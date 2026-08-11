@@ -2547,3 +2547,321 @@ body.theme-night .lightbox-caption h3 {
     }
 
                 }
+
+/* =========================
+   HAMBURGER MENU
+========================= */
+
+.menu-button {
+    position: fixed;
+
+    top: 18px;
+    right: 18px;
+
+    width: 50px;
+    height: 50px;
+
+    z-index: 9000;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    box-shadow:
+        0 8px 24px
+        rgba(0, 0, 0, 0.12);
+
+    cursor: pointer;
+}
+
+
+.menu-button span {
+    display: block;
+
+    width: 22px;
+    height: 2px;
+
+    border-radius: 999px;
+
+    background: #6a4c93;
+}
+
+
+body.theme-night .menu-button {
+    background:
+        rgba(25, 22, 45, 0.82);
+
+    border-color:
+        rgba(255, 255, 255, 0.12);
+}
+
+
+body.theme-night .menu-button span {
+    background: white;
+}
+
+
+/* پس‌زمینه پشت منو */
+
+.side-menu-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9090;
+
+    background:
+        rgba(6, 7, 15, 0.55);
+
+    backdrop-filter: blur(3px);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+
+.side-menu-overlay.overlay-open {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+/* خود منو */
+
+.side-menu {
+    position: fixed;
+
+    top: 0;
+    right: 0;
+
+    width: min(84vw, 350px);
+    height: 100dvh;
+
+    z-index: 9100;
+
+    padding:
+        75px 20px
+        24px;
+
+    overflow-y: auto;
+
+    background:
+        rgba(255, 255, 255, 0.95);
+
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+
+    box-shadow:
+        -15px 0 50px
+        rgba(0, 0, 0, 0.18);
+
+    transform:
+        translateX(105%);
+
+    transition:
+        transform 0.35s ease;
+
+    border-radius:
+        30px 0 0 30px;
+}
+
+
+.side-menu.menu-open {
+    transform:
+        translateX(0);
+}
+
+
+body.theme-night .side-menu {
+    background:
+        rgba(18, 17, 34, 0.97);
+
+    color: white;
+
+    box-shadow:
+        -15px 0 50px
+        rgba(0, 0, 0, 0.45);
+}
+
+
+.menu-close {
+    position: absolute;
+
+    top: 18px;
+    left: 18px;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        rgba(106, 76, 147, 0.10);
+
+    color:
+        #6a4c93;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+body.theme-night .menu-close {
+    background:
+        rgba(255, 255, 255, 0.10);
+
+    color: white;
+}
+
+
+.menu-logo {
+    text-align: center;
+
+    margin-bottom: 28px;
+}
+
+
+.menu-logo span {
+    display: block;
+
+    font-size: 45px;
+
+    margin-bottom: 8px;
+}
+
+
+.menu-logo h2 {
+    margin: 0 0 5px;
+
+    font-size: 24px;
+}
+
+
+.menu-logo p {
+    margin: 0;
+
+    font-size: 11px;
+
+    opacity: 0.6;
+}
+
+
+.menu-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.menu-links a {
+    display: block;
+
+    width: 100%;
+
+    padding:
+        14px
+        15px;
+
+    border-radius: 17px;
+
+    background:
+        rgba(106, 76, 147, 0.07);
+
+    color:
+        #2d3748;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    line-height: 1.7;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.menu-links a:hover {
+    transform:
+        translateX(-4px);
+
+    background:
+        rgba(213, 63, 140, 0.11);
+}
+
+
+body.theme-night .menu-links a {
+    background:
+        rgba(255, 255, 255, 0.07);
+
+    color: white;
+}
+
+
+body.theme-night .menu-links a:hover {
+    background:
+        rgba(255, 130, 190, 0.12);
+}
+
+
+.menu-footer {
+    margin-top: 30px;
+
+    text-align: center;
+
+    color:
+        #d53f8c;
+
+    font-weight: bold;
+}
+
+
+/* موبایل */
+
+@media (max-width: 560px) {
+
+    .menu-button {
+        top: 12px;
+        right: 12px;
+
+        width: 46px;
+        height: 46px;
+
+        border-radius: 14px;
+    }
+
+    .side-menu {
+        width: 87vw;
+
+        border-radius:
+            24px 0 0 24px;
+    }
+
+}
