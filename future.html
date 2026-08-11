@@ -1,0 +1,3857 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        ما هنوز کلی کار داریم ❤️
+    </title>
+
+    <meta
+        name="theme-color"
+        content="#17152b"
+    >
+
+    <meta
+        name="description"
+        content="رویاها و آینده‌ی آرین و صبا ❤️"
+    >
+
+    <link
+        rel="stylesheet"
+        href="future.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         پس‌زمینه
+    ========================== -->
+
+    <div id="futureParticles"></div>
+
+
+
+    <!-- =========================
+         نوار بالا
+    ========================== -->
+
+    <header class="top-bar">
+
+
+        <a
+            href="index.html"
+            class="home-button"
+        >
+            ← برگشت
+        </a>
+
+
+        <div class="top-title">
+            A ❤️ S
+        </div>
+
+
+        <button
+            id="themeButton"
+            class="theme-button"
+            onclick="toggleTheme()"
+            aria-label="تغییر حالت روشن و تیره"
+        >
+            🌙
+        </button>
+
+
+    </header>
+
+
+
+    <main class="page">
+
+
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section class="future-card hero-section">
+
+
+            <div class="hero-symbol">
+                🚐🌍❤️
+            </div>
+
+
+            <p class="small-label">
+                OUR FUTURE
+            </p>
+
+
+            <h1>
+                ما هنوز
+                <span>کلی کار نکرده</span>
+                داریم...
+            </h1>
+
+
+            <p class="hero-text">
+                بعضی رویاها بزرگن،
+                بعضیا خیلی ساده‌ان،
+                بعضیا هم شاید سال‌ها طول بکشه؛
+                ولی خب...
+                لیستشون رو از الان می‌سازیم. 🤭❤️
+            </p>
+
+
+
+            <div class="future-counter">
+
+
+                <div>
+                    <strong id="dreamCount">
+                        17
+                    </strong>
+
+                    <span>
+                        رویا ✨
+                    </span>
+                </div>
+
+
+                <div>
+                    <strong>
+                        0
+                    </strong>
+
+                    <span>
+                        عجله 😌
+                    </span>
+                </div>
+
+
+                <div>
+                    <strong>
+                        1
+                    </strong>
+
+                    <span>
+                        زندگی ❤️
+                    </span>
+                </div>
+
+
+            </div>
+
+
+            <button
+                class="main-button"
+                onclick="scrollToSection('dreamList')"
+            >
+                بریم ببینیم چی در انتظارمونه ↓
+            </button>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             DREAM CHECKLIST
+        ====================================================== -->
+
+        <section
+            class="future-card"
+            id="dreamList"
+        >
+
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    ✨
+                </span>
+
+
+                <h2>
+                    لیست «باید باهم انجام بدیم»
+                </h2>
+
+
+                <p>
+                    هر چیزی که انجام دادیم،
+                    روش بزن تا برای همیشه روی همین گوشی تیک بخوره.
+                </p>
+
+            </div>
+
+
+
+            <div class="dream-progress-box">
+
+
+                <div class="dream-progress-text">
+
+                    <span>
+                        پیشرفت ما
+                    </span>
+
+
+                    <strong id="dreamProgressText">
+                        0 از 17
+                    </strong>
+
+                </div>
+
+
+                <div class="dream-progress-track">
+
+                    <div
+                        id="dreamProgressBar"
+                        class="dream-progress-bar"
+                    ></div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- سفر -->
+
+            <div class="dream-category">
+
+
+                <h3>
+                    🌍 سفر و جاده
+                </h3>
+
+
+                <div class="dream-grid">
+
+
+                    <button
+                        class="dream-item"
+                        data-dream="wohnmobil"
+                        onclick="toggleDream(this)"
+                    >
+                        <span class="dream-check">⬜</span>
+                        <span class="dream-emoji">🚐</span>
+                        <span class="dream-name">
+                            سفر طولانی با Wohnmobil
+                        </span>
+                    </button>
+
+
+                    <button
+                        class="dream-item"
+                        data-dream="italy"
+                        onclick="toggleDream(this)"
+                    >
+                        <span class="dream-check">⬜</span>
+                        <span class="dream-emoji">🇮🇹</span>
+                        <span class="dream-name">
+                            سفر دونفری به ایتالیا
+                        </span>
+                    </button>
+
+
+                    <button
+                        class="dream-item"
+                        data-dream="europe"
+                        onclick="toggleDream(this)"
+                    >
+                        <span class="dream-check">⬜</span>
+                        <span class="dream-emoji">🗺️</span>
+                        <span class="dream-name">
+                            Road Trip توی اروپا
+                        </span>
+                    </button>
+
+
+                    <button
+                        class="dream-item"
+                        data-dream="aurora"
+                        onclick="toggleDream(this)"
+                    >
+                        <span class="dream-check">⬜</span>
+                        <span class="dream-emoji">🌌</span>
+                        <span class="dream-name">
+                            دیدن شفق قطبی کنار هم
+                        </span>
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- خانه -->
+
+            <div class="dream-category">
+
+
+                <h3>
+                    🏠 خونه و زندگی
+                </h3>
+
+
+                <div class="dream-grid">
+
+
+                    <button
+                        class="dream-item"
+                        data-dream="germany-home"
+                        onclick="toggleDream(this)"
+                    >
+                        <span class="dream-check">⬜</span>
+                        <span class="dream-emoji">🇩🇪</span>
+                        <span class="dream-name">
+                            کنار هم زندگی کردن توی آلمان
+                        </span>
+                    </button>
+
+
+                    <button
+                        class="dream-item"
+                        data-dream="home"
+                        onclick="toggleDream(this)"
+                    >
+                        <span class="dream-check">⬜</span>
+                        <span class="dream-emoji">🔑</span>
+                        <span class="dream-name">
+                            خونه‌ی خودمون
+                        </span>
+                    </button>
+
+
+                    <button
+                        class="dream-item"
+                        data-dream="cooking"
+                        onclick="toggleDream(this)"
+                    >
+                        <span class="dream-check">⬜</span>
+                        <span class="dream-emoji">🍳</span>
+                        <span class="dream-name">
+                            آشپزی‌های دونفری
+                        </span>
+                    </button>
+
+
+                    <button
+                        class="dream-item"
+                        data-dream="pet"
+                        onclick="toggleDream(this)"
+                    >
+                        <span class="dream-check">⬜</span>
+                        <span class="dream-emoji">🐾</span>
+                        <span class="dream-name">
+                            شاید یه حیوان خونگی
+                        </span>
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- تجربه -->
+
+            <div class="dream-category">
+
+
+                <h3>
+                    🎉 تجربه‌هایی که هنوز مونده
+                </h3>
+
+
+                <div class="dream-grid">
+
+
+                    <button
+                        class="dream-item"
+                        data-dream="cinema"
+                        onclick="toggleDream(this)"
+                    >
+                        <span class="dream-check">⬜</span>
+                        <span class="dream-emoji">🎬</span>
+                        <span class="dream-name">
+                            کلی سینمای دیگه
+                        </span>
+                    </button>
+
+
+                    <button
+                        class="dream-item"
+                        data-dream="party"
+                        onclick="toggleDream(this)"
+                    >
+                        <span class="dream-check">⬜</span>
+                        <span class="dream-emoji">🎉</span>
+                        <span class="dream-name">
+                            پارتی و دیسکو باهم
+                        </span>
+                    </button>
+
+
+                    <button
+                        class="dream-item"
+                        data-dream="concert"
+                        onclick="toggleDream(this)"
+                    >
+                        <span class="dream-check">⬜</span>
+                        <span class="dream-emoji">🎵</span>
+                        <span class="dream-name">
+                            کنسرت دونفری
+                        </span>
+                    </button>
+
+
+                    <button
+                        class="dream-item"
+                        data-dream="random-day"
+                        onclick="toggleDream(this)"
+                    >
+                        <span class="dream-check">⬜</span>
+                        <span class="dream-emoji">🌤️</span>
+                        <span class="dream-name">
+                            یه روز کامل بدون هیچ برنامه‌ای
+                        </span>
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- آرام -->
+
+            <div class="dream-category">
+
+
+                <h3>
+                    🎬📚 روزهای آروم
+                </h3>
+
+
+                <div class="dream-grid">
+
+
+                    <button
+                        class="dream-item"
+                        data-dream="movies"
+                        onclick="toggleDream(this)"
+                    >
+                        <span class="dream-check">⬜</span>
+                        <span class="dream-emoji">🍿</span>
+                        <span class="dream-name">
+                            کلی فیلم و سریال کنار هم
+                        </span>
+                    </button>
+
+
+                    <button
+                        class="dream-item"
+                        data-dream="books"
+                        onclick="toggleDream(this)"
+                    >
+                        <span class="dream-check">⬜</span>
+                        <span class="dream-emoji">📚</span>
+                        <span class="dream-name">
+                            کنار هم کتاب خوندن
+                        </span>
+                    </button>
+
+
+                    <button
+                        class="dream-item"
+                        data-dream="rain"
+                        onclick="toggleDream(this)"
+                    >
+                        <span class="dream-check">⬜</span>
+                        <span class="dream-emoji">🌧️</span>
+                        <span class="dream-name">
+                            یه روز بارونی زیر پتو
+                        </span>
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- آینده دور -->
+
+            <div class="dream-category">
+
+
+                <h3>
+                    ❤️ فصل‌های خیلی دورتر
+                </h3>
+
+
+                <div class="dream-grid">
+
+
+                    <button
+                        class="dream-item"
+                        data-dream="baby"
+                        onclick="toggleDream(this)"
+                    >
+                        <span class="dream-check">⬜</span>
+                        <span class="dream-emoji">👶</span>
+                        <span class="dream-name">
+                            شاید یه روز بچه‌دار شدنمون
+                        </span>
+                    </button>
+
+
+                    <button
+                        class="dream-item"
+                        data-dream="old"
+                        onclick="toggleDream(this)"
+                    >
+                        <span class="dream-check">⬜</span>
+                        <span class="dream-emoji">👴👵</span>
+                        <span class="dream-name">
+                            پیر شیم و هنوز به هم گیر بدیم 😭❤️
+                        </span>
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             WORLD MAP
+        ====================================================== -->
+
+        <section class="future-card">
+
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    🌍
+                </span>
+
+
+                <h2>
+                    نقشه‌ی «ما باید بریم اینجا»
+                </h2>
+
+
+                <p>
+                    روی مقصدها بزن.
+                    هر نقطه یه نسخه‌ی کوچیک از یه سفر احتمالیه.
+                </p>
+
+            </div>
+
+
+
+            <div class="map-statuses">
+
+
+                <span>
+                    ❤️ حتماً
+                </span>
+
+
+                <span>
+                    ✨ یه روز
+                </span>
+
+
+                <span>
+                    ✅ رفتیم
+                </span>
+
+
+            </div>
+
+
+
+            <div class="dream-map">
+
+
+                <div class="map-glow"></div>
+
+
+                <span class="continent continent-europe">
+                    EUROPE
+                </span>
+
+
+                <span class="continent continent-asia">
+                    ASIA
+                </span>
+
+
+                <span class="continent continent-africa">
+                    AFRICA
+                </span>
+
+
+                <span class="continent continent-america">
+                    AMERICA
+                </span>
+
+
+
+                <button
+                    class="map-pin must-go pin-italy"
+                    onclick="showDestination(
+                        '🇮🇹 ایتالیا',
+                        '❤️ حتماً باید بریم',
+                        'Wohnmobil، پاستا، ساحل، رم، شهرهای کوچیک و احتمالاً گم شدن باهم توی یه کوچه‌ی عجیب 😭❤️'
+                    )"
+                >
+                    🇮🇹
+                </button>
+
+
+
+                <button
+                    class="map-pin must-go pin-france"
+                    onclick="showDestination(
+                        '🇫🇷 فرانسه',
+                        '❤️ حتماً باید بریم',
+                        'یه سفر آروم، کافه، خیابون‌گردی و حداقل یک عکس خیلی کلیشه‌ای که بعداً مسخره‌ش کنیم.'
+                    )"
+                >
+                    🇫🇷
+                </button>
+
+
+
+                <button
+                    class="map-pin someday pin-spain"
+                    onclick="showDestination(
+                        '🇪🇸 اسپانیا',
+                        '✨ شاید یه روز',
+                        'آفتاب، ساحل، شب‌گردی و یه سفر که هیچ برنامه‌ی دقیقی براش نداشته باشیم.'
+                    )"
+                >
+                    🇪🇸
+                </button>
+
+
+
+                <button
+                    class="map-pin must-go pin-norway"
+                    onclick="showDestination(
+                        '🇳🇴 نروژ',
+                        '❤️ حتماً باید بریم',
+                        'برای شفق قطبی. فقط همین دلیل خودش کافیه. 🌌'
+                    )"
+                >
+                    🇳🇴
+                </button>
+
+
+
+                <button
+                    class="map-pin someday pin-japan"
+                    onclick="showDestination(
+                        '🇯🇵 ژاپن',
+                        '✨ یه روز خیلی دور شاید',
+                        'غذا، شهر، فرهنگ، کلی عکس عجیب و احتمالاً ده ساعت راه رفتن بدون اینکه بفهمیم.'
+                    )"
+                >
+                    🇯🇵
+                </button>
+
+
+
+                <button
+                    class="map-pin must-go pin-germany"
+                    onclick="showDestination(
+                        '🇩🇪 آلمان',
+                        '🏠 مقصد فقط سفر نیست',
+                        'یه جایی که شاید بخشی از آینده‌مون، خونه‌مون و زندگی روزمره‌مون اینجا ساخته بشه.'
+                    )"
+                >
+                    🏠
+                </button>
+
+
+
+                <button
+                    class="map-pin someday pin-usa"
+                    onclick="showDestination(
+                        '🇺🇸 آمریکا',
+                        '✨ شاید یه روز',
+                        'یه Road Trip طولانی و کلی شهری که فقط اسمشونو توی فیلم‌ها دیدیم.'
+                    )"
+                >
+                    🇺🇸
+                </button>
+
+
+
+            </div>
+
+
+
+            <div
+                id="destinationCard"
+                class="destination-card"
+            >
+
+
+                <span id="destinationFlag">
+                    🌍
+                </span>
+
+
+                <div>
+
+                    <h3 id="destinationTitle">
+                        یکی از مقصدها رو انتخاب کن
+                    </h3>
+
+
+                    <strong id="destinationStatus">
+                        A ❤️ S
+                    </strong>
+
+
+                    <p id="destinationText">
+                        هنوز کلی جای دنیا هست که هیچ خاطره‌ای از ما توش ساخته نشده.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+        <!-- =====================================================
+             FUTURE HOME
+        ====================================================== -->
+
+        <section class="future-card">
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    🏠
+                </span>
+
+                <h2>
+                    یه روز، خونه‌ی ما
+                </h2>
+
+                <p>
+                    روی هر قسمت خونه بزن؛
+                    ببین اون گوشه چه آینده‌ای قایم شده.
+                </p>
+
+            </div>
+
+
+            <div class="future-house">
+
+
+                <button
+                    class="room room-living"
+                    onclick="showRoom(
+                        '🛋️ نشیمن',
+                        'جایی برای سریال دیدن زیر پتو، غذا خوردن جلوی تلویزیون و دعوا سر اینکه امشب چی ببینیم 😭'
+                    )"
+                >
+
+                    <span>
+                        🛋️
+                    </span>
+
+                    <strong>
+                        نشیمن
+                    </strong>
+
+                </button>
+
+
+                <button
+                    class="room room-kitchen"
+                    onclick="showRoom(
+                        '🍳 آشپزخونه',
+                        'غذاهایی که یه بار عالی می‌شن و یه بار فاجعه. مهم اینه که دونفری درستشون کردیم.'
+                    )"
+                >
+
+                    <span>
+                        🍳
+                    </span>
+
+                    <strong>
+                        آشپزخونه
+                    </strong>
+
+                </button>
+
+
+                <button
+                    class="room room-library"
+                    onclick="showRoom(
+                        '📚 گوشه‌ی کتاب',
+                        'دو تا صندلی، کتاب، سکوت و هر چند دقیقه یک بار مزاحم شدن برای اینکه یه جمله‌ی جالب رو برای هم بخونیم.'
+                    )"
+                >
+
+                    <span>
+                        📚
+                    </span>
+
+                    <strong>
+                        کتابخونه
+                    </strong>
+
+                </button>
+
+
+                <button
+                    class="room room-balcony"
+                    onclick="showRoom(
+                        '🌿 بالکن',
+                        'قهوه، هوای خنک، حرف‌های الکی و اون مکالمه‌هایی که یهو سه ساعت طول می‌کشن.'
+                    )"
+                >
+
+                    <span>
+                        🌿
+                    </span>
+
+                    <strong>
+                        بالکن
+                    </strong>
+
+                </button>
+
+
+                <button
+                    class="room room-bedroom"
+                    onclick="showRoom(
+                        '🛏️ اتاق خواب',
+                        'جایی که احتمالاً آرین باز بیشتر از حد استاندارد می‌خوابه 😭'
+                    )"
+                >
+
+                    <span>
+                        🛏️
+                    </span>
+
+                    <strong>
+                        اتاق
+                    </strong>
+
+                </button>
+
+
+                <button
+                    class="room room-future"
+                    onclick="showRoom(
+                        '🧸 فصل‌های بعدی',
+                        'این یکی هنوز خیلی دوره. لازم نیست الان بدونیم دقیقاً چه شکلیه؛ فقط خوبه یه جای خالی براش داشته باشیم. ❤️'
+                    )"
+                >
+
+                    <span>
+                        🧸
+                    </span>
+
+                    <strong>
+                        آینده
+                    </strong>
+
+                </button>
+
+            </div>
+
+
+            <div
+                id="roomMessage"
+                class="room-message"
+            >
+
+                <span id="roomEmoji">
+                    🏠
+                </span>
+
+                <div>
+
+                    <h3 id="roomTitle">
+                        Home, someday.
+                    </h3>
+
+                    <p id="roomText">
+                        یه خونه فقط دیوار و سقف نیست؛
+                        کلی روز معمولیه که کنار آدم درست می‌گذره.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SHARED SHELF
+        ====================================================== -->
+
+        <section class="future-card">
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    🎬📚
+                </span>
+
+                <h2>
+                    قفسه‌ی مشترک ما
+                </h2>
+
+                <p>
+                    فیلم، سریال و کتاب‌هایی که یه روز باید کنار هم تمومشون کنیم.
+                </p>
+
+            </div>
+
+
+            <div class="shelf-tabs">
+
+                <button
+                    class="shelf-tab active"
+                    onclick="showShelf('movies', this)"
+                >
+                    🎬 فیلم
+                </button>
+
+                <button
+                    class="shelf-tab"
+                    onclick="showShelf('series', this)"
+                >
+                    📺 سریال
+                </button>
+
+                <button
+                    class="shelf-tab"
+                    onclick="showShelf('books', this)"
+                >
+                    📚 کتاب
+                </button>
+
+            </div>
+
+
+            <!-- Movies -->
+
+            <div
+                id="moviesShelf"
+                class="shelf-content active-shelf"
+            >
+
+                <button
+                    class="shelf-item"
+                    data-shelf="movie-1"
+                    onclick="toggleShelfItem(this)"
+                >
+                    <span>🎥</span>
+
+                    <strong>
+                        یه فیلم ترسناک دونفری
+                    </strong>
+
+                    <small>
+                        ⬜ هنوز مونده
+                    </small>
+                </button>
+
+
+                <button
+                    class="shelf-item"
+                    data-shelf="movie-2"
+                    onclick="toggleShelfItem(this)"
+                >
+                    <span>🍿</span>
+
+                    <strong>
+                        Movie Marathon تا صبح
+                    </strong>
+
+                    <small>
+                        ⬜ هنوز مونده
+                    </small>
+                </button>
+
+
+                <button
+                    class="shelf-item"
+                    data-shelf="movie-3"
+                    onclick="toggleShelfItem(this)"
+                >
+                    <span>🎞️</span>
+
+                    <strong>
+                        یه فیلم قدیمی خیلی خوب
+                    </strong>
+
+                    <small>
+                        ⬜ هنوز مونده
+                    </small>
+                </button>
+
+
+                <button
+                    class="shelf-item"
+                    data-shelf="movie-4"
+                    onclick="toggleShelfItem(this)"
+                >
+                    <span>🎟️</span>
+
+                    <strong>
+                        قرار سینمایی جدید
+                    </strong>
+
+                    <small>
+                        ⬜ هنوز مونده
+                    </small>
+                </button>
+
+            </div>
+
+
+            <!-- Series -->
+
+            <div
+                id="seriesShelf"
+                class="shelf-content"
+            >
+
+                <button
+                    class="shelf-item"
+                    data-shelf="series-1"
+                    onclick="toggleShelfItem(this)"
+                >
+                    <span>📺</span>
+
+                    <strong>
+                        یه سریال بلند که باهم شروع کنیم
+                    </strong>
+
+                    <small>
+                        ⬜ هنوز مونده
+                    </small>
+                </button>
+
+
+                <button
+                    class="shelf-item"
+                    data-shelf="series-2"
+                    onclick="toggleShelfItem(this)"
+                >
+                    <span>😭</span>
+
+                    <strong>
+                        یه سریال که آخرش نابودمون کنه
+                    </strong>
+
+                    <small>
+                        ⬜ هنوز مونده
+                    </small>
+                </button>
+
+
+                <button
+                    class="shelf-item"
+                    data-shelf="series-3"
+                    onclick="toggleShelfItem(this)"
+                >
+                    <span>😂</span>
+
+                    <strong>
+                        یه Sitcom برای شبای خسته
+                    </strong>
+
+                    <small>
+                        ⬜ هنوز مونده
+                    </small>
+                </button>
+
+            </div>
+
+
+            <!-- Books -->
+
+            <div
+                id="booksShelf"
+                class="shelf-content"
+            >
+
+                <button
+                    class="shelf-item"
+                    data-shelf="book-1"
+                    onclick="toggleShelfItem(this)"
+                >
+                    <span>📖</span>
+
+                    <strong>
+                        یه رمان رو همزمان بخونیم
+                    </strong>
+
+                    <small>
+                        ⬜ هنوز مونده
+                    </small>
+                </button>
+
+
+                <button
+                    class="shelf-item"
+                    data-shelf="book-2"
+                    onclick="toggleShelfItem(this)"
+                >
+                    <span>🧠</span>
+
+                    <strong>
+                        یه کتاب روانشناسی و کلی بحث سرش
+                    </strong>
+
+                    <small>
+                        ⬜ هنوز مونده
+                    </small>
+                </button>
+
+
+                <button
+                    class="shelf-item"
+                    data-shelf="book-3"
+                    onclick="toggleShelfItem(this)"
+                >
+                    <span>☕</span>
+
+                    <strong>
+                        یه عصر کامل کافه + کتاب
+                    </strong>
+
+                    <small>
+                        ⬜ هنوز مونده
+                    </small>
+                </button>
+
+            </div>
+
+
+            <button
+                class="random-picker-button"
+                onclick="pickTonight()"
+            >
+                🎲 امشب چی انتخاب کنیم؟
+            </button>
+
+
+            <div
+                id="randomPickResult"
+                class="random-pick-result"
+            >
+                هنوز قرعه‌کشی نکردیم 🤭
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             FUTURE TIMELINE
+        ====================================================== -->
+
+        <section class="future-card">
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    🛤️
+                </span>
+
+                <h2>
+                    هنوز کلی زندگی مونده
+                </h2>
+
+                <p>
+                    بعضی ایستگاه‌ها نزدیکن،
+                    بعضیا خیلی دور.
+                    فعلاً فقط جاشون رو روی مسیر نگه می‌داریم.
+                </p>
+
+            </div>
+
+
+            <div class="future-timeline">
+
+
+                <button
+                    class="future-stop"
+                    data-stop="stop-wohnmobil"
+                    onclick="toggleFutureStop(this)"
+                >
+
+                    <span class="stop-icon">
+                        🚐
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            اولین سفر واقعی با Wohnmobil
+                        </h3>
+
+                        <p>
+                            هنوز نرسیدیم اینجا...
+                        </p>
+
+                    </div>
+
+                    <span class="stop-lock">
+                        🔒
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="future-stop"
+                    data-stop="stop-party"
+                    onclick="toggleFutureStop(this)"
+                >
+
+                    <span class="stop-icon">
+                        🎉
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            پارتی و دیسکو دونفری
+                        </h3>
+
+                        <p>
+                            یه شب که فرداش احتمالاً بگیم چرا این کارو کردیم 😭
+                        </p>
+
+                    </div>
+
+                    <span class="stop-lock">
+                        🔒
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="future-stop"
+                    data-stop="stop-home"
+                    onclick="toggleFutureStop(this)"
+                >
+
+                    <span class="stop-icon">
+                        🏠
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            زندگی زیر یه سقف توی آلمان
+                        </h3>
+
+                        <p>
+                            از سفر و قرار تبدیل بشه به زندگی معمولی کنار هم.
+                        </p>
+
+                    </div>
+
+                    <span class="stop-lock">
+                        🔒
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="future-stop"
+                    data-stop="stop-travel"
+                    onclick="toggleFutureStop(this)"
+                >
+
+                    <span class="stop-icon">
+                        🌍
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            کلی کشور و شهر جدید
+                        </h3>
+
+                        <p>
+                            هر مقصد یه خاطره‌ی جدید.
+                        </p>
+
+                    </div>
+
+                    <span class="stop-lock">
+                        🔒
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="future-stop"
+                    data-stop="stop-books"
+                    onclick="toggleFutureStop(this)"
+                >
+
+                    <span class="stop-icon">
+                        📚
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            قفسه‌ی کتاب مشترک
+                        </h3>
+
+                        <p>
+                            کتابایی که بعضیاش رو هر دو دوست داریم
+                            و بعضیاش رو سرش دعوامون می‌شه.
+                        </p>
+
+                    </div>
+
+                    <span class="stop-lock">
+                        🔒
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="future-stop"
+                    data-stop="stop-pet"
+                    onclick="toggleFutureStop(this)"
+                >
+
+                    <span class="stop-icon">
+                        🐾
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            شاید یه حیوان خونگی
+                        </h3>
+
+                        <p>
+                            این یکی هنوز کاملاً در بخش «شاید» قرار داره.
+                        </p>
+
+                    </div>
+
+                    <span class="stop-lock">
+                        🔒
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="future-stop"
+                    data-stop="stop-child"
+                    onclick="toggleFutureStop(this)"
+                >
+
+                    <span class="stop-icon">
+                        👶
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            شاید یه روز، یه خانواده‌ی بزرگ‌تر
+                        </h3>
+
+                        <p>
+                            خیلی دوره.
+                            فعلاً فقط یه ایستگاه روی نقشه‌ی آینده‌ست. ❤️
+                        </p>
+
+                    </div>
+
+                    <span class="stop-lock">
+                        🔒
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="future-stop"
+                    data-stop="stop-old"
+                    onclick="toggleFutureStop(this)"
+                >
+
+                    <span class="stop-icon">
+                        👴👵
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            پیر شدن و هنوز گیر دادن به هم
+                        </h3>
+
+                        <p>
+                            Final Boss زندگی 😭❤️
+                        </p>
+
+                    </div>
+
+                    <span class="stop-lock">
+                        🔒
+                    </span>
+
+                </button>
+
+
+            </div>
+
+
+            <p class="timeline-hint">
+                هر وقت یکی از این اتفاق‌ها واقعاً افتاد،
+                روی ایستگاه بزن تا Unlock بشه. 🔓
+            </p>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             ROAD TRIP GAME
+        ====================================================== -->
+
+        <section
+            class="future-card game-section"
+            id="roadGame"
+        >
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    🚐
+                </span>
+
+                <h2>
+                    Road Trip: Arian & Saba
+                </h2>
+
+                <p>
+                    قلب ❤️،
+                    بنزین ⛽
+                    و خاطره 📸 جمع کن.
+                    از چاله‌ها 🕳️ هم فرار کن.
+                </p>
+
+            </div>
+
+
+            <div class="road-stats">
+
+
+                <div>
+
+                    <span>
+                        ❤️ قلب
+                    </span>
+
+                    <strong id="roadHearts">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        ⛽ بنزین
+                    </span>
+
+                    <strong id="roadFuel">
+                        5
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        📸 خاطره
+                    </span>
+
+                    <strong id="roadMemories">
+                        0
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="road-game-shell">
+
+
+                <canvas
+                    id="roadCanvas"
+                    width="360"
+                    height="560"
+                >
+                </canvas>
+
+
+                <div
+                    id="roadOverlay"
+                    class="road-overlay"
+                >
+
+                    <div class="road-overlay-box">
+
+                        <span class="road-big-icon">
+                            🚐
+                        </span>
+
+                        <h3>
+                            Ready for Europe?
+                        </h3>
+
+                        <p>
+                            مقصد نهایی:
+                            <br>
+                            🏠 Home, Germany ❤️
+                        </p>
+
+                        <button
+                            class="main-button"
+                            onclick="startRoadGame()"
+                        >
+                            حرکت کنیم
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="road-controls">
+
+                <button
+                    id="roadLeft"
+                    class="road-control"
+                >
+
+
+                 <script>
+
+
+        /* =====================================================
+           PARTICLES
+        ====================================================== */
+
+        function createFutureParticles() {
+
+            const container =
+                document.getElementById(
+                    "futureParticles"
+                );
+
+
+            const icons = [
+
+                "✨",
+                "❤️",
+                "🌍",
+                "🚐",
+                "🌟"
+
+            ];
+
+
+            for (
+                let i = 0;
+                i < 22;
+                i++
+            ) {
+
+                const particle =
+                    document.createElement(
+                        "span"
+                    );
+
+
+                particle.className =
+                    "future-particle";
+
+
+                particle.textContent =
+                    icons[
+                        Math.floor(
+                            Math.random() *
+                            icons.length
+                        )
+                    ];
+
+
+                particle.style.left =
+                    Math.random() * 100 +
+                    "%";
+
+
+                particle.style.animationDuration =
+                    (
+                        10 +
+                        Math.random() * 13
+                    ) + "s";
+
+
+                particle.style.animationDelay =
+                    Math.random() * 10 +
+                    "s";
+
+
+                container.appendChild(
+                    particle
+                );
+
+            }
+
+        }
+
+
+        createFutureParticles();
+
+
+
+        /* =====================================================
+           DARK MODE
+        ====================================================== */
+
+        const savedFutureTheme =
+            localStorage.getItem(
+                "futureTheme"
+            );
+
+
+        if (
+            savedFutureTheme ===
+            "dark"
+        ) {
+
+            document.body
+                .classList
+                .add("dark-mode");
+
+        }
+
+
+        updateThemeButton();
+
+
+
+        function toggleTheme() {
+
+            document.body
+                .classList
+                .toggle("dark-mode");
+
+
+            const isDark =
+                document.body
+                    .classList
+                    .contains(
+                        "dark-mode"
+                    );
+
+
+            localStorage.setItem(
+
+                "futureTheme",
+
+                isDark
+                    ? "dark"
+                    : "light"
+
+            );
+
+
+            updateThemeButton();
+
+        }
+
+
+
+        function updateThemeButton() {
+
+            const button =
+                document.getElementById(
+                    "themeButton"
+                );
+
+
+            button.textContent =
+                document.body
+                    .classList
+                    .contains(
+                        "dark-mode"
+                    )
+                    ? "☀️"
+                    : "🌙";
+
+        }
+
+
+
+        /* =====================================================
+           SCROLL
+        ====================================================== */
+
+        function scrollToSection(id) {
+
+            const section =
+                document.getElementById(
+                    id
+                );
+
+
+            if (section) {
+
+                section.scrollIntoView({
+
+                    behavior:
+                        "smooth",
+
+                    block:
+                        "start"
+
+                });
+
+            }
+
+        }
+
+
+
+        /* =====================================================
+           DREAM CHECKLIST
+        ====================================================== */
+
+        const dreamItems =
+            document.querySelectorAll(
+                ".dream-item"
+            );
+
+
+
+        function loadDreams() {
+
+            dreamItems.forEach(
+
+                function(item) {
+
+                    const key =
+                        item.dataset.dream;
+
+
+                    const saved =
+                        localStorage.getItem(
+                            "dream-" + key
+                        );
+
+
+                    if (
+                        saved === "done"
+                    ) {
+
+                        markDreamDone(
+                            item,
+                            true
+                        );
+
+                    }
+
+                }
+
+            );
+
+
+            updateDreamProgress();
+
+        }
+
+
+
+        function toggleDream(item) {
+
+            const key =
+                item.dataset.dream;
+
+
+            const done =
+                item.classList
+                    .contains(
+                        "dream-done"
+                    );
+
+
+            if (done) {
+
+                localStorage.removeItem(
+                    "dream-" + key
+                );
+
+
+                markDreamDone(
+                    item,
+                    false
+                );
+
+            }
+
+            else {
+
+                localStorage.setItem(
+                    "dream-" + key,
+                    "done"
+                );
+
+
+                markDreamDone(
+                    item,
+                    true
+                );
+
+
+                createMiniCelebration();
+
+            }
+
+
+            updateDreamProgress();
+
+        }
+
+
+
+        function markDreamDone(
+            item,
+            done
+        ) {
+
+            const check =
+                item.querySelector(
+                    ".dream-check"
+                );
+
+
+            if (done) {
+
+                item.classList.add(
+                    "dream-done"
+                );
+
+
+                check.textContent =
+                    "✅";
+
+            }
+
+            else {
+
+                item.classList.remove(
+                    "dream-done"
+                );
+
+
+                check.textContent =
+                    "⬜";
+
+            }
+
+        }
+
+
+
+        function updateDreamProgress() {
+
+            const done =
+                document.querySelectorAll(
+                    ".dream-item.dream-done"
+                ).length;
+
+
+            const total =
+                dreamItems.length;
+
+
+            document
+                .getElementById(
+                    "dreamProgressText"
+                )
+                .textContent =
+                done +
+                " از " +
+                total;
+
+
+            document
+                .getElementById(
+                    "dreamProgressBar"
+                )
+                .style.width =
+                (
+                    done /
+                    total *
+                    100
+                ) + "%";
+
+
+            document
+                .getElementById(
+                    "dreamCount"
+                )
+                .textContent =
+                total;
+
+        }
+
+
+        loadDreams();
+
+
+
+        /* =====================================================
+           DESTINATION MAP
+        ====================================================== */
+
+        function showDestination(
+            title,
+            status,
+            text
+        ) {
+
+            document
+                .getElementById(
+                    "destinationTitle"
+                )
+                .textContent =
+                title;
+
+
+            document
+                .getElementById(
+                    "destinationStatus"
+                )
+                .textContent =
+                status;
+
+
+            document
+                .getElementById(
+                    "destinationText"
+                )
+                .textContent =
+                text;
+
+
+            document
+                .getElementById(
+                    "destinationFlag"
+                )
+                .textContent =
+                title.split(" ")[0];
+
+
+            const card =
+                document.getElementById(
+                    "destinationCard"
+                );
+
+
+            card.classList.remove(
+                "card-pop"
+            );
+
+
+            void card.offsetWidth;
+
+
+            card.classList.add(
+                "card-pop"
+            );
+
+        }
+
+
+
+        /* =====================================================
+           FUTURE HOUSE
+        ====================================================== */
+
+        function showRoom(
+            title,
+            text
+        ) {
+
+            document
+                .getElementById(
+                    "roomTitle"
+                )
+                .textContent =
+                title;
+
+
+            document
+                .getElementById(
+                    "roomText"
+                )
+                .textContent =
+                text;
+
+
+            document
+                .getElementById(
+                    "roomEmoji"
+                )
+                .textContent =
+                title.split(" ")[0];
+
+
+            const message =
+                document.getElementById(
+                    "roomMessage"
+                );
+
+
+            message.classList.remove(
+                "card-pop"
+            );
+
+
+            void message.offsetWidth;
+
+
+            message.classList.add(
+                "card-pop"
+            );
+
+        }
+
+
+
+        /* =====================================================
+           SHARED SHELF
+        ====================================================== */
+
+        function showShelf(
+            shelf,
+            button
+        ) {
+
+            document
+                .querySelectorAll(
+                    ".shelf-content"
+                )
+                .forEach(
+
+                    function(content) {
+
+                        content.classList.remove(
+                            "active-shelf"
+                        );
+
+                    }
+
+                );
+
+
+            document
+                .querySelectorAll(
+                    ".shelf-tab"
+                )
+                .forEach(
+
+                    function(tab) {
+
+                        tab.classList.remove(
+                            "active"
+                        );
+
+                    }
+
+                );
+
+
+            document
+                .getElementById(
+                    shelf + "Shelf"
+                )
+                .classList.add(
+                    "active-shelf"
+                );
+
+
+            button.classList.add(
+                "active"
+            );
+
+        }
+
+
+
+        const shelfItems =
+            document.querySelectorAll(
+                ".shelf-item"
+            );
+
+
+
+        function loadShelf() {
+
+            shelfItems.forEach(
+
+                function(item) {
+
+                    const key =
+                        item.dataset.shelf;
+
+
+                    if (
+                        localStorage.getItem(
+                            "shelf-" + key
+                        ) === "done"
+                    ) {
+
+                        setShelfDone(
+                            item,
+                            true
+                        );
+
+                    }
+
+                }
+
+            );
+
+        }
+
+
+
+        function toggleShelfItem(item) {
+
+            const key =
+                item.dataset.shelf;
+
+
+            const done =
+                item.classList
+                    .contains(
+                        "shelf-done"
+                    );
+
+
+            if (done) {
+
+                localStorage.removeItem(
+                    "shelf-" + key
+                );
+
+
+                setShelfDone(
+                    item,
+                    false
+                );
+
+            }
+
+            else {
+
+                localStorage.setItem(
+                    "shelf-" + key,
+                    "done"
+                );
+
+
+                setShelfDone(
+                    item,
+                    true
+                );
+
+            }
+
+        }
+
+
+
+        function setShelfDone(
+            item,
+            done
+        ) {
+
+            const status =
+                item.querySelector(
+                    "small"
+                );
+
+
+            if (done) {
+
+                item.classList.add(
+                    "shelf-done"
+                );
+
+
+                status.textContent =
+                    "✅ انجام شد";
+
+            }
+
+            else {
+
+                item.classList.remove(
+                    "shelf-done"
+                );
+
+
+                status.textContent =
+                    "⬜ هنوز مونده";
+
+            }
+
+        }
+
+
+        loadShelf();
+
+
+
+        /* =====================================================
+           RANDOM PICKER
+        ====================================================== */
+
+        const randomChoices = [
+
+            "🎬 امشب فیلم ببینیم.",
+
+            "📺 امشب یه قسمت سریال.",
+
+            "📚 بیست دقیقه کنار هم کتاب بخونیم.",
+
+            "🍿 یه فیلمی انتخاب کنیم که هیچکدوم قبلاً ندیدیم.",
+
+            "☕ کتاب + نوشیدنی + بدون گوشی.",
+
+            "😭 امشب حق انتخاب کامل با صباست.",
+
+            "🤭 امشب آرین انتخاب کنه و صبا حق اعتراض نداره.",
+
+            "🎟️ به‌جای خونه، برنامه‌ی سینما بچینیم."
+
+        ];
+
+
+
+        function pickTonight() {
+
+            const result =
+                document.getElementById(
+                    "randomPickResult"
+                );
+
+
+            result.textContent =
+                "در حال تصمیم‌گیری بسیار علمی... 🎲";
+
+
+            setTimeout(
+
+                function() {
+
+                    result.textContent =
+                        randomChoices[
+                            Math.floor(
+                                Math.random() *
+                                randomChoices.length
+                            )
+                        ];
+
+
+                    result.classList.remove(
+                        "card-pop"
+                    );
+
+
+                    void result.offsetWidth;
+
+
+                    result.classList.add(
+                        "card-pop"
+                    );
+
+                },
+
+                500
+
+            );
+
+        }
+
+
+
+        /* =====================================================
+           FUTURE TIMELINE
+        ====================================================== */
+
+        const futureStops =
+            document.querySelectorAll(
+                ".future-stop"
+            );
+
+
+
+        function loadFutureStops() {
+
+            futureStops.forEach(
+
+                function(stop) {
+
+                    const key =
+                        stop.dataset.stop;
+
+
+                    if (
+                        localStorage.getItem(
+                            "future-" + key
+                        ) === "unlocked"
+                    ) {
+
+                        setStopUnlocked(
+                            stop,
+                            true
+                        );
+
+                    }
+
+                }
+
+            );
+
+        }
+
+
+
+        function toggleFutureStop(stop) {
+
+            const key =
+                stop.dataset.stop;
+
+
+            const unlocked =
+                stop.classList
+                    .contains(
+                        "stop-unlocked"
+                    );
+
+
+            if (unlocked) {
+
+                localStorage.removeItem(
+                    "future-" + key
+                );
+
+
+                setStopUnlocked(
+                    stop,
+                    false
+                );
+
+            }
+
+            else {
+
+                localStorage.setItem(
+                    "future-" + key,
+                    "unlocked"
+                );
+
+
+                setStopUnlocked(
+                    stop,
+                    true
+                );
+
+
+                createMiniCelebration();
+
+            }
+
+        }
+
+
+
+        function setStopUnlocked(
+            stop,
+            unlocked
+        ) {
+
+            const lock =
+                stop.querySelector(
+                    ".stop-lock"
+                );
+
+
+            if (unlocked) {
+
+                stop.classList.add(
+                    "stop-unlocked"
+                );
+
+
+                lock.textContent =
+                    "✅";
+
+            }
+
+            else {
+
+                stop.classList.remove(
+                    "stop-unlocked"
+                );
+
+
+                lock.textContent =
+                    "🔒";
+
+            }
+
+        }
+
+
+        loadFutureStops();
+
+
+
+        /* =====================================================
+           MINI CELEBRATION
+        ====================================================== */
+
+        function createMiniCelebration() {
+
+            const icons = [
+
+                "❤️",
+                "✨",
+                "🌟",
+                "💖"
+
+            ];
+
+
+            for (
+                let i = 0;
+                i < 10;
+                i++
+            ) {
+
+                const item =
+                    document.createElement(
+                        "span"
+                    );
+
+
+                item.className =
+                    "celebration-item";
+
+
+                item.textContent =
+                    icons[
+                        Math.floor(
+                            Math.random() *
+                            icons.length
+                        )
+                    ];
+
+
+                item.style.left =
+                    (
+                        10 +
+                        Math.random() * 80
+                    ) + "%";
+
+
+                document.body.appendChild(
+                    item
+                );
+
+
+                setTimeout(
+
+                    function() {
+
+                        item.remove();
+
+                    },
+
+                    1500
+
+                );
+
+            }
+
+        }
+
+
+
+        /* =====================================================
+           ROAD TRIP GAME
+        ====================================================== */
+
+        const roadCanvas =
+            document.getElementById(
+                "roadCanvas"
+            );
+
+
+        const roadCtx =
+            roadCanvas.getContext(
+                "2d"
+            );
+
+
+        let roadRunning =
+            false;
+
+
+        let roadAnimation =
+            null;
+
+
+        let roadHearts =
+            0;
+
+
+        let roadFuel =
+            5;
+
+
+        let roadMemories =
+            0;
+
+
+        let roadSpawnTimer =
+            0;
+
+
+        let roadDistance =
+            0;
+
+
+        let roadObjects =
+            [];
+
+
+        let stampsUnlocked =
+            0;
+
+
+
+        const camper = {
+
+            x: 150,
+
+            y: 470,
+
+            width: 62,
+
+            height: 62,
+
+            speed: 7
+
+        };
+
+
+
+        const roadKeys = {
+
+            left: false,
+
+            right: false
+
+        };
+
+
+
+        const stampFlags = [
+
+            "🇮🇹",
+
+            "🇫🇷",
+
+            "🇦🇹",
+
+            "🇨🇭",
+
+            "🇩🇪"
+
+        ];
+
+
+
+        /* =====================================================
+           START ROAD GAME
+        ====================================================== */
+
+        function startRoadGame() {
+
+            roadRunning =
+                true;
+
+
+            roadHearts =
+                0;
+
+
+            roadFuel =
+                5;
+
+
+            roadMemories =
+                0;
+
+
+            roadSpawnTimer =
+                0;
+
+
+            roadDistance =
+                0;
+
+
+            roadObjects =
+                [];
+
+
+            stampsUnlocked =
+                0;
+
+
+            camper.x =
+                roadCanvas.width /
+                2 -
+                camper.width /
+                2;
+
+
+            resetPassport();
+
+
+            updateRoadStats();
+
+
+            document
+                .getElementById(
+                    "roadOverlay"
+                )
+                .classList
+                .add("hidden");
+
+
+            if (roadAnimation) {
+
+                cancelAnimationFrame(
+                    roadAnimation
+                );
+
+            }
+
+
+            roadGameLoop();
+
+        }
+
+
+
+        /* =====================================================
+           ROAD LOOP
+        ==================     
+                           /* =====================================================
+           ROAD LOOP
+        ====================================================== */
+
+        function roadGameLoop() {
+
+            if (!roadRunning) {
+
+                return;
+
+            }
+
+
+            updateRoadGame();
+
+
+            drawRoadGame();
+
+
+            roadAnimation =
+                requestAnimationFrame(
+                    roadGameLoop
+                );
+
+        }
+
+
+
+        /* =====================================================
+           UPDATE ROAD GAME
+        ====================================================== */
+
+        function updateRoadGame() {
+
+            roadDistance++;
+
+
+            if (roadKeys.left) {
+
+                camper.x -=
+                    camper.speed;
+
+            }
+
+
+            if (roadKeys.right) {
+
+                camper.x +=
+                    camper.speed;
+
+            }
+
+
+            if (
+                camper.x < 8
+            ) {
+
+                camper.x =
+                    8;
+
+            }
+
+
+            if (
+                camper.x +
+                camper.width >
+                roadCanvas.width - 8
+            ) {
+
+                camper.x =
+                    roadCanvas.width -
+                    camper.width -
+                    8;
+
+            }
+
+
+            roadSpawnTimer++;
+
+
+            if (
+                roadSpawnTimer > 45
+            ) {
+
+                spawnRoadObject();
+
+
+                roadSpawnTimer =
+                    0;
+
+            }
+
+
+            roadObjects.forEach(
+
+                function(object) {
+
+                    object.y +=
+                        object.speed;
+
+                }
+
+            );
+
+
+            for (
+                let i =
+                    roadObjects.length - 1;
+                i >= 0;
+                i--
+            ) {
+
+                const object =
+                    roadObjects[i];
+
+
+                if (
+                    roadCollision(
+                        camper,
+                        object
+                    )
+                ) {
+
+                    collectRoadObject(
+                        object
+                    );
+
+
+                    roadObjects.splice(
+                        i,
+                        1
+                    );
+
+                }
+
+                else if (
+                    object.y >
+                    roadCanvas.height +
+                    60
+                ) {
+
+                    roadObjects.splice(
+                        i,
+                        1
+                    );
+
+                }
+
+            }
+
+
+            if (
+                roadDistance % 850 ===
+                0
+            ) {
+
+                unlockNextStamp();
+
+            }
+
+
+            if (
+                stampsUnlocked >= 5
+            ) {
+
+                finishRoadTrip();
+
+            }
+
+
+            if (
+                roadFuel <= 0
+            ) {
+
+                endRoadGame(
+                    false
+                );
+
+            }
+
+        }
+
+
+
+        /* =====================================================
+           SPAWN OBJECT
+        ====================================================== */
+
+        function spawnRoadObject() {
+
+            const chance =
+                Math.random();
+
+
+            let type;
+
+
+            if (
+                chance < 0.42
+            ) {
+
+                type =
+                    "heart";
+
+            }
+
+            else if (
+                chance < 0.64
+            ) {
+
+                type =
+                    "fuel";
+
+            }
+
+            else if (
+                chance < 0.84
+            ) {
+
+                type =
+                    "memory";
+
+            }
+
+            else {
+
+                type =
+                    "hole";
+
+            }
+
+
+            roadObjects.push({
+
+                x:
+                    24 +
+                    Math.random() *
+                    (
+                        roadCanvas.width -
+                        80
+                    ),
+
+                y:
+                    -55,
+
+                width:
+                    44,
+
+                height:
+                    44,
+
+                speed:
+                    2.8 +
+                    Math.random() *
+                    1.8,
+
+                type:
+                    type
+
+            });
+
+        }
+
+
+
+        /* =====================================================
+           COLLECT
+        ====================================================== */
+
+        function collectRoadObject(
+            object
+        ) {
+
+            if (
+                object.type ===
+                "heart"
+            ) {
+
+                roadHearts++;
+
+
+                roadPop(
+                    "❤️",
+                    object
+                );
+
+            }
+
+
+            else if (
+                object.type ===
+                "fuel"
+            ) {
+
+                roadFuel =
+                    Math.min(
+                        9,
+                        roadFuel + 1
+                    );
+
+
+                roadPop(
+                    "⛽",
+                    object
+                );
+
+            }
+
+
+            else if (
+                object.type ===
+                "memory"
+            ) {
+
+                roadMemories++;
+
+
+                roadPop(
+                    "📸",
+                    object
+                );
+
+            }
+
+
+            else {
+
+                roadFuel--;
+
+
+                roadPop(
+                    "💥",
+                    object
+                );
+
+            }
+
+
+            updateRoadStats();
+
+        }
+
+
+
+        /* =====================================================
+           DRAW ROAD
+        ====================================================== */
+
+        function drawRoadGame() {
+
+            roadCtx.clearRect(
+
+                0,
+                0,
+                roadCanvas.width,
+                roadCanvas.height
+
+            );
+
+
+            const gradient =
+                roadCtx.createLinearGradient(
+
+                    0,
+                    0,
+                    0,
+                    roadCanvas.height
+
+                );
+
+
+            gradient.addColorStop(
+
+                0,
+                "#303254"
+
+            );
+
+
+            gradient.addColorStop(
+
+                1,
+                "#111426"
+
+            );
+
+
+            roadCtx.fillStyle =
+                gradient;
+
+
+            roadCtx.fillRect(
+
+                0,
+                0,
+                roadCanvas.width,
+                roadCanvas.height
+
+            );
+
+
+
+            /* کناره‌های جاده */
+
+            roadCtx.fillStyle =
+                "rgba(57,122,76,0.45)";
+
+
+            roadCtx.fillRect(
+
+                0,
+                0,
+                35,
+                roadCanvas.height
+
+            );
+
+
+            roadCtx.fillRect(
+
+                roadCanvas.width - 35,
+                0,
+                35,
+                roadCanvas.height
+
+            );
+
+
+
+            /* خط جاده */
+
+            roadCtx.strokeStyle =
+                "rgba(255,255,255,0.22)";
+
+
+            roadCtx.lineWidth =
+                4;
+
+
+            roadCtx.setLineDash([
+
+                22,
+                24
+
+            ]);
+
+
+            roadCtx.beginPath();
+
+
+            roadCtx.moveTo(
+
+                roadCanvas.width / 2,
+                0
+
+            );
+
+
+            roadCtx.lineTo(
+
+                roadCanvas.width / 2,
+                roadCanvas.height
+
+            );
+
+
+            roadCtx.stroke();
+
+
+            roadCtx.setLineDash([]);
+
+
+
+            /* Wohnmobil */
+
+            roadCtx.font =
+                "52px sans-serif";
+
+
+            roadCtx.textAlign =
+                "center";
+
+
+            roadCtx.textBaseline =
+                "middle";
+
+
+            roadCtx.fillText(
+
+                "🚐",
+
+                camper.x +
+                camper.width / 2,
+
+                camper.y +
+                camper.height / 2
+
+            );
+
+
+
+            /* آیتم‌های جاده */
+
+            roadObjects.forEach(
+
+                function(object) {
+
+                    let icon;
+
+
+                    if (
+                        object.type ===
+                        "heart"
+                    ) {
+
+                        icon =
+                            "❤️";
+
+                    }
+
+                    else if (
+                        object.type ===
+                        "fuel"
+                    ) {
+
+                        icon =
+                            "⛽";
+
+                    }
+
+                    else if (
+                        object.type ===
+                        "memory"
+                    ) {
+
+                        icon =
+                            "📸";
+
+                    }
+
+                    else {
+
+                        icon =
+                            "🕳️";
+
+                    }
+
+
+                    roadCtx.font =
+                        "37px sans-serif";
+
+
+                    roadCtx.fillText(
+
+                        icon,
+
+                        object.x +
+                        object.width / 2,
+
+                        object.y +
+                        object.height / 2
+
+                    );
+
+                }
+
+            );
+
+        }
+
+
+
+        /* =====================================================
+           COLLISION
+        ====================================================== */
+
+        function roadCollision(
+            a,
+            b
+        ) {
+
+            return (
+
+                a.x <
+                b.x + b.width
+
+                &&
+
+                a.x + a.width >
+                b.x
+
+                &&
+
+                a.y <
+                b.y + b.height
+
+                &&
+
+                a.y + a.height >
+                b.y
+
+            );
+
+        }
+
+
+
+        /* =====================================================
+           ROAD STATS
+        ====================================================== */
+
+        function updateRoadStats() {
+
+            document
+                .getElementById(
+                    "roadHearts"
+                )
+                .textContent =
+                roadHearts;
+
+
+            document
+                .getElementById(
+                    "roadFuel"
+                )
+                .textContent =
+                roadFuel;
+
+
+            document
+                .getElementById(
+                    "roadMemories"
+                )
+                .textContent =
+                roadMemories;
+
+        }
+
+
+
+        /* =====================================================
+           PASSPORT
+        ====================================================== */
+
+        function resetPassport() {
+
+            const container =
+                document.getElementById(
+                    "passportStamps"
+                );
+
+
+            container.innerHTML =
+                stampFlags.map(
+
+                    function(flag) {
+
+                        return `
+                            <span class="locked-stamp">
+                                ${flag} ?
+                            </span>
+                        `;
+
+                    }
+
+                ).join("");
+
+        }
+
+
+
+        function unlockNextStamp() {
+
+            if (
+                stampsUnlocked >=
+                stampFlags.length
+            ) {
+
+                return;
+
+            }
+
+
+            const stamps =
+                document.querySelectorAll(
+                    "#passportStamps span"
+                );
+
+
+            stamps[
+                stampsUnlocked
+            ].classList.remove(
+                "locked-stamp"
+            );
+
+
+            stamps[
+                stampsUnlocked
+            ].classList.add(
+                "unlocked-stamp"
+            );
+
+
+            stamps[
+                stampsUnlocked
+            ].textContent =
+                stampFlags[
+                    stampsUnlocked
+                ] +
+                " ✅";
+
+
+            stampsUnlocked++;
+
+
+            createMiniCelebration();
+
+        }
+
+
+
+        /* =====================================================
+           ROAD ENDINGS
+        ====================================================== */
+
+        function finishRoadTrip() {
+
+            roadRunning =
+                false;
+
+
+            const overlay =
+                document.getElementById(
+                    "roadOverlay"
+                );
+
+
+            overlay.classList.remove(
+                "hidden"
+            );
+
+
+            overlay.innerHTML = `
+
+                <div class="road-overlay-box">
+
+                    <span class="road-big-icon">
+                        🏠❤️
+                    </span>
+
+                    <h3>
+                        Destination reached
+                    </h3>
+
+                    <p>
+                        Home, Germany 🇩🇪
+                        <br><br>
+                        ❤️ ${roadHearts}
+                        &nbsp;
+                        📸 ${roadMemories}
+                    </p>
+
+                    <p>
+                        آخر بعضی سفرها،
+                        مقصد یه شهر نیست...
+                        یه خونه‌ست.
+                    </p>
+
+                    <button
+                        class="main-button"
+                        onclick="startRoadGame()"
+                    >
+                        دوباره بریم 🚐
+                    </button>
+
+                </div>
+
+            `;
+
+
+            createMiniCelebration();
+
+        }
+
+
+
+        function endRoadGame() {
+
+            roadRunning =
+                false;
+
+
+            const overlay =
+                document.getElementById(
+                    "roadOverlay"
+                );
+
+
+            overlay.classList.remove(
+                "hidden"
+            );
+
+
+            overlay.innerHTML = `
+
+                <div class="road-overlay-box">
+
+                    <span class="road-big-icon">
+                        😭⛽
+                    </span>
+
+                    <h3>
+                        بنزین تموم شد!
+                    </h3>
+
+                    <p>
+                        ظاهراً عشق به تنهایی
+                        Wohnmobil رو روشن نگه نمی‌داره 😭
+                    </p>
+
+                    <button
+                        class="main-button"
+                        onclick="startRoadGame()"
+                    >
+                        دوباره تلاش کنیم
+                    </button>
+
+                </div>
+
+            `;
+
+        }
+
+
+
+        /* =====================================================
+           ROAD CONTROLS
+        ====================================================== */
+
+        function bindRoadControl(
+            element,
+            direction
+        ) {
+
+            element.addEventListener(
+
+                "touchstart",
+
+                function(event) {
+
+                    event.preventDefault();
+
+
+                    roadKeys[
+                        direction
+                    ] =
+                        true;
+
+                },
+
+                {
+                    passive:
+                        false
+                }
+
+            );
+
+
+            element.addEventListener(
+
+                "touchend",
+
+                function(event) {
+
+                    event.preventDefault();
+
+
+                    roadKeys[
+                        direction
+                    ] =
+                        false;
+
+                },
+
+                {
+                    passive:
+                        false
+                }
+
+            );
+
+
+            element.addEventListener(
+
+                "touchcancel",
+
+                function() {
+
+                    roadKeys[
+                        direction
+                    ] =
+                        false;
+
+                }
+
+            );
+
+
+            element.addEventListener(
+
+                "mousedown",
+
+                function() {
+
+                    roadKeys[
+                        direction
+                    ] =
+                        true;
+
+                }
+
+            );
+
+
+            element.addEventListener(
+
+                "mouseup",
+
+                function() {
+
+                    roadKeys[
+                        direction
+                    ] =
+                        false;
+
+                }
+
+            );
+
+
+            element.addEventListener(
+
+                "mouseleave",
+
+                function() {
+
+                    roadKeys[
+                        direction
+                    ] =
+                        false;
+
+                }
+
+            );
+
+        }
+
+
+
+        bindRoadControl(
+
+            document.getElementById(
+                "roadLeft"
+            ),
+
+            "left"
+
+        );
+
+
+        bindRoadControl(
+
+            document.getElementById(
+                "roadRight"
+            ),
+
+            "right"
+
+        );
+
+
+
+        document.addEventListener(
+
+            "keydown",
+
+            function(event) {
+
+                if (
+                    event.key ===
+                    "ArrowLeft"
+                ) {
+
+                    roadKeys.left =
+                        true;
+
+                }
+
+
+                if (
+                    event.key ===
+                    "ArrowRight"
+                ) {
+
+                    roadKeys.right =
+                        true;
+
+                }
+
+            }
+
+        );
+
+
+        document.addEventListener(
+
+            "keyup",
+
+            function(event) {
+
+                if (
+                    event.key ===
+                    "ArrowLeft"
+                ) {
+
+                    roadKeys.left =
+                        false;
+
+                }
+
+
+                if (
+                    event.key ===
+                    "ArrowRight"
+                ) {
+
+                    roadKeys.right =
+                        false;
+
+                }
+
+            }
+
+        );
+
+
+
+        /* =====================================================
+           ROAD POP
+        ====================================================== */
+
+        function roadPop(
+            symbol,
+            object
+        ) {
+
+            const rect =
+                roadCanvas
+                    .getBoundingClientRect();
+
+
+            const pop =
+                document.createElement(
+                    "span"
+                );
+
+
+            pop.className =
+                "road-pop";
+
+
+            pop.textContent =
+                symbol;
+
+
+            pop.style.left =
+                (
+                    rect.left +
+                    object.x /
+                    roadCanvas.width *
+                    rect.width
+                ) + "px";
+
+
+            pop.style.top =
+                (
+                    rect.top +
+                    object.y /
+                    roadCanvas.height *
+                    rect.height
+                ) + "px";
+
+
+            document.body.appendChild(
+                pop
+            );
+
+
+            setTimeout(
+
+                function() {
+
+                    pop.remove();
+
+                },
+
+                750
+
+            );
+
+        }
+
+
+
+        /* =====================================================
+           اولین تصویر بازی
+        ====================================================== */
+
+        resetPassport();
+
+        updateRoadStats();
+
+        drawRoadGame();
+
+
+    </script>
+
+
+</body>
+
+</html>
