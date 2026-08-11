@@ -1,0 +1,3442 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>کپسول زمان آرین و صبا 🔐❤️</title>
+
+    <meta
+        name="theme-color"
+        content="#17152b"
+    >
+
+    <meta
+        name="description"
+        content="کپسول زمان آرین و صبا؛ نامه‌ها، پیش‌بینی‌ها، عکس‌ها و چیزهایی برای آینده."
+    >
+
+    <link
+        rel="stylesheet"
+        href="capsule.css"
+    >
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         BACKGROUND
+    ====================================================== -->
+
+    <div id="capsuleParticles"></div>
+
+
+    <!-- =====================================================
+         TOP BAR
+    ====================================================== -->
+
+    <header class="top-bar">
+
+        <a
+            href="index.html"
+            class="home-button"
+        >
+            ← برگشت
+        </a>
+
+        <div class="top-title">
+            TIME CAPSULE • A ❤️ S
+        </div>
+
+        <button
+            id="themeButton"
+            class="theme-button"
+            type="button"
+            onclick="cycleTheme()"
+            aria-label="تغییر تم"
+        >
+            ☀️
+        </button>
+
+    </header>
+
+
+    <main class="page">
+
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section class="capsule-card hero-section">
+
+            <div class="hero-lock">
+                🔐
+            </div>
+
+            <p class="small-label">
+                ARCHIVE OF US
+            </p>
+
+            <h1>
+                بعضی چیزها برای
+                <span>الان</span>
+                نیستن...
+            </h1>
+
+            <p class="hero-text">
+                اینجا چند تکه از «ما» رو برای آینده قفل می‌کنیم؛
+                نامه، عکس، پیش‌بینی، خاطره و چیزهایی که شاید چند سال بعد
+                خیلی بیشتر از امروز معنی داشته باشن.
+            </p>
+
+
+            <div class="main-countdown">
+
+                <p>
+                    تا باز شدن کپسول اصلی
+                </p>
+
+                <h2>
+                    ۱۱ آگوست ۲۰۲۹
+                </h2>
+
+                <div class="countdown-grid">
+
+                    <div>
+                        <strong id="mainDays">---</strong>
+                        <span>روز</span>
+                    </div>
+
+                    <div>
+                        <strong id="mainHours">--</strong>
+                        <span>ساعت</span>
+                    </div>
+
+                    <div>
+                        <strong id="mainMinutes">--</strong>
+                        <span>دقیقه</span>
+                    </div>
+
+                    <div>
+                        <strong id="mainSeconds">--</strong>
+                        <span>ثانیه</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="main-button"
+                type="button"
+                onclick="scrollToCapsules()"
+            >
+                بریم سراغ گاوصندوق‌ها ↓
+            </button>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             VAULTS
+        ====================================================== -->
+
+        <section
+            class="capsule-card"
+            id="vaultSection"
+        >
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    🗄️
+                </span>
+
+                <h2>
+                    آرشیو آینده
+                </h2>
+
+                <p>
+                    هر صندوق تاریخ خودش رو داره.
+                    بعضی‌ها هنوز خالی‌ان و بعداً می‌تونیم نامه یا عکسشون رو اضافه کنیم.
+                </p>
+
+            </div>
+
+
+            <div class="vault-grid">
+
+
+                <!-- Vault 1 -->
+
+                <button
+                    class="vault-card vault-pink"
+                    type="button"
+                    onclick="openPresetCapsule('futureLetter')"
+                >
+
+                    <span class="vault-number">
+                        VAULT 01
+                    </span>
+
+                    <span class="vault-icon">
+                        💌
+                    </span>
+
+                    <h3>
+                        نامه به صبای آینده
+                    </h3>
+
+                    <p>
+                        نامه‌ای که بعداً نوشته می‌شه و سه سال بعد بازش می‌کنیم.
+                    </p>
+
+                    <div class="vault-date">
+                        🔒 11 AUG 2029
+                    </div>
+
+                    <span
+                        class="vault-status"
+                        id="status-futureLetter"
+                    >
+                        در حال بررسی...
+                    </span>
+
+                </button>
+
+
+
+                <!-- Vault 2 -->
+
+                <button
+                    class="vault-card vault-gold"
+                    type="button"
+                    onclick="openPresetCapsule('photoMemory')"
+                >
+
+                    <span class="vault-number">
+                        VAULT 02
+                    </span>
+
+                    <span class="vault-icon">
+                        📸
+                    </span>
+
+                    <h3>
+                        عکس قفل‌شده
+                    </h3>
+
+                    <p>
+                        عکسش رو بعداً آپلود می‌کنیم؛
+                        فعلاً فقط جای اون رو برای آینده نگه می‌داریم.
+                    </p>
+
+                    <div class="vault-date">
+                        🔒 14 FEB 2029
+                    </div>
+
+                    <span
+                        class="vault-status"
+                        id="status-photoMemory"
+                    >
+                        در حال بررسی...
+                    </span>
+
+                </button>
+
+
+
+                <!-- Vault 3 -->
+
+                <button
+                    class="vault-card vault-purple"
+                    type="button"
+                    onclick="openPresetCapsule('predictions2030')"
+                >
+
+                    <span class="vault-number">
+                        VAULT 03
+                    </span>
+
+                    <span class="vault-icon">
+                        🔮
+                    </span>
+
+                    <h3>
+                        پیش‌بینی‌های ما از ۲۰۳۰
+                    </h3>
+
+                    <p>
+                        الان حدس می‌زنیم آینده چه شکلی می‌شه؛
+                        بعداً می‌بینیم چقدر پرت گفتیم 😭
+                    </p>
+
+                    <div class="vault-date">
+                        🔒 01 JAN 2030
+                    </div>
+
+                    <span
+                        class="vault-status"
+                        id="status-predictions2030"
+                    >
+                        در حال بررسی...
+                    </span>
+
+                </button>
+
+
+
+                <!-- Vault 4 -->
+
+                <button
+                    class="vault-card vault-blue"
+                    type="button"
+                    onclick="openPresetCapsule('beforeAfter')"
+                >
+
+                    <span class="vault-number">
+                        VAULT 04
+                    </span>
+
+                    <span class="vault-icon">
+                        ❤️
+                    </span>
+
+                    <h3>
+                        ما؛ قبل و بعد
+                    </h3>
+
+                    <p>
+                        جواب‌های امروز در برابر جواب‌های آینده.
+                        آرین و صبای ۲۰۲۶ در برابر نسخه‌ی چند سال بعد.
+                    </p>
+
+                    <div class="vault-date">
+                        🔒 11 AUG 2030
+                    </div>
+
+                    <span
+                        class="vault-status"
+                        id="status-beforeAfter"
+                    >
+                        در حال بررسی...
+                    </span>
+
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SNAPSHOT — PROVIDED BY ARIAN
+        ====================================================== -->
+
+        <section class="capsule-card snapshot-section">
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    🕰️
+                </span>
+
+                <h2>
+                    ما در روز ساخت این کپسول
+                </h2>
+
+                <p>
+                    ثبت شده در ۱۱ آگوست ۲۰۲۶؛
+                    برای اینکه چند سال بعد دقیقاً یادمون بیاد این روزها چه شکلی بودن.
+                </p>
+
+            </div>
+
+
+            <div class="snapshot-meta">
+
+                <span>
+                    📱 ساخته‌شده با گوشی
+                </span>
+
+                <span>
+                    🦵 پای شکسته‌ی آرین
+                </span>
+
+                <span>
+                    ❤️ هنوز وسط داستان
+                </span>
+
+            </div>
+
+
+            <article class="snapshot-letter">
+
+                <div class="paper-pin">
+                    ❤️
+                </div>
+
+                <h3>
+                    برای صبای آینده
+                </h3>
+
+                <p>
+                    صبا جونم سلام، خخخ من دارم این سایت رو تن تن با گوشی میسازم پامم شکسته
+                    دیشب اومدی پیشم خیلی خوش گذشت کنارهم خوابیدیم خخخ ، خیلی دوستت دارم
+                    زنگت زدم بیای اینو ببینی خواب بودی امروز روز فرده و کلاس زبان عباسی داری
+                    ساعت ۶ اینا دیروز تولد الما بود نرفتیم و ی دعوای کوچولومونم شد خخخ
+                    عاشقتم ممنونم ک تو زندگیمی و ب زندگیم رنگ عشق رو دادی درسته الان ی ویژگیات
+                    ب شدت رو اعصابمه بخصوص داستان رابطتت با مامانت و فک کنم تمومی نداره🤭
+                    اما من عاشق این رابطم و میخوام تا اخر عمرم کنارهم باشیم و باهم پیر بشیم
+                    بچه دار بشیم نام نام نام خیلی دوستت دارم خیلییی قلب منی
+                </p>
+
+                <p>
+                    میدونم تو روزای سختی هستی امتحانت رو هوا هست دیشب بود یا پریشب گفتی انگار
+                    تلک جواب همه رو داده جز تو منم اعصابم از خالت خرد شد با این نامه تخمی ک نوشت🤭
+                    حالا بگذریم میدونم روزای سختی رو سر میکنی ولی مطمئنا باهم مهاجرت میکنیم
+                    و ی زندگی خوبی رو کنارهم میسازیم عشق نازم❤️❤️
+                </p>
+
+                <footer>
+                    — آرین، 11 August 2026
+                </footer>
+
+            </article>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             FUTURE LETTER PLACEHOLDERS
+        ====================================================== -->
+
+        <section class="capsule-card">
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    💌
+                </span>
+
+                <h2>
+                    نامه‌هایی که هنوز نوشته نشدن
+                </h2>
+
+                <p>
+                    فعلاً فقط پاکت‌ها رو می‌ذاریم.
+                    متن واقعی رو هر وقت خواستی بعداً داخل همین فایل اضافه می‌کنیم.
+                </p>
+
+            </div>
+
+
+            <div class="letter-envelope-grid">
+
+
+                <div class="letter-envelope">
+
+                    <span class="envelope-icon">
+                        💌
+                    </span>
+
+                    <h3>
+                        برای صبا در ۲۰۲۹
+                    </h3>
+
+                    <p>
+                        هنوز نوشته نشده.
+                    </p>
+
+                    <span class="envelope-lock">
+                        🔒 باز شدن: 11 AUG 2029
+                    </span>
+
+                </div>
+
+
+                <div class="letter-envelope">
+
+                    <span class="envelope-icon">
+                        🌧️
+                    </span>
+
+                    <h3>
+                        وقتی روز سختی داری
+                    </h3>
+
+                    <p>
+                        متنش رو بعداً می‌نویسیم.
+                    </p>
+
+                    <span class="envelope-lock">
+                        ✍️ جای نامه رزرو شده
+                    </span>
+
+                </div>
+
+
+                <div class="letter-envelope">
+
+                    <span class="envelope-icon">
+                        🏠
+                    </span>
+
+                    <h3>
+                        اولین روز خونه‌مون در آلمان
+                    </h3>
+
+                    <p>
+                        تاریخش رو وقتی معلوم شد تنظیم می‌کنیم.
+                    </p>
+
+                    <span class="envelope-lock">
+                        🕰️ تاریخ هنوز نامعلوم
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             PREDICTIONS
+        ====================================================== -->
+
+        <section class="capsule-card">
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    🔮
+                </span>
+
+                <h2>
+                    پیش‌بینی‌های ما از آینده
+                </h2>
+
+                <p>
+                    لازم نیست الان پرشون کنی.
+                    هر وقت خواستی جواب‌ها رو بنویس و ذخیره کن؛
+                    روی همین دستگاه می‌مونن.
+                </p>
+
+            </div>
+
+
+            <div class="prediction-grid">
+
+
+                <label class="prediction-item">
+
+                    <span>
+                        🏠 سال ۲۰۳۰ فکر می‌کنیم کجا زندگی می‌کنیم؟
+                    </span>
+
+                    <textarea
+                        id="prediction-home"
+                        placeholder="جواب رو بعداً بنویس..."
+                    ></textarea>
+
+                </label>
+
+
+                <label class="prediction-item">
+
+                    <span>
+                        🚗 اولین ماشین مشترکمون چی می‌شه؟
+                    </span>
+
+                    <textarea
+                        id="prediction-car"
+                        placeholder="حدس آینده..."
+                    ></textarea>
+
+                </label>
+
+
+                <label class="prediction-item">
+
+                    <span>
+                        😴 کدوممون هنوز بیشتر می‌خوابه؟
+                    </span>
+
+                    <textarea
+                        id="prediction-sleep"
+                        placeholder="فکر کنم جوابش خیلی سخته 😭"
+                    ></textarea>
+
+                </label>
+
+
+                <label class="prediction-item">
+
+                    <span>
+                        🌍 تا ۲۰۳۰ چند کشور رو باهم دیدیم؟
+                    </span>
+
+                    <textarea
+                        id="prediction-countries"
+                        placeholder="یک عدد یا توضیح..."
+                    ></textarea>
+
+                </label>
+
+
+                <label class="prediction-item">
+
+                    <span>
+                        🎬 هنوز سر انتخاب فیلم بحث می‌کنیم؟
+                    </span>
+
+                    <textarea
+                        id="prediction-movie"
+                        placeholder="قطعاً؟ شاید؟ 😭"
+                    ></textarea>
+
+                </label>
+
+
+            </div>
+
+
+            <div class="action-row">
+
+                <button
+                    class="main-button"
+                    type="button"
+                    onclick="savePredictions()"
+                >
+                    مهر و موم پیش‌بینی‌ها 🔐
+                </button>
+
+                <span
+                    id="predictionSaveMessage"
+                    class="save-message"
+                ></span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             LOCKED PHOTO
+        ====================================================== -->
+
+        <section class="capsule-card">
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    📸
+                </span>
+
+                <h2>
+                    عکس قفل‌شده
+                </h2>
+
+                <p>
+                    عکس رو بعداً آپلود می‌کنیم.
+                    الان فقط قاب و سیستم قفل آماده‌ست.
+                </p>
+
+            </div>
+
+
+            <div class="locked-photo-frame">
+
+                <div
+                    id="photoVaultContent"
+                    class="photo-placeholder"
+                >
+
+                    <span class="photo-lock-icon">
+                        🔒
+                    </span>
+
+                    <h3>
+                        عکس هنوز اضافه نشده
+                    </h3>
+
+                    <p>
+                        بعداً فقط آدرس عکس رو داخل متغیر
+                        <strong>LOCKED_PHOTO_URL</strong>
+                        در پایین فایل قرار بده.
+                    </p>
+
+                    <span class="photo-unlock-date">
+                        باز شدن: 14 February 2029
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             BEFORE / AFTER
+        ====================================================== -->
+
+        <section class="capsule-card">
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    ❤️
+                </span>
+
+                <h2>
+                    آرین و صبای امروز ↔ آرین و صبای آینده
+                </h2>
+
+                <p>
+                    جواب‌های امروز رو ذخیره می‌کنیم.
+                    بعد از تاریخ باز شدن، نسخه‌ی آینده رو کنار همین‌ها می‌نویسیم.
+                </p>
+
+            </div>
+
+
+            <div class="before-after-grid">
+
+
+                <div class="era-card">
+
+                    <span class="era-year">
+                        2026
+                    </span>
+
+                    <h3>
+                        الان
+                    </h3>
+
+                    <label>
+                        تعریف «خونه» برای من چیه؟
+                        <textarea
+                            id="before-home"
+                            placeholder="بعداً بنویس..."
+                        ></textarea>
+                    </label>
+
+                    <label>
+                        بزرگ‌ترین آرزوم برای ما چیه؟
+                        <textarea
+                            id="before-dream"
+                            placeholder="بعداً بنویس..."
+                        ></textarea>
+                    </label>
+
+                    <label>
+                        فکر می‌کنم رابطه‌مون در آینده چه شکلی می‌شه؟
+                        <textarea
+                            id="before-relationship"
+                            placeholder="بعداً بنویس..."
+                        ></textarea>
+                    </label>
+
+                    <button
+                        class="secondary-button"
+                        type="button"
+                        onclick="saveBeforeAnswers()"
+                    >
+                        ذخیره جواب‌های امروز
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="era-card future-era"
+                    id="futureEraCard"
+                >
+
+                    <span class="era-year">
+                        2030
+                    </span>
+
+                    <h3>
+                        نسخه‌ی آینده
+                    </h3>
+
+                    <div id="futureEraLocked">
+
+                        <span class="big-lock">
+                            🔒
+                        </span>
+
+                        <p>
+                            این طرف ماجرا تا
+                            <strong>11 August 2030</strong>
+                            باز نمی‌شه.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        id="futureEraUnlocked"
+                        class="hidden"
+                    >
+
+                        <label>
+                            الان تعریف «خونه» برای من چیه؟
+                            <textarea
+                                id="after-home"
+                                placeholder="جواب نسخه‌ی آینده..."
+                            ></textarea>
+                        </label>
+
+                        <label>
+                            بزرگ‌ترین آرزوم برای ما الان چیه؟
+                            <textarea
+                                id="after-dream"
+                                placeholder="چی عوض شده؟"
+                            ></textarea>
+                        </label>
+
+                        <label>
+                            رابطه‌مون واقعاً چه شکلی شده؟
+                            <textarea
+                                id="after-relationship"
+                                placeholder="نسخه‌ی واقعی آینده..."
+                            ></textarea>
+                        </label>
+
+                        <button
+                            class="main-button"
+                            type="button"
+                            onclick="compareEras()"
+                        >
+                            مقایسه‌ی ۲۰۲۶ و ۲۰۳۰ ❤️
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div
+                id="eraComparison"
+                class="comparison-result hidden"
+            ></div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             MIDNIGHT CAPSULE
+        ====================================================== -->
+
+        <section class="capsule-card midnight-section">
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    🌌
+                </span>
+
+                <h2>
+                    Midnight Capsule
+                </h2>
+
+                <p>
+                    این یکی تاریخ نداره؛
+                    فقط وقتی همه خوابن باز می‌شه.
+                </p>
+
+            </div>
+
+
+            <div class="midnight-vault">
+
+                <div
+                    id="midnightLocked"
+                    class="midnight-locked"
+                >
+
+                    <span class="midnight-moon">
+                        🌙
+                    </span>
+
+                    <h3>
+                        این کپسول فقط بین ۰۰:۰۰ تا ۰۴:۰۰ باز می‌شه
+                    </h3>
+
+                    <p id="midnightStatus">
+                        ساعت رو چک می‌کنم...
+                    </p>
+
+                    <button
+                        class="secondary-button"
+                        type="button"
+                        onclick="checkMidnightCapsule(true)"
+                    >
+                        امتحان کن 🔐
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="midnightUnlocked"
+                    class="midnight-unlocked hidden"
+                >
+
+                    <span class="midnight-moon">
+                        🌙✨
+                    </span>
+
+                    <h3>
+                        همه خوابن...
+                    </h3>
+
+                    <p>
+                        متن مخصوص این کپسول هنوز نوشته نشده.
+                        یه شب مناسب براش یه نامه‌ی مخصوص نیمه‌شب می‌نویسیم. ❤️
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CUSTOM CAPSULE BUILDER
+        ====================================================== -->
+
+        <section class="capsule-card">
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    ➕
+                </span>
+
+                <h2>
+                    یه کپسول جدید بسازیم
+                </h2>
+
+                <p>
+                    بدون دست زدن به کد،
+                    عنوان، متن و تاریخ اضافه کن.
+                    کپسول‌های ساخته‌شده روی همین مرورگر ذخیره می‌شن.
+                </p>
+
+            </div>
+
+
+            <form
+                id="capsuleBuilder"
+                class="capsule-builder"
+                onsubmit="createCustomCapsule(event)"
+            >
+
+                <label>
+
+                    عنوان کپسول
+
+                    <input
+                        id="customTitle"
+                        type="text"
+                        maxlength="80"
+                        placeholder="مثلاً: برای وقتی بالاخره رفتیم ایتالیا"
+                        required
+                    >
+
+                </label>
+
+
+                <label>
+
+                    متن
+
+                    <textarea
+                        id="customText"
+                        maxlength="3000"
+                        placeholder="هرچی می‌خوای برای آینده بنویس..."
+                        required
+                    ></textarea>
+
+                </label>
+
+
+                <label>
+
+                    تاریخ باز شدن
+
+                    <input
+                        id="customDate"
+                        type="datetime-local"
+                        required
+                    >
+
+                </label>
+
+
+                <button
+                    class="main-button"
+                    type="submit"
+                >
+                    قفلش کن 🔐
+                </button>
+
+            </form>
+
+
+            <div class="custom-capsules-heading">
+
+                <h3>
+                    کپسول‌های ساخته‌شده
+                </h3>
+
+                <span id="customCapsuleCount">
+                    0
+                </span>
+
+            </div>
+
+
+            <div
+                id="customCapsuleList"
+                class="custom-capsule-list"
+            >
+
+                <p class="empty-state">
+                    هنوز کپسول شخصی جدیدی ساخته نشده.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             FOOTER
+        ====================================================== -->
+
+        <footer class="footer-text">
+
+            <p>
+                بعضی خاطره‌ها رو نمی‌شه نگه داشت،
+                ولی می‌شه یه جای کوچیک براشون توی آینده رزرو کرد. ❤️
+            </p>
+
+            <span>
+                Arian + Saba • Time Capsule
+            </span>
+
+        </footer>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         MODAL
+    ====================================================== -->
+
+    <div
+        id="capsuleModal"
+        class="modal hidden"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+    >
+
+        <div
+            class="modal-backdrop"
+            onclick="closeCapsuleModal()"
+        ></div>
+
+        <div class="modal-card">
+
+            <button
+                class="modal-close"
+                type="button"
+                onclick="closeCapsuleModal()"
+                aria-label="بستن"
+            >
+                ×
+            </button>
+
+            <span
+                id="modalIcon"
+                class="modal-icon"
+            >
+                🔐
+            </span>
+
+            <h2 id="modalTitle">
+                کپسول
+            </h2>
+
+            <p
+                id="modalSubtitle"
+                class="modal-subtitle"
+            ></p>
+
+            <div
+                id="modalBody"
+                class="modal-body"
+            ></div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         TOAST
+    ====================================================== -->
+
+    <div
+        id="toast"
+        class="toast"
+        aria-live="polite"
+    ></div>
+
+
+
+    <script>
+
+        /* =====================================================
+           IMPORTANT DATES
+        ====================================================== */
+
+        const CAPSULE_DATES = {
+
+            futureLetter:
+                new Date("2029-08-11T00:00:00"),
+
+            photoMemory:
+                new Date("2029-02-14T00:00:00"),
+
+            predictions2030:
+                new Date("2030-01-01T00:00:00"),
+
+            beforeAfter:
+                new Date("2030-08-11T00:00:00")
+
+        };
+
+
+        /* =====================================================
+           PHOTO PLACEHOLDER
+
+           بعداً وقتی عکس را در GitHub آپلود کردی،
+           فقط آدرسش را اینجا قرار بده.
+
+           Example:
+           const LOCKED_PHOTO_URL = "images/capsule-photo.jpg";
+        ====================================================== */
+
+        const LOCKED_PHOTO_URL = "";
+
+
+        /* =====================================================
+           FUTURE LETTER PLACEHOLDER
+
+           متن نامه را بعداً بین backtick ها بگذار.
+        ====================================================== */
+
+        const FUTURE_LETTER_TEXT = `
+این نامه هنوز نوشته نشده.
+
+آرین بعداً اینجا برای صبای آینده یه نامه می‌نویسه. ❤️
+        `.trim();
+
+
+
+        /* =====================================================
+           PRESET CAPSULE DATA
+        ====================================================== */
+
+        const PRESET_CAPSULES = {
+
+            futureLetter: {
+
+                icon:
+                    "💌",
+
+                title:
+                    "نامه به صبای آینده",
+
+                date:
+                    CAPSULE_DATES.futureLetter,
+
+                unlockedText:
+                    FUTURE_LETTER_TEXT
+
+            },
+
+
+            photoMemory: {
+
+                icon:
+                    "📸",
+
+                title:
+                    "عکس قفل‌شده",
+
+                date:
+                    CAPSULE_DATES.photoMemory,
+
+                unlockedText:
+                    "زمان عکس رسیده."
+
+            },
+
+
+            predictions2030: {
+
+                icon:
+                    "🔮",
+
+                title:
+                    "پیش‌بینی‌های ما از ۲۰۳۰",
+
+                date:
+                    CAPSULE_DATES.predictions2030,
+
+                unlockedText:
+                    "وقتشه ببینیم چقدر درست حدس زده بودیم."
+
+            },
+
+
+            beforeAfter: {
+
+                icon:
+                    "❤️",
+
+                title:
+                    "ما؛ قبل و بعد",
+
+                date:
+                    CAPSULE_DATES.beforeAfter,
+
+                unlockedText:
+                    "آرین و صبای ۲۰۲۶، با نسخه‌ی آینده‌شون ملاقات می‌کنن."
+
+            }
+
+        };
+
+
+
+        /* =====================================================
+           HELPERS
+        ====================================================== */
+
+        function isUnlocked(date) {
+
+            return (
+                new Date() >= date
+            );
+
+        }
+
+
+
+        function getRemaining(date) {
+
+            const now =
+                new Date();
+
+
+            let diff =
+                date.getTime() -
+                now.getTime();
+
+
+            if (diff <= 0) {
+
+                return {
+
+                    total:
+                        0,
+
+                    days:
+                        0,
+
+                    hours:
+                        0,
+
+                    minutes:
+                        0,
+
+                    seconds:
+                        0
+
+                };
+
+            }
+
+
+            const totalSeconds =
+                Math.floor(
+                    diff / 1000
+                );
+
+
+            const days =
+                Math.floor(
+                    totalSeconds /
+                    86400
+                );
+
+
+            const hours =
+                Math.floor(
+                    (
+                        totalSeconds %
+                        86400
+                    ) /
+                    3600
+                );
+
+
+            const minutes =
+                Math.floor(
+                    (
+                        totalSeconds %
+                        3600
+                    ) /
+                    60
+                );
+
+
+            const seconds =
+                totalSeconds %
+                60;
+
+
+            return {
+
+                total:
+                    diff,
+
+                days:
+                    days,
+
+                hours:
+                    hours,
+
+                minutes:
+                    minutes,
+
+                seconds:
+                    seconds
+
+            };
+
+        }
+
+
+
+        function formatDateFa(date) {
+
+            try {
+
+                return new Intl.DateTimeFormat(
+                    "fa-IR",
+                    {
+                        year:
+                            "numeric",
+
+                        month:
+                            "long",
+
+                        day:
+                            "numeric",
+
+                        hour:
+                            "2-digit",
+
+                        minute:
+                            "2-digit"
+                    }
+                ).format(date);
+
+            }
+
+            catch (error) {
+
+                return date.toLocaleString();
+
+            }
+
+        }
+
+
+
+        function escapeHTML(text) {
+
+            const div =
+                document.createElement(
+                    "div"
+                );
+
+
+            div.textContent =
+                text;
+
+
+            return div.innerHTML;
+
+        }
+
+
+
+        /* =====================================================
+           MAIN COUNTDOWN
+        ====================================================== */
+
+        function updateMainCountdown() {
+
+            const remaining =
+                getRemaining(
+                    CAPSULE_DATES.futureLetter
+                );
+
+
+            document
+                .getElementById(
+                    "mainDays"
+                )
+                .textContent =
+                remaining.days;
+
+
+            document
+                .getElementById(
+                    "mainHours"
+                )
+                .textContent =
+                String(
+                    remaining.hours
+                ).padStart(
+                    2,
+                    "0"
+                );
+
+
+            document
+                .getElementById(
+                    "mainMinutes"
+                )
+                .textContent =
+                String(
+                    remaining.minutes
+                ).padStart(
+                    2,
+                    "0"
+                );
+
+
+            document
+                .getElementById(
+                    "mainSeconds"
+                )
+                .textContent =
+                String(
+                    remaining.seconds
+                ).padStart(
+                    2,
+                    "0"
+                );
+
+        }
+
+
+        updateMainCountdown();
+
+
+        setInterval(
+
+            updateMainCountdown,
+
+            1000
+
+        );
+
+
+
+        /* =====================================================
+           VAULT STATUS
+        ====================================================== */
+
+        function updateVaultStatuses() {
+
+            Object.keys(
+                PRESET_CAPSULES
+            ).forEach(
+
+                function(key) {
+
+                    const item =
+                        PRESET_CAPSULES[
+                            key
+                        ];
+
+
+                    const status =
+                        document.getElementById(
+                            "status-" + key
+                        );
+
+
+                    if (!status) {
+
+                        return;
+
+                    }
+
+
+                    if (
+                        isUnlocked(
+                            item.date
+                        )
+                    ) {
+
+                        status.textContent =
+                            "🔓 آماده‌ی باز شدن";
+
+                        status.classList.add(
+                            "unlocked-status"
+                        );
+
+                    }
+
+                    else {
+
+                        const remaining =
+                            getRemaining(
+                                item.date
+                            );
+
+
+                        status.textContent =
+                            "🔒 " +
+                            remaining.days +
+                            " روز مونده";
+
+                    }
+
+                }
+
+            );
+
+        }
+
+
+        updateVaultStatuses();
+
+
+        setInterval(
+
+            updateVaultStatuses,
+
+            60000
+
+        );
+
+
+
+        /* =====================================================
+           OPEN PRESET CAPSULE
+        ====================================================== */
+
+        function openPresetCapsule(key) {
+
+            const item =
+                PRESET_CAPSULES[
+                    key
+                ];
+
+
+            if (!item) {
+
+                return;
+
+            }
+
+
+            if (
+                !isUnlocked(
+                    item.date
+                )
+            ) {
+
+                const remaining =
+                    getRemaining(
+                        item.date
+                    );
+
+
+                showLockedModal(
+                    item,
+                    remaining
+                );
+
+
+                return;
+
+            }
+
+
+            if (
+                key ===
+                "photoMemory"
+            ) {
+
+                showPhotoCapsule();
+
+                return;
+
+            }
+
+
+            if (
+                key ===
+                "predictions2030"
+            ) {
+
+                showPredictionCapsule();
+
+                return;
+
+            }
+
+
+            showCapsuleModal(
+                item.icon,
+                item.title,
+                "🔓 زمانش رسیده.",
+                `
+                    <p class="modal-letter">
+                        ${escapeHTML(
+                            item.unlockedText
+                        ).replace(
+                            /\n/g,
+                            "<br>"
+                        )}
+                    </p>
+                `
+            );
+
+        }
+
+
+
+        function showLockedModal(
+            item,
+            remaining
+        ) {
+
+            showCapsuleModal(
+
+                "🔒",
+
+                item.title,
+
+                formatDateFa(
+                    item.date
+                ),
+
+                `
+                    <div class="locked-modal-message">
+
+                        <span class="big-lock">
+                            🔐
+                        </span>
+
+                        <p>
+                            نه خانم، هنوز
+                            <strong>
+                                ${remaining.days}
+                            </strong>
+                            روز مونده 😭❤️
+                        </p>
+
+                        <p>
+                            قانون کپسول زمان اینه که
+                            باید واقعاً صبر کنیم.
+                        </p>
+
+                    </div>
+                `
+
+            );
+
+
+            shakeModal();
+
+        }
+
+
+
+        /* =====================================================
+           PHOTO CAPSULE
+        ====================================================== */
+
+        function showPhotoCapsule() {
+
+            if (
+                !LOCKED_PHOTO_URL
+            ) {
+
+                showCapsuleModal(
+
+                    "📸",
+
+                    "عکس قفل‌شده",
+
+                    "🔓 تاریخ باز شدن رسیده، ولی عکس هنوز آپلود نشده.",
+
+                    `
+                        <p>
+                            وقتی عکس رو به پوشه‌ی images اضافه کردی،
+                            آدرسش رو داخل متغیر
+                            <strong>
+                                LOCKED_PHOTO_URL
+                            </strong>
+                            بذار.
+                        </p>
+                    `
+
+                );
+
+
+                return;
+
+            }
+
+
+            showCapsuleModal(
+
+                "📸",
+
+                "عکس قفل‌شده",
+
+                "یه تکه از گذشته که بالاخره باز شد.",
+
+                `
+                    <img
+                        class="unlocked-photo"
+                        src="${escapeHTML(
+                            LOCKED_PHOTO_URL
+                        )}"
+                        alt="خاطره‌ی قفل‌شده‌ی آرین و صبا"
+                    >
+                `
+
+            );
+
+        }
+
+
+
+        /* =====================================================
+           PREDICTIONS
+        ====================================================== */
+
+        const predictionFields = [
+
+            "home",
+            "car",
+            "sleep",
+            "countries",
+            "movie"
+
+        ];
+
+
+
+        function loadPredictions() {
+
+            predictionFields.forEach(
+
+                function(key) {
+
+                    const field =
+                        document.getElementById(
+                            "prediction-" + key
+                        );
+
+
+                    if (!field) {
+
+                        return;
+
+                    }
+
+
+                    const saved =
+                        localStorage.getItem(
+                            "capsule-prediction-" +
+                            key
+                        );
+
+
+                    if (
+                        saved !== null
+                    ) {
+
+                        field.value =
+                            saved;
+
+                    }
+
+                }
+
+            );
+
+        }
+
+
+
+        function savePredictions() {
+
+            predictionFields.forEach(
+
+                function(key) {
+
+                    const field =
+                        document.getElementById(
+                            "prediction-" + key
+                        );
+
+
+                    localStorage.setItem(
+
+                        "capsule-prediction-" +
+                        key,
+
+                        field.value.trim()
+
+                    );
+
+                }
+
+            );
+
+
+            localStorage.setItem(
+
+                "capsule-predictions-sealed",
+
+                new Date().toISOString()
+
+            );
+
+
+            const message =
+                document.getElementById(
+                    "predictionSaveMessage"
+                );
+
+
+            message.textContent =
+                "ذخیره و مهر و موم شد 🔐❤️";
+
+
+            showToast(
+                "پیش‌بینی‌ها ذخیره شدن 🔮"
+            );
+
+        }
+
+
+        loadPredictions();
+
+
+
+        function showPredictionCapsule() {
+
+            const labels = {
+
+                home:
+                    "🏠 کجا زندگی می‌کنیم؟",
+
+                car:
+                    "🚗 ماشین مشترکمون؟",
+
+                sleep:
+                    "😴 کدوممون بیشتر می‌خوابه؟",
+
+                countries:
+                    "🌍 چند کشور؟",
+
+                movie:
+                    "🎬 هنوز سر فیلم بحث می‌کنیم؟"
+
+            };
+
+
+            let output =
+                '<div class="prediction-reveal">';
+
+
+            predictionFields.forEach(
+
+                function(key) {
+
+                    const value =
+                        localStorage.getItem(
+                            "capsule-prediction-" +
+                            key
+                        ) || "جوابی ثبت نشده بود.";
+
+
+                    output += `
+
+                        <div class="revealed-answer">
+
+                            <strong>
+                                ${labels[key]}
+                            </strong>
+
+                            <p>
+                                ${escapeHTML(
+                                    value
+                                )}
+                            </p>
+
+                        </div>
+
+                    `;
+
+                }
+
+            );
+
+
+            output +=
+                "</div>";
+
+
+            showCapsuleModal(
+
+                "🔮",
+
+                "پیش‌بینی‌های ۲۰۳۰",
+
+                "خب... ببینیم چقدر آینده رو درست دیده بودیم 😭",
+
+                output
+
+            );
+
+        }
+
+
+
+        /* =====================================================
+           BEFORE / AFTER
+        ====================================================== */
+
+        const beforeFields = [
+
+            "home",
+            "dream",
+            "relationship"
+
+        ];
+
+
+
+        function loadBeforeAnswers() {
+
+            beforeFields.forEach(
+
+                function(key) {
+
+                    const field =
+                        document.getElementById(
+                            "before-" + key
+                        );
+
+
+                    const saved =
+                        localStorage.getItem(
+                            "capsule-before-" +
+                            key
+                        );
+
+
+                    if (
+                        field &&
+                        saved !== null
+                    ) {
+
+                        field.value =
+                            saved;
+
+                    }
+
+                }
+
+            );
+
+        }
+
+
+
+        function saveBeforeAnswers() {
+
+            beforeFields.forEach(
+
+                function(key) {
+
+                    const field =
+                        document.getElementById(
+                            "before-" + key
+                        );
+
+
+                    localStorage.setItem(
+
+                        "capsule-before-" +
+                        key,
+
+                        field.value.trim()
+
+                    );
+
+                }
+
+            );
+
+
+            showToast(
+                "جواب‌های ۲۰۲۶ ذخیره شدن ❤️"
+            );
+
+        }
+
+
+        loadBeforeAnswers();
+
+
+
+        function updateFutureEra() {
+
+            if (
+                isUnlocked(
+                    CAPSULE_DATES.beforeAfter
+                )
+            ) {
+
+                document
+                    .getElementById(
+                        "futureEraLocked"
+                    )
+                    .classList
+                    .add("hidden");
+
+
+                document
+                    .getElementById(
+                        "futureEraUnlocked"
+                    )
+                    .classList
+                    .remove("hidden");
+
+            }
+
+        }
+
+
+        updateFutureEra();
+
+
+
+        function normalizeWords(text) {
+
+            return text
+                .toLowerCase()
+                .replace(
+                    /[^\u0600-\u06FFa-zA-Z0-9\s]/g,
+                    " "
+                )
+                .split(/\s+/)
+                .filter(
+                    function(word) {
+
+                        return (
+                            word.length > 1
+                        );
+
+                    }
+                );
+
+        }
+
+
+
+        function textSimilarity(
+            first,
+            second
+        ) {
+
+            const a =
+                new Set(
+                    normalizeWords(
+                        first
+                    )
+                );
+
+
+            const b =
+                new Set(
+                    normalizeWords(
+                        second
+                    )
+                );
+
+
+            if (
+                a.size === 0 ||
+                b.size === 0
+            ) {
+
+                return 0;
+
+            }
+
+
+            let common =
+                0;
+
+
+            a.forEach(
+
+                function(word) {
+
+                    if (
+                        b.has(word)
+                    ) {
+
+                        common++;
+
+                    }
+
+                }
+
+            );
+
+
+            const total =
+                new Set([
+                    ...a,
+                    ...b
+                ]).size;
+
+
+            return Math.round(
+                common /
+                total *
+                100
+            );
+
+        }
+
+
+
+        function compareEras() {
+
+            if (
+                !isUnlocked(
+                    CAPSULE_DATES.beforeAfter
+                )
+            ) {
+
+                return;
+
+            }
+
+
+            let total =
+                0;
+
+
+            let count =
+                0;
+
+
+            beforeFields.forEach(
+
+                function(key) {
+
+                    const before =
+                        localStorage.getItem(
+                            "capsule-before-" +
+                            key
+                        ) || "";
+
+
+                    const afterField =
+                        document.getElementById(
+                            "after-" + key
+                        );
+
+
+                    const after =
+                        afterField.value.trim();
+
+
+                    if (
+                        before ||
+                        after
+                    ) {
+
+                        total +=
+                            textSimilarity(
+                                before,
+                                after
+                            );
+
+
+                        count++;
+
+                    }
+
+                }
+
+            );
+
+
+            const average =
+                count
+                    ? Math.round(
+                        total / count
+                    )
+                    : 0;
+
+
+            const result =
+                document.getElementById(
+                    "eraComparison"
+                );
+
+
+            result.classList.remove(
+                "hidden"
+            );
+
+
+            result.innerHTML = `
+
+                <span class="comparison-heart">
+                    ❤️
+                </span>
+
+                <h3>
+                    شباهت نمایشی جواب‌ها:
+                    ${average}%
+                </h3>
+
+                <p>
+                    این درصد فقط بر اساس واژه‌های مشترک حساب شده؛
+                    بخش باحال ماجرا خود جواب‌ها و تغییرشون در طول زمانه.
+                </p>
+
+            `;
+
+        }
+
+
+
+        /* =====================================================
+           MIDNIGHT CAPSULE
+        ====================================================== */
+
+        function checkMidnightCapsule(
+            showMessage
+        ) {
+
+            const hour =
+                new Date().getHours();
+
+
+            const unlocked =
+                (
+                    hour >= 0 &&
+                    hour < 4
+                );
+
+
+            const lockedBox =
+                document.getElementById(
+                    "midnightLocked"
+                );
+
+
+            const unlockedBox =
+                document.getElementById(
+                    "midnightUnlocked"
+                );
+
+
+            const status =
+                document.getElementById(
+                    "midnightStatus"
+                );
+
+
+            if (unlocked) {
+
+                lockedBox.classList.add(
+                    "hidden"
+                );
+
+
+                unlockedBox.classList.remove(
+                    "hidden"
+                );
+
+
+                if (showMessage) {
+
+                    showToast(
+                        "Midnight Capsule باز شد 🌙✨"
+                    );
+
+                }
+
+            }
+
+            else {
+
+                lockedBox.classList.remove(
+                    "hidden"
+                );
+
+
+                unlockedBox.classList.add(
+                    "hidden"
+                );
+
+
+                status.textContent =
+                    "الان هنوز وقتش نیست؛ نیمه‌شب برگرد 🤭";
+
+
+                if (showMessage) {
+
+                    showToast(
+                        "این یکی فقط بین ۰۰:۰۰ تا ۰۴:۰۰ باز می‌شه 🌙"
+                    );
+
+                }
+
+            }
+
+        }
+
+
+        checkMidnightCapsule(
+            false
+        );
+
+
+
+        /* =====================================================
+           CUSTOM CAPSULES
+        ====================================================== */
+
+        function getCustomCapsules() {
+
+            try {
+
+                return JSON.parse(
+                    localStorage.getItem(
+                        "custom-time-capsules"
+                    ) || "[]"
+                );
+
+            }
+
+            catch (error) {
+
+                return [];
+
+            }
+
+        }
+
+
+
+        function saveCustomCapsules(
+            capsules
+        ) {
+
+            localStorage.setItem(
+
+                "custom-time-capsules",
+
+                JSON.stringify(
+                    capsules
+                )
+
+            );
+
+        }
+
+
+
+        function createCustomCapsule(
+            event
+        ) {
+
+            event.preventDefault();
+
+
+            const title =
+                document
+                    .getElementById(
+                        "customTitle"
+                    )
+                    .value
+                    .trim();
+
+
+            const text =
+                document
+                    .getElementById(
+                        "customText"
+                    )
+                    .value
+                    .trim();
+
+
+            const dateValue =
+                document
+                    .getElementById(
+                        "customDate"
+                    )
+                    .value;
+
+
+            const date =
+                new Date(
+                    dateValue
+                );
+
+
+            if (
+                !title ||
+                !text ||
+                !dateValue ||
+                Number.isNaN(
+                    date.getTime()
+                )
+            ) {
+
+                showToast(
+                    "همه‌ی قسمت‌ها رو کامل کن 🤭"
+                );
+
+                return;
+
+            }
+
+
+            if (
+                date <= new Date()
+            ) {
+
+                showToast(
+                    "تاریخ باز شدن باید توی آینده باشه 🔐"
+                );
+
+                return;
+
+            }
+
+
+            const capsules =
+                getCustomCapsules();
+
+
+            capsules.unshift({
+
+                id:
+                    Date.now(),
+
+                title:
+                    title,
+
+                text:
+                    text,
+
+                date:
+                    date.toISOString(),
+
+                createdAt:
+                    new Date().toISOString()
+
+            });
+
+
+            saveCustomCapsules(
+                capsules
+            );
+
+
+            document
+                .getElementById(
+                    "capsuleBuilder"
+                )
+                .reset();
+
+
+            renderCustomCapsules();
+
+
+            showToast(
+                "کپسول جدید قفل شد 🔐❤️"
+            );
+
+        }
+
+
+
+        function renderCustomCapsules() {
+
+            const capsules =
+                getCustomCapsules();
+
+
+            const list =
+                document.getElementById(
+                    "customCapsuleList"
+                );
+
+
+            const count =
+                document.getElementById(
+                    "customCapsuleCount"
+                );
+
+
+            count.textContent =
+                capsules.length;
+
+
+            list.innerHTML =
+                "";
+
+
+            if (
+                capsules.length === 0
+            ) {
+
+                const empty =
+                    document.createElement(
+                        "p"
+                    );
+
+
+                empty.className =
+                    "empty-state";
+
+
+                empty.textContent =
+                    "هنوز کپسول شخصی جدیدی ساخته نشده.";
+
+
+                list.appendChild(
+                    empty
+                );
+
+
+                return;
+
+            }
+
+
+            capsules.forEach(
+
+                function(capsule) {
+
+                    const date =
+                        new Date(
+                            capsule.date
+                        );
+
+
+                    const unlocked =
+                        isUnlocked(
+                            date
+                        );
+
+
+                    const card =
+                        document.createElement(
+                            "article"
+                        );
+
+
+                    card.className =
+                        "custom-capsule-card" +
+                        (
+                            unlocked
+                                ? " custom-unlocked"
+                                : ""
+                        );
+
+
+                    const top =
+                        document.createElement(
+                            "div"
+                        );
+
+
+                    top.className =
+                        "custom-capsule-top";
+
+
+                    const icon =
+                        document.createElement(
+                            "span"
+                        );
+
+
+                    icon.textContent =
+                        unlocked
+                            ? "🔓"
+                            : "🔐";
+
+
+                    const title =
+                        document.createElement(
+                            "h3"
+                        );
+
+
+                    title.textContent =
+                        capsule.title;
+
+
+                    top.appendChild(
+                        icon
+                    );
+
+
+                    top.appendChild(
+                        title
+                    );
+
+
+                    const dateText =
+                        document.createElement(
+                            "p"
+                        );
+
+
+                    dateText.className =
+                        "custom-date";
+
+
+                    dateText.textContent =
+                        formatDateFa(
+                            date
+                        );
+
+
+                    const actions =
+                        document.createElement(
+                            "div"
+                        );
+
+
+                    actions.className =
+                        "custom-actions";
+
+
+                    const openButton =
+                        document.createElement(
+                            "button"
+                        );
+
+
+                    openButton.type =
+                        "button";
+
+
+                    openButton.className =
+                        "secondary-button";
+
+
+                    openButton.textContent =
+                        unlocked
+                            ? "بازش کن ❤️"
+                            : "قفل رو امتحان کن";
+
+
+                    openButton.addEventListener(
+
+                        "click",
+
+                        function() {
+
+                            openCustomCapsule(
+                                capsule.id
+                            );
+
+                        }
+
+                    );
+
+
+                    const deleteButton =
+                        document.createElement(
+                            "button"
+                        );
+
+
+                    deleteButton.type =
+                        "button";
+
+
+                    deleteButton.className =
+                        "danger-button";
+
+
+                    deleteButton.textContent =
+                        "حذف";
+
+
+                    deleteButton.addEventListener(
+
+                        "click",
+
+                        function() {
+
+                            deleteCustomCapsule(
+                                capsule.id
+                            );
+
+                        }
+
+                    );
+
+
+                    actions.appendChild(
+                        openButton
+                    );
+
+
+                    actions.appendChild(
+                        deleteButton
+                    );
+
+
+                    card.appendChild(
+                        top
+                    );
+
+
+                    card.appendChild(
+                        dateText
+                    );
+
+
+                    card.appendChild(
+                        actions
+                    );
+
+
+                    list.appendChild(
+                        card
+                    );
+
+                }
+
+            );
+
+        }
+
+
+
+        function openCustomCapsule(
+            id
+        ) {
+
+            const capsule =
+                getCustomCapsules()
+                    .find(
+
+                        function(item) {
+
+                            return (
+                                item.id === id
+                            );
+
+                        }
+
+                    );
+
+
+            if (!capsule) {
+
+                return;
+
+            }
+
+
+            const date =
+                new Date(
+                    capsule.date
+                );
+
+
+            if (
+                !isUnlocked(
+                    date
+                )
+            ) {
+
+                const remaining =
+                    getRemaining(
+                        date
+                    );
+
+
+                showCapsuleModal(
+
+                    "🔐",
+
+                    capsule.title,
+
+                    formatDateFa(
+                        date
+                    ),
+
+                    `
+                        <div class="locked-modal-message">
+
+                            <span class="big-lock">
+                                🔒
+                            </span>
+
+                            <p>
+                                هنوز
+                                <strong>
+                                    ${remaining.days}
+                                </strong>
+                                روز مونده.
+                            </p>
+
+                        </div>
+                    `
+
+                );
+
+
+                shakeModal();
+
+
+                return;
+
+            }
+
+
+            showCapsuleModal(
+
+                "🔓",
+
+                capsule.title,
+
+                "بالاخره وقتش رسید ❤️",
+
+                `
+                    <p class="modal-letter">
+                        ${escapeHTML(
+                            capsule.text
+                        ).replace(
+                            /\n/g,
+                            "<br>"
+                        )}
+                    </p>
+                `
+
+            );
+
+        }
+
+
+
+        function deleteCustomCapsule(
+            id
+        ) {
+
+            const confirmed =
+                window.confirm(
+                    "این کپسول حذف بشه؟"
+                );
+
+
+            if (!confirmed) {
+
+                return;
+
+            }
+
+
+            const capsules =
+                getCustomCapsules()
+                    .filter(
+
+                        function(item) {
+
+                            return (
+                                item.id !== id
+                            );
+
+                        }
+
+                    );
+
+
+            saveCustomCapsules(
+                capsules
+            );
+
+
+            renderCustomCapsules();
+
+        }
+
+
+        renderCustomCapsules();
+
+
+
+        /* =====================================================
+           MODAL
+        ====================================================== */
+
+        function showCapsuleModal(
+            icon,
+            title,
+            subtitle,
+            bodyHTML
+        ) {
+
+            document
+                .getElementById(
+                    "modalIcon"
+                )
+                .textContent =
+                icon;
+
+
+            document
+                .getElementById(
+                    "modalTitle"
+                )
+                .textContent =
+                title;
+
+
+            document
+                .getElementById(
+                    "modalSubtitle"
+                )
+                .textContent =
+                subtitle;
+
+
+            document
+                .getElementById(
+                    "modalBody"
+                )
+                .innerHTML =
+                bodyHTML;
+
+
+            document
+                .getElementById(
+                    "capsuleModal"
+                )
+                .classList
+                .remove("hidden");
+
+
+            document.body
+                .classList
+                .add(
+                    "modal-open"
+                );
+
+        }
+
+
+
+        function closeCapsuleModal() {
+
+            document
+                .getElementById(
+                    "capsuleModal"
+                )
+                .classList
+                .add("hidden");
+
+
+            document.body
+                .classList
+                .remove(
+                    "modal-open"
+                );
+
+        }
+
+
+
+        function shakeModal() {
+
+            const card =
+                document.querySelector(
+                    ".modal-card"
+                );
+
+
+            card.classList.remove(
+                "shake"
+            );
+
+
+            void card.offsetWidth;
+
+
+            card.classList.add(
+                "shake"
+            );
+
+        }
+
+
+
+        /* =====================================================
+           TOAST
+        ====================================================== */
+
+        let toastTimer =
+            null;
+
+
+
+        function showToast(
+            text
+        ) {
+
+            const toast =
+                document.getElementById(
+                    "toast"
+                );
+
+
+            toast.textContent =
+                text;
+
+
+            toast.classList.add(
+                "toast-show"
+            );
+
+
+            clearTimeout(
+                toastTimer
+            );
+
+
+            toastTimer =
+                setTimeout(
+
+                    function() {
+
+                        toast.classList.remove(
+                            "toast-show"
+                        );
+
+                    },
+
+                    2600
+
+                );
+
+        }
+
+
+
+        /* =====================================================
+           THEME — THREE STATES
+           light -> sunset -> dark
+        ====================================================== */
+
+        const THEMES = [
+
+            {
+                name:
+                    "light",
+
+                icon:
+                    "☀️"
+            },
+
+            {
+                name:
+                    "sunset",
+
+                icon:
+                    "🌅"
+            },
+
+            {
+                name:
+                    "dark",
+
+                icon:
+                    "🌙"
+            }
+
+        ];
+
+
+        let currentThemeIndex =
+            0;
+
+
+
+        function applySavedTheme() {
+
+            const saved =
+                localStorage.getItem(
+                    "capsuleTheme"
+                ) || "light";
+
+
+            const foundIndex =
+                THEMES.findIndex(
+
+                    function(theme) {
+
+                        return (
+                            theme.name ===
+                            saved
+                        );
+
+                    }
+
+                );
+
+
+            currentThemeIndex =
+                foundIndex >= 0
+                    ? foundIndex
+                    : 0;
+
+
+            applyTheme();
+
+        }
+
+
+
+        function applyTheme() {
+
+            document.body
+                .classList
+                .remove(
+                    "dark-mode",
+                    "sunset-mode"
+                );
+
+
+            const theme =
+                THEMES[
+                    currentThemeIndex
+                ];
+
+
+            if (
+                theme.name ===
+                "dark"
+            ) {
+
+                document.body
+                    .classList
+                    .add(
+                        "dark-mode"
+                    );
+
+            }
+
+
+            if (
+                theme.name ===
+                "sunset"
+            ) {
+
+                document.body
+                    .classList
+                    .add(
+                        "sunset-mode"
+                    );
+
+            }
+
+
+            document
+                .getElementById(
+                    "themeButton"
+                )
+                .textContent =
+                theme.icon;
+
+
+            localStorage.setItem(
+
+                "capsuleTheme",
+
+                theme.name
+
+            );
+
+        }
+
+
+
+        function cycleTheme() {
+
+            currentThemeIndex =
+                (
+                    currentThemeIndex +
+                    1
+                ) %
+                THEMES.length;
+
+
+            applyTheme();
+
+        }
+
+
+        applySavedTheme();
+
+
+
+        /* =====================================================
+           PARTICLES
+        ====================================================== */
+
+        function createCapsuleParticles() {
+
+            const container =
+                document.getElementById(
+                    "capsuleParticles"
+                );
+
+
+            const icons = [
+
+                "✨",
+                "❤️",
+                "🔐",
+                "🌙",
+                "💌",
+                "⏳"
+
+            ];
+
+
+            for (
+                let i = 0;
+                i < 22;
+                i++
+            ) {
+
+                const particle =
+                    document.createElement(
+                        "span"
+                    );
+
+
+                particle.className =
+                    "capsule-particle";
+
+
+                particle.textContent =
+                    icons[
+                        Math.floor(
+                            Math.random() *
+                            icons.length
+                        )
+                    ];
+
+
+                particle.style.left =
+                    Math.random() *
+                    100 +
+                    "%";
+
+
+                particle.style.animationDuration =
+                    (
+                        10 +
+                        Math.random() *
+                        14
+                    ) + "s";
+
+
+                particle.style.animationDelay =
+                    Math.random() *
+                    10 +
+                    "s";
+
+
+                container.appendChild(
+                    particle
+                );
+
+            }
+
+        }
+
+
+        createCapsuleParticles();
+
+
+
+        /* =====================================================
+           NAVIGATION
+        ====================================================== */
+
+        function scrollToCapsules() {
+
+            document
+                .getElementById(
+                    "vaultSection"
+                )
+                .scrollIntoView({
+
+                    behavior:
+                        "smooth",
+
+                    block:
+                        "start"
+
+                });
+
+        }
+
+
+
+        /* =====================================================
+           KEYBOARD
+        ====================================================== */
+
+        document.addEventListener(
+
+            "keydown",
+
+            function(event) {
+
+                if (
+                    event.key ===
+                    "Escape"
+                ) {
+
+                    closeCapsuleModal();
+
+                }
+
+            }
+
+        );
+
+
+
+        /* =====================================================
+           CUSTOM DATE DEFAULT
+           Three years from now as a helpful starting point
+        ====================================================== */
+
+        function setDefaultCustomDate() {
+
+            const input =
+                document.getElementById(
+                    "customDate"
+                );
+
+
+            const date =
+                new Date();
+
+
+            date.setFullYear(
+                date.getFullYear() +
+                3
+            );
+
+
+            date.setMinutes(
+                date.getMinutes() -
+                date.getTimezoneOffset()
+            );
+
+
+            input.value =
+                date
+                    .toISOString()
+                    .slice(
+                        0,
+                        16
+                    );
+
+        }
+
+
+        setDefaultCustomDate();
+
+
+    </script>
+
+
+</body>
+
+</html>
