@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>امروز چی نصیبت می‌شه؟ 🎲❤️</title>
+<meta name="theme-color" content="#21162f">
+<meta name="description" content="Daily Drop عاشقانه آرین و صبا">
+<style>
+:root{
+ --bg1:#fff6fb;--bg2:#eeeaff;--bg3:#ffe8f2;
+ --card:rgba(255,255,255,.86);--card2:rgba(255,255,255,.96);--soft:rgba(255,255,255,.58);
+ --text:#2e2940;--muted:#716a80;--faint:#9a93a7;
+ --pink:#df4f95;--pink2:#ff91c5;--purple:#7453a6;--purple2:#a786dc;
+ --gold:#efb94d;--green:#36a873;--red:#db586e;--blue:#6684e8;
+ --border:rgba(255,255,255,.7);--shadow:0 22px 58px rgba(55,40,92,.14);
+}
+body.night{
+ --bg1:#0c1020;--bg2:#17132b;--bg3:#2a183d;
+ --card:rgba(24,21,43,.88);--card2:rgba(29,25,50,.97);--soft:rgba(255,255,255,.07);
+ --text:#faf5ff;--muted:rgba(250,245,255,.76);--faint:rgba(250,245,255,.48);
+ --pink:#ff96c8;--pink2:#ffb4d7;--purple:#c5a7ff;--purple2:#a989e8;
+ --gold:#ffd273;--green:#7cdfb2;--red:#ff8ca1;--blue:#9babff;
+ --border:rgba(255,255,255,.11);--shadow:0 22px 62px rgba(0,0,0,.35);
+}
+body.sunset{
+ --bg1:#fff0da;--bg2:#ffd7e8;--bg3:#e9ddff;
+ --card:rgba(255,249,243,.88);--card2:rgba(255,252,248,.97);--soft:rgba(255,255,255,.61);
+ --text:#3d2d47;--muted:#795f76;--faint:#9b8298;
+ --pink:#e76099;--pink2:#ff9fbd;--purple:#805eaf;--purple2:#ac8ad8;
+ --gold:#e9ab3b;--green:#48a87b;--red:#d95c6b;--blue:#7589df;
+ --border:rgba(255,255,255,.74);
+}
+*{box-sizing:border-box}
+html{overflow-x:hidden;scroll-behavior:smooth}
+body{
+ margin:0;min-height:100vh;overflow-x:hidden;padding:82px 12px 28px;
+ font-family:Tahoma,Arial,sans-serif;color:var(--text);
+ background:
+ radial-gradient(circle at 8% 8%,rgba(255,143,195,.35),transparent 31%),
+ radial-gradient(circle at 92% 14%,rgba(159,122,234,.30),transparent 31%),
+ linear-gradient(135deg,var(--bg1),var(--bg2) 52%,var(--bg3));
+ background-attachment:fixed;transition:.4s
+}
+button,a,input{font-family:inherit;-webkit-tap-highlight-color:transparent}
+button{cursor:pointer}a{text-decoration:none;color:inherit}.hidden{display:none!important}
+#particles{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.particle{position:absolute;top:-50px;opacity:0;animation:fall linear infinite}
+@keyframes fall{0%{opacity:0;transform:translateY(-10vh) rotate(0)}12%{opacity:.35}88%{opacity:.2}100%{opacity:0;transform:translateY(115vh) rotate(420deg)}}
+.topbar{
+ position:fixed;top:0;left:0;right:0;z-index:9000;min-height:64px;
+ display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px;
+ padding:max(8px,env(safe-area-inset-top)) 12px 8px;
+ background:rgba(255,255,255,.72);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.5)
+}
+body.night .topbar{background:rgba(14,12,28,.86);border-bottom-color:rgba(255,255,255,.08)}
+.back,.theme{border:0;background:rgba(116,83,166,.11);color:var(--purple);font-weight:bold}
+.back{justify-self:start;padding:9px 12px;border-radius:999px;font-size:11px}
+.theme{justify-self:end;width:40px;height:40px;border-radius:50%;font-size:18px}
+.top-title{justify-self:center;color:var(--pink);font-size:11px;font-weight:bold;white-space:nowrap}
+.page{position:relative;z-index:2;width:100%;max-width:920px;margin:auto}
+.card{
+ position:relative;overflow:hidden;margin-bottom:18px;padding:28px 22px;border:1px solid var(--border);
+ border-radius:32px;background:var(--card);backdrop-filter:blur(18px);box-shadow:var(--shadow)
+}
+.card:before{content:"";position:absolute;width:220px;height:220px;top:-130px;left:-100px;border-radius:50%;background:radial-gradient(circle,rgba(255,143,195,.15),transparent 68%);pointer-events:none}
+.card>*{position:relative;z-index:1}
+.hero{text-align:center;padding-top:36px;padding-bottom:36px}
+.hero-icon{display:block;font-size:64px;animation:float 3s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-7px) rotate(4deg)}}
+.tag{display:inline-block;margin:7px 0 10px;padding:6px 12px;border-radius:999px;background:linear-gradient(135deg,rgba(223,79,149,.1),rgba(116,83,166,.1));color:var(--purple);font-size:10px;font-weight:bold}
+h1{margin:0 auto 10px;max-width:720px;font-size:clamp(28px,6vw,43px);line-height:1.55}
+h1 span{color:var(--pink)}
+.hero p{max-width:650px;margin:0 auto 18px;color:var(--muted);font-size:13px;line-height:1.95}
+.timebox{max-width:620px;margin:0 auto 17px;padding:10px 12px;border:1px solid var(--border);border-radius:16px;background:var(--soft);font-size:11px;font-weight:bold;color:var(--muted)}
+.rec-title{font-size:10px;color:var(--muted);margin:0 0 8px}
+.rec-switch{max-width:470px;margin:0 auto 18px;display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.rec-btn{min-height:48px;border:1px solid var(--border);border-radius:17px;background:var(--soft);color:var(--muted);font-weight:bold}
+.rec-btn.active{border-color:transparent;color:white;background:linear-gradient(135deg,var(--pink),var(--purple2));box-shadow:0 10px 24px rgba(177,80,151,.2)}
+.streak{max-width:610px;margin:0 auto 18px;padding:12px;display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;border:1px solid var(--border);border-radius:19px;background:linear-gradient(135deg,rgba(255,177,134,.1),rgba(223,79,149,.08));text-align:right}
+.streak .fire{font-size:31px}.streak strong{display:block;font-size:12px}.streak small{display:block;margin-top:2px;color:var(--muted);font-size:9px;line-height:1.7}.streak .num{font-size:22px;color:var(--pink);font-weight:bold}
+.bigbtn{width:min(100%,520px);min-height:55px;border:0;border-radius:999px;color:white;background:linear-gradient(135deg,var(--pink),var(--purple2));box-shadow:0 14px 30px rgba(177,80,151,.27);font-size:14px;font-weight:bold}
+.reveal{max-width:700px;margin:17px auto 0;padding:18px;border:1px solid var(--border);border-radius:23px;background:var(--soft);box-shadow:0 10px 25px rgba(50,35,80,.08)}
+.reveal.pop{animation:pop .5s ease}
+@keyframes pop{0%{opacity:0;transform:scale(.95) translateY(12px)}70%{transform:scale(1.015)}100%{opacity:1;transform:scale(1)}}
+.rarity-line{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.badge{padding:6px 10px;border-radius:999px;font-size:9px;font-weight:bold}
+.common{background:rgba(239,137,187,.18);color:#8e3167}.special{background:rgba(141,106,211,.16);color:var(--purple)}.legend{background:rgba(239,185,77,.2);color:#9b6a08}
+body.night .common,body.night .special,body.night .legend{color:white}
+.date{font-size:8px;color:var(--faint)}.dropicon{display:block;text-align:center;font-size:47px;margin:6px}.droptype{text-align:center;color:var(--purple);font-size:11px;margin:0 0 5px}.droptitle{text-align:center;margin:0 0 7px;font-size:20px}.droptext{text-align:center;color:var(--muted);font-size:12px;line-height:2;margin:0}.note{margin:12px 0 0;padding:9px;border-radius:13px;background:rgba(116,83,166,.07);color:var(--muted);font-size:9px;text-align:center}
+.heading{text-align:center;max-width:680px;margin:0 auto 20px}.heading .icon{display:block;font-size:45px}.heading h2{margin:3px 0 7px;font-size:clamp(22px,5vw,31px)}.heading p{margin:0;color:var(--muted);font-size:12px;line-height:1.9}
+.command{max-width:700px;margin:auto;padding:16px;display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;border:1px solid var(--border);border-radius:21px;background:linear-gradient(145deg,rgba(54,168,115,.1),var(--soft))}
+.command .ci{font-size:35px}.command h3{margin:0 0 4px;font-size:14px}.command p{margin:0;color:var(--muted);font-size:10px;line-height:1.8}.ctime{padding:7px 9px;border-radius:999px;background:rgba(54,168,115,.12);color:var(--green);font-size:8px;font-weight:bold;white-space:nowrap}
+.actions{display:flex;flex-wrap:wrap;justify-content:center;gap:7px;margin-top:10px}.smallbtn{min-height:40px;padding:8px 13px;border:1px solid var(--border);border-radius:999px;background:var(--soft);color:var(--muted);font-size:9px;font-weight:bold}.smallbtn.done{color:var(--green);background:rgba(54,168,115,.12)}
+.wheel-grid{display:grid;grid-template-columns:1fr minmax(230px,.8fr);gap:20px;align-items:center}
+.wheel-wrap{position:relative;width:min(100%,390px);aspect-ratio:1;margin:auto}.pointer{position:absolute;top:-5px;left:50%;z-index:4;transform:translateX(-50%);width:0;height:0;border-left:16px solid transparent;border-right:16px solid transparent;border-top:31px solid var(--pink)}
+#wheel{width:100%;height:100%;display:block;border-radius:50%;box-shadow:0 18px 40px rgba(48,31,77,.18);transition:transform 4.2s cubic-bezier(.14,.78,.17,1)}
+.wcenter{position:absolute;left:50%;top:50%;z-index:3;transform:translate(-50%,-50%);width:74px;height:74px;border:7px solid rgba(255,255,255,.78);border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--pink),var(--purple2));color:white;font-size:23px}
+.wpanel{padding:16px;border:1px solid var(--border);border-radius:21px;background:var(--soft)}.wpanel h3{margin:0 0 7px;font-size:16px}.wpanel p{margin:0 0 12px;color:var(--muted);font-size:10px;line-height:1.8}.spin{width:100%;min-height:47px;border:0;border-radius:999px;background:linear-gradient(135deg,var(--pink),var(--purple2));color:white;font-weight:bold}.wresult{margin-top:10px;padding:10px;border-radius:14px;background:rgba(116,83,166,.07);color:var(--muted);font-size:10px;line-height:1.8;text-align:center}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.mcard{position:relative;min-height:210px;perspective:900px;border:0;background:transparent;padding:0}.inner{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.2,.75,.25,1)}.mcard.revealed .inner{transform:rotateY(180deg)}
+.front,.backside{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;padding:13px;border:1px solid var(--border);border-radius:22px;backface-visibility:hidden;-webkit-backface-visibility:hidden;box-shadow:0 10px 25px rgba(45,30,70,.1)}.front{background:linear-gradient(145deg,var(--purple),var(--pink));color:white}.front span{font-size:48px}.front strong{font-size:11px}.backside{transform:rotateY(180deg);background:var(--card2);color:var(--text)}.backside span{font-size:34px}.backside strong{font-size:12px}.backside p{margin:0;color:var(--muted);font-size:9px;line-height:1.7;text-align:center}.cardnote{text-align:center;margin:12px 0 0;color:var(--faint);font-size:9px}
+.song{max-width:710px;margin:auto;padding:13px;display:grid;grid-template-columns:84px 1fr auto;gap:12px;align-items:center;border:1px solid var(--border);border-radius:22px;background:linear-gradient(145deg,rgba(116,83,166,.11),rgba(223,79,149,.08),var(--soft))}
+.song img{width:84px;height:84px;border-radius:17px;object-fit:cover}.song small{display:block;color:var(--pink);font-size:8px;font-weight:bold}.song h3{margin:3px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:15px}.song p{margin:0;color:var(--muted);font-size:9px}.play{width:48px;height:48px;border:0;border-radius:50%;background:linear-gradient(135deg,var(--pink),var(--purple2));color:white;font-size:19px}
+.raritygrid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.raritybox{padding:13px;border:1px solid var(--border);border-radius:18px;background:var(--soft);text-align:center}.raritybox span{display:block;font-size:27px}.raritybox strong{display:block;font-size:11px;margin:4px}.raritybox small{color:var(--muted);font-size:8px;line-height:1.6}
+.secret{border-color:rgba(239,185,77,.35);background:radial-gradient(circle at 50% 0%,rgba(255,210,115,.18),transparent 33%),linear-gradient(145deg,rgba(56,37,77,.96),rgba(31,24,53,.97));color:white}.secret .heading h2{color:#ffe5a7}.secret .heading p{color:rgba(255,255,255,.72)}.secretbox{max-width:650px;margin:auto;padding:20px;border:1px solid rgba(255,255,255,.11);border-radius:22px;background:rgba(255,255,255,.06);text-align:center}.secretbox span{display:block;font-size:50px}.secretbox h3{margin:5px;color:#ffe5a7}.secretbox p{margin:0;color:rgba(255,255,255,.76);font-size:11px;line-height:1.9}
+.history{display:grid;gap:7px}.hitem{display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:center;padding:10px;border:1px solid var(--border);border-radius:15px;background:var(--soft)}.hitem>span:first-child{font-size:22px}.hmain{min-width:0}.hmain strong{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:10px}.hmain small{display:block;margin-top:2px;color:var(--muted);font-size:8px}.hdate{color:var(--faint);font-size:7px;direction:ltr}
+#toast{position:fixed;left:50%;bottom:17px;z-index:12000;max-width:calc(100vw - 28px);padding:10px 14px;border:1px solid var(--border);border-radius:999px;background:var(--card2);color:var(--text);box-shadow:var(--shadow);font-size:9px;font-weight:bold;opacity:0;visibility:hidden;transform:translate(-50%,12px);transition:.22s}#toast.show{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.celebrate{position:fixed;bottom:-50px;z-index:11000;pointer-events:none;font-size:23px;animation:rise 1.6s ease-out forwards}@keyframes rise{0%{opacity:0;transform:translateY(0) scale(.7)}18%{opacity:1}100%{opacity:0;transform:translateY(-80vh) scale(1.3) rotate(25deg)}}
+.footer{text-align:center;color:var(--muted);font-size:9px;line-height:1.8;margin:20px 0 4px}
+@media(max-width:760px){.wheel-grid{grid-template-columns:1fr}.wpanel{max-width:520px;margin:auto}}
+@media(max-width:560px){
+ body{padding:72px 8px 18px}.card{padding:21px 12px;border-radius:23px;margin-bottom:12px}.hero{padding-top:26px;padding-bottom:26px}.hero-icon{font-size:52px}h1{font-size:25px}.hero p,.heading p{font-size:11px}.top-title{max-width:140px;font-size:8px}.back{font-size:9px;padding:7px 9px}.theme{width:37px;height:37px}.rec-btn{min-height:46px;font-size:10px}.streak{padding:10px}.streak .fire{font-size:27px}.streak strong{font-size:10px}.bigbtn{min-height:51px;font-size:12px}.dropicon{font-size:40px}.droptitle{font-size:18px}.droptext{font-size:11px}.heading .icon{font-size:39px}.heading h2{font-size:21px}.command{grid-template-columns:auto 1fr;padding:12px}.ctime{grid-column:1/-1;justify-self:center}.command .ci{font-size:30px}.wheel-wrap{width:min(100%,325px)}.wcenter{width:65px;height:65px;font-size:20px}.cards{gap:6px}.mcard{min-height:180px}.front,.backside{padding:8px;border-radius:17px}.front span{font-size:38px}.front strong{font-size:9px}.backside span{font-size:28px}.backside strong{font-size:9px}.backside p{font-size:7px}.song{grid-template-columns:64px 1fr 43px;gap:8px;padding:10px}.song img{width:64px;height:64px;border-radius:13px}.song h3{font-size:12px}.play{width:42px;height:42px}.raritygrid{gap:5px}.raritybox{padding:10px 4px}.raritybox span{font-size:22px}.raritybox strong{font-size:9px}.raritybox small{font-size:6px}.hitem{grid-template-columns:auto 1fr}.hdate{grid-column:1/-1;justify-self:end}}
+</style>
+</head>
+
+<body>
+<div id="particles"></div>
+
+<header class="topbar">
+<a class="back" href="index.html">← برگشت</a>
+<div class="top-title">DAILY DROP • A ❤️ S</div>
+<button id="themeBtn" class="theme" onclick="cycleTheme()">☀️</button>
+</header>
+
+<main class="page">
+
+<section class="card hero">
+<span class="hero-icon">🎲🎁</span>
+<div class="tag">DAILY DROP</div>
+<h1>امروز کائنات برای <span>آرین و صبا</span> چه غلطی کرده؟ 😭❤️</h1>
+<p>یه شانس روزانه، یه دستور کوچیک، یه ذره مسخره‌بازی و شاید هم Jackpot واقعی.</p>
+<div id="timeGreeting" class="timebox">در حال بررسی وضعیت کائنات...</div>
+
+<div class="rec-title">امروز این شانس برای کیه؟</div>
+<div class="rec-switch">
+<button id="arianBtn" class="rec-btn" onclick="selectRecipient('arian')">👦 آرین</button>
+<button id="sabaBtn" class="rec-btn active" onclick="selectRecipient('saba')">👧 صبا</button>
+</div>
+
+<div class="streak">
+<span class="fire">🔥</span>
+<div><strong>Streak روزانه</strong><small id="streakMsg">در حال محاسبه...</small></div>
+<span id="streakNum" class="num">1</span>
+</div>
+
+<button id="dropBtn" class="bigbtn" onclick="openDailyDrop()">🎁 شانس امروزمو باز کن</button>
+
+<div id="dailyReveal" class="reveal hidden">
+<div class="rarity-line">
+<span id="rarity" class="badge common">🌸 معمولی</span>
+<span id="dropDate" class="date"></span>
+</div>
+<span id="dropIcon" class="dropicon">🎁</span>
+<p id="dropType" class="droptype">DAILY DROP</p>
+<h2 id="dropTitle" class="droptitle">امروز...</h2>
+<p id="dropText" class="droptext"></p>
+<p class="note">نتیجه‌ی اصلی امروز تا نیمه‌شب همین می‌مونه؛ فردا Drop جدید داریم.</p>
+</div>
+</section>
+
+<section class="card">
+<div class="heading"><span class="icon">✅</span><h2>دستور کوچیک امروز</h2><p>همون رسم خودتون: یه کار مفید یا حال‌خوب‌کن که بیشتر از یکی دو ساعت وقت نگیره.</p></div>
+<div class="command">
+<span id="commandIcon" class="ci">🚶</span>
+<div><h3 id="commandTitle">قدم بزن</h3><p id="commandText">یه قدم کوتاه برو.</p></div>
+<span id="commandTime" class="ctime">۲۰ دقیقه</span>
+</div>
+<div class="actions">
+<button id="doneBtn" class="smallbtn" onclick="toggleCommandDone()">⬜ انجامش دادم</button>
+<button class="smallbtn" onclick="showCommandReason()">چرا اینو بهم دادی؟ 🤨</button>
+</div>
+</section>
+
+<section class="card">
+<div class="heading"><span class="icon">🎡</span><h2>Wheel of Us</h2><p>فیلم، غذا، آهنگ، قرار، بوس، خاطره، سورپرایز یا... بدشانسی 😭</p></div>
+<div class="wheel-grid">
+<div class="wheel-wrap">
+<div class="pointer"></div>
+<canvas id="wheel" width="500" height="500"></canvas>
+<div class="wcenter">❤️</div>
+</div>
+<div class="wpanel">
+<h3>بچرخون ببین چی می‌شه</h3>
+<p>گردونه مسئول تصمیمه؛ اعتراض بعد از چرخش پذیرفته نیست.</p>
+<button id="spinBtn" class="spin" onclick="spinWheel()">🎡 بچرخون</button>
+<div id="wheelResult" class="wresult">هنوز گردونه تصمیم نگرفته.</div>
+</div>
+</div>
+</section>
+
+<section class="card">
+<div class="heading"><span class="icon">🎴</span><h2>یکی رو انتخاب کن...</h2><p>اولین انتخاب مال توئه؛ بعد دوتای دیگه هم برمی‌گردن تا ببینی چی از دست دادی 😭</p></div>
+<div class="cards">
+<button class="mcard" data-i="0" onclick="chooseCard(0)"><span class="inner"><span class="front"><span>❓</span><strong>کارت اول</strong></span><span class="backside"><span class="ri">🎁</span><strong class="rt"></strong><p class="rx"></p></span></span></button>
+<button class="mcard" data-i="1" onclick="chooseCard(1)"><span class="inner"><span class="front"><span>❓</span><strong>کارت دوم</strong></span><span class="backside"><span class="ri">🎁</span><strong class="rt"></strong><p class="rx"></p></span></span></button>
+<button class="mcard" data-i="2" onclick="chooseCard(2)"><span class="inner"><span class="front"><span>❓</span><strong>کارت سوم</strong></span><span class="backside"><span class="ri">🎁</span><strong class="rt"></strong><p class="rx"></p></span></span></button>
+</div>
+<p id="cardNote" class="cardnote">انتخاب امروز هنوز انجام نشده.</p>
+</section>
+
+<section class="card">
+<div class="heading"><span class="icon">🎵</span><h2>آهنگ امروز</h2><p>هر روز یکی از ۴۰ جایگاه پلی‌لیست انتخاب می‌شه. اگر صفحه از داخل index جدید باز باشه، آهنگ توی پلیر اصلی پخش می‌شه.</p></div>
+<div class="song">
+<img id="songCover" src="images/photo1.jpg" alt="کاور">
+<div><small>SONG OF THE DAY</small><h3 id="songTitle">Love You</h3><p id="songArtist">Arian & Saba Playlist</p></div>
+<button id="songPlay" class="play" onclick="playSong()">▶</button>
+</div>
+<div class="actions">
+<button class="smallbtn" onclick="openMainPlayer()">🎧 پلیر اصلی</button>
+<button class="smallbtn" onclick="explainSong()">ℹ️ چرا این آهنگ؟</button>
+</div>
+<audio id="localAudio" preload="metadata"></audio>
+</section>
+
+<section class="card">
+<div class="heading"><span class="icon">🎰</span><h2>درجه‌ی شانس</h2><p>Daily Dropها سه سطح دارن؛ افسانه‌ای واقعاً کم پیدا می‌شه.</p></div>
+<div class="raritygrid">
+<div class="raritybox"><span>🌸</span><strong>معمولی</strong><small>پیام و مأموریت ساده</small></div>
+<div class="raritybox"><span>💖</span><strong>خاص</strong><small>جایزه و دستور بامزه‌تر</small></div>
+<div class="raritybox"><span>👑✨</span><strong>افسانه‌ای</strong><small>حدود ۲٪ شانس Jackpot</small></div>
+</div>
+</section>
+
+<section id="secretSection" class="card secret hidden">
+<div class="heading"><span class="icon">⚠️</span><h2>SECRET DAY DETECTED</h2><p>امروز یه قانون اضافه برای شما پیدا شده.</p></div>
+<div class="secretbox"><span>👑🔐</span><h3>قانون مخفی امروز</h3><p id="secretText"></p></div>
+</section>
+
+<section class="card">
+<div class="heading"><span class="icon">📜</span><h2>چند روز اخیر</h2><p>Daily Dropهای قبلی روی همین دستگاه ذخیره می‌شن.</p></div>
+<div id="history" class="history"><p class="cardnote">هنوز تاریخچه‌ای نداریم.</p></div>
+</section>
+
+<p class="footer">یک روز • یک Drop • یه کار کوچیک خوب • و کلی بهانه برای مسخره‌بازی ❤️</p>
+</main>
+
+<div id="toast"></div>
+
+<script>
+function todayKey(d=new Date()){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
+function yesterdayKey(){let d=new Date();d.setDate(d.getDate()-1);return todayKey(d)}
+function hash(s){let h=2166136261;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}return h>>>0}
+function idx(seed,len){return hash(seed)%len}
+function faDate(){try{return new Intl.DateTimeFormat("fa-IR",{year:"numeric",month:"long",day:"numeric"}).format(new Date())}catch(e){return todayKey()}}
+let themes=["light","sunset","night"],themeIndex=0;
+function applyTheme(){document.body.classList.remove("sunset","night");let t=themes[themeIndex];if(t!=="light")document.body.classList.add(t);document.getElementById("themeBtn").textContent=t==="light"?"☀️":t==="sunset"?"🌅":"🌙";localStorage.setItem("randomTheme",t)}
+function cycleTheme(){themeIndex=(themeIndex+1)%themes.length;applyTheme()}
+(()=>{let s=localStorage.getItem("randomTheme");themeIndex=Math.max(0,themes.indexOf(s));applyTheme()})();
+(function particles(){let box=document.getElementById("particles"),icons=["✨","❤️","🎲","🎁","🌸","💖","⭐"];for(let i=0;i<24;i++){let p=document.createElement("span");p.className="particle";p.textContent=icons[Math.floor(Math.random()*icons.length)];p.style.left=Math.random()*100+"%";p.style.fontSize=11+Math.random()*9+"px";p.style.animationDuration=10+Math.random()*14+"s";p.style.animationDelay=Math.random()*10+"s";box.appendChild(p)}})();
+function timeGreeting(){let d=new Date(),h=d.getHours(),m=String(d.getMinutes()).padStart(2,"0"),x=document.getElementById("timeGreeting");if(h>=5&&h<12)x.textContent="☀️ ماموریت صبحگاهی آماده‌ست؛ امروز رو با یه چیز کوچیک خوب شروع کنیم.";else if(h>=12&&h<19)x.textContent="🌇 امروز بعدازظهر چی نصیبت می‌شه؟ ببینیم کائنات چه برنامه‌ای داره.";else if(h>=19||h<1)x.textContent="🌙 Night Drop آماده‌ست؛ یه چیز کوچیک برای آخر روز.";else x.textContent="😭 تو چرا ساعت "+h+":"+m+" داری شانس عاشقانه‌ت رو امتحان می‌کنی؟ برو بخواب."}
+timeGreeting();
+
+let recipient=localStorage.getItem("randomRecipient")||"saba";
+function updateRecipient(){document.getElementById("arianBtn").classList.toggle("active",recipient==="arian");document.getElementById("sabaBtn").classList.toggle("active",recipient==="saba")}
+function selectRecipient(p){recipient=p;localStorage.setItem("randomRecipient",p);updateRecipient();restoreDrop();renderCommand();renderCards();renderSong()}
+updateRecipient();
+
+function updateStreak(){let t=todayKey(),y=yesterdayKey(),last=localStorage.getItem("randomLastVisit"),s=Number(localStorage.getItem("randomStreak"))||0;if(last===t){}else if(last===y)s++;else s=1;localStorage.setItem("randomLastVisit",t);localStorage.setItem("randomStreak",s);document.getElementById("streakNum").textContent=s;let m=document.getElementById("streakMsg");m.textContent=s>=30?"۳۰ روز؟ این سایت رسماً آیین روزانه شده 😭👑":s>=14?"دو هفته پشت سر هم! این دیگه تعهده 😭❤️":s>=7?"هفت روزه داریم آینده‌مون رو از یه سایت عجیب چک می‌کنیم 😭❤️":s>=3?"سه روزه پشت سر هم اومدی ❤️‍🔥":"هر روز یه سر بزن؛ Streak رو زنده نگه دار 🌱"}
+updateStreak();
+
+const commonDrops=[
+{icon:"💌",type:"پیام امروز",title:"یه دلیل واقعی بگو",s:"آرین امروز باید بهت بگه دقیقاً کدوم ویژگی‌ت رو دوست داره؛ جواب «همه‌چی» قبول نیست 😭",a:"صبا امروز باید بهت بگه دقیقاً کدوم ویژگی‌ت رو دوست داره؛ جواب کلی ممنوعه."},
+{icon:"🎬",type:"ماموریت دونفری",title:"سه دقیقه برای انتخاب فیلم",s:"امشب یه فیلم انتخاب کنید؛ بیشتر از سه دقیقه بحث سر انتخابش ممنوع 😭",a:"امشب یه فیلم انتخاب کنید؛ اگر سه دقیقه گذشت و هنوز انتخاب نکردید، قرعه تصمیم می‌گیره."},
+{icon:"☕",type:"قرار امروز",title:"بیست دقیقه بدون گوشی",s:"یه نوشیدنی، یه قدم زدن یا فقط بیست دقیقه حرف زدن بدون گوشی.",a:"بیست دقیقه گوشی کنار؛ فقط حرف، چای، قهوه یا یه قدم کوتاه."},
+{icon:"📸",type:"چالش خاطره",title:"یه عکس قدیمی پیدا کن",s:"یه عکس قدیمی پیدا کن و از آرین بپرس اون روز دقیقاً چی یادشه.",a:"یه عکس قدیمی پیدا کن و برای صبا تعریف کن اون روز از نگاه تو چه شکلی بوده."},
+{icon:"❤️",type:"جرأت عاشقانه",title:"۳۰ ثانیه بدون مسخره‌بازی",s:"آرین باید ۳۰ ثانیه جدی و بدون شوخی ازت تعریف کنه؛ خندیدن باعث تمدید زمان می‌شه 🤨",a:"صبا باید ۳۰ ثانیه بدون شوخی ازت تعریف کنه؛ وسطش خندید؟ از اول 😭"},
+{icon:"🤡",type:"کارت مسخره‌بازی",title:"سنگ کاغذ قیچی",s:"بازنده‌ی سنگ‌کاغذقیچی باید برای برنده یه خوراکی بخره.",a:"یک دست سنگ‌کاغذقیچی؛ بازنده مسئول خوراکی بعدیه."},
+{icon:"🎵",type:"موسیقی امروز",title:"یه آهنگ کامل",s:"آهنگ امروز رو کامل گوش بده؛ بدون Skip.",a:"آهنگ امروز رو تا آخر گوش بده و آخرش یه جمله درباره حسش بگو."},
+{icon:"🫂",type:"ماموریت خیلی سخت 😭",title:"بغل رایگان",s:"امروز یه بغل اضافه طلب داری؛ قابل انتقال به فردا نیست.",a:"امروز یه بغل اضافه طلب داری؛ تاریخ انقضا تا نیمه‌شبه."},
+{icon:"🌙",type:"Night Drop",title:"قبل خواب یه جمله",s:"قبل خواب یه جمله به آرین بگو که دوست داری فردا یادش بمونه.",a:"قبل خواب یه جمله برای صبا بفرست که صبح باهاش روزش رو شروع کنه."}
+];
+const specialDrops=[
+{icon:"💖",type:"خاص",title:"حق انتخاب کامل با صبا",s:"امشب انتخاب فیلم، غذا یا برنامه با توئه؛ آرین حق غر زدن نداره.",a:"امشب حق انتخاب کامل رو بده به صبا؛ اعتراض فقط کتبی 😭"},
+{icon:"🎙️",type:"خاص",title:"ویس عاشقانه",s:"آرین امروز باید یه ویس کوتاه و واقعی برات بفرسته؛ متن آماده ممنوع.",a:"یه ویس کوتاه برای صبا بفرست؛ همون چیزی که واقعاً حس می‌کنی."},
+{icon:"🍰",type:"خاص",title:"یه چیز شیرین",s:"آرین امروز یه چیز شیرین برات بدهکاره؛ نوعش با خودت.",a:"امروز برای صبا یه چیز شیرین جور کن؛ کوچیک هم باشه قبوله."},
+{icon:"💋",type:"خاص",title:"کوپن بوس 😌",s:"یه بوس اضافه نصیبت شد؛ این سند از نظر سیستم معتبره 😭",a:"یک کوپن بوس اضافه گرفتی؛ برو با مدیریت مذاکره کن."},
+{icon:"🎁",type:"خاص",title:"سورپرایز خیلی کوچیک",s:"آرین تا آخر امروز یه سورپرایز کوچیک برات بسازه؛ حتی یه پیام غیرمنتظره.",a:"برای صبا یه چیز کوچیک و غیرمنتظره درست کن؛ ارزش مالی مهم نیست."}
+];
+const legendaryDrops=[
+{icon:"👑❤️",type:"JACKPOT",title:"امروز هیچ قانونی وجود نداره",s:"JACKPOT! امروز باید یه قرار دونفری ساخته بشه؛ حتی یه قدم کوتاه و یه خوراکی.",a:"JACKPOT! امروز یه قرار واقعی یا مینی‌قرار برای خودتون بسازید."},
+{icon:"✨🎁",type:"LEGENDARY DROP",title:"خاطره‌ی جدید بسازید",s:"امروز باید یه عکس جدید از یه لحظه‌ی معمولی بگیرید تا بعداً وارد سایت بشه.",a:"یه خاطره‌ی کوچیک جدید بساز و حداقل یک عکس برای نسخه آینده سایت نگه دار."}
+];
+
+function dropKey(){return"dailyDrop-"+todayKey()+"-"+recipient}
+function buildDrop(){let seed=todayKey()+"-"+recipient+"-drop",roll=hash(seed+"-rarity")%10000,rar="common",pool=commonDrops;if(roll<200){rar="legendary";pool=legendaryDrops}else if(roll<2200){rar="special";pool=specialDrops}return{rarity:rar,item:pool[idx(seed+"-result",pool.length)]}}
+function openDailyDrop(){let k=dropKey(),s=localStorage.getItem(k),d=s?JSON.parse(s):buildDrop();if(!s){localStorage.setItem(k,JSON.stringify(d));saveHistory(d);celebrate(d.rarity==="legendary"?24:10)}showDrop(d)}
+function showDrop(d){let r=document.getElementById("dailyReveal");r.classList.remove("hidden","pop");void r.offsetWidth;r.classList.add("pop");let b=document.getElementById("rarity");b.className="badge "+(d.rarity==="legendary"?"legend":d.rarity==="special"?"special":"common");b.textContent=d.rarity==="legendary"?"👑✨ افسانه‌ای":d.rarity==="special"?"💖 خاص":"🌸 معمولی";document.getElementById("dropDate").textContent=faDate();document.getElementById("dropIcon").textContent=d.item.icon;document.getElementById("dropType").textContent=d.item.type;document.getElementById("dropTitle").textContent=d.item.title;document.getElementById("dropText").textContent=recipient==="saba"?d.item.s:d.item.a;document.getElementById("dropBtn").textContent="🔒 شانس امروز باز شده"}
+function restoreDrop(){let s=localStorage.getItem(dropKey());if(s)showDrop(JSON.parse(s));else{document.getElementById("dailyReveal").classList.add("hidden");document.getElementById("dropBtn").textContent="🎁 شانس امروزمو باز کن"}}
+restoreDrop();
+
+const commands=[
+{icon:"🚶",title:"قدم بزن",text:"۲۰ تا ۳۰ دقیقه راه برو؛ حتی بدون مقصد خاص.",time:"۲۰–۳۰ دقیقه",why:"چون عوض کردن محیط و حرکت کردن مغز رو ریست می‌کنه."},
+{icon:"🎬",title:"یه فیلم یا یک قسمت سریال ببین",text:"بدون احساس گناه یه چیز خوب ببین و استراحت کن.",time:"۴۵–۱۲۰ دقیقه",why:"سرگرمی هم بخشی از زندگیه؛ لازم نیست هر ساعت پربازده باشه."},
+{icon:"🧘",title:"یوگا یا کشش",text:"یه روتین کوتاه انتخاب کن و فقط بدنت رو حرکت بده.",time:"۱۵–۳۰ دقیقه",why:"برای اینکه بدن هم بفهمه امروز کامل فراموشش نکردی 😭"},
+{icon:"🏋️",title:"یه ورزش سبک",text:"نرمش یا تمرین کوتاه متناسب با وضعیت بدنت.",time:"۲۰–۴۵ دقیقه",why:"نه برای رکورد؛ فقط یه کار خوب برای خودت."},
+{icon:"🇩🇪",title:"چند صفحه زبان بخون",text:"آلمانی بخون، چند واژه مرور کن یا یه تمرین کوتاه بزن.",time:"۲۰–۴۰ دقیقه",why:"کار کوچیک ولی مداوم از جلسه سنگین ماهی یک بار بهتره."},
+{icon:"📚",title:"ده صفحه کتاب",text:"فقط ده صفحه؛ اگر خواستی بیشتر بخون.",time:"۱۵–۳۰ دقیقه",why:"شروع کردن سخت‌تر از ادامه دادنه."},
+{icon:"☕",title:"یه استراحت واقعی",text:"یه نوشیدنی بگیر و بیست دقیقه بدون اسکرول بشین.",time:"۲۰ دقیقه",why:"استراحت با اسکرول همیشه استراحت واقعی نیست."},
+{icon:"🧹",title:"یه گوشه کوچیک رو مرتب کن",text:"فقط یک میز، کشو یا پوشه؛ کل دنیا رو مرتب نکن.",time:"۱۵–۳۰ دقیقه",why:"کار کوچیک و قابل تمام شدن حس کنترل می‌ده."},
+{icon:"🎧",title:"سه آهنگ بدون کار دیگه",text:"سه آهنگ رو فقط گوش بده؛ همزمان هیچ کار دیگه‌ای نکن.",time:"۱۰–۱۵ دقیقه",why:"موسیقی وقتی فقط پس‌زمینه نباشه خیلی بیشتر اثر می‌ذاره."},
+{icon:"✍️",title:"یه صفحه بنویس",text:"هرچی توی ذهنت هست روی کاغذ یا Notes خالی کن.",time:"۱۵ دقیقه",why:"گاهی نوشتن یعنی خالی کردن RAM مغز 😭"},
+{icon:"📵",title:"نیم ساعت بدون شبکه اجتماعی",text:"شبکه‌های اجتماعی رو نیم ساعت باز نکن.",time:"۳۰ دقیقه",why:"فقط ببین مغزت بدون ورودی مداوم چه شکلی می‌شه."},
+{icon:"🌤️",title:"یه کم هوای آزاد",text:"حتی بالکن یا جلوی در؛ چند دقیقه بیرون باش.",time:"۱۵–۳۰ دقیقه",why:"نور و تغییر فضا حال رو عوض می‌کنه."},
+{icon:"📞",title:"یه تماس کوتاه با آدم مهم",text:"بدون دلیل خاص یه تماس کوتاه بگیر.",time:"۱۰–۲۰ دقیقه",why:"رابطه‌ها با تماس‌های بدون مناسبت زنده می‌مونن."},
+{icon:"🍳",title:"یه چیز ساده درست کن",text:"یه خوراکی، نوشیدنی یا غذای ساده برای خودت درست کن.",time:"۲۰–۶۰ دقیقه",why:"ساختن یه چیز کوچیک حس خوبی می‌ده."}
+];
+function getCommand(){return commands[idx(todayKey()+"-"+recipient+"-command",commands.length)]}
+function renderCommand(){let c=getCommand();commandIcon.textContent=c.icon;commandTitle.textContent=c.title;commandText.textContent=c.text;commandTime.textContent=c.time;let done=localStorage.getItem("commandDone-"+todayKey()+"-"+recipient)==="true";doneBtn.textContent=done?"✅ انجامش دادم":"⬜ انجامش دادم";doneBtn.classList.toggle("done",done)}
+function toggleCommandDone(){let k="commandDone-"+todayKey()+"-"+recipient,done=localStorage.getItem(k)==="true";localStorage.setItem(k,done?"false":"true");renderCommand();if(!done){toast("یکی از کارهای امروز جمع شد ✅");celebrate(7)}}
+function showCommandReason(){toast(getCommand().why)}
+renderCommand();
+
+const wheelItems=[
+{icon:"🎬",label:"فیلم",result:"امشب یه فیلم انتخاب کنید؛ انتخاب بیشتر از ۵ دقیقه طول بکشه، گردونه برنده‌ست 😭"},
+{icon:"🍕",label:"غذا",result:"یه خوراکی یا غذای خوشحال‌کننده انتخاب کنید."},
+{icon:"🎵",label:"آهنگ",result:"هرکدوم یه آهنگ انتخاب کنید و پشت سر هم گوش بدید."},
+{icon:"☕",label:"قرار",result:"یه مینی‌قرار: نوشیدنی، قدم زدن یا بیست دقیقه کنار هم."},
+{icon:"💋",label:"بوس",result:"خب... سیستم خیلی واضح تصمیم گرفته 😌"},
+{icon:"📸",label:"خاطره",result:"یه عکس قدیمی یا جدید انتخاب کنید و درباره‌ش حرف بزنید."},
+{icon:"🎁",label:"سورپرایز",result:"یکی تا آخر امروز یه سورپرایز خیلی کوچیک بسازه."},
+{icon:"😭",label:"بدشانسی",result:"هیچی نصیبت نشد. برو صبا رو بغل کن شاید درست شد 😭"}
+];
+const canvas=document.getElementById("wheel"),ctx=canvas.getContext("2d");let rotation=0,spinning=false;
+function drawWheel(){let s=canvas.width,c=s/2,r=c-10,a=Math.PI*2/wheelItems.length,colors=["#ff8fbe","#ffad79","#9a7be0","#57bdb5","#df5b97","#6684e8","#efb94d","#76618d"];ctx.clearRect(0,0,s,s);wheelItems.forEach((it,i)=>{let st=i*a-Math.PI/2;ctx.beginPath();ctx.moveTo(c,c);ctx.arc(c,c,r,st,st+a);ctx.closePath();ctx.fillStyle=colors[i];ctx.fill();ctx.save();ctx.translate(c,c);ctx.rotate(st+a/2);ctx.textAlign="right";ctx.textBaseline="middle";ctx.fillStyle="white";ctx.font="bold 24px sans-serif";ctx.fillText(it.icon+" "+it.label,r-28,0);ctx.restore()});ctx.beginPath();ctx.arc(c,c,r,0,Math.PI*2);ctx.lineWidth=8;ctx.strokeStyle="rgba(255,255,255,.72)";ctx.stroke()}
+drawWheel();
+function spinWheel(){if(spinning)return;spinning=true;spinBtn.disabled=true;spinBtn.textContent="در حال تصمیم‌گیری... 😭";let sel=Math.floor(Math.random()*wheelItems.length),deg=360/wheelItems.length,center=sel*deg+deg/2;rotation+=(5+Math.floor(Math.random()*3))*360+(360-center);canvas.style.transform="rotate("+rotation+"deg)";setTimeout(()=>{let it=wheelItems[sel];wheelResult.textContent=it.icon+" "+it.label+" — "+it.result;spinning=false;spinBtn.disabled=false;spinBtn.textContent="🎡 دوباره بچرخون";if(it.label==="سورپرایز")celebrate(8)},4300)}
+
+const mystery=[
+{icon:"🍫",title:"خوراکی مهمون من",text:"یه خوراکی کوچیک طلب داری."},
+{icon:"💋",title:"یه بوس اضافه",text:"کوپن معتبر تا آخر امروزه 😌"},
+{icon:"🎬",title:"حق انتخاب فیلم",text:"امشب انتخاب با توئه."},
+{icon:"☕",title:"یه نوشیدنی دونفری",text:"یه بهانه برای بیست دقیقه کنار هم."},
+{icon:"📸",title:"یه عکس جدید",text:"امروز یه قاب جدید از یه لحظه معمولی."},
+{icon:"🎵",title:"انتخاب آهنگ",text:"آهنگ بعدی کامل با انتخاب تو."},
+{icon:"🫂",title:"بغل طولانی",text:"نسخه بدون عجله."},
+{icon:"🤡",title:"کارت مسخره‌بازی",text:"یه چالش مسخره برای اون یکی بساز."},
+{icon:"🎁",title:"سورپرایز مخفی",text:"یه چیز کوچیک که اون یکی انتظارش رو نداره."}
+];
+function cardResults(){let copy=[...mystery],out=[],seed=todayKey()+"-"+recipient+"-cards";while(out.length<3){let i=idx(seed,copy.length);out.push(copy.splice(i,1)[0]);seed+="-next"}return out}
+function renderCards(){let res=cardResults(),cards=document.querySelectorAll(".mcard");cards.forEach((c,i)=>{c.classList.remove("revealed");c.querySelector(".ri").textContent=res[i].icon;c.querySelector(".rt").textContent=res[i].title;c.querySelector(".rx").textContent=res[i].text});let saved=localStorage.getItem("mysteryChoice-"+todayKey()+"-"+recipient);if(saved!==null){cards.forEach(c=>c.classList.add("revealed"));cardNote.textContent="انتخاب اصلی امروز کارت "+(Number(saved)+1)+" بود؛ بقیه فقط برای سوزش نمایش داده شدن 😭"}else cardNote.textContent="انتخاب امروز هنوز انجام نشده."}
+function chooseCard(i){let k="mysteryChoice-"+todayKey()+"-"+recipient;if(localStorage.getItem(k)!==null){toast("انتخاب امروز قبلاً انجام شده 😭");return}localStorage.setItem(k,i);let cards=document.querySelectorAll(".mcard");cards[i].classList.add("revealed");celebrate(7);setTimeout(()=>{cards.forEach(c=>c.classList.add("revealed"));cardNote.textContent="کارت "+(i+1)+" انتخاب اصلیت بود؛ حالا ببین چی‌ها رو از دست دادی 😭"},1000)}
+renderCards();
+
+const photos=Array.from({length:11},(_,i)=>"images/photo"+(i+1)+".jpg");
+const tracks=Array.from({length:40},(_,i)=>{let n=i+1,p=String(n).padStart(2,"0"),title="Song "+p,artist="بعداً اضافه می‌شود",cover=photos[i%photos.length];if(n===1){title="Love You";artist="Arian & Saba Playlist";cover="images/photo9.jpg"}if(n===2){title="Black Sails";artist="DARK • Soundtrack";cover="images/photo4.jpg"}if(n===3){title="What If This Is Real Nightmare";artist="Arian & Saba Playlist";cover="images/photo2.jpg"}return{id:n,file:"music/song"+p+".mp3",title,artist,cover}});
+function songIndex(){return idx(todayKey()+"-song-of-day",tracks.length)}
+function renderSong(){let t=tracks[songIndex()];songCover.src=t.cover;songTitle.textContent=t.title;songArtist.textContent=t.artist;localAudio.src=t.file}
+function playSong(){let i=songIndex(),t=tracks[i];try{if(window.parent&&window.parent!==window&&typeof window.parent.loadMusicTrack==="function"){window.parent.loadMusicTrack(i,true);toast("آهنگ امروز توی پلیر اصلی سایت پخش شد 🎵");return}}catch(e){}if(localAudio.paused)localAudio.play().then(()=>songPlay.textContent="❚❚").catch(()=>toast("فایل "+t.file+" هنوز آپلود نشده یا اجازه پخش نداره."));else{localAudio.pause();songPlay.textContent="▶"}}
+localAudio.addEventListener("ended",()=>songPlay.textContent="▶");
+function openMainPlayer(){try{if(window.parent&&window.parent!==window&&typeof window.parent.openMusicPlayer==="function"){window.parent.openMusicPlayer();return}}catch(e){}toast("اگر صفحه از داخل index جدید باز بشه، پلیر اصلی اینجا باز می‌شه 🎧")}
+function explainSong(){toast("امروز جایگاه song"+String(songIndex()+1).padStart(2,"0")+".mp3 انتخاب شده؛ انتخاب تا فردا ثابته.")}
+renderSong();
+
+const secretRules=[
+"تا آخر امروز هرکی اول بگه «عاشقتم»، برنده‌ست. ❤️",
+"امروز باید یه عکس جدید به خاطرات آینده‌ی سایت اضافه بشه. 📸",
+"امروز هرکدوم یه آهنگ برای اون یکی انتخاب کنه؛ بدون توضیح، فقط آهنگ. 🎵",
+"امروز یه تعریف باید کاملاً جدی باشه؛ خنده و شوخی ممنوع 😭",
+"امروز حداقل بیست دقیقه بدون گوشی کنار هم باشید. 📵❤️",
+"امروز یه خوراکی کوچیک باید به شکل سورپرایز وارد داستان بشه. 🍫",
+"امروز یکی از خاطره‌های قدیمی‌تون رو برای هم از اول تعریف کنید. 🌙"
+];
+(function secretDay(){let seed=todayKey()+"-secret-day",roll=hash(seed)%100;if(roll<7){secretSection.classList.remove("hidden");secretText.textContent=secretRules[idx(seed+"-rule",secretRules.length)];setTimeout(()=>toast("⚠️ SECRET DAY DETECTED"),700)}})();
+
+function getHistory(){try{return JSON.parse(localStorage.getItem("dailyDropHistory")||"[]")}catch(e){return[]}}
+function saveHistory(d){let h=getHistory(),item={date:todayKey(),recipient,icon:d.item.icon,title:d.item.title,type:d.item.type};if(!h.some(x=>x.date===item.date&&x.recipient===item.recipient)){h.unshift(item);localStorage.setItem("dailyDropHistory",JSON.stringify(h.slice(0,14)))}renderHistory()}
+function renderHistory(){let box=document.getElementById("history"),h=getHistory();box.innerHTML="";if(!h.length){box.innerHTML='<p class="cardnote">هنوز تاریخچه‌ای نداریم.</p>';return}h.forEach(x=>{let r=document.createElement("div");r.className="hitem";r.innerHTML='<span>'+x.icon+'</span><span class="hmain"><strong>'+x.title+'</strong><small>'+(x.recipient==="saba"?"صبا":"آرین")+' • '+x.type+'</small></span><span class="hdate">'+x.date+'</span>';box.appendChild(r)})}
+renderHistory();
+
+let toastTimer;
+function toast(text){let t=document.getElementById("toast");t.textContent=text;t.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove("show"),3000)}
+function celebrate(n=10){let icons=["❤️","✨","💖","🌸","🎁","⭐"];for(let i=0;i<n;i++){let e=document.createElement("span");e.className="celebrate";e.textContent=icons[Math.floor(Math.random()*icons.length)];e.style.left=5+Math.random()*90+"%";e.style.animationDelay=Math.random()*.3+"s";document.body.appendChild(e);setTimeout(()=>e.remove(),1900)}}
+</script>
+</body>
+</html>
