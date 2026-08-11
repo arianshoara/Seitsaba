@@ -1,110 +1,1912 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>آرین و صبا ❤️</title>
-    <!-- لینک CSS به صورت مستقیم و بدون وابستگی به پایتون -->
+
+    <meta name="theme-color" content="#f7c7df">
+    <meta name="description" content="دنیای کوچک آرین و صبا ❤️">
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- ستاره‌های در حال سقوط -->
+
+    <!-- ستاره‌های پس‌زمینه -->
     <div id="stars"></div>
 
-    <!-- بخش اصلی خوش‌آمدگویی -->
-    <div class="container">
-        <span class="emoji-big">❤️🌹💖</span>
-        <h1>به دنیای <span class="highlight">آرین</span> و <span class="highlight-pink">صبا</span> خوش آمدید!</h1>
-        <p class="subtitle">این سایت رو با عشق و با گوشی ساختم، چون پام شکسته بود و حوصله‌ی کامپیوتر نداشتم! 😭🤭</p>
-        
-        <div class="btn-group">
-            <button class="btn" onclick="showLove()">💕 به صبا بگو چقدر دوستش داری!</button>
-            <button class="btn btn-secondary" onclick="window.close()">❌ بستن</button>
+    <main class="page">
+
+        <!-- =========================
+             صفحه اصلی
+        ========================== -->
+
+        <section class="glass hero-section">
+
+            <p id="timeGreeting" class="time-greeting">
+                سلام صبا ❤️
+            </p>
+
+            <div class="hero-badge">
+                A ❤️ S
+            </div>
+
+            <span class="emoji-big">
+                ❤️🌹💖
+            </span>
+
+            <h1>
+                به دنیای
+                <span class="highlight">آرین</span>
+                و
+                <span class="highlight-pink">صبا</span>
+                خوش اومدی!
+            </h1>
+
+            <p class="subtitle">
+                این سایت رو با عشق و با گوشی ساختم،
+                چون پام شکسته بود و حوصله‌ی کامپیوتر نداشتم! 😭🤭
+            </p>
+
+            <div class="btn-group">
+
+                <button
+                    class="btn"
+                    onclick="showLove(event)"
+                >
+                    💕 به صبا بگو چقدر دوستش داری!
+                </button>
+
+                <button
+                    class="btn btn-secondary"
+                    onclick="scrollToSection('secretLove')"
+                >
+                    🔐 قلب مخفی
+                </button>
+
+            </div>
+
+            <div
+                id="loveMessage"
+                class="love-message"
+            >
+                🌹 منتظر یه کلمه‌ی عاشقانه‌ام...
+            </div>
+
+            <p class="small-counter">
+
+                این دکمه تا حالا
+
+                <span id="loveCount">
+                    0
+                </span>
+
+                بار زده شده 🤭
+
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             Love Calculator
+        ========================== -->
+
+        <section class="glass section-box">
+
+            <h2 class="section-title">
+                امروز چقدر دوستت دارم؟ 😂❤️
+            </h2>
+
+            <p class="section-subtitle">
+                یک محاسبه‌ی کاملاً علمی و اصلاً غیراغراق‌آمیز.
+            </p>
+
+            <div class="meter-wrap">
+
+                <div class="meter-bar">
+
+                    <div
+                        id="loveFill"
+                        class="meter-fill"
+                    ></div>
+
+                </div>
+
+                <div
+                    id="lovePercent"
+                    class="love-percent"
+                >
+                    0%
+                </div>
+
+            </div>
+
+            <p
+                id="loveResult"
+                class="meter-result"
+            >
+                روی دکمه بزن تا سیستم شروع به محاسبه کند...
+            </p>
+
+            <div class="center-button">
+
+                <button
+                    class="btn"
+                    onclick="runLoveMeter()"
+                >
+                    💘 محاسبه کن
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             Timeline
+        ========================== -->
+
+        <section class="glass section-box">
+
+            <h2 class="section-title">
+                داستان ما 📖
+            </h2>
+
+            <p class="section-subtitle">
+                چند تکه از چیزهایی که بین ما موندن.
+            </p>
+
+            <div class="timeline">
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot">
+                        🌱
+                    </div>
+
+                    <div class="timeline-card">
+
+                        <h3>
+                            شروع
+                        </h3>
+
+                        <p>
+                            همه‌چیز از یه جایی شروع شد؛
+                            از همون لحظه‌هایی که شاید اون موقع ساده بودن،
+                            ولی بعداً فهمیدیم چقدر مهم شدن.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot">
+                        ☕
+                    </div>
+
+                    <div class="timeline-card">
+
+                        <h3>
+                            قرارهای ساده
+                        </h3>
+
+                        <p>
+                            کافه، خیابون، درس خوندن،
+                            حرف زدن و وقت گذروندن.
+                            چیزهای ساده‌ای که چون با تو بودن،
+                            ساده نموندن.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot">
+                        🎬
+                    </div>
+
+                    <div class="timeline-card">
+
+                        <h3>
+                            تجربه‌های دوتایی
+                        </h3>
+
+                        <p>
+                            سینما، پل غدیر، شب‌های صدرا،
+                            الف، مالی‌آباد و کلی جای دیگه
+                            که یه تکه از ما توشون جا مونده.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot">
+                        🌙
+                    </div>
+
+                    <div class="timeline-card">
+
+                        <h3>
+                            روزهای سخت
+                        </h3>
+
+                        <p>
+                            فقط روزهای خوب نیستن که یادم موندن.
+                            اینکه توی روزهای سخت کنارم بودی
+                            برای من یکی از مهم‌ترین بخش‌های این داستانه.
+                            ممنونم عشقم. ❤️
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot">
+                        ∞
+                    </div>
+
+                    <div class="timeline-card">
+
+                        <h3>
+                            ادامه دارد...
+                        </h3>
+
+                        <p>
+                            این داستان هنوز تموم نشده.
+                            هنوز کلی عکس،
+                            کلی خاطره
+                            و کلی جای خالی برای اتفاق‌های بعدی داریم.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             گالری خاطرات
+        ========================== -->
+
+        <section
+            class="glass section-box"
+            id="gallery"
+        >
+
+            <h2 class="section-title">
+                دفتر خاطره‌ها 📸
+            </h2>
+
+            <p class="section-subtitle">
+                روی هر عکس بزن تا کامل بازش کنی.
+            </p>
+
+
+            <div class="memory-grid">
+
+
+                <!-- PHOTO 1 -->
+
+                <article
+                    class="polaroid"
+                    onclick="openLightbox(
+                        'images/photo1.jpg',
+                        '01 — گودبای پارتی اروین',
+                        'روزی که توی گودبای پارتی اروین کنار هم وایسادیم. یه قاب شلوغ از یه روز خاص که برام موندگار شد. ❤️'
+                    )"
+                >
+
+                    <img
+                        src="images/photo1.jpg"
+                        alt="گودبای پارتی اروین"
+                        loading="lazy"
+                    >
+
+                    <div class="polaroid-body">
+
+                        <span class="memory-number">
+                            01
+                        </span>
+
+                        <h3>
+                            گودبای پارتی اروین
+                        </h3>
+
+                        <p>
+                            روزی که توی گودبای پارتی اروین کنار هم وایسادیم.
+                            یه قاب شلوغ از یه روز خاص که برام موندگار شد. ❤️
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PHOTO 2 -->
+
+                <article
+                    class="polaroid"
+                    onclick="openLightbox(
+                        'images/photo2.jpg',
+                        '02 — سرِ صدرا',
+                        'یه شب ساده اما موندگار برامون، سرِ صدرا. از اون شب‌هایی که اتفاق عجیب خاصی لازم نداشت تا قشنگ باشه. 🌙'
+                    )"
+                >
+
+                    <img
+                        src="images/photo2.jpg"
+                        alt="شب صدرا"
+                        loading="lazy"
+                    >
+
+                    <div class="polaroid-body">
+
+                        <span class="memory-number">
+                            02
+                        </span>
+
+                        <h3>
+                            سرِ صدرا
+                        </h3>
+
+                        <p>
+                            یه شب ساده اما موندگار برامون.
+                            از اون شب‌هایی که فقط کنار هم بودن کافی بود. 🌙
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PHOTO 3 -->
+
+                <article
+                    class="polaroid"
+                    onclick="openLightbox(
+                        'images/photo3.jpg',
+                        '03 — الف',
+                        'از اون روزایی که می‌رفتیم الف و کلی خوش می‌گذشت. یه جای معمولی که با تو تبدیل شد به بخشی از خاطراتم. 📚❤️'
+                    )"
+                >
+
+                    <img
+                        src="images/photo3.jpg"
+                        alt="الف"
+                        loading="lazy"
+                    >
+
+                    <div class="polaroid-body">
+
+                        <span class="memory-number">
+                            03
+                        </span>
+
+                        <h3>
+                            روزای الف
+                        </h3>
+
+                        <p>
+                            از اون روزایی که می‌رفتیم الف
+                            و کلی خوش می‌گذشت.
+                            یه جای معمولی که با تو برام خاص شد.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PHOTO 4 -->
+
+                <article
+                    class="polaroid"
+                    onclick="openLightbox(
+                        'images/photo4.jpg',
+                        '04 — کاله آبی',
+                        'اوایل رابطه، توی کاله آبی؛ من و تم دارکم 🤭 و تو که کنارم بودی. دیدن این عکس هنوز منو می‌بره همون روزا.'
+                    )"
+                >
+
+                    <img
+                        src="images/photo4.jpg"
+                        alt="کاله آبی"
+                        loading="lazy"
+                    >
+
+                    <div class="polaroid-body">
+
+                        <span class="memory-number">
+                            04
+                        </span>
+
+                        <h3>
+                            کاله آبی
+                        </h3>
+
+                        <p>
+                            اوایل رابطه.
+                            من و تم دارکم 🤭
+                            و تو که کنارم بودی.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PHOTO 5 -->
+
+                <article
+                    class="polaroid"
+                    onclick="openLightbox(
+                        'images/photo5.jpg',
+                        '05 — خانم خودم 🤭',
+                        'اون روزی که با چادر شدی خانم خودم 🤭❤️ این عکس هنوز یکی از بامزه‌ترین قاب‌های تو برای منه.'
+                    )"
+                >
+
+                    <img
+                        src="images/photo5.jpg"
+                        alt="صبا با چادر"
+                        loading="lazy"
+                    >
+
+                    <div class="polaroid-body">
+
+                        <span class="memory-number">
+                            05
+                        </span>
+
+                        <h3>
+                            خانم خودم 🤭
+                        </h3>
+
+                        <p>
+                            اون روزی که با چادر شدی خانم خودم.
+                            این عکس هنوز برام خیلی دوست‌داشتنیه. 🤭❤️
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PHOTO 6 -->
+
+                <article
+                    class="polaroid"
+                    onclick="openLightbox(
+                        'images/photo6.jpg',
+                        '06 — پای بساط',
+                        'از اون روزایی که می‌رفتیم پای بساط. ممنونم که توی روزای سخت کنارم بودی عشقم. این بخش از داستانمون رو هیچ‌وقت فراموش نمی‌کنم. ❤️'
+                    )"
+                >
+
+                    <img
+                        src="images/photo6.jpg"
+                        alt="پای بساط"
+                        loading="lazy"
+                    >
+
+                    <div class="polaroid-body">
+
+                        <span class="memory-number">
+                            06
+                        </span>
+
+                        <h3>
+                            پای بساط
+                        </h3>
+
+                        <p>
+                            ممنونم که توی روزای سخت کنارم بودی عشقم.
+                            این چیزیه که هیچ‌وقت فراموش نمی‌کنم. ❤️
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PHOTO 7 -->
+
+                <article
+                    class="polaroid"
+                    onclick="openLightbox(
+                        'images/photo7.jpg',
+                        '07 — مالی‌آباد',
+                        'کافه توی مالی‌آباد؛ می‌رفتیم اونجا درس می‌خوندیم و چقدر بهمون خوش می‌گذشت. حتی درس خوندن هم کنار تو خاطره شد. ☕📚'
+                    )"
+                >
+
+                    <img
+                        src="images/photo7.jpg"
+                        alt="کافه مالی آباد"
+                        loading="lazy"
+                    >
+
+                    <div class="polaroid-body">
+
+                        <span class="memory-number">
+                            07
+                        </span>
+
+                        <h3>
+                            مالی‌آباد
+                        </h3>
+
+                        <p>
+                            کافه، درس خوندن و کلی خوش گذروندن.
+                            حتی درس خوندن کنار تو خاطره شد. ☕📚
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PHOTO 8 -->
+
+                <article
+                    class="polaroid"
+                    onclick="openLightbox(
+                        'images/photo8.jpg',
+                        '08 — سینما',
+                        'توی سینما کنار هم. یه تجربه‌ی ساده ولی خیلی خوب که هنوز دیدن قابش برام شیرینه. 🎬❤️'
+                    )"
+                >
+
+                    <img
+                        src="images/photo8.jpg"
+                        alt="سینما"
+                        loading="lazy"
+                    >
+
+                    <div class="polaroid-body">
+
+                        <span class="memory-number">
+                            08
+                        </span>
+
+                        <h3>
+                            سینما
+                        </h3>
+
+                        <p>
+                            توی سینما کنار هم.
+                            یه تجربه‌ی ساده ولی خیلی خوب
+                            که هنوز برام شیرینه. 🎬❤️
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PHOTO 9 -->
+
+                <article
+                    class="polaroid"
+                    onclick="openLightbox(
+                        'images/photo9.jpg',
+                        '09 — روز تولدم',
+                        'روز تولدم؛ قبلش دونفری رفته بودیم پل غدیر 🤭❤️ یکی از اون روزایی که ترکیب اتفاق‌های کوچیکش باعث شد خیلی خاص بشه.'
+                    )"
+                >
+
+                    <img
+                        src="images/photo9.jpg"
+                        alt="تولد آرین و پل غدیر"
+                        loading="lazy"
+                    >
+
+                    <div class="polaroid-body">
+
+                        <span class="memory-number">
+                            09
+                        </span>
+
+                        <h3>
+                            روز تولدم
+                        </h3>
+
+                        <p>
+                            قبلش دونفری رفته بودیم پل غدیر 🤭❤️
+                            یکی از اون روزایی که خیلی خوب توی ذهنم موند.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PHOTO 10 -->
+
+                <article
+                    class="polaroid"
+                    onclick="openLightbox(
+                        'images/photo10.jpg',
+                        '10 — روزای اول رابطه',
+                        'روزای اول رابطه و سلفی عجیب من 😭🤭 از اون عکسایی که هرچی زمان می‌گذره دیدنش بامزه‌تر می‌شه.'
+                    )"
+                >
+
+                    <img
+                        src="images/photo10.jpg"
+                        alt="روزهای اول رابطه"
+                        loading="lazy"
+                    >
+
+                    <div class="polaroid-body">
+
+                        <span class="memory-number">
+                            10
+                        </span>
+
+                        <h3>
+                            روزای اول رابطه
+                        </h3>
+
+                        <p>
+                            روزای اول رابطه و سلفی عجیب من 😭🤭
+                            از اون عکسایی که هرچی می‌گذره بامزه‌تر می‌شه.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PHOTO 11 -->
+
+                <article
+                    class="polaroid"
+                    onclick="openLightbox(
+                        'images/photo11.jpg',
+                        '11 — بالاخره کیفیت خوب 😭❤️',
+                        'از اون عکسایی که کیفیتش واقعاً خوبه 😭❤️ ولی خب سوژه‌هاش هم بد نیستن.'
+                    )"
+                >
+
+                    <img
+                        src="images/photo11.jpg"
+                        alt="عکس آرین و صبا"
+                        loading="lazy"
+                    >
+
+                    <div class="polaroid-body">
+
+                        <span class="memory-number">
+                            11
+                        </span>
+
+                        <h3>
+                            بالاخره کیفیت خوب 😭❤️
+                        </h3>
+
+                        <p>
+                            از اون عکسایی که کیفیتش واقعاً خوبه 😭❤️
+                            ولی خب سوژه‌هاش هم بد نیستن.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             کهکشان
+        ========================== -->
+
+        <section class="glass section-box galaxy-section">
+
+            <h2 class="section-title">
+                کهکشان آرین و صبا ✨
+            </h2>
+
+            <p class="section-subtitle">
+                روی ستاره‌ها بزن.
+                هر کدوم یه تکه از ما رو قایم کرده.
+            </p>
+
+
+            <div class="constellation">
+
+
+                <div class="star-line line-1"></div>
+
+                <div class="star-line line-2"></div>
+
+                <div class="star-line line-3"></div>
+
+
+                <button
+                    class="memory-star star-a"
+                    onclick="showStarMemory(
+                        'A — آرین',
+                        'یه آدم که یه روز تصمیم گرفت حتی با گوشی و پای شکسته، یه گوشه‌ی اینترنت رو برای تو بسازه. 🤭'
+                    )"
+                >
+                    A
+                </button>
+
+
+                <button
+                    class="memory-star star-b"
+                    onclick="showStarMemory(
+                        'S — صبا',
+                        'اون کسی که باعث شد خیلی از جاهای معمولی، خیلی از شب‌های ساده و خیلی از عکس‌های اتفاقی تبدیل به خاطره بشن.'
+                    )"
+                >
+                    S
+                </button>
+
+
+                <button
+                    class="memory-star star-c"
+                    onclick="showStarMemory(
+                        'روزهای ساده',
+                        'کافه، درس، خیابون و کلی اتفاق کوچیک. شاید هیچ‌کدوم به تنهایی عجیب نبودن؛ ولی با تو مهم شدن.'
+                    )"
+                >
+                    ✨
+                </button>
+
+
+                <button
+                    class="memory-star star-d"
+                    onclick="showStarMemory(
+                        'روزهای سخت',
+                        'ممنونم که وقتی همه‌چی ساده نبود هم کنارم بودی. بعضی چیزها رو آدم هیچ‌وقت فراموش نمی‌کنه.'
+                    )"
+                >
+                    🌙
+                </button>
+
+
+                <button
+                    class="memory-star star-e"
+                    onclick="showStarMemory(
+                        'خاطرات عجیب',
+                        'از سلفی‌های عجیب گرفته تا تم دارک من و خانم چادری خودم؛ دقیقاً همین جزئیاتن که خاطره‌ها رو واقعی می‌کنن. 🤭'
+                    )"
+                >
+                    💫
+                </button>
+
+
+                <button
+                    class="memory-star star-f"
+                    onclick="showStarMemory(
+                        'ادامه دارد...',
+                        'این کهکشان هنوز کامل نشده. هنوز جا برای کلی ستاره‌ی جدید، عکس جدید و خاطره‌ی جدید هست. ❤️'
+                    )"
+                >
+                    ❤️
+                </button>
+
+
+            </div>
+
+
+            <div
+                id="starMessage"
+                class="star-message"
+            >
+
+                <h3>
+                    روی یکی از ستاره‌ها بزن ✨
+                </h3>
+
+                <p>
+                    چند تکه‌ی کوچیک از داستانمون اینجا قایم شدن.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             قلب مخفی
+        ========================== -->
+
+        <section
+            class="glass section-box secret-section"
+            id="secretLove"
+        >
+
+            <h2 class="section-title">
+                قلب قفل‌شده 🔐❤️
+            </h2>
+
+            <p class="section-subtitle">
+                برای باز کردنش ۵ بار روی قلب بزن.
+            </p>
+
+
+            <button
+                id="secretHeart"
+                class="secret-heart"
+                onclick="unlockSecret()"
+            >
+                ❤️
+            </button>
+
+
+            <p
+                id="secretCount"
+                class="secret-count"
+            >
+                0 / 5
+            </p>
+
+
+            <div
+                id="secretBox"
+                class="secret-box hidden"
+            >
+
+                <h3>
+                    این قسمت فقط برای صباست 💌
+                </h3>
+
+                <p>
+                    صبا جان،
+                </p>
+
+                <p>
+                    شاید این فقط یه سایت کوچیک باشه
+                    و پشتش چند خط HTML و CSS و JavaScript،
+                    ولی دلیل ساختنش هیچ‌کدوم از اینا نیست.
+                </p>
+
+                <p>
+                    خواستم یه گوشه‌ی کوچیک از اینترنت وجود داشته باشه
+                    که وقتی بازش می‌کنی،
+                    پر از چیزایی باشه که منو یاد تو می‌اندازه.
+                </p>
+
+                <p>
+                    عکس‌های عجیبمون،
+                    شب‌های ساده‌مون،
+                    کافه‌ها،
+                    سینما،
+                    روزهای خوب
+                    و حتی روزهایی که خیلی خوب نبودن.
+                </p>
+
+                <p>
+                    ممنونم که توی خیلی از اون روزها کنارم بودی.
+                </p>
+
+                <p>
+                    و اگه یه روز دوباره این صفحه رو باز کردی،
+                    بدون پشت همه‌ی قلب‌ها و ستاره‌ها و شوخی‌های این سایت،
+                    یه جمله‌ی خیلی ساده هست:
+                </p>
+
+                <p class="secret-end">
+                    دوستت دارم صبا ❤️
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             آرین و صبا
+        ========================== -->
+
+        <section class="glass section-box">
+
+            <h2 class="section-title">
+                ما ❤️
+            </h2>
+
+
+            <div class="profile-row">
+
+
+                <div class="profile">
+
+                    <img
+                        src="https://www.upload.ee/image/19635950/IMG_20260807_040252_811.jpg"
+                        alt="عکس آرین"
+                        class="profile-img"
+                    >
+
+                    <p class="profile-name">
+                        آرین
+                    </p>
+
+                </div>
+
+
+                <div class="profile-center-heart">
+                    ❤️
+                </div>
+
+
+                <div class="profile">
+
+                    <img
+                        src="https://www.upload.ee/image/19635974/IMG_20260707_123631_330.jpg"
+                        alt="عکس صبا"
+                        class="profile-img"
+                    >
+
+                    <p class="profile-name">
+                        صبا ❤️
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="love-text">
+
+                <p>
+                    صبا جان،
+                    تو زیباترین اتفاق زندگیم هستی.
+                    هر روز با تو رنگین‌تر از دیروز است. 🌈✨
+                </p>
+
+                <p>
+                    عاشقتم به اندازه‌ی تمام ستاره‌های آسمون...
+                    بی‌نهایت! 💫
+                </p>
+
+            </div>
+
+
+
+            <!-- اطلاعات آرین -->
+
+            <div class="info-box">
+
+                <p>
+                    <span class="highlight">
+                        آرین
+                    </span>
+                    هستم، مدرس زبان آلمانی (مدرک B2).
+                </p>
+
+                <p>
+                    برای هماهنگی کلاس‌ها و مشاوره رایگان،
+                    با من تماس بگیرید:
+                </p>
+
+
+                <ul class="contact-list">
+
+
+                    <li>
+                        📱
+                        <strong>
+                            شماره:
+                        </strong>
+
+                        09179915982
+                    </li>
+
+
+                    <li>
+                        📧
+                        <strong>
+                            ایمیل:
+                        </strong>
+
+                        arian311380@gmail.com
+                    </li>
+
+
+                    <li>
+
+                        📸
+                        <strong>
+                            اینستاگرام:
+                        </strong>
+
+                        <a
+                            href="https://instagram.com/Arian__sho2"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            @Arian__sho2
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        ✈️
+                        <strong>
+                            تلگرام:
+                        </strong>
+
+                        <a
+                            href="https://t.me/ariansho"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            @ariansho
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+
+            <span class="ai-badge">
+                📱 ساخته‌شده با HTML + CSS + JavaScript ❤️
+            </span>
+
+
+        </section>
+
+
+        <p class="bottom-text">
+            made with too much love 🌹
+        </p>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         نمایش بزرگ عکس
+    ========================== -->
+
+    <div
+        id="lightbox"
+        class="lightbox hidden"
+        onclick="closeLightbox()"
+    >
+
+        <div
+            class="lightbox-content"
+            onclick="event.stopPropagation()"
+        >
+
+            <button
+                class="lightbox-close"
+                onclick="closeLightbox()"
+            >
+                ×
+            </button>
+
+
+            <img
+                id="lightboxImg"
+                src=""
+                alt="خاطره آرین و صبا"
+            >
+
+
+            <div class="lightbox-caption">
+
+                <h3 id="lightboxTitle"></h3>
+
+                <p id="lightboxText"></p>
+
+            </div>
+
+
         </div>
-        
-        <div id="loveMessage">🌹 منتظر یه کلمه عاشقانه‌ای...</div>
+
     </div>
 
-    <!-- بخش عکس‌ها و اطلاعات -->
-    <div class="footer" id="about">
-        <div class="profile-row">
-            <div class="profile">
-                <img src="https://www.upload.ee/image/19635950/IMG_20260807_040252_811.jpg" alt="عکس آرین" class="profile-img">
-                <p class="profile-name">آرین</p>
-            </div>
-            <div class="profile">
-                <img src="https://www.upload.ee/image/19635974/IMG_20260707_123631_330.jpg" alt="عکس صبا" class="profile-img">
-                <p class="profile-name">صبا ❤️</p>
-            </div>
-        </div>
-        
-        <div class="love-text">
-            <p>صبا جان، تو زیباترین اتفاق زندگیم هستی. هر روز با تو رنگین‌تر از دیروز است. 🌈✨</p>
-            <p>عاشقتم به اندازه‌ی تمام ستاره‌های آسمون... بی‌نهایت! 💫</p>
-        </div>
 
-        <div class="info-box">
-            <p><span class="highlight">آرین</span> هستم، مدرس زبان آلمانی (مدرک B2).</p>
-            <p>برای هماهنگی کلاس‌ها و مشاوره رایگان، با من تماس بگیرید:</p>
-            <ul class="contact-list">
-                <li>📱 <strong>شماره:</strong> 09179915982</li>
-                <li>📧 <strong>ایمیل:</strong> arian311380@gmail.com</li>
-                <li>📸 <strong>اینستاگرام:</strong> <a href="https://instagram.com/Arian__sho2" target="_blank">@Arian__sho2</a></li>
-                <li>✈️ <strong>تلگرام:</strong> <a href="https://t.me/ariansho" target="_blank">@ariansho</a></li>
-            </ul>
-        </div>
-        
-        <span class="ai-badge">🤖 ساخته شده با Flask + AI ❤️</span>
-    </div>
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
 
     <script>
-        // ساخت ستاره‌های در حال سقوط
+
+
+        /* =========================================
+           ستاره‌های پس‌زمینه
+        ========================================= */
+
         function createStars() {
-            const starsContainer = document.getElementById('stars');
-            const emojis = ['✨', '🌟', '⭐', '💫', '❤️', '🌹'];
-            for (let i = 0; i < 30; i++) {
-                const star = document.createElement('div');
-                star.className = 'star';
-                star.textContent = emojis[Math.floor(Math.random() * emojis.length)];
-                star.style.left = Math.random() * 100 + '%';
-                star.style.fontSize = (Math.random() * 18 + 10) + 'px';
-                star.style.animationDuration = (Math.random() * 10 + 6) + 's';
-                star.style.animationDelay = (Math.random() * 10) + 's';
+
+            const starsContainer =
+                document.getElementById("stars");
+
+
+            const emojis = [
+
+                "✨",
+                "🌟",
+                "⭐",
+                "💫",
+                "❤️",
+                "🌹"
+
+            ];
+
+
+            for (let i = 0; i < 28; i++) {
+
+                const star =
+                    document.createElement("div");
+
+
+                star.className =
+                    "star";
+
+
+                star.textContent =
+                    emojis[
+                        Math.floor(
+                            Math.random() * emojis.length
+                        )
+                    ];
+
+
+                star.style.left =
+                    Math.random() * 100 + "%";
+
+
+                star.style.fontSize =
+                    Math.random() * 18 + 10 + "px";
+
+
+                star.style.animationDuration =
+                    Math.random() * 10 + 8 + "s";
+
+
+                star.style.animationDelay =
+                    Math.random() * 10 + "s";
+
+
                 starsContainer.appendChild(star);
+
             }
+
         }
+
+
         createStars();
 
-        // پیام‌های عاشقانه برای صبا
-        function showLove() {
-            const messages = [
-                '❤️ صبا، تو همه‌ی دنیای منی!',
-                '🌹 عشق من، بدون تو هیچم!',
-                '💕 صبا، عاشقتم به اندازه‌ی تمام کهکشان‌ها!',
-                '🌸 تو رویای هر شبی هستی که بیدارم نگه می‌دارد.',
-                '💖 صبا، تو بهترین اتفاق زندگیم هستی.',
-                '🌟 با تو هر روز یک ماجرای عاشقانه‌ست.',
-                '🌺 عشق من، تو تکه‌ی گمشده‌ی پازلم هستی.',
-                '💗 صبا، دوستت دارم بی‌نهایت!'
-            ];
-            
-            const randomMsg = messages[Math.floor(Math.random() * messages.length)];
-            const el = document.getElementById('loveMessage');
-            
-            el.style.transition = 'all 0.5s ease';
-            el.style.transform = 'scale(0.8)';
-            el.style.opacity = '0';
-            
-            setTimeout(() => {
-                el.textContent = randomMsg;
-                el.style.transform = 'scale(1.2)';
-                el.style.opacity = '1';
-            }, 300);
-            
-            setTimeout(() => {
-                el.style.transform = 'scale(1)';
-            }, 600);
+
+
+        /* =========================================
+           تغییر سایت براساس ساعت
+        ========================================= */
+
+        function setThemeByTime() {
+
+            const hour =
+                new Date().getHours();
+
+
+            const greeting =
+                document.getElementById(
+                    "timeGreeting"
+                );
+
+
+            const body =
+                document.body;
+
+
+            body.classList.remove(
+
+                "theme-morning",
+                "theme-evening",
+                "theme-night"
+
+            );
+
+
+            if (
+                hour >= 5 &&
+                hour < 12
+            ) {
+
+                body.classList.add(
+                    "theme-morning"
+                );
+
+
+                greeting.textContent =
+                    "صبح بخیر صبا ☀️";
+
+            }
+
+
+            else if (
+                hour >= 12 &&
+                hour < 19
+            ) {
+
+                body.classList.add(
+                    "theme-evening"
+                );
+
+
+                greeting.textContent =
+                    "امیدوارم روز قشنگی داشته باشی 🌇";
+
+            }
+
+
+            else if (
+                hour >= 19 &&
+                hour < 24
+            ) {
+
+                body.classList.add(
+                    "theme-night"
+                );
+
+
+                greeting.textContent =
+                    "شب بخیر صبا 🌙";
+
+            }
+
+
+            else {
+
+                body.classList.add(
+                    "theme-night"
+                );
+
+
+                greeting.textContent =
+                    "هنوز بیداری؟ برو بخواب دیگه 😭❤️";
+
+            }
+
         }
+
+
+        setThemeByTime();
+
+
+
+        /* =========================================
+           پیام‌های عاشقانه
+        ========================================= */
+
+        const loveMessages = [
+
+            "❤️ صبا، تو همه‌ی دنیای منی!",
+
+            "🌹 عشق من، بدون تو یه چیزی از دنیا کمه!",
+
+            "💕 صبا، عاشقتم به اندازه‌ی تمام کهکشان‌ها!",
+
+            "🌸 دیدنت هنوزم می‌تونه کل روزمو عوض کنه.",
+
+            "💖 صبا، تو بهترین اتفاق زندگیم هستی.",
+
+            "🌟 با تو حتی روزای عادی هم خاطره می‌شن.",
+
+            "🌺 بعضی از بهترین خاطراتم فقط چون تو اونجا بودی قشنگ شدن.",
+
+            "💗 صبا، دوستت دارم بی‌نهایت!",
+
+            "🫶 ممنونم که توی روزای سخت کنارم بودی.",
+
+            "🌙 بعضی شب‌ها فقط با فکر تو قشنگ‌ترن."
+
+        ];
+
+
+
+        let loveCount =
+            Number(
+                localStorage.getItem(
+                    "loveCount"
+                )
+            ) || 0;
+
+
+        document.getElementById(
+            "loveCount"
+        ).textContent =
+            loveCount;
+
+
+
+        function showLove(event) {
+
+            const randomMsg =
+                loveMessages[
+                    Math.floor(
+                        Math.random() *
+                        loveMessages.length
+                    )
+                ];
+
+
+            const el =
+                document.getElementById(
+                    "loveMessage"
+                );
+
+
+            el.classList.remove(
+                "message-pop"
+            );
+
+
+            void el.offsetWidth;
+
+
+            el.textContent =
+                randomMsg;
+
+
+            el.classList.add(
+                "message-pop"
+            );
+
+
+            loveCount++;
+
+
+            localStorage.setItem(
+
+                "loveCount",
+                loveCount
+
+            );
+
+
+            document.getElementById(
+                "loveCount"
+            ).textContent =
+                loveCount;
+
+
+            createHeartBurst(event);
+
+        }
+
+
+
+        /* =========================================
+           قلب‌های موقع کلیک
+        ========================================= */
+
+        function createHeartBurst(event) {
+
+            const hearts = [
+
+                "❤️",
+                "💖",
+                "💕",
+                "💞",
+                "🌹"
+
+            ];
+
+
+            for (let i = 0; i < 8; i++) {
+
+                const heart =
+                    document.createElement(
+                        "span"
+                    );
+
+
+                heart.className =
+                    "heart-particle";
+
+
+                heart.textContent =
+                    hearts[
+                        Math.floor(
+                            Math.random() *
+                            hearts.length
+                        )
+                    ];
+
+
+                heart.style.left =
+                    event.clientX + "px";
+
+
+                heart.style.top =
+                    event.clientY + "px";
+
+
+                heart.style.setProperty(
+
+                    "--x",
+
+                    (
+                        Math.random() * 160 -
+                        80
+                    ) + "px"
+
+                );
+
+
+                heart.style.setProperty(
+
+                    "--y",
+
+                    -(
+                        Math.random() * 140 +
+                        60
+                    ) + "px"
+
+                );
+
+
+                document.body.appendChild(
+                    heart
+                );
+
+
+                setTimeout(
+
+                    function () {
+
+                        heart.remove();
+
+                    },
+
+                    1000
+
+                );
+
+            }
+
+        }
+
+
+
+        /* =========================================
+           Love Calculator
+        ========================================= */
+
+        const meterSteps = [
+
+            {
+                percent: 23,
+                text: "سیستم هنوز داره گرم می‌شه..."
+            },
+
+            {
+                percent: 67,
+                text: "نتیجه‌ها مشکوکانه خوبن 😌"
+            },
+
+            {
+                percent: 98,
+                text: "اوضاع داره جدی می‌شه..."
+            },
+
+            {
+                percent: 100,
+                text: "خب... طبق قوانین ریاضی باید اینجا تموم می‌شد."
+            },
+
+            {
+                percent: 384,
+                text: "ولی ظاهراً قوانین ریاضی اینجا کاربرد ندارن. 🤨❤️"
+            },
+
+            {
+                percent: "∞",
+                text: "Error: میزان علاقه از ظرفیت مرورگر بیشتر شد. 🤷🏻‍♂️❤️"
+            }
+
+        ];
+
+
+        let meterIndex = 0;
+
+
+
+        function runLoveMeter() {
+
+            const fill =
+                document.getElementById(
+                    "loveFill"
+                );
+
+
+            const percent =
+                document.getElementById(
+                    "lovePercent"
+                );
+
+
+            const result =
+                document.getElementById(
+                    "loveResult"
+                );
+
+
+            const step =
+                meterSteps[
+                    meterIndex
+                ];
+
+
+            if (
+                step.percent === "∞"
+            ) {
+
+                fill.style.width =
+                    "100%";
+
+
+                fill.classList.add(
+                    "infinite-fill"
+                );
+
+
+                percent.textContent =
+                    "∞";
+
+            }
+
+
+            else {
+
+                fill.classList.remove(
+                    "infinite-fill"
+                );
+
+
+                fill.style.width =
+                    Math.min(
+                        step.percent,
+                        100
+                    ) + "%";
+
+
+                percent.textContent =
+                    step.percent + "%";
+
+            }
+
+
+            result.textContent =
+                step.text;
+
+
+            meterIndex =
+                (
+                    meterIndex + 1
+                ) %
+                meterSteps.length;
+
+        }
+
+
+
+        /* =========================================
+           کهکشان خاطرات
+        ========================================= */
+
+        function showStarMemory(
+            title,
+            text
+        ) {
+
+            const box =
+                document.getElementById(
+                    "starMessage"
+                );
+
+
+            box.innerHTML =
+                "<h3>" +
+                title +
+                "</h3>" +
+                "<p>" +
+                text +
+                "</p>";
+
+        }
+
+
+
+        /* =========================================
+           قلب مخفی
+        ========================================= */
+
+        let secretClicks = 0;
+
+
+        const heartStates = [
+
+            "❤️",
+            "💗",
+            "💖",
+            "💞",
+            "💘"
+
+        ];
+
+
+
+        function unlockSecret() {
+
+            if (
+                secretClicks >= 5
+            ) {
+
+                return;
+
+            }
+
+
+            secretClicks++;
+
+
+            const heart =
+                document.getElementById(
+                    "secretHeart"
+                );
+
+
+            const counter =
+                document.getElementById(
+                    "secretCount"
+                );
+
+
+            const box =
+                document.getElementById(
+                    "secretBox"
+                );
+
+
+            const stage =
+                Math.min(
+                    secretClicks,
+                    5
+                );
+
+
+            heart.textContent =
+                heartStates[
+                    stage - 1
+                ];
+
+
+            counter.textContent =
+                stage + " / 5";
+
+
+            heart.style.transform =
+                "scale(1.15)";
+
+
+            setTimeout(
+
+                function () {
+
+                    heart.style.transform =
+                        "scale(1)";
+
+                },
+
+                180
+
+            );
+
+
+            if (
+                secretClicks >= 5
+            ) {
+
+                box.classList.remove(
+                    "hidden"
+                );
+
+
+                box.classList.add(
+                    "show-secret"
+                );
+
+
+                counter.textContent =
+                    "باز شد ❤️";
+
+
+                setTimeout(
+
+                    function () {
+
+                        box.scrollIntoView({
+
+                            behavior: "smooth",
+                            block: "center"
+
+                        });
+
+                    },
+
+                    300
+
+                );
+
+            }
+
+        }
+
+
+
+        /* =========================================
+           Lightbox گالری
+        ========================================= */
+
+        function openLightbox(
+            src,
+            title,
+            text
+        ) {
+
+            document.getElementById(
+                "lightboxImg"
+            ).src =
+                src;
+
+
+            document.getElementById(
+                "lightboxTitle"
+            ).textContent =
+                title;
+
+
+            document.getElementById(
+                "lightboxText"
+            ).textContent =
+                text;
+
+
+            document.getElementById(
+                "lightbox"
+            ).classList.remove(
+                "hidden"
+            );
+
+
+            document.body.style.overflow =
+                "hidden";
+
+        }
+
+
+
+        function closeLightbox() {
+
+            document.getElementById(
+                "lightbox"
+            ).classList.add(
+                "hidden"
+            );
+
+
+            document.body.style.overflow =
+                "";
+
+        }
+
+
+
+        /* =========================================
+           اسکرول نرم
+        ========================================= */
+
+        function scrollToSection(id) {
+
+            const el =
+                document.getElementById(
+                    id
+                );
+
+
+            if (el) {
+
+                el.scrollIntoView({
+
+                    behavior: "smooth",
+                    block: "start"
+
+                });
+
+            }
+
+        }
+
+
+
+        /* =========================================
+           بستن Lightbox با Escape
+        ========================================= */
+
+        document.addEventListener(
+
+            "keydown",
+
+            function (event) {
+
+                if (
+                    event.key === "Escape"
+                ) {
+
+                    closeLightbox();
+
+                }
+
+            }
+
+        );
+
+
     </script>
+
+
 </body>
+
 </html>
