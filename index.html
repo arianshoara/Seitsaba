@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>آرین و صبا ❤️</title>
+    <!-- لینک CSS به صورت مستقیم و بدون وابستگی به پایتون -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ستاره‌های در حال سقوط -->
+    <div id="stars"></div>
+
+    <!-- بخش اصلی خوش‌آمدگویی -->
+    <div class="container">
+        <span class="emoji-big">❤️🌹💖</span>
+        <h1>به دنیای <span class="highlight">آرین</span> و <span class="highlight-pink">صبا</span> خوش آمدید!</h1>
+        <p class="subtitle">این سایت رو با عشق و با گوشی ساختم، چون پام شکسته بود و حوصله‌ی کامپیوتر نداشتم! 😭🤭</p>
+        
+        <div class="btn-group">
+            <button class="btn" onclick="showLove()">💕 به صبا بگو چقدر دوستش داری!</button>
+            <button class="btn btn-secondary" onclick="window.close()">❌ بستن</button>
+        </div>
+        
+        <div id="loveMessage">🌹 منتظر یه کلمه عاشقانه‌ای...</div>
+    </div>
+
+    <!-- بخش عکس‌ها و اطلاعات -->
+    <div class="footer" id="about">
+        <div class="profile-row">
+            <div class="profile">
+                <img src="https://www.upload.ee/image/19635950/IMG_20260807_040252_811.jpg" alt="عکس آرین" class="profile-img">
+                <p class="profile-name">آرین</p>
+            </div>
+            <div class="profile">
+                <img src="https://www.upload.ee/image/19635974/IMG_20260707_123631_330.jpg" alt="عکس صبا" class="profile-img">
+                <p class="profile-name">صبا ❤️</p>
+            </div>
+        </div>
+        
+        <div class="love-text">
+            <p>صبا جان، تو زیباترین اتفاق زندگیم هستی. هر روز با تو رنگین‌تر از دیروز است. 🌈✨</p>
+            <p>عاشقتم به اندازه‌ی تمام ستاره‌های آسمون... بی‌نهایت! 💫</p>
+        </div>
+
+        <div class="info-box">
+            <p><span class="highlight">آرین</span> هستم، مدرس زبان آلمانی (مدرک B2).</p>
+            <p>برای هماهنگی کلاس‌ها و مشاوره رایگان، با من تماس بگیرید:</p>
+            <ul class="contact-list">
+                <li>📱 <strong>شماره:</strong> 09179915982</li>
+                <li>📧 <strong>ایمیل:</strong> arian311380@gmail.com</li>
+                <li>📸 <strong>اینستاگرام:</strong> <a href="https://instagram.com/Arian__sho2" target="_blank">@Arian__sho2</a></li>
+                <li>✈️ <strong>تلگرام:</strong> <a href="https://t.me/ariansho" target="_blank">@ariansho</a></li>
+            </ul>
+        </div>
+        
+        <span class="ai-badge">🤖 ساخته شده با Flask + AI ❤️</span>
+    </div>
+
+    <script>
+        // ساخت ستاره‌های در حال سقوط
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            const emojis = ['✨', '🌟', '⭐', '💫', '❤️', '🌹'];
+            for (let i = 0; i < 30; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+                star.style.left = Math.random() * 100 + '%';
+                star.style.fontSize = (Math.random() * 18 + 10) + 'px';
+                star.style.animationDuration = (Math.random() * 10 + 6) + 's';
+                star.style.animationDelay = (Math.random() * 10) + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+        createStars();
+
+        // پیام‌های عاشقانه برای صبا
+        function showLove() {
+            const messages = [
+                '❤️ صبا، تو همه‌ی دنیای منی!',
+                '🌹 عشق من، بدون تو هیچم!',
+                '💕 صبا، عاشقتم به اندازه‌ی تمام کهکشان‌ها!',
+                '🌸 تو رویای هر شبی هستی که بیدارم نگه می‌دارد.',
+                '💖 صبا، تو بهترین اتفاق زندگیم هستی.',
+                '🌟 با تو هر روز یک ماجرای عاشقانه‌ست.',
+                '🌺 عشق من، تو تکه‌ی گمشده‌ی پازلم هستی.',
+                '💗 صبا، دوستت دارم بی‌نهایت!'
+            ];
+            
+            const randomMsg = messages[Math.floor(Math.random() * messages.length)];
+            const el = document.getElementById('loveMessage');
+            
+            el.style.transition = 'all 0.5s ease';
+            el.style.transform = 'scale(0.8)';
+            el.style.opacity = '0';
+            
+            setTimeout(() => {
+                el.textContent = randomMsg;
+                el.style.transform = 'scale(1.2)';
+                el.style.opacity = '1';
+            }, 300);
+            
+            setTimeout(() => {
+                el.style.transform = 'scale(1)';
+            }, 600);
+        }
+    </script>
+</body>
+</html>
