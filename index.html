@@ -17,7 +17,58 @@
 
     <!-- ستاره‌های پس‌زمینه -->
     <div id="stars"></div>
+     <!-- منوی سه خط -->
+<button class="menu-button" onclick="toggleMenu()" aria-label="باز کردن منو">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
 
+<div id="sideMenuOverlay" class="side-menu-overlay" onclick="closeMenu()"></div>
+
+<nav id="sideMenu" class="side-menu">
+
+    <button class="menu-close" onclick="closeMenu()">×</button>
+
+    <div class="menu-logo">
+        <span>❤️</span>
+        <h2>آرین و صبا</h2>
+        <p>A little world for us</p>
+    </div>
+
+    <div class="menu-links">
+
+        <a href="index.html">
+            🏠 صفحه اصلی
+        </a>
+
+        <a href="quiz.html">
+            🧠 صبا چقدر منو می‌شناسه؟
+        </a>
+
+        <a href="future.html">
+            ✨ کارهایی که باید باهم انجام بدیم
+        </a>
+
+        <a href="capsule.html">
+            🔐 کپسول زمان
+        </a>
+
+        <a href="random.html">
+            🎲 امروز چی نصیبت می‌شه؟
+        </a>
+
+        <a href="letters.html">
+            💌 نامه‌ها برای صبا
+        </a>
+
+    </div>
+
+    <p class="menu-footer">
+        A ❤️ S
+    </p>
+
+</nav>
     <main class="page">
 
         <!-- =========================
@@ -1903,7 +1954,50 @@
 
         );
 
+        /* =========================================
+   منوی کناری
+========================================= */
 
+function toggleMenu() {
+
+    document
+        .getElementById("sideMenu")
+        .classList
+        .toggle("menu-open");
+
+    document
+        .getElementById("sideMenuOverlay")
+        .classList
+        .toggle("overlay-open");
+
+}
+
+
+function closeMenu() {
+
+    document
+        .getElementById("sideMenu")
+        .classList
+        .remove("menu-open");
+
+    document
+        .getElementById("sideMenuOverlay")
+        .classList
+        .remove("overlay-open");
+
+}
+
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (event.key === "Escape") {
+            closeMenu();
+        }
+
+    }
+);
     </script>
 
 
