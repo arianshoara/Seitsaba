@@ -1,0 +1,2348 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>صبا چقدر آرین رو می‌شناسه؟ ❤️</title>
+
+    <meta
+        name="theme-color"
+        content="#17152b"
+    >
+
+    <link
+        rel="stylesheet"
+        href="quiz.css"
+    >
+</head>
+
+
+<body>
+
+    <!-- پس‌زمینه -->
+    <div id="particles"></div>
+
+
+    <!-- =========================
+         نوار بالا
+    ========================== -->
+
+    <header class="top-bar">
+
+        <a
+            href="index.html"
+            class="home-button"
+        >
+            ← برگشت
+        </a>
+
+
+        <div class="top-title">
+            A ❤️ S
+        </div>
+
+
+        <button
+            id="themeButton"
+            class="theme-button"
+            onclick="toggleTheme()"
+            aria-label="تغییر حالت روشن و تیره"
+        >
+            🌙
+        </button>
+
+    </header>
+
+
+
+    <main class="page">
+
+
+        <!-- =========================
+             معرفی
+        ========================== -->
+
+        <section class="hero-card">
+
+            <div class="hero-icon">
+                🧠❤️
+            </div>
+
+
+            <p class="mini-title">
+                THE ARIAN TEST
+            </p>
+
+
+            <h1>
+                صبا چقدر
+                <span>
+                    آرین
+                </span>
+                رو می‌شناسه؟
+            </h1>
+
+
+            <p class="hero-text">
+                ده سؤال کاملاً علمی،
+                دقیق و بدون هیچ‌گونه پارتی‌بازی 😭
+            </p>
+
+
+            <button
+                id="startQuizButton"
+                class="main-button"
+                onclick="startQuiz()"
+            >
+                شروع آزمون 🤭
+            </button>
+
+        </section>
+
+
+
+        <!-- =========================
+             QUIZ
+        ========================== -->
+
+        <section
+            id="quizSection"
+            class="quiz-card hidden"
+        >
+
+
+            <!-- وضعیت آزمون -->
+
+            <div class="quiz-status">
+
+                <span id="questionCounter">
+                    سؤال 1 از 10
+                </span>
+
+                <span id="scoreCounter">
+                    ❤️ 0
+                </span>
+
+            </div>
+
+
+            <!-- Progress -->
+
+            <div class="progress-track">
+
+                <div
+                    id="progressBar"
+                    class="progress-bar"
+                ></div>
+
+            </div>
+
+
+
+            <!-- سؤال -->
+
+            <div class="question-area">
+
+                <div
+                    id="questionEmoji"
+                    class="question-emoji"
+                >
+                    🤔
+                </div>
+
+
+                <h2 id="questionText">
+                    سؤال
+                </h2>
+
+
+                <div
+                    id="answersContainer"
+                    class="answers-container"
+                ></div>
+
+            </div>
+
+
+
+            <!-- واکنش -->
+
+            <div
+                id="answerFeedback"
+                class="answer-feedback hidden"
+            >
+            </div>
+
+
+            <button
+                id="nextQuestionButton"
+                class="next-button hidden"
+                onclick="nextQuestion()"
+            >
+                سؤال بعدی ←
+            </button>
+
+        </section>
+
+
+
+        <!-- =========================
+             نتیجه آزمون
+        ========================== -->
+
+        <section
+            id="resultSection"
+            class="result-card hidden"
+        >
+
+            <div
+                id="resultEmoji"
+                class="result-emoji"
+            >
+                ❤️
+            </div>
+
+
+            <p class="result-small">
+                نتیجه نهایی
+            </p>
+
+
+            <h2 id="finalScore">
+                0 / 10
+            </h2>
+
+
+            <div
+                id="resultStars"
+                class="result-stars"
+            >
+            </div>
+
+
+            <p
+                id="resultMessage"
+                class="result-message"
+            >
+            </p>
+
+
+            <div class="result-buttons">
+
+                <button
+                    class="main-button"
+                    onclick="restartQuiz()"
+                >
+                    دوباره امتحان کن 🔄
+                </button>
+
+
+                <button
+                    class="secondary-button"
+                    onclick="scrollToGame()"
+                >
+                    بریم بازی کنیم 🚗❤️
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             بازی
+        ========================== -->
+
+        <section
+            id="gameSection"
+            class="game-card"
+        >
+
+            <div class="game-heading">
+
+                <span class="game-badge">
+                    MINI GAME
+                </span>
+
+
+                <h2>
+                    ماشین عشق 🚗❤️
+                </h2>
+
+
+                <p>
+                    قلب‌ها رو جمع کن،
+                    ولی حواست به قلب شکسته‌ها باشه 😭
+                </p>
+
+            </div>
+
+
+
+            <!-- آمار بازی -->
+
+            <div class="game-stats">
+
+                <div>
+                    <span>
+                        ❤️ امتیاز
+                    </span>
+
+                    <strong id="gameScore">
+                        0
+                    </strong>
+                </div>
+
+
+                <div>
+                    <span>
+                        🏆 رکورد
+                    </span>
+
+                    <strong id="bestScore">
+                        0
+                    </strong>
+                </div>
+
+
+                <div>
+                    <span>
+                        💗 جون
+                    </span>
+
+                    <strong id="gameLives">
+                        3
+                    </strong>
+                </div>
+
+            </div>
+
+
+
+            <!-- محیط بازی -->
+
+            <div class="game-shell">
+
+                <canvas
+                    id="gameCanvas"
+                    width="360"
+                    height="560"
+                >
+                </canvas>
+
+
+                <!-- صفحه شروع بازی -->
+
+                <div
+                    id="gameOverlay"
+                    class="game-overlay"
+                >
+
+                    <div class="game-overlay-content">
+
+                        <span class="overlay-car">
+                            🚗
+                        </span>
+
+
+                        <h3>
+                            آماده‌ای؟
+                        </h3>
+
+
+                        <p>
+                            ❤️ جمع کن
+                            <br>
+                            از 💔 فرار کن
+                        </p>
+
+
+                        <button
+                            class="main-button"
+                            onclick="startGame()"
+                        >
+                            شروع بازی
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- کنترل موبایل -->
+
+            <div class="mobile-controls">
+
+                <button
+                    class="control-button"
+                    id="rightButton"
+                >
+                    ➡️
+                </button>
+
+
+                <button
+                    class="control-button"
+                    id="leftButton"
+                >
+                    ⬅️
+                </button>
+
+            </div>
+
+
+            <p class="game-help">
+                روی گوشی از دکمه‌ها استفاده کن؛
+                روی کامپیوتر از ← و →.
+            </p>
+
+        </section>
+
+
+
+        <p class="footer-text">
+            made for Saba with an unreasonable amount of love ❤️
+        </p>
+
+
+    </main>
+
+
+
+    <script>
+
+        /* =========================================
+           اطلاعات Quiz
+        ========================================= */
+
+        const questions = [
+
+            {
+                emoji: "🍽️",
+
+                question:
+                    "غذای موردعلاقه‌ی آرین کدومه؟",
+
+                answers: [
+                    "پیتزا",
+                    "کله‌پاچه",
+                    "قرمه‌سبزی",
+                    "کباب"
+                ],
+
+                correct: 1,
+
+                correctText:
+                    "آفرین 😭 کله‌پاچه! خیلی رمانتیک و ظریف.",
+
+                wrongText:
+                    "نههه 😭 جواب درست کله‌پاچه بود."
+            },
+
+
+            {
+                emoji: "😑",
+
+                question:
+                    "آرین از کدوم رفتار بیشتر بدش میاد؟",
+
+                answers: [
+                    "دیر جواب دادن",
+                    "شوخی زیاد",
+                    "کنترل‌گری",
+                    "کم حرف زدن"
+                ],
+
+                correct: 2,
+
+                correctText:
+                    "دقیقاً. کنترل‌گری ❌",
+
+                wrongText:
+                    "جواب درست کنترل‌گری بود 👀"
+            },
+
+
+            {
+                emoji: "😴",
+
+                question:
+                    "وقتی حال آرین واقعاً بده، معمولاً بیشتر به چی نیاز داره؟",
+
+                answers: [
+                    "بیرون رفتن و شلوغی",
+                    "حرف زدن با همه",
+                    "خواب و سکوت",
+                    "بازی کردن"
+                ],
+
+                correct: 2,
+
+                correctText:
+                    "آره ❤️ یه مقدار خواب و سکوت معمولاً بهترین دواست.",
+
+                wrongText:
+                    "نه 🤭 جواب آرین: خواب و سکوت."
+            },
+
+
+            {
+                emoji: "🚶",
+
+                question:
+                    "آرین برای وقت‌گذرونی بیشتر از کدوم ترکیب خوشش میاد؟",
+
+                answers: [
+                    "قدم زدن، خوردن و فیلم دیدن",
+                    "خرید کردن و مهمونی",
+                    "فقط بازی کامپیوتری",
+                    "ورزش سنگین"
+                ],
+
+                correct: 0,
+
+                correctText:
+                    "کاملاً درست ❤️ قدم زدن + خوردن + فیلم.",
+
+                wrongText:
+                    "نههه. ترکیب درست: قدم زدن، خوردن و فیلم دیدن 🤭"
+            },
+
+
+            {
+                emoji: "🛌",
+
+                question:
+                    "یکی از عادت‌های معروف آرین چیه؟",
+
+                answers: [
+                    "خیلی زود بیدار می‌شه",
+                    "خیلی کم غذا می‌خوره",
+                    "زیاد می‌خوابه",
+                    "هیچ‌وقت فیلم نمی‌بینه"
+                ],
+
+                correct: 2,
+
+                correctText:
+                    "متأسفانه بله 😭 زیاد می‌خوابم.",
+
+                wrongText:
+                    "جواب درست: زیاد خوابیدن 😭"
+            },
+
+
+            {
+                emoji: "🌉",
+
+                question:
+                    "قبل از تولد آرین، آرین و صبا دونفری کجا رفته بودن؟",
+
+                answers: [
+                    "پل غدیر",
+                    "مالی‌آباد",
+                    "کاله آبی",
+                    "الف"
+                ],
+
+                correct: 0,
+
+                correctText:
+                    "آره 🤭❤️ پل غدیر.",
+
+                wrongText:
+                    "نه! قبلش دونفری رفته بودیم پل غدیر ❤️"
+            },
+
+
+            {
+                emoji: "🌙",
+
+                question:
+                    "اون شب ساده ولی موندگارِ خاطره‌ها کجا بود؟",
+
+                answers: [
+                    "معالی‌آباد",
+                    "صدرا",
+                    "سینما",
+                    "کاله آبی"
+                ],
+
+                correct: 1,
+
+                correctText:
+                    "دقیقاً؛ سرِ صدرا 🌙❤️",
+
+                wrongText:
+                    "جواب درست صدرا بود؛ یه شب ساده ولی موندگار."
+            },
+
+
+            {
+                emoji: "☕",
+
+                question:
+                    "کجا می‌رفتیم، درس می‌خوندیم و کلی هم خوش می‌گذشت؟",
+
+                answers: [
+                    "پل غدیر",
+                    "صدرا",
+                    "مالی‌آباد",
+                    "سینما"
+                ],
+
+                correct: 2,
+
+                correctText:
+                    "آره ☕📚 مالی‌آباد.",
+
+                wrongText:
+                    "جواب مالی‌آباد بود؛ حتی درس خوندنمون هم خاطره شد 🤭"
+            },
+
+
+            {
+                emoji: "🖤",
+
+                question:
+                    "کدوم خاطره مربوط به اوایل رابطه و «تم دارک آرین» بود؟",
+
+                answers: [
+                    "کاله آبی",
+                    "پل غدیر",
+                    "گودبای پارتی اروین",
+                    "مالی‌آباد"
+                ],
+
+                correct: 0,
+
+                correctText:
+                    "کاله آبی 😭🖤 دوران تم دارک فراموش نمی‌شه.",
+
+                wrongText:
+                    "کاله آبی بود 🤭 اوایل رابطه و تم دارک معروف."
+            },
+
+
+            {
+                emoji: "🥹",
+
+                question:
+                    "آرین بین این جمله‌ها، کدومو بیشتر به صبا میگه؟",
+
+                answers: [
+                    "عاشقتم",
+                    "عشق منی",
+                    "قربونت برم",
+                    "دوستت دارم"
+                ],
+
+                correct: 2,
+
+                correctText:
+                    "قربونت برم 🥹❤️ اینو دیگه باید می‌دونستی!",
+
+                wrongText:
+                    "جواب درست «قربونت برم» بود 😭❤️"
+            }
+
+        ];
+
+
+
+        /* =========================================
+           متغیرهای Quiz
+        ========================================= */
+
+        let currentQuestion = 0;
+
+        let score = 0;
+
+        let answered = false;
+
+
+
+        /* =========================================
+           شروع Quiz
+        ========================================= */
+
+        function startQuiz() {
+
+            document
+                .getElementById("startQuizButton")
+                .classList
+                .add("hidden");
+
+
+            document
+                .getElementById("quizSection")
+                .classList
+                .remove("hidden");
+
+
+            currentQuestion = 0;
+
+            score = 0;
+
+            answered = false;
+
+
+            showQuestion();
+
+
+            document
+                .getElementById("quizSection")
+                .scrollIntoView({
+
+                    behavior: "smooth",
+                    block: "start"
+
+                });
+
+        }
+
+
+
+        /* =========================================
+           نمایش سؤال
+        ========================================= */
+
+        function showQuestion() {
+
+            answered = false;
+
+
+            const data =
+                questions[currentQuestion];
+
+
+            document
+                .getElementById("questionEmoji")
+                .textContent =
+                data.emoji;
+
+
+            document
+                .getElementById("questionText")
+                .textContent =
+                data.question;
+
+
+            document
+                .getElementById("questionCounter")
+                .textContent =
+                `سؤال ${currentQuestion + 1} از ${questions.length}`;
+
+
+            document
+                .getElementById("scoreCounter")
+                .textContent =
+                `❤️ ${score}`;
+
+
+            const progress =
+                (
+                    currentQuestion /
+                    questions.length
+                ) * 100;
+
+
+            document
+                .getElementById("progressBar")
+                .style.width =
+                progress + "%";
+
+
+            const container =
+                document.getElementById(
+                    "answersContainer"
+                );
+
+
+            container.innerHTML = "";
+
+
+            data.answers.forEach(
+
+                function(answer, index) {
+
+                    const button =
+                        document.createElement(
+                            "button"
+                        );
+
+
+                    button.className =
+                        "answer-button";
+
+
+                    button.textContent =
+                        answer;
+
+
+                    button.onclick =
+                        function() {
+
+                            selectAnswer(
+                                index,
+                                button
+                            );
+
+                        };
+
+
+                    container.appendChild(
+                        button
+                    );
+
+                }
+
+            );
+
+
+            document
+                .getElementById("answerFeedback")
+                .classList
+                .add("hidden");
+
+
+            document
+                .getElementById("nextQuestionButton")
+                .classList
+                .add("hidden");
+
+        }
+
+
+
+        /* =========================================
+           انتخاب جواب
+        ========================================= */
+
+        function selectAnswer(
+            selectedIndex,
+            selectedButton
+        ) {
+
+            if (answered) {
+                return;
+            }
+
+
+            answered = true;
+
+
+            const data =
+                questions[currentQuestion];
+
+
+            const buttons =
+                document.querySelectorAll(
+                    ".answer-button"
+                );
+
+
+            buttons.forEach(
+
+                function(button) {
+
+                    button.disabled = true;
+
+                }
+
+            );
+
+
+            const feedback =
+                document.getElementById(
+                    "answerFeedback"
+                );
+
+
+            if (
+                selectedIndex ===
+                data.correct
+            ) {
+
+                score++;
+
+
+                selectedButton
+                    .classList
+                    .add(
+                        "answer-correct"
+                    );
+
+
+                feedback.textContent =
+                    data.correctText;
+
+
+                feedback.className =
+                    "answer-feedback feedback-correct";
+
+
+                createCelebration();
+
+            }
+
+            else {
+
+                selectedButton
+                    .classList
+                    .add(
+                        "answer-wrong"
+                    );
+
+
+                buttons[
+                    data.correct
+                ].classList.add(
+                    "answer-correct"
+                );
+
+
+                feedback.textContent =
+                    data.wrongText;
+
+
+                feedback.className =
+                    "answer-feedback feedback-wrong";
+
+            }
+
+
+            document
+                .getElementById("scoreCounter")
+                .textContent =
+                `❤️ ${score}`;
+
+
+            document
+                .getElementById("nextQuestionButton")
+                .classList
+                .remove("hidden");
+
+
+            if (
+                currentQuestion ===
+                questions.length - 1
+            ) {
+
+                document
+                    .getElementById("nextQuestionButton")
+                    .textContent =
+                    "نتیجه رو ببین ❤️";
+
+            }
+
+            else {
+
+                document
+                    .getElementById("nextQuestionButton")
+                    .textContent =
+                    "سؤال بعدی ←";
+
+            }
+
+        }
+
+
+
+        /* =========================================
+           سؤال بعدی
+        ========================================= */
+
+        function nextQuestion() {
+
+            if (
+                currentQuestion <
+                questions.length - 1
+            ) {
+
+                currentQuestion++;
+
+                showQuestion();
+
+            }
+
+            else {
+
+                showResult();
+
+            }
+
+        }
+
+
+
+        /* =========================================
+           نتیجه
+        ========================================= */
+
+                function showResult() {
+
+            document
+                .getElementById("quizSection")
+                .classList
+                .add("hidden");
+
+
+            const resultSection =
+                document.getElementById(
+                    "resultSection"
+                );
+
+
+            resultSection
+                .classList
+                .remove("hidden");
+
+
+            document
+                .getElementById("finalScore")
+                .textContent =
+                `${score} / ${questions.length}`;
+
+
+            let emoji;
+
+            let message;
+
+            let stars;
+
+
+            if (score === 10) {
+
+                emoji = "🏆❤️";
+
+                stars =
+                    "❤️ ❤️ ❤️ ❤️ ❤️";
+
+                message =
+                    "۱۰ از ۱۰؟! خب این دیگه مشکوکه... یا واقعاً منو زیادی خوب می‌شناسی، یا رفتی سورس کد سایت رو خوندی 😭❤️";
+
+            }
+
+            else if (score >= 8) {
+
+                emoji = "🥹❤️";
+
+                stars =
+                    "❤️ ❤️ ❤️ ❤️";
+
+                message =
+                    "خیلی خوب بود خانم صبا 🤭 ظاهراً هنوز بخش قابل‌توجهی از آرین توی حافظه‌ت ذخیره شده.";
+
+            }
+
+            else if (score >= 6) {
+
+                emoji = "🤨💕";
+
+                stars =
+                    "❤️ ❤️ ❤️";
+
+                message =
+                    "بد نبود... ولی چند مورد نیاز به آپدیت نرم‌افزاری داری خانم 😭";
+
+            }
+
+            else if (score >= 4) {
+
+                emoji = "😭";
+
+                stars =
+                    "❤️ ❤️";
+
+                message =
+                    "اوضاع کمی نگران‌کننده‌ست. پیشنهاد می‌شود یک دوره‌ی فشرده‌ی «آرین‌شناسی» بگذرونی.";
+
+            }
+
+            else {
+
+                emoji = "💀";
+
+                stars =
+                    "❤️";
+
+                message =
+                    "صبا... ما باید حرف بزنیم 😭 این نتیجه رسماً توهین به چند سال خاطره‌ست.";
+
+            }
+
+
+            document
+                .getElementById("resultEmoji")
+                .textContent =
+                emoji;
+
+
+            document
+                .getElementById("resultStars")
+                .textContent =
+                stars;
+
+
+            document
+                .getElementById("resultMessage")
+                .textContent =
+                message;
+
+
+            resultSection.scrollIntoView({
+
+                behavior: "smooth",
+                block: "center"
+
+            });
+
+
+            createCelebration();
+
+        }
+
+
+
+        /* =========================================
+           شروع دوباره Quiz
+        ========================================= */
+
+        function restartQuiz() {
+
+            document
+                .getElementById("resultSection")
+                .classList
+                .add("hidden");
+
+
+            document
+                .getElementById("quizSection")
+                .classList
+                .remove("hidden");
+
+
+            currentQuestion = 0;
+
+            score = 0;
+
+            answered = false;
+
+
+            showQuestion();
+
+
+            document
+                .getElementById("quizSection")
+                .scrollIntoView({
+
+                    behavior: "smooth",
+                    block: "start"
+
+                });
+
+        }
+
+
+
+        /* =========================================
+           قلب‌های جشن
+        ========================================= */
+
+        function createCelebration() {
+
+            const symbols = [
+
+                "❤️",
+                "💕",
+                "💖",
+                "✨",
+                "🌹"
+
+            ];
+
+
+            for (
+                let i = 0;
+                i < 12;
+                i++
+            ) {
+
+                const item =
+                    document.createElement(
+                        "span"
+                    );
+
+
+                item.className =
+                    "celebration-heart";
+
+
+                item.textContent =
+                    symbols[
+                        Math.floor(
+                            Math.random() *
+                            symbols.length
+                        )
+                    ];
+
+
+                item.style.left =
+                    (
+                        10 +
+                        Math.random() * 80
+                    ) + "%";
+
+
+                item.style.animationDelay =
+                    (
+                        Math.random() *
+                        0.3
+                    ) + "s";
+
+
+                document.body.appendChild(
+                    item
+                );
+
+
+                setTimeout(
+
+                    function() {
+
+                        item.remove();
+
+                    },
+
+                    1800
+
+                );
+
+            }
+
+        }
+
+
+
+        /* =========================================
+           DARK MODE
+        ========================================= */
+
+        const savedTheme =
+            localStorage.getItem(
+                "quizTheme"
+            );
+
+
+        if (
+            savedTheme === "dark"
+        ) {
+
+            document.body
+                .classList
+                .add("dark-mode");
+
+        }
+
+
+        updateThemeButton();
+
+
+
+        function toggleTheme() {
+
+            document.body
+                .classList
+                .toggle("dark-mode");
+
+
+            const dark =
+                document.body
+                    .classList
+                    .contains(
+                        "dark-mode"
+                    );
+
+
+            localStorage.setItem(
+
+                "quizTheme",
+
+                dark
+                    ? "dark"
+                    : "light"
+
+            );
+
+
+            updateThemeButton();
+
+        }
+
+
+
+        function updateThemeButton() {
+
+            const button =
+                document.getElementById(
+                    "themeButton"
+                );
+
+
+            button.textContent =
+                document.body
+                    .classList
+                    .contains(
+                        "dark-mode"
+                    )
+                    ? "☀️"
+                    : "🌙";
+
+        }
+
+
+
+        /* =========================================
+           PARTICLES
+        ========================================= */
+
+        function createParticles() {
+
+            const container =
+                document.getElementById(
+                    "particles"
+                );
+
+
+            const icons = [
+
+                "✨",
+                "❤️",
+                "💫",
+                "🌹"
+
+            ];
+
+
+            for (
+                let i = 0;
+                i < 20;
+                i++
+            ) {
+
+                const particle =
+                    document.createElement(
+                        "span"
+                    );
+
+
+                particle.className =
+                    "background-particle";
+
+
+                particle.textContent =
+                    icons[
+                        Math.floor(
+                            Math.random() *
+                            icons.length
+                        )
+                    ];
+
+
+                particle.style.left =
+                    Math.random() * 100 +
+                    "%";
+
+
+                particle.style.animationDuration =
+                    (
+                        8 +
+                        Math.random() * 12
+                    ) + "s";
+
+
+                particle.style.animationDelay =
+                    Math.random() * 10 +
+                    "s";
+
+
+                container.appendChild(
+                    particle
+                );
+
+            }
+
+        }
+
+
+        createParticles();
+
+
+
+        /* =========================================
+           GAME
+        ========================================= */
+
+        const canvas =
+            document.getElementById(
+                "gameCanvas"
+            );
+
+
+        const ctx =
+            canvas.getContext(
+                "2d"
+            );
+
+
+        let gameRunning = false;
+
+        let gameScore = 0;
+
+        let gameLives = 3;
+
+        let animationId = null;
+
+        let spawnTimer = 0;
+
+
+        let bestScore =
+            Number(
+                localStorage.getItem(
+                    "loveCarBest"
+                )
+            ) || 0;
+
+
+        document
+            .getElementById("bestScore")
+            .textContent =
+            bestScore;
+
+
+
+        const car = {
+
+            x: 150,
+
+            y: 480,
+
+            width: 60,
+
+            height: 60,
+
+            speed: 7
+
+        };
+
+
+        let objects = [];
+
+
+        const keys = {
+
+            left: false,
+
+            right: false
+
+        };
+
+
+
+        /* =========================================
+           شروع بازی
+        ========================================= */
+
+        function startGame() {
+
+            gameScore = 0;
+
+            gameLives = 3;
+
+            objects = [];
+
+            spawnTimer = 0;
+
+
+            car.x =
+                canvas.width / 2 -
+                car.width / 2;
+
+
+            gameRunning =
+                true;
+
+
+            updateGameStats();
+
+
+            document
+                .getElementById("gameOverlay")
+                .classList
+                .add("hidden");
+
+
+            if (animationId) {
+
+                cancelAnimationFrame(
+                    animationId
+                );
+
+            }
+
+
+            gameLoop();
+
+        }
+
+
+
+        /* =========================================
+           LOOP بازی
+        ========================================= */
+
+        function gameLoop() {
+
+            if (!gameRunning) {
+
+                return;
+
+            }
+
+
+            updateGame();
+
+            drawGame();
+
+
+            animationId =
+                requestAnimationFrame(
+                    gameLoop
+                );
+
+        }
+
+
+
+        /* =========================================
+           UPDATE GAME
+        ========================================= */
+
+        function updateGame() {
+
+            if (keys.left) {
+
+                car.x -=
+                    car.speed;
+
+            }
+
+
+            if (keys.right) {
+
+                car.x +=
+                    car.speed;
+
+            }
+
+
+            if (car.x < 5) {
+
+                car.x = 5;
+
+            }
+
+
+            if (
+                car.x +
+                car.width >
+                canvas.width - 5
+            ) {
+
+                car.x =
+                    canvas.width -
+                    car.width -
+                    5;
+
+            }
+
+
+            spawnTimer++;
+
+
+            if (
+                spawnTimer > 42
+            ) {
+
+                spawnObject();
+
+                spawnTimer = 0;
+
+            }
+
+
+            objects.forEach(
+
+                function(object) {
+
+                    object.y +=
+                        object.speed;
+
+                }
+
+            );
+
+
+            for (
+                let i =
+                    objects.length - 1;
+                i >= 0;
+                i--
+            ) {
+
+                const object =
+                    objects[i];
+
+
+                if (
+                    checkCollision(
+                        car,
+                        object
+                    )
+                ) {
+
+                    if (
+                        object.type ===
+                        "heart"
+                    ) {
+
+                        gameScore++;
+
+
+                        createGamePop(
+                            "❤️",
+                            object.x,
+                            object.y
+                        );
+
+                    }
+
+                    else {
+
+                        gameLives--;
+
+
+                        createGamePop(
+                            "💔",
+                            object.x,
+                            object.y
+                        );
+
+                    }
+
+
+                    objects.splice(
+                        i,
+                        1
+                    );
+
+
+                    updateGameStats();
+
+
+                    if (
+                        gameLives <= 0
+                    ) {
+
+                        endGame();
+
+                        return;
+
+                    }
+
+                }
+
+                else if (
+                    object.y >
+                    canvas.height + 50
+                ) {
+
+                    objects.splice(
+                        i,
+                        1
+                    );
+
+                }
+
+            }
+
+        }
+
+
+
+        /* =========================================
+           ساخت قلب‌ها
+        ========================================= */
+
+        function spawnObject() {
+
+            const bad =
+                Math.random() <
+                0.22;
+
+
+            objects.push({
+
+                x:
+                    20 +
+                    Math.random() *
+                    (
+                        canvas.width -
+                        70
+                    ),
+
+                y:
+                    -50,
+
+                width:
+                    42,
+
+                height:
+                    42,
+
+                speed:
+                    2.5 +
+                    Math.random() *
+                    2,
+
+                type:
+                    bad
+                        ? "broken"
+                        : "heart"
+
+            });
+
+        }
+
+
+
+        /* =========================================
+           DRAW GAME
+        ========================================= */
+
+        function drawGame() {
+
+            ctx.clearRect(
+                0,
+                0,
+                canvas.width,
+                canvas.height
+            );
+
+
+            const gradient =
+                ctx.createLinearGradient(
+                    0,
+                    0,
+                    0,
+                    canvas.height
+                );
+
+
+            gradient.addColorStop(
+                0,
+                "#211b3a"
+            );
+
+
+            gradient.addColorStop(
+                1,
+                "#100d20"
+            );
+
+
+            ctx.fillStyle =
+                gradient;
+
+
+            ctx.fillRect(
+                0,
+                0,
+                canvas.width,
+                canvas.height
+            );
+
+
+            /* خط وسط جاده */
+
+            ctx.strokeStyle =
+                "rgba(255,255,255,0.16)";
+
+
+            ctx.lineWidth =
+                4;
+
+
+            ctx.setLineDash([
+                20,
+                25
+            ]);
+
+
+            ctx.beginPath();
+
+
+            ctx.moveTo(
+                canvas.width / 2,
+                0
+            );
+
+
+            ctx.lineTo(
+                canvas.width / 2,
+                canvas.height
+            );
+
+
+            ctx.stroke();
+
+
+            ctx.setLineDash([]);
+
+
+
+            /* ماشین */
+
+            ctx.font =
+                "52px sans-serif";
+
+
+            ctx.textAlign =
+                "center";
+
+
+            ctx.textBaseline =
+                "middle";
+
+
+            ctx.fillText(
+                "🚗",
+                car.x +
+                car.width / 2,
+                car.y +
+                car.height / 2
+            );
+
+
+
+            /* قلب‌ها */
+
+            objects.forEach(
+
+                function(object) {
+
+                    ctx.font =
+                        "38px sans-serif";
+
+
+                    ctx.fillText(
+
+                        object.type ===
+                        "heart"
+                            ? "❤️"
+                            : "💔",
+
+                        object.x +
+                        object.width / 2,
+
+                        object.y +
+                        object.height / 2
+
+                    );
+
+                }
+
+            );
+
+        }
+
+
+
+        /* =========================================
+           COLLISION
+        ========================================= */
+
+        function checkCollision(
+            a,
+            b
+        ) {
+
+            return (
+
+                a.x <
+                b.x + b.width
+
+                &&
+
+                a.x + a.width >
+                b.x
+
+                &&
+
+                a.y <
+                b.y + b.height
+
+                &&
+
+                a.y + a.height >
+                b.y
+
+            );
+
+        }
+
+
+
+        /* =========================================
+           پایان بازی
+        ========================================= */
+
+        function endGame() {
+
+            gameRunning =
+                false;
+
+
+            if (
+                gameScore >
+                bestScore
+            ) {
+
+                bestScore =
+                    gameScore;
+
+
+                localStorage.setItem(
+
+                    "loveCarBest",
+
+                    bestScore
+
+                );
+
+
+                document
+                    .getElementById(
+                        "bestScore"
+                    )
+                    .textContent =
+                    bestScore;
+
+            }
+
+
+            const overlay =
+                document.getElementById(
+                    "gameOverlay"
+                );
+
+
+            overlay.classList
+                .remove("hidden");
+
+
+            overlay.innerHTML = `
+
+                <div class="game-overlay-content">
+
+                    <span class="overlay-car">
+                        ${gameScore >= 10 ? "🏆" : "😭"}
+                    </span>
+
+                    <h3>
+                        بازی تموم شد!
+                    </h3>
+
+                    <p>
+                        ${gameScore}
+                        تا قلب جمع کردی ❤️
+                    </p>
+
+                    <p class="game-result-message">
+
+                        ${
+                            gameScore >= 15
+
+                            ? "این دیگه رسماً ماشین عشق بود 😭❤️"
+
+                            : gameScore >= 8
+
+                            ? "بد نبود خانم راننده 🤭"
+
+                            : "قلبا رو ول کردی رفتی کجا؟ 😭"
+                        }
+
+                    </p>
+
+                    <button
+                        class="main-button"
+                        onclick="startGame()"
+                    >
+                        دوباره بازی کن
+                    </button>
+
+                </div>
+
+            `;
+
+        }
+
+
+
+        /* =========================================
+           آپدیت آمار بازی
+        ========================================= */
+
+        function updateGameStats() {
+
+            document
+                .getElementById(
+                    "gameScore"
+                )
+                .textContent =
+                gameScore;
+
+
+            document
+                .getElementById(
+                    "gameLives"
+                )
+                .textContent =
+                gameLives;
+
+        }
+
+
+
+        /* =========================================
+           کنترل کیبورد
+        ========================================= */
+
+        document.addEventListener(
+
+            "keydown",
+
+            function(event) {
+
+                if (
+                    event.key ===
+                    "ArrowLeft"
+                ) {
+
+                    keys.left =
+                        true;
+
+                }
+
+
+                if (
+                    event.key ===
+                    "ArrowRight"
+                ) {
+
+                    keys.right =
+                        true;
+
+                }
+
+            }
+
+        );
+
+
+        document.addEventListener(
+
+            "keyup",
+
+            function(event) {
+
+                if (
+                    event.key ===
+                    "ArrowLeft"
+                ) {
+
+                    keys.left =
+                        false;
+
+                }
+
+
+                if (
+                    event.key ===
+                    "ArrowRight"
+                ) {
+
+                    keys.right =
+                        false;
+
+                }
+
+            }
+
+        );
+
+
+
+        /* =========================================
+           کنترل موبایل
+        ========================================= */
+
+        function bindControl(
+            element,
+            direction
+        ) {
+
+            element.addEventListener(
+
+                "touchstart",
+
+                function(event) {
+
+                    event.preventDefault();
+
+
+                    keys[direction] =
+                        true;
+
+                },
+
+                {
+                    passive: false
+                }
+
+            );
+
+
+            element.addEventListener(
+
+                "touchend",
+
+                function(event) {
+
+                    event.preventDefault();
+
+
+                    keys[direction] =
+                        false;
+
+                },
+
+                {
+                    passive: false
+                }
+
+            );
+
+
+            element.addEventListener(
+
+                "touchcancel",
+
+                function() {
+
+                    keys[direction] =
+                        false;
+
+                }
+
+            );
+
+
+            element.addEventListener(
+
+                "mousedown",
+
+                function() {
+
+                    keys[direction] =
+                        true;
+
+                }
+
+            );
+
+
+            element.addEventListener(
+
+                "mouseup",
+
+                function() {
+
+                    keys[direction] =
+                        false;
+
+                }
+
+            );
+
+
+            element.addEventListener(
+
+                "mouseleave",
+
+                function() {
+
+                    keys[direction] =
+                        false;
+
+                }
+
+            );
+
+        }
+
+
+
+        bindControl(
+
+            document.getElementById(
+                "leftButton"
+            ),
+
+            "left"
+
+        );
+
+
+        bindControl(
+
+            document.getElementById(
+                "rightButton"
+            ),
+
+            "right"
+
+        );
+
+
+
+        /* =========================================
+           افکت گرفتن قلب
+        ========================================= */
+
+        function createGamePop(
+            symbol,
+            x,
+            y
+        ) {
+
+            const rect =
+                canvas.getBoundingClientRect();
+
+
+            const pop =
+                document.createElement(
+                    "span"
+                );
+
+
+            pop.className =
+                "game-pop";
+
+
+            pop.textContent =
+                symbol;
+
+
+            pop.style.left =
+                (
+                    rect.left +
+                    (
+                        x /
+                        canvas.width
+                    ) *
+                    rect.width
+                ) + "px";
+
+
+            pop.style.top =
+                (
+                    rect.top +
+                    (
+                        y /
+                        canvas.height
+                    ) *
+                    rect.height
+                ) + "px";
+
+
+            document.body
+                .appendChild(
+                    pop
+                );
+
+
+            setTimeout(
+
+                function() {
+
+                    pop.remove();
+
+                },
+
+                700
+
+            );
+
+        }
+
+
+
+        /* =========================================
+           رفتن به بخش بازی
+        ========================================= */
+
+        function scrollToGame() {
+
+            document
+                .getElementById(
+                    "gameSection"
+                )
+                .scrollIntoView({
+
+                    behavior:
+                        "smooth",
+
+                    block:
+                        "start"
+
+                });
+
+        }
+
+
+
+        /* =========================================
+           اولین فریم بازی
+        ========================================= */
+
+        drawGame();
+
+
+    </script>
+
+
+</body>
+
+</html>
