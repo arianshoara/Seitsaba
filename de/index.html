@@ -6610,34 +6610,75 @@ function saveMusicStateBeforeLanguageSwitch() {
 }
 
 function switchSiteLanguage(language) {
+
+    let currentPath =
+        window.location.pathname;
+
+    /*
+       Find the main site folder regardless of whether
+       we are currently inside /en/ or /de/.
+    */
+
+    let siteRoot =
+        currentPath
+            .replace(
+                /\/(?:en|de)(?:\/index\.html)?\/?$/,
+                "/"
+            )
+            .replace(
+                /\/index\.html$/,
+                "/"
+            );
+
     const routes = {
-        fa: "index.html",
-        en: "en/index.html",
-        de: "de/index.html"
+
+        fa:
+            siteRoot +
+            "index.html",
+
+        en:
+            siteRoot +
+            "en/index.html",
+
+        de:
+            siteRoot +
+            "de/index.html"
+
     };
 
-    const target = routes[language];
+
+    const target =
+        routes[
+            language
+        ];
+
 
     if (!target) {
+
         return;
+
     }
+
 
     localStorage.setItem(
         "asSiteLanguage",
         language
     );
 
-    markSelectedSiteLanguage(language);
+
+    markSelectedSiteLanguage(
+        language
+    );
+
+
     saveMusicStateBeforeLanguageSwitch();
 
-    if (language === "fa") {
-        closeSettingsPanel();
-        return;
-    }
 
-    window.location.href = target;
+    window.location.href =
+        target;
+
 }
-
+    
 function openMobileSettings() {
     setMobileNavActive("settings");
     openSettingsPanel();
