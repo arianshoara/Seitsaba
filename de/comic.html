@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Unser Comic | Arian & Saba ❤️</title>
+
+    <meta name="theme-color" content="#f7c7df">
+    <meta
+        name="description"
+        content="Arians & Sabas Comics; kleine illustrierte Episoden aus unserer Geschichte ❤️"
+    >
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="comic.css">
+</head>
+
+<body class="comic-page-body">
+
+    <main class="page comic-page">
+
+        <header class="glass comic-topbar">
+
+            <a
+                href="index.html"
+                class="comic-back-button"
+                aria-label="Zurück zur Startseite"
+            >
+                ←
+                <span>Zurück</span>
+            </a>
+
+            <div class="comic-topbar-title">
+                <span class="comic-topbar-icon">📖</span>
+
+                <div>
+                    <strong>Unser Comic</strong>
+                    <small>Arian & Saba</small>
+                </div>
+            </div>
+
+            <span
+                class="comic-topbar-heart"
+                aria-hidden="true"
+            >
+                ❤️
+            </span>
+
+        </header>
+
+
+        <section class="glass comic-hero">
+
+            <div class="comic-hero-badge">
+                A ❤️ S
+            </div>
+
+            <h1>
+                Arians & Sabas Comic
+                <span>📖✨</span>
+            </h1>
+
+            <p>
+                Ein kleines Archiv unserer illustrierten Geschichten;
+                Episoden, die nach und nach entstehen,
+                jede mit ihrem eigenen Bild, Titel und Soundtrack.
+            </p>
+
+            <div class="comic-hero-stats">
+
+                <div class="comic-stat">
+                    <strong id="comicEpisodeCount">11</strong>
+                    <span>Episode</span>
+                </div>
+
+                <div class="comic-stat">
+                    <strong>♫</strong>
+                    <span>Ein eigener Soundtrack für jede Episode</span>
+                </div>
+
+                <div class="comic-stat">
+                    <strong>∞</strong>
+                    <span>Fortsetzung folgt</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="comic-library-header">
+
+            <div>
+                <span class="comic-eyebrow">
+                    UNSER COMIC-ARCHIV
+                </span>
+
+                <h2>
+                    Episoden
+                </h2>
+
+                <p>
+                    Tippe auf das Bild einer Episode, um es größer zu öffnen.
+                </p>
+            </div>
+
+            <div
+                class="comic-library-count"
+                aria-label="Anzahl der Episoden"
+            >
+                <span id="comicEpisodeCountSecondary">11</span>
+                <small>EPISODEN</small>
+            </div>
+
+        </section>
+
+
+        <section
+            id="comicEpisodes"
+            class="comic-episodes"
+            aria-live="polite"
+        ></section>
+
+
+        <section class="glass comic-continue">
+
+            <span class="comic-continue-icon">
+                ✨
+            </span>
+
+            <div>
+                <h2>
+                    Fortsetzung folgt...
+                </h2>
+
+                <p>
+                    Immer wenn eine neue Episode entsteht,
+                    wird dieser Seite ein weiterer Rahmen hinzugefügt.
+                </p>
+            </div>
+
+            <span class="comic-continue-heart">
+                ❤️
+            </span>
+
+        </section>
+
+
+        <p class="bottom-text">
+            Unsere Geschichte ist noch nicht vorbei 🌙❤️
+        </p>
+
+    </main>
+
+
+    <div
+        id="comicLightbox"
+        class="comic-lightbox"
+        aria-hidden="true"
+        onclick="closeComicLightbox()"
+    >
+
+        <div
+            class="comic-lightbox-inner"
+            onclick="event.stopPropagation()"
+        >
+
+            <button
+                type="button"
+                class="comic-lightbox-close"
+                onclick="closeComicLightbox()"
+                aria-label="Bild schließen"
+            >
+                ×
+            </button>
+
+            <div class="comic-lightbox-image-wrap">
+
+                <img
+                    id="comicLightboxImage"
+                    src=""
+                    alt=""
+                >
+
+            </div>
+
+            <div class="comic-lightbox-caption">
+
+                <span
+                    id="comicLightboxNumber"
+                    class="comic-lightbox-number"
+                ></span>
+
+                <h2 id="comicLightboxTitle"></h2>
+
+                <p id="comicLightboxText"></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        /* =========================================================
+           COMIC-EPISODEN-DATEN
+
+           Bilder und Audiodateien werden im Ordner comic gespeichert:
+
+           ../comic/comic01.jpg
+           ../comic/comic01.mp3
+
+           ../comic/comic02.jpg
+           ../comic/comic02.mp3
+
+           ...
+
+           Um in Zukunft eine neue Episode hinzuzufügen, füge einfach ein neues Element
+           am Ende des Arrays hinzu.
+
+           Beispiel für Episode 12:
+
+           {
+               number: 12,
+               title: "Titel der zwölften Episode",
+               image: "../comic/comic12.jpg",
+               audio: "../comic/comic12.mp3",
+               description: ""
+           }
+
+           Die HTML-Struktur der Karten muss nicht geändert werden.
+           ========================================================= */
+
+        const comicEpisodes = [
+
+            {
+                number: 1,
+                title: "Manche Begegnungen",
+                image: "../comic/comic01.jpg",
+                audio: "../comic/comic01.mp3",
+                description: "Arian & Saba, Manche Begegnungen"
+            },
+
+            {
+                number: 2,
+                title: "Eine Haltestelle weiter",
+                image: "../comic/comic02.jpg",
+                audio: "../comic/comic02.mp3",
+                description: "Arian & Saba, Eine Haltestelle weiter"
+            },
+
+            {
+                number: 3,
+                title: "Das letzte Blatt 🍂",
+                image: "../comic/comic03.jpg",
+                audio: "../comic/comic03.mp3",
+                description: "Saba, Das letzte Blatt 🍂"
+            },
+
+            {
+                number: 4,
+                title: "Einfach bleiben 📖",
+                image: "../comic/comic04.jpg",
+                audio: "../comic/comic04.mp3",
+                description: "Arvin und Einfach bleiben 📖"
+            },
+
+            {
+                number: 5,
+                titl: "Das falsche Buch 📖🌼",
+                image: "../comic/comic05.jpg",
+                audio: "../comic/comic05.mp3",
+                description: "Saba, Das falsche Buch 📖🌼"
+            },
+
+            {
+                number: 6,
+                title: "U-Bahn-Ticket 🚇",
+                image: "../comic/comic06.jpg",
+                audio: "../comic/comic06.mp3",
+                description: "Saba, U-Bahn-Ticket 🚇"
+            },
+
+            {
+                number: 7,
+                title: "Wortlose Freundschaft 🐈",
+                image: "../comic/comic07.jpg",
+                audio: "../comic/comic07.mp3",
+                description: "Arian, Wortlose Freundschaft 🐈"
+            },
+
+            {
+                number: 9,
+                title: "Seite an Seite 👣",
+                image: "../comic/comic09.jpg",
+                audio: "../comic/comic09.mp3",
+                description: "Arian & Arvin, Seite an Seite 👣"
+            },
+
+            {
+                number: 12,
+                title: "Der zweite Tee 🫖",
+                image: "../comic/comic12.jpg",
+                audio: "../comic/comic12.mp3",
+                description: ""
+            },
+
+            {
+                number: 11,
+                title: "Der Knoten 🪢",
+                image: "../comic/comic11.jpg",
+                audio: "../comic/comic11.mp3",
+                description: "Arian, Der Knoten 🪢"
+            },
+
+            {
+                number: 10,
+                title: "Genau dieser hier",
+                image: "../comic/comic10.jpg",
+                audio: "../comic/comic10.mp3",
+                description: "Arian, Genau dieser hier"
+            }, 
+            
+            {
+                number: 8,
+                title: "Bis der Unterricht vorbei ist 🌝",
+                image: "../comic/comic8.jpg",
+                audio: "../comic/comic8.mp3",
+                description: "Arian & Saba, Bis der Unterricht vorbei ist 🌝"
+            }
+
+        ];
+
+
+        function padComicNumber(number) {
+
+            return String(number).padStart(
+                2,
+                "0"
+            );
+
+        }
+
+
+        function escapeComicHtml(value) {
+
+            return String(
+                value ?? ""
+            )
+                .replaceAll("&", "&amp;")
+                .replaceAll("<", "&lt;")
+                .replaceAll(">", "&gt;")
+                .replaceAll('"', "&quot;")
+                .replaceAll("'", "&#039;");
+
+        }
+
+
+        function renderComicEpisodes() {
+
+            const container =
+                document.getElementById(
+                    "comicEpisodes"
+                );
+
+            if (!container) {
+                return;
+            }
+
+            container.innerHTML =
+                "";
+
+            comicEpisodes.forEach(
+                function (
+                    episode
+                ) {
+
+                    const number =
+                        padComicNumber(
+                            episode.number
+                        );
+
+                    const article =
+                        document.createElement(
+                            "article"
+                        );
+
+                    article.className =
+                        "glass comic-episode";
+
+                    article.dataset.comicEpisode =
+                        number;
+
+                    const description =
+                        episode.description
+                            ? `
+                                <p class="comic-episode-description">
+                                    ${escapeComicHtml(
+                                        episode.description
+                                    )}
+                                </p>
+                              `
+                            : "";
+
+                    article.innerHTML = `
+
+                        <button
+                            type="button"
+                            class="comic-image-button"
+                            aria-label="Bild öffnen ${escapeComicHtml(
+                                episode.title
+                            )}"
+                        >
+
+                            <span class="comic-episode-number">
+                                ${number}
+                            </span>
+
+                            <img
+                                class="comic-episode-image"
+                                src="${escapeComicHtml(
+                                    episode.image
+                                )}"
+                                alt="${escapeComicHtml(
+                                    episode.title
+                                )}"
+                                loading="lazy"
+                            >
+
+                            <span class="comic-image-open-hint">
+                                ⛶ In voller Größe ansehen
+                            </span>
+
+                        </button>
+
+
+                        <div class="comic-episode-content">
+
+                            <div class="comic-episode-heading">
+
+                                <div>
+
+                                    <span class="comic-episode-label">
+                                        EPISODE ${number}
+                                    </span>
+
+                                    <h2>
+                                        ${escapeComicHtml(
+                                            episode.title
+                                        )}
+                                    </h2>
+
+                                </div>
+
+                                <span
+                                    class="comic-episode-heart"
+                                    aria-hidden="true"
+                                >
+                                    ❤️
+                                </span>
+
+                            </div>
+
+                            ${description}
+
+                            <div class="comic-soundtrack">
+
+                                <div class="comic-soundtrack-info">
+
+                                    <span class="comic-soundtrack-icon">
+                                        🎵
+                                    </span>
+
+                                    <div>
+
+                                        <strong>
+                                            Soundtrack dieser Episode
+                                        </strong>
+
+                                        <small>
+                                            Comic ${number} Soundtrack
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                                <audio
+                                    class="comic-audio"
+                                    controls
+                                    preload="metadata"
+                                    playsinline
+                                    src="${escapeComicHtml(
+                                        episode.audio
+                                    )}"
+                                    aria-label="Soundtrack für ${escapeComicHtml(
+                                        episode.title
+                                    )}"
+                                ></audio>
+
+                            </div>
+
+                        </div>
+
+                    `;
+
+                    const imageButton =
+                        article.querySelector(
+                            ".comic-image-button"
+                        );
+
+                    if (imageButton) {
+
+                        imageButton.addEventListener(
+                            "click",
+                            function () {
+
+                                openComicLightbox(
+                                    episode
+                                );
+
+                            }
+                        );
+
+                    }
+
+                    container.appendChild(
+                        article
+                    );
+
+                }
+            );
+
+            document.getElementById(
+                "comicEpisodeCount"
+            ).textContent =
+                comicEpisodes.length;
+
+            document.getElementById(
+                "comicEpisodeCountSecondary"
+            ).textContent =
+                comicEpisodes.length;
+
+            setupComicAudio();
+
+        }
+
+
+        /* =========================================================
+           UNABHÄNGIGES COMIC-AUDIO
+
+           Dieser Abschnitt steuert nur die Audioelemente innerhalb von comic.html.
+           Er hat absichtlich keine Verbindung zu parent.ASMusic oder zum Hauptplayer der Website.
+
+           Wenn einer der Audiotracks auf dieser Seite abgespielt wird,
+           wird nur der zuvor laufende Comic-Track pausiert.
+           ========================================================= */
+
+        function setupComicAudio() {
+
+            const audios =
+                Array.from(
+                    document.querySelectorAll(
+                        ".comic-audio"
+                    )
+                );
+
+            audios.forEach(
+                function (
+                    audio
+                ) {
+
+                    audio.addEventListener(
+                        "play",
+                        function () {
+
+                            audios.forEach(
+                                function (
+                                    otherAudio
+                                ) {
+
+                                    if (
+                                        otherAudio !== audio &&
+                                        !otherAudio.paused
+                                    ) {
+
+                                        otherAudio.pause();
+
+                                    }
+
+                                }
+                            );
+
+                        }
+                    );
+
+                }
+            );
+
+        }
+
+
+        function openComicLightbox(
+            episode
+        ) {
+
+            const lightbox =
+                document.getElementById(
+                    "comicLightbox"
+                );
+
+            const image =
+                document.getElementById(
+                    "comicLightboxImage"
+                );
+
+            const number =
+                document.getElementById(
+                    "comicLightboxNumber"
+                );
+
+            const title =
+                document.getElementById(
+                    "comicLightboxTitle"
+                );
+
+            const text =
+                document.getElementById(
+                    "comicLightboxText"
+                );
+
+            image.src =
+                episode.image;
+
+            image.alt =
+                episode.title;
+
+            number.textContent =
+                "EPISODE " +
+                padComicNumber(
+                    episode.number
+                );
+
+            title.textContent =
+                episode.title;
+
+            text.textContent =
+                episode.description || "";
+
+            lightbox.classList.add(
+                "comic-lightbox-open"
+            );
+
+            lightbox.setAttribute(
+                "aria-hidden",
+                "false"
+            );
+
+            document.body.style.overflow =
+                "hidden";
+
+        }
+
+
+        function closeComicLightbox() {
+
+            const lightbox =
+                document.getElementById(
+                    "comicLightbox"
+                );
+
+            if (!lightbox) {
+                return;
+            }
+
+            lightbox.classList.remove(
+                "comic-lightbox-open"
+            );
+
+            lightbox.setAttribute(
+                "aria-hidden",
+                "true"
+            );
+
+            document.body.style.overflow =
+                "";
+
+        }
+
+
+        document.addEventListener(
+            "keydown",
+            function (
+                event
+            ) {
+
+                if (
+                    event.key ===
+                    "Escape"
+                ) {
+
+                    closeComicLightbox();
+
+                }
+
+            }
+        );
+
+
+        renderComicEpisodes();
+
+    </script>
+
+</body>
+
+</html>
