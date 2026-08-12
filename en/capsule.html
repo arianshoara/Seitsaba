@@ -1,0 +1,3442 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Arian & Saba’s Time Capsule 🔐❤️</title>
+
+    <meta
+        name="theme-color"
+        content="#17152b"
+    >
+
+    <meta
+        name="description"
+        content="Arian & Saba’s time capsule; letters, predictions, photos, and things for the future."
+    >
+
+    <link
+        rel="stylesheet"
+        href="capsule.css"
+    >
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         BACKGROUND
+    ====================================================== -->
+
+    <div id="capsuleParticles"></div>
+
+
+    <!-- =====================================================
+         TOP BAR
+    ====================================================== -->
+
+    <header class="top-bar">
+
+        <a
+            href="index.html"
+            class="home-button"
+        >
+            ← Back
+        </a>
+
+        <div class="top-title">
+            TIME CAPSULE • A ❤️ S
+        </div>
+
+        <button
+            id="themeButton"
+            class="theme-button"
+            type="button"
+            onclick="cycleTheme()"
+            aria-label="Change theme"
+        >
+            ☀️
+        </button>
+
+    </header>
+
+
+    <main class="page">
+
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section class="capsule-card hero-section">
+
+            <div class="hero-lock">
+                🔐
+            </div>
+
+            <p class="small-label">
+                ARCHIVE OF US
+            </p>
+
+            <h1>
+                Some things aren’t meant for
+                <span>right now</span>
+                ...
+            </h1>
+
+            <p class="hero-text">
+                Here, we lock away a few pieces of “us” for the future;
+                letters, photos, predictions, memories, and things that maybe a few years from now
+                will mean much more than they do today.
+            </p>
+
+
+            <div class="main-countdown">
+
+                <p>
+                    Until the main capsule opens
+                </p>
+
+                <h2>
+                    11 August 2029
+                </h2>
+
+                <div class="countdown-grid">
+
+                    <div>
+                        <strong id="mainDays">---</strong>
+                        <span>Days</span>
+                    </div>
+
+                    <div>
+                        <strong id="mainHours">--</strong>
+                        <span>Hours</span>
+                    </div>
+
+                    <div>
+                        <strong id="mainMinutes">--</strong>
+                        <span>Minutes</span>
+                    </div>
+
+                    <div>
+                        <strong id="mainSeconds">--</strong>
+                        <span>Seconds</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="main-button"
+                type="button"
+                onclick="scrollToCapsules()"
+            >
+                Let’s go to the vaults ↓
+            </button>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             VAULTS
+        ====================================================== -->
+
+        <section
+            class="capsule-card"
+            id="vaultSection"
+        >
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    🗄️
+                </span>
+
+                <h2>
+                    Future Archive
+                </h2>
+
+                <p>
+                    Each vault has its own date.
+                    Some are still empty, and we can add their letter or photo later.
+                </p>
+
+            </div>
+
+
+            <div class="vault-grid">
+
+
+                <!-- Vault 1 -->
+
+                <button
+                    class="vault-card vault-pink"
+                    type="button"
+                    onclick="openPresetCapsule('futureLetter')"
+                >
+
+                    <span class="vault-number">
+                        VAULT 01
+                    </span>
+
+                    <span class="vault-icon">
+                        💌
+                    </span>
+
+                    <h3>
+                        Letter to Future Saba
+                    </h3>
+
+                    <p>
+                        A letter we’ll write later and open three years from now.
+                    </p>
+
+                    <div class="vault-date">
+                        🔒 11 AUG 2029
+                    </div>
+
+                    <span
+                        class="vault-status"
+                        id="status-futureLetter"
+                    >
+                        Checking...
+                    </span>
+
+                </button>
+
+
+
+                <!-- Vault 2 -->
+
+                <button
+                    class="vault-card vault-gold"
+                    type="button"
+                    onclick="openPresetCapsule('photoMemory')"
+                >
+
+                    <span class="vault-number">
+                        VAULT 02
+                    </span>
+
+                    <span class="vault-icon">
+                        📸
+                    </span>
+
+                    <h3>
+                        Locked Photo
+                    </h3>
+
+                    <p>
+                        We’ll upload the photo later;
+                        for now, we’re just saving its place for the future.
+                    </p>
+
+                    <div class="vault-date">
+                        🔒 14 FEB 2029
+                    </div>
+
+                    <span
+                        class="vault-status"
+                        id="status-photoMemory"
+                    >
+                        Checking...
+                    </span>
+
+                </button>
+
+
+
+                <!-- Vault 3 -->
+
+                <button
+                    class="vault-card vault-purple"
+                    type="button"
+                    onclick="openPresetCapsule('predictions2030')"
+                >
+
+                    <span class="vault-number">
+                        VAULT 03
+                    </span>
+
+                    <span class="vault-icon">
+                        🔮
+                    </span>
+
+                    <h3>
+                        Our Predictions for 2030
+                    </h3>
+
+                    <p>
+                        Right now, we’re guessing what the future will look like;
+                        later, we’ll see how wildly wrong we were 😭
+                    </p>
+
+                    <div class="vault-date">
+                        🔒 01 JAN 2030
+                    </div>
+
+                    <span
+                        class="vault-status"
+                        id="status-predictions2030"
+                    >
+                        Checking...
+                    </span>
+
+                </button>
+
+
+
+                <!-- Vault 4 -->
+
+                <button
+                    class="vault-card vault-blue"
+                    type="button"
+                    onclick="openPresetCapsule('beforeAfter')"
+                >
+
+                    <span class="vault-number">
+                        VAULT 04
+                    </span>
+
+                    <span class="vault-icon">
+                        ❤️
+                    </span>
+
+                    <h3>
+                        Us; Before & After
+                    </h3>
+
+                    <p>
+                        Today’s answers versus our future answers.
+                        Arian and Saba in 2026 versus their versions a few years later.
+                    </p>
+
+                    <div class="vault-date">
+                        🔒 11 AUG 2030
+                    </div>
+
+                    <span
+                        class="vault-status"
+                        id="status-beforeAfter"
+                    >
+                        Checking...
+                    </span>
+
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SNAPSHOT — PROVIDED BY ARIAN
+        ====================================================== -->
+
+        <section class="capsule-card snapshot-section">
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    🕰️
+                </span>
+
+                <h2>
+                    Us on the Day We Made This Capsule
+                </h2>
+
+                <p>
+                    Recorded on 11 August 2026;
+                    so that a few years from now, we can remember exactly what these days were like.
+                </p>
+
+            </div>
+
+
+            <div class="snapshot-meta">
+
+                <span>
+                    📱 Made on a phone
+                </span>
+
+                <span>
+                    🦵 Arian’s broken leg
+                </span>
+
+                <span>
+                    ❤️ Still in the middle of the story
+                </span>
+
+            </div>
+
+
+            <article class="snapshot-letter">
+
+                <div class="paper-pin">
+                    ❤️
+                </div>
+
+                <h3>
+                    For Future Saba
+                </h3>
+
+                <p>
+                    Hi my dear Saba, haha. I’m building this site little by little on my phone, and my leg is broken.
+                    You came over last night and we had such a good time. We slept next to each other, haha. I love you so much.
+                    I called you to come see this, but you were asleep. Today is an odd-numbered day, and you have Abbasi’s language class
+                    around 6. Yesterday was Alma’s birthday; we didn’t go, and we had a tiny argument too, haha.
+                    I love you. Thank you for being in my life and bringing the color of love into it. It’s true that right now, some of your traits
+                    really get on my nerves, especially the whole story of your relationship with your mom, and I don’t think it’s ever going to end 🤭
+                    but I love this relationship, and I want us to stay together for the rest of our lives and grow old together,
+                    have kids, nom nom nom. I love you so, so much. You are my heart.
+                </p>
+
+                <p>
+                    I know you’re going through hard days. Your exam situation is still up in the air. Last night or the night before, you said it seems
+                    TELC has answered everyone except you. I got pissed off at your aunt too because of that shitty letter she wrote 🤭
+                    Anyway, I know you’re going through a difficult time, but we’ll definitely immigrate together
+                    and build a good life together, my sweet love ❤️❤️
+                </p>
+
+                <footer>
+                    — Arian, 11 August 2026
+                </footer>
+
+            </article>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             FUTURE LETTER PLACEHOLDERS
+        ====================================================== -->
+
+        <section class="capsule-card">
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    💌
+                </span>
+
+                <h2>
+                    Letters That Haven’t Been Written Yet
+                </h2>
+
+                <p>
+                    For now, we’re just putting the envelopes here.
+                    Whenever you want, we can add the real text to this same file later.
+                </p>
+
+            </div>
+
+
+            <div class="letter-envelope-grid">
+
+
+                <div class="letter-envelope">
+
+                    <span class="envelope-icon">
+                        💌
+                    </span>
+
+                    <h3>
+                        For Saba in 2029
+                    </h3>
+
+                    <p>
+                        Not written yet.
+                    </p>
+
+                    <span class="envelope-lock">
+                        🔒 Opens: 11 AUG 2029
+                    </span>
+
+                </div>
+
+
+                <div class="letter-envelope">
+
+                    <span class="envelope-icon">
+                        🌧️
+                    </span>
+
+                    <h3>
+                        When You’re Having a Hard Day
+                    </h3>
+
+                    <p>
+                        We’ll write the text later.
+                    </p>
+
+                    <span class="envelope-lock">
+                        ✍️ Letter slot reserved
+                    </span>
+
+                </div>
+
+
+                <div class="letter-envelope">
+
+                    <span class="envelope-icon">
+                        🏠
+                    </span>
+
+                    <h3>
+                        Our First Day in Our Home in Germany
+                    </h3>
+
+                    <p>
+                        We’ll set the date once we know it.
+                    </p>
+
+                    <span class="envelope-lock">
+                        🕰️ Date still unknown
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             PREDICTIONS
+        ====================================================== -->
+
+        <section class="capsule-card">
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    🔮
+                </span>
+
+                <h2>
+                    Our Predictions for the Future
+                </h2>
+
+                <p>
+                    You don’t need to fill these out now.
+                    Whenever you want, write your answers and save them;
+                    they’ll stay on this device.
+                </p>
+
+            </div>
+
+
+            <div class="prediction-grid">
+
+
+                <label class="prediction-item">
+
+                    <span>
+                        🏠 Where do we think we’ll be living in 2030?
+                    </span>
+
+                    <textarea
+                        id="prediction-home"
+                        placeholder="Write the answer later..."
+                    ></textarea>
+
+                </label>
+
+
+                <label class="prediction-item">
+
+                    <span>
+                        🚗 What will our first car together be?
+                    </span>
+
+                    <textarea
+                        id="prediction-car"
+                        placeholder="Future guess..."
+                    ></textarea>
+
+                </label>
+
+
+                <label class="prediction-item">
+
+                    <span>
+                        😴 Which one of us will still sleep more?
+                    </span>
+
+                    <textarea
+                        id="prediction-sleep"
+                        placeholder="I think this one is really hard 😭"
+                    ></textarea>
+
+                </label>
+
+
+                <label class="prediction-item">
+
+                    <span>
+                        🌍 By 2030, how many countries will we have visited together?
+                    </span>
+
+                    <textarea
+                        id="prediction-countries"
+                        placeholder="A number or an explanation..."
+                    ></textarea>
+
+                </label>
+
+
+                <label class="prediction-item">
+
+                    <span>
+                        🎬 Will we still argue over choosing a movie?
+                    </span>
+
+                    <textarea
+                        id="prediction-movie"
+                        placeholder="Definitely? Maybe? 😭"
+                    ></textarea>
+
+                </label>
+
+
+            </div>
+
+
+            <div class="action-row">
+
+                <button
+                    class="main-button"
+                    type="button"
+                    onclick="savePredictions()"
+                >
+                    Seal the Predictions 🔐
+                </button>
+
+                <span
+                    id="predictionSaveMessage"
+                    class="save-message"
+                ></span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             LOCKED PHOTO
+        ====================================================== -->
+
+        <section class="capsule-card">
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    📸
+                </span>
+
+                <h2>
+                    Locked Photo
+                </h2>
+
+                <p>
+                    We’ll upload the photo later.
+                    For now, only the frame and lock system are ready.
+                </p>
+
+            </div>
+
+
+            <div class="locked-photo-frame">
+
+                <div
+                    id="photoVaultContent"
+                    class="photo-placeholder"
+                >
+
+                    <span class="photo-lock-icon">
+                        🔒
+                    </span>
+
+                    <h3>
+                        The photo hasn’t been added yet
+                    </h3>
+
+                    <p>
+                        Later, just put the photo URL inside the variable
+                        <strong>LOCKED_PHOTO_URL</strong>
+                        at the bottom of the file.
+                    </p>
+
+                    <span class="photo-unlock-date">
+                        Opens: 14 February 2029
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             BEFORE / AFTER
+        ====================================================== -->
+
+        <section class="capsule-card">
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    ❤️
+                </span>
+
+                <h2>
+                    Arian & Saba Today ↔ Arian & Saba in the Future
+                </h2>
+
+                <p>
+                    We’ll save today’s answers.
+                    After the unlock date, we’ll write the future version beside them.
+                </p>
+
+            </div>
+
+
+            <div class="before-after-grid">
+
+
+                <div class="era-card">
+
+                    <span class="era-year">
+                        2026
+                    </span>
+
+                    <h3>
+                        Now
+                    </h3>
+
+                    <label>
+                        What does “home” mean to me?
+                        <textarea
+                            id="before-home"
+                            placeholder="Write it later..."
+                        ></textarea>
+                    </label>
+
+                    <label>
+                        What is my biggest dream for us?
+                        <textarea
+                            id="before-dream"
+                            placeholder="Write it later..."
+                        ></textarea>
+                    </label>
+
+                    <label>
+                        What do I think our relationship will look like in the future?
+                        <textarea
+                            id="before-relationship"
+                            placeholder="Write it later..."
+                        ></textarea>
+                    </label>
+
+                    <button
+                        class="secondary-button"
+                        type="button"
+                        onclick="saveBeforeAnswers()"
+                    >
+                        Save Today’s Answers
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="era-card future-era"
+                    id="futureEraCard"
+                >
+
+                    <span class="era-year">
+                        2030
+                    </span>
+
+                    <h3>
+                        Future Version
+                    </h3>
+
+                    <div id="futureEraLocked">
+
+                        <span class="big-lock">
+                            🔒
+                        </span>
+
+                        <p>
+                            This side of the story won’t open until
+                            <strong>11 August 2030</strong>
+                            — not before then.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        id="futureEraUnlocked"
+                        class="hidden"
+                    >
+
+                        <label>
+                            What does “home” mean to me now?
+                            <textarea
+                                id="after-home"
+                                placeholder="Future version’s answer..."
+                            ></textarea>
+                        </label>
+
+                        <label>
+                            What is my biggest dream for us now?
+                            <textarea
+                                id="after-dream"
+                                placeholder="What changed?"
+                            ></textarea>
+                        </label>
+
+                        <label>
+                            What has our relationship actually become?
+                            <textarea
+                                id="after-relationship"
+                                placeholder="The real future version..."
+                            ></textarea>
+                        </label>
+
+                        <button
+                            class="main-button"
+                            type="button"
+                            onclick="compareEras()"
+                        >
+                            Compare 2026 and 2030 ❤️
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div
+                id="eraComparison"
+                class="comparison-result hidden"
+            ></div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             MIDNIGHT CAPSULE
+        ====================================================== -->
+
+        <section class="capsule-card midnight-section">
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    🌌
+                </span>
+
+                <h2>
+                    Midnight Capsule
+                </h2>
+
+                <p>
+                    This one has no date;
+                    it only opens when everyone is asleep.
+                </p>
+
+            </div>
+
+
+            <div class="midnight-vault">
+
+                <div
+                    id="midnightLocked"
+                    class="midnight-locked"
+                >
+
+                    <span class="midnight-moon">
+                        🌙
+                    </span>
+
+                    <h3>
+                        This capsule only opens between 00:00 and 04:00
+                    </h3>
+
+                    <p id="midnightStatus">
+                        Checking the time...
+                    </p>
+
+                    <button
+                        class="secondary-button"
+                        type="button"
+                        onclick="checkMidnightCapsule(true)"
+                    >
+                        Try It 🔐
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="midnightUnlocked"
+                    class="midnight-unlocked hidden"
+                >
+
+                    <span class="midnight-moon">
+                        🌙✨
+                    </span>
+
+                    <h3>
+                        Everyone is asleep...
+                    </h3>
+
+                    <p>
+                        The special text for this capsule hasn’t been written yet.
+                        One good night, we’ll write a special midnight letter for it. ❤️
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CUSTOM CAPSULE BUILDER
+        ====================================================== -->
+
+        <section class="capsule-card">
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    ➕
+                </span>
+
+                <h2>
+                    Let’s Make a New Capsule
+                </h2>
+
+                <p>
+                    Without touching the code,
+                    add a title, text, and date.
+                    The capsules you create are saved in this browser.
+                </p>
+
+            </div>
+
+
+            <form
+                id="capsuleBuilder"
+                class="capsule-builder"
+                onsubmit="createCustomCapsule(event)"
+            >
+
+                <label>
+
+                    Capsule Title
+
+                    <input
+                        id="customTitle"
+                        type="text"
+                        maxlength="80"
+                        placeholder="For example: For when we finally went to Italy"
+                        required
+                    >
+
+                </label>
+
+
+                <label>
+
+                    Text
+
+                    <textarea
+                        id="customText"
+                        maxlength="3000"
+                        placeholder="Write whatever you want for the future..."
+                        required
+                    ></textarea>
+
+                </label>
+
+
+                <label>
+
+                    Unlock Date
+
+                    <input
+                        id="customDate"
+                        type="datetime-local"
+                        required
+                    >
+
+                </label>
+
+
+                <button
+                    class="main-button"
+                    type="submit"
+                >
+                    Lock It 🔐
+                </button>
+
+            </form>
+
+
+            <div class="custom-capsules-heading">
+
+                <h3>
+                    Created Capsules
+                </h3>
+
+                <span id="customCapsuleCount">
+                    0
+                </span>
+
+            </div>
+
+
+            <div
+                id="customCapsuleList"
+                class="custom-capsule-list"
+            >
+
+                <p class="empty-state">
+                    No new personal capsule has been created yet.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             FOOTER
+        ====================================================== -->
+
+        <footer class="footer-text">
+
+            <p>
+                Some memories can’t be held onto,
+                but you can reserve a small place for them in the future. ❤️
+            </p>
+
+            <span>
+                Arian + Saba • Time Capsule
+            </span>
+
+        </footer>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         MODAL
+    ====================================================== -->
+
+    <div
+        id="capsuleModal"
+        class="modal hidden"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+    >
+
+        <div
+            class="modal-backdrop"
+            onclick="closeCapsuleModal()"
+        ></div>
+
+        <div class="modal-card">
+
+            <button
+                class="modal-close"
+                type="button"
+                onclick="closeCapsuleModal()"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+            <span
+                id="modalIcon"
+                class="modal-icon"
+            >
+                🔐
+            </span>
+
+            <h2 id="modalTitle">
+                Capsule
+            </h2>
+
+            <p
+                id="modalSubtitle"
+                class="modal-subtitle"
+            ></p>
+
+            <div
+                id="modalBody"
+                class="modal-body"
+            ></div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         TOAST
+    ====================================================== -->
+
+    <div
+        id="toast"
+        class="toast"
+        aria-live="polite"
+    ></div>
+
+
+
+    <script>
+
+        /* =====================================================
+           IMPORTANT DATES
+        ====================================================== */
+
+        const CAPSULE_DATES = {
+
+            futureLetter:
+                new Date("2029-08-11T00:00:00"),
+
+            photoMemory:
+                new Date("2029-02-14T00:00:00"),
+
+            predictions2030:
+                new Date("2030-01-01T00:00:00"),
+
+            beforeAfter:
+                new Date("2030-08-11T00:00:00")
+
+        };
+
+
+        /* =====================================================
+           PHOTO PLACEHOLDER
+
+           Later, when you upload the photo to GitHub,
+           just put its URL here.
+
+           Example:
+           const LOCKED_PHOTO_URL = "images/capsule-photo.jpg";
+        ====================================================== */
+
+        const LOCKED_PHOTO_URL = "";
+
+
+        /* =====================================================
+           FUTURE LETTER PLACEHOLDER
+
+           Put the letter text between the backticks later.
+        ====================================================== */
+
+        const FUTURE_LETTER_TEXT = `
+This letter hasn’t been written yet.
+
+Arian will write a letter here for Future Saba later. ❤️
+        `.trim();
+
+
+
+        /* =====================================================
+           PRESET CAPSULE DATA
+        ====================================================== */
+
+        const PRESET_CAPSULES = {
+
+            futureLetter: {
+
+                icon:
+                    "💌",
+
+                title:
+                    "Letter to Future Saba",
+
+                date:
+                    CAPSULE_DATES.futureLetter,
+
+                unlockedText:
+                    FUTURE_LETTER_TEXT
+
+            },
+
+
+            photoMemory: {
+
+                icon:
+                    "📸",
+
+                title:
+                    "Locked Photo",
+
+                date:
+                    CAPSULE_DATES.photoMemory,
+
+                unlockedText:
+                    "It’s time for the photo."
+
+            },
+
+
+            predictions2030: {
+
+                icon:
+                    "🔮",
+
+                title:
+                    "Our Predictions for 2030",
+
+                date:
+                    CAPSULE_DATES.predictions2030,
+
+                unlockedText:
+                    "Time to see how accurate our guesses were."
+
+            },
+
+
+            beforeAfter: {
+
+                icon:
+                    "❤️",
+
+                title:
+                    "Us; Before & After",
+
+                date:
+                    CAPSULE_DATES.beforeAfter,
+
+                unlockedText:
+                    "Arian and Saba from 2026 meet their future selves."
+
+            }
+
+        };
+
+
+
+        /* =====================================================
+           HELPERS
+        ====================================================== */
+
+        function isUnlocked(date) {
+
+            return (
+                new Date() >= date
+            );
+
+        }
+
+
+
+        function getRemaining(date) {
+
+            const now =
+                new Date();
+
+
+            let diff =
+                date.getTime() -
+                now.getTime();
+
+
+            if (diff <= 0) {
+
+                return {
+
+                    total:
+                        0,
+
+                    days:
+                        0,
+
+                    hours:
+                        0,
+
+                    minutes:
+                        0,
+
+                    seconds:
+                        0
+
+                };
+
+            }
+
+
+            const totalSeconds =
+                Math.floor(
+                    diff / 1000
+                );
+
+
+            const days =
+                Math.floor(
+                    totalSeconds /
+                    86400
+                );
+
+
+            const hours =
+                Math.floor(
+                    (
+                        totalSeconds %
+                        86400
+                    ) /
+                    3600
+                );
+
+
+            const minutes =
+                Math.floor(
+                    (
+                        totalSeconds %
+                        3600
+                    ) /
+                    60
+                );
+
+
+            const seconds =
+                totalSeconds %
+                60;
+
+
+            return {
+
+                total:
+                    diff,
+
+                days:
+                    days,
+
+                hours:
+                    hours,
+
+                minutes:
+                    minutes,
+
+                seconds:
+                    seconds
+
+            };
+
+        }
+
+
+
+        function formatDateFa(date) {
+
+            try {
+
+                return new Intl.DateTimeFormat(
+                    "fa-IR",
+                    {
+                        year:
+                            "numeric",
+
+                        month:
+                            "long",
+
+                        day:
+                            "numeric",
+
+                        hour:
+                            "2-digit",
+
+                        minute:
+                            "2-digit"
+                    }
+                ).format(date);
+
+            }
+
+            catch (error) {
+
+                return date.toLocaleString();
+
+            }
+
+        }
+
+
+
+        function escapeHTML(text) {
+
+            const div =
+                document.createElement(
+                    "div"
+                );
+
+
+            div.textContent =
+                text;
+
+
+            return div.innerHTML;
+
+        }
+
+
+
+        /* =====================================================
+           MAIN COUNTDOWN
+        ====================================================== */
+
+        function updateMainCountdown() {
+
+            const remaining =
+                getRemaining(
+                    CAPSULE_DATES.futureLetter
+                );
+
+
+            document
+                .getElementById(
+                    "mainDays"
+                )
+                .textContent =
+                remaining.days;
+
+
+            document
+                .getElementById(
+                    "mainHours"
+                )
+                .textContent =
+                String(
+                    remaining.hours
+                ).padStart(
+                    2,
+                    "0"
+                );
+
+
+            document
+                .getElementById(
+                    "mainMinutes"
+                )
+                .textContent =
+                String(
+                    remaining.minutes
+                ).padStart(
+                    2,
+                    "0"
+                );
+
+
+            document
+                .getElementById(
+                    "mainSeconds"
+                )
+                .textContent =
+                String(
+                    remaining.seconds
+                ).padStart(
+                    2,
+                    "0"
+                );
+
+        }
+
+
+        updateMainCountdown();
+
+
+        setInterval(
+
+            updateMainCountdown,
+
+            1000
+
+        );
+
+
+
+        /* =====================================================
+           VAULT STATUS
+        ====================================================== */
+
+        function updateVaultStatuses() {
+
+            Object.keys(
+                PRESET_CAPSULES
+            ).forEach(
+
+                function(key) {
+
+                    const item =
+                        PRESET_CAPSULES[
+                            key
+                        ];
+
+
+                    const status =
+                        document.getElementById(
+                            "status-" + key
+                        );
+
+
+                    if (!status) {
+
+                        return;
+
+                    }
+
+
+                    if (
+                        isUnlocked(
+                            item.date
+                        )
+                    ) {
+
+                        status.textContent =
+                            "🔓 Ready to open";
+
+                        status.classList.add(
+                            "unlocked-status"
+                        );
+
+                    }
+
+                    else {
+
+                        const remaining =
+                            getRemaining(
+                                item.date
+                            );
+
+
+                        status.textContent =
+                            "🔒 " +
+                            remaining.days +
+                            " days left";
+
+                    }
+
+                }
+
+            );
+
+        }
+
+
+        updateVaultStatuses();
+
+
+        setInterval(
+
+            updateVaultStatuses,
+
+            60000
+
+        );
+
+
+
+        /* =====================================================
+           OPEN PRESET CAPSULE
+        ====================================================== */
+
+        function openPresetCapsule(key) {
+
+            const item =
+                PRESET_CAPSULES[
+                    key
+                ];
+
+
+            if (!item) {
+
+                return;
+
+            }
+
+
+            if (
+                !isUnlocked(
+                    item.date
+                )
+            ) {
+
+                const remaining =
+                    getRemaining(
+                        item.date
+                    );
+
+
+                showLockedModal(
+                    item,
+                    remaining
+                );
+
+
+                return;
+
+            }
+
+
+            if (
+                key ===
+                "photoMemory"
+            ) {
+
+                showPhotoCapsule();
+
+                return;
+
+            }
+
+
+            if (
+                key ===
+                "predictions2030"
+            ) {
+
+                showPredictionCapsule();
+
+                return;
+
+            }
+
+
+            showCapsuleModal(
+                item.icon,
+                item.title,
+                "🔓 The time has come.",
+                `
+                    <p class="modal-letter">
+                        ${escapeHTML(
+                            item.unlockedText
+                        ).replace(
+                            /\n/g,
+                            "<br>"
+                        )}
+                    </p>
+                `
+            );
+
+        }
+
+
+
+        function showLockedModal(
+            item,
+            remaining
+        ) {
+
+            showCapsuleModal(
+
+                "🔒",
+
+                item.title,
+
+                formatDateFa(
+                    item.date
+                ),
+
+                `
+                    <div class="locked-modal-message">
+
+                        <span class="big-lock">
+                            🔐
+                        </span>
+
+                        <p>
+                            No ma’am, there are still
+                            <strong>
+                                ${remaining.days}
+                            </strong>
+                            days left 😭❤️
+                        </p>
+
+                        <p>
+                            The rule of the time capsule is that
+                            we actually have to wait.
+                        </p>
+
+                    </div>
+                `
+
+            );
+
+
+            shakeModal();
+
+        }
+
+
+
+        /* =====================================================
+           PHOTO CAPSULE
+        ====================================================== */
+
+        function showPhotoCapsule() {
+
+            if (
+                !LOCKED_PHOTO_URL
+            ) {
+
+                showCapsuleModal(
+
+                    "📸",
+
+                    "Locked Photo",
+
+                    "🔓 The unlock date has arrived, but the photo still hasn’t been uploaded.",
+
+                    `
+                        <p>
+                            When you add the photo to the images folder,
+                            put its URL inside the variable
+                            <strong>
+                                LOCKED_PHOTO_URL
+                            </strong>
+                            there.
+                        </p>
+                    `
+
+                );
+
+
+                return;
+
+            }
+
+
+            showCapsuleModal(
+
+                "📸",
+
+                "Locked Photo",
+
+                "A piece of the past that finally opened.",
+
+                `
+                    <img
+                        class="unlocked-photo"
+                        src="${escapeHTML(
+                            LOCKED_PHOTO_URL
+                        )}"
+                        alt="Arian and Saba’s locked memory"
+                    >
+                `
+
+            );
+
+        }
+
+
+
+        /* =====================================================
+           PREDICTIONS
+        ====================================================== */
+
+        const predictionFields = [
+
+            "home",
+            "car",
+            "sleep",
+            "countries",
+            "movie"
+
+        ];
+
+
+
+        function loadPredictions() {
+
+            predictionFields.forEach(
+
+                function(key) {
+
+                    const field =
+                        document.getElementById(
+                            "prediction-" + key
+                        );
+
+
+                    if (!field) {
+
+                        return;
+
+                    }
+
+
+                    const saved =
+                        localStorage.getItem(
+                            "capsule-prediction-" +
+                            key
+                        );
+
+
+                    if (
+                        saved !== null
+                    ) {
+
+                        field.value =
+                            saved;
+
+                    }
+
+                }
+
+            );
+
+        }
+
+
+
+        function savePredictions() {
+
+            predictionFields.forEach(
+
+                function(key) {
+
+                    const field =
+                        document.getElementById(
+                            "prediction-" + key
+                        );
+
+
+                    localStorage.setItem(
+
+                        "capsule-prediction-" +
+                        key,
+
+                        field.value.trim()
+
+                    );
+
+                }
+
+            );
+
+
+            localStorage.setItem(
+
+                "capsule-predictions-sealed",
+
+                new Date().toISOString()
+
+            );
+
+
+            const message =
+                document.getElementById(
+                    "predictionSaveMessage"
+                );
+
+
+            message.textContent =
+                "Saved and sealed 🔐❤️";
+
+
+            showToast(
+                "Predictions saved 🔮"
+            );
+
+        }
+
+
+        loadPredictions();
+
+
+
+        function showPredictionCapsule() {
+
+            const labels = {
+
+                home:
+                    "🏠 Where will we live?",
+
+                car:
+                    "🚗 Our car together?",
+
+                sleep:
+                    "😴 Which one of us sleeps more?",
+
+                countries:
+                    "🌍 How many countries?",
+
+                movie:
+                    "🎬 Will we still argue about movies?"
+
+            };
+
+
+            let output =
+                '<div class="prediction-reveal">';
+
+
+            predictionFields.forEach(
+
+                function(key) {
+
+                    const value =
+                        localStorage.getItem(
+                            "capsule-prediction-" +
+                            key
+                        ) || "No answer was recorded.";
+
+
+                    output += `
+
+                        <div class="revealed-answer">
+
+                            <strong>
+                                ${labels[key]}
+                            </strong>
+
+                            <p>
+                                ${escapeHTML(
+                                    value
+                                )}
+                            </p>
+
+                        </div>
+
+                    `;
+
+                }
+
+            );
+
+
+            output +=
+                "</div>";
+
+
+            showCapsuleModal(
+
+                "🔮",
+
+                "Predictions for 2030",
+
+                "Well... let’s see how accurately we saw the future 😭",
+
+                output
+
+            );
+
+        }
+
+
+
+        /* =====================================================
+           BEFORE / AFTER
+        ====================================================== */
+
+        const beforeFields = [
+
+            "home",
+            "dream",
+            "relationship"
+
+        ];
+
+
+
+        function loadBeforeAnswers() {
+
+            beforeFields.forEach(
+
+                function(key) {
+
+                    const field =
+                        document.getElementById(
+                            "before-" + key
+                        );
+
+
+                    const saved =
+                        localStorage.getItem(
+                            "capsule-before-" +
+                            key
+                        );
+
+
+                    if (
+                        field &&
+                        saved !== null
+                    ) {
+
+                        field.value =
+                            saved;
+
+                    }
+
+                }
+
+            );
+
+        }
+
+
+
+        function saveBeforeAnswers() {
+
+            beforeFields.forEach(
+
+                function(key) {
+
+                    const field =
+                        document.getElementById(
+                            "before-" + key
+                        );
+
+
+                    localStorage.setItem(
+
+                        "capsule-before-" +
+                        key,
+
+                        field.value.trim()
+
+                    );
+
+                }
+
+            );
+
+
+            showToast(
+                "The 2026 answers were saved ❤️"
+            );
+
+        }
+
+
+        loadBeforeAnswers();
+
+
+
+        function updateFutureEra() {
+
+            if (
+                isUnlocked(
+                    CAPSULE_DATES.beforeAfter
+                )
+            ) {
+
+                document
+                    .getElementById(
+                        "futureEraLocked"
+                    )
+                    .classList
+                    .add("hidden");
+
+
+                document
+                    .getElementById(
+                        "futureEraUnlocked"
+                    )
+                    .classList
+                    .remove("hidden");
+
+            }
+
+        }
+
+
+        updateFutureEra();
+
+
+
+        function normalizeWords(text) {
+
+            return text
+                .toLowerCase()
+                .replace(
+                    /[^\u0600-\u06FFa-zA-Z0-9\s]/g,
+                    " "
+                )
+                .split(/\s+/)
+                .filter(
+                    function(word) {
+
+                        return (
+                            word.length > 1
+                        );
+
+                    }
+                );
+
+        }
+
+
+
+        function textSimilarity(
+            first,
+            second
+        ) {
+
+            const a =
+                new Set(
+                    normalizeWords(
+                        first
+                    )
+                );
+
+
+            const b =
+                new Set(
+                    normalizeWords(
+                        second
+                    )
+                );
+
+
+            if (
+                a.size === 0 ||
+                b.size === 0
+            ) {
+
+                return 0;
+
+            }
+
+
+            let common =
+                0;
+
+
+            a.forEach(
+
+                function(word) {
+
+                    if (
+                        b.has(word)
+                    ) {
+
+                        common++;
+
+                    }
+
+                }
+
+            );
+
+
+            const total =
+                new Set([
+                    ...a,
+                    ...b
+                ]).size;
+
+
+            return Math.round(
+                common /
+                total *
+                100
+            );
+
+        }
+
+
+
+        function compareEras() {
+
+            if (
+                !isUnlocked(
+                    CAPSULE_DATES.beforeAfter
+                )
+            ) {
+
+                return;
+
+            }
+
+
+            let total =
+                0;
+
+
+            let count =
+                0;
+
+
+            beforeFields.forEach(
+
+                function(key) {
+
+                    const before =
+                        localStorage.getItem(
+                            "capsule-before-" +
+                            key
+                        ) || "";
+
+
+                    const afterField =
+                        document.getElementById(
+                            "after-" + key
+                        );
+
+
+                    const after =
+                        afterField.value.trim();
+
+
+                    if (
+                        before ||
+                        after
+                    ) {
+
+                        total +=
+                            textSimilarity(
+                                before,
+                                after
+                            );
+
+
+                        count++;
+
+                    }
+
+                }
+
+            );
+
+
+            const average =
+                count
+                    ? Math.round(
+                        total / count
+                    )
+                    : 0;
+
+
+            const result =
+                document.getElementById(
+                    "eraComparison"
+                );
+
+
+            result.classList.remove(
+                "hidden"
+            );
+
+
+            result.innerHTML = `
+
+                <span class="comparison-heart">
+                    ❤️
+                </span>
+
+                <h3>
+                    Display similarity of the answers:
+                    ${average}%
+                </h3>
+
+                <p>
+                    This percentage is calculated only from shared words;
+                    the interesting part is the answers themselves and how they change over time.
+                </p>
+
+            `;
+
+        }
+
+
+
+        /* =====================================================
+           MIDNIGHT CAPSULE
+        ====================================================== */
+
+        function checkMidnightCapsule(
+            showMessage
+        ) {
+
+            const hour =
+                new Date().getHours();
+
+
+            const unlocked =
+                (
+                    hour >= 0 &&
+                    hour < 4
+                );
+
+
+            const lockedBox =
+                document.getElementById(
+                    "midnightLocked"
+                );
+
+
+            const unlockedBox =
+                document.getElementById(
+                    "midnightUnlocked"
+                );
+
+
+            const status =
+                document.getElementById(
+                    "midnightStatus"
+                );
+
+
+            if (unlocked) {
+
+                lockedBox.classList.add(
+                    "hidden"
+                );
+
+
+                unlockedBox.classList.remove(
+                    "hidden"
+                );
+
+
+                if (showMessage) {
+
+                    showToast(
+                        "Midnight Capsule opened 🌙✨"
+                    );
+
+                }
+
+            }
+
+            else {
+
+                lockedBox.classList.remove(
+                    "hidden"
+                );
+
+
+                unlockedBox.classList.add(
+                    "hidden"
+                );
+
+
+                status.textContent =
+                    "It’s not time yet; come back at midnight 🤭";
+
+
+                if (showMessage) {
+
+                    showToast(
+                        "This one only opens between 00:00 and 04:00 🌙"
+                    );
+
+                }
+
+            }
+
+        }
+
+
+        checkMidnightCapsule(
+            false
+        );
+
+
+
+        /* =====================================================
+           CUSTOM CAPSULES
+        ====================================================== */
+
+        function getCustomCapsules() {
+
+            try {
+
+                return JSON.parse(
+                    localStorage.getItem(
+                        "custom-time-capsules"
+                    ) || "[]"
+                );
+
+            }
+
+            catch (error) {
+
+                return [];
+
+            }
+
+        }
+
+
+
+        function saveCustomCapsules(
+            capsules
+        ) {
+
+            localStorage.setItem(
+
+                "custom-time-capsules",
+
+                JSON.stringify(
+                    capsules
+                )
+
+            );
+
+        }
+
+
+
+        function createCustomCapsule(
+            event
+        ) {
+
+            event.preventDefault();
+
+
+            const title =
+                document
+                    .getElementById(
+                        "customTitle"
+                    )
+                    .value
+                    .trim();
+
+
+            const text =
+                document
+                    .getElementById(
+                        "customText"
+                    )
+                    .value
+                    .trim();
+
+
+            const dateValue =
+                document
+                    .getElementById(
+                        "customDate"
+                    )
+                    .value;
+
+
+            const date =
+                new Date(
+                    dateValue
+                );
+
+
+            if (
+                !title ||
+                !text ||
+                !dateValue ||
+                Number.isNaN(
+                    date.getTime()
+                )
+            ) {
+
+                showToast(
+                    "Fill in every field 🤭"
+                );
+
+                return;
+
+            }
+
+
+            if (
+                date <= new Date()
+            ) {
+
+                showToast(
+                    "The unlock date must be in the future 🔐"
+                );
+
+                return;
+
+            }
+
+
+            const capsules =
+                getCustomCapsules();
+
+
+            capsules.unshift({
+
+                id:
+                    Date.now(),
+
+                title:
+                    title,
+
+                text:
+                    text,
+
+                date:
+                    date.toISOString(),
+
+                createdAt:
+                    new Date().toISOString()
+
+            });
+
+
+            saveCustomCapsules(
+                capsules
+            );
+
+
+            document
+                .getElementById(
+                    "capsuleBuilder"
+                )
+                .reset();
+
+
+            renderCustomCapsules();
+
+
+            showToast(
+                "The new capsule was locked 🔐❤️"
+            );
+
+        }
+
+
+
+        function renderCustomCapsules() {
+
+            const capsules =
+                getCustomCapsules();
+
+
+            const list =
+                document.getElementById(
+                    "customCapsuleList"
+                );
+
+
+            const count =
+                document.getElementById(
+                    "customCapsuleCount"
+                );
+
+
+            count.textContent =
+                capsules.length;
+
+
+            list.innerHTML =
+                "";
+
+
+            if (
+                capsules.length === 0
+            ) {
+
+                const empty =
+                    document.createElement(
+                        "p"
+                    );
+
+
+                empty.className =
+                    "empty-state";
+
+
+                empty.textContent =
+                    "No new personal capsule has been created yet.";
+
+
+                list.appendChild(
+                    empty
+                );
+
+
+                return;
+
+            }
+
+
+            capsules.forEach(
+
+                function(capsule) {
+
+                    const date =
+                        new Date(
+                            capsule.date
+                        );
+
+
+                    const unlocked =
+                        isUnlocked(
+                            date
+                        );
+
+
+                    const card =
+                        document.createElement(
+                            "article"
+                        );
+
+
+                    card.className =
+                        "custom-capsule-card" +
+                        (
+                            unlocked
+                                ? " custom-unlocked"
+                                : ""
+                        );
+
+
+                    const top =
+                        document.createElement(
+                            "div"
+                        );
+
+
+                    top.className =
+                        "custom-capsule-top";
+
+
+                    const icon =
+                        document.createElement(
+                            "span"
+                        );
+
+
+                    icon.textContent =
+                        unlocked
+                            ? "🔓"
+                            : "🔐";
+
+
+                    const title =
+                        document.createElement(
+                            "h3"
+                        );
+
+
+                    title.textContent =
+                        capsule.title;
+
+
+                    top.appendChild(
+                        icon
+                    );
+
+
+                    top.appendChild(
+                        title
+                    );
+
+
+                    const dateText =
+                        document.createElement(
+                            "p"
+                        );
+
+
+                    dateText.className =
+                        "custom-date";
+
+
+                    dateText.textContent =
+                        formatDateFa(
+                            date
+                        );
+
+
+                    const actions =
+                        document.createElement(
+                            "div"
+                        );
+
+
+                    actions.className =
+                        "custom-actions";
+
+
+                    const openButton =
+                        document.createElement(
+                            "button"
+                        );
+
+
+                    openButton.type =
+                        "button";
+
+
+                    openButton.className =
+                        "secondary-button";
+
+
+                    openButton.textContent =
+                        unlocked
+                            ? "Open it ❤️"
+                            : "Try the lock";
+
+
+                    openButton.addEventListener(
+
+                        "click",
+
+                        function() {
+
+                            openCustomCapsule(
+                                capsule.id
+                            );
+
+                        }
+
+                    );
+
+
+                    const deleteButton =
+                        document.createElement(
+                            "button"
+                        );
+
+
+                    deleteButton.type =
+                        "button";
+
+
+                    deleteButton.className =
+                        "danger-button";
+
+
+                    deleteButton.textContent =
+                        "Delete";
+
+
+                    deleteButton.addEventListener(
+
+                        "click",
+
+                        function() {
+
+                            deleteCustomCapsule(
+                                capsule.id
+                            );
+
+                        }
+
+                    );
+
+
+                    actions.appendChild(
+                        openButton
+                    );
+
+
+                    actions.appendChild(
+                        deleteButton
+                    );
+
+
+                    card.appendChild(
+                        top
+                    );
+
+
+                    card.appendChild(
+                        dateText
+                    );
+
+
+                    card.appendChild(
+                        actions
+                    );
+
+
+                    list.appendChild(
+                        card
+                    );
+
+                }
+
+            );
+
+        }
+
+
+
+        function openCustomCapsule(
+            id
+        ) {
+
+            const capsule =
+                getCustomCapsules()
+                    .find(
+
+                        function(item) {
+
+                            return (
+                                item.id === id
+                            );
+
+                        }
+
+                    );
+
+
+            if (!capsule) {
+
+                return;
+
+            }
+
+
+            const date =
+                new Date(
+                    capsule.date
+                );
+
+
+            if (
+                !isUnlocked(
+                    date
+                )
+            ) {
+
+                const remaining =
+                    getRemaining(
+                        date
+                    );
+
+
+                showCapsuleModal(
+
+                    "🔐",
+
+                    capsule.title,
+
+                    formatDateFa(
+                        date
+                    ),
+
+                    `
+                        <div class="locked-modal-message">
+
+                            <span class="big-lock">
+                                🔒
+                            </span>
+
+                            <p>
+                                Still
+                                <strong>
+                                    ${remaining.days}
+                                </strong>
+                                days left.
+                            </p>
+
+                        </div>
+                    `
+
+                );
+
+
+                shakeModal();
+
+
+                return;
+
+            }
+
+
+            showCapsuleModal(
+
+                "🔓",
+
+                capsule.title,
+
+                "The time has finally come ❤️",
+
+                `
+                    <p class="modal-letter">
+                        ${escapeHTML(
+                            capsule.text
+                        ).replace(
+                            /\n/g,
+                            "<br>"
+                        )}
+                    </p>
+                `
+
+            );
+
+        }
+
+
+
+        function deleteCustomCapsule(
+            id
+        ) {
+
+            const confirmed =
+                window.confirm(
+                    "Delete this capsule?"
+                );
+
+
+            if (!confirmed) {
+
+                return;
+
+            }
+
+
+            const capsules =
+                getCustomCapsules()
+                    .filter(
+
+                        function(item) {
+
+                            return (
+                                item.id !== id
+                            );
+
+                        }
+
+                    );
+
+
+            saveCustomCapsules(
+                capsules
+            );
+
+
+            renderCustomCapsules();
+
+        }
+
+
+        renderCustomCapsules();
+
+
+
+        /* =====================================================
+           MODAL
+        ====================================================== */
+
+        function showCapsuleModal(
+            icon,
+            title,
+            subtitle,
+            bodyHTML
+        ) {
+
+            document
+                .getElementById(
+                    "modalIcon"
+                )
+                .textContent =
+                icon;
+
+
+            document
+                .getElementById(
+                    "modalTitle"
+                )
+                .textContent =
+                title;
+
+
+            document
+                .getElementById(
+                    "modalSubtitle"
+                )
+                .textContent =
+                subtitle;
+
+
+            document
+                .getElementById(
+                    "modalBody"
+                )
+                .innerHTML =
+                bodyHTML;
+
+
+            document
+                .getElementById(
+                    "capsuleModal"
+                )
+                .classList
+                .remove("hidden");
+
+
+            document.body
+                .classList
+                .add(
+                    "modal-open"
+                );
+
+        }
+
+
+
+        function closeCapsuleModal() {
+
+            document
+                .getElementById(
+                    "capsuleModal"
+                )
+                .classList
+                .add("hidden");
+
+
+            document.body
+                .classList
+                .remove(
+                    "modal-open"
+                );
+
+        }
+
+
+
+        function shakeModal() {
+
+            const card =
+                document.querySelector(
+                    ".modal-card"
+                );
+
+
+            card.classList.remove(
+                "shake"
+            );
+
+
+            void card.offsetWidth;
+
+
+            card.classList.add(
+                "shake"
+            );
+
+        }
+
+
+
+        /* =====================================================
+           TOAST
+        ====================================================== */
+
+        let toastTimer =
+            null;
+
+
+
+        function showToast(
+            text
+        ) {
+
+            const toast =
+                document.getElementById(
+                    "toast"
+                );
+
+
+            toast.textContent =
+                text;
+
+
+            toast.classList.add(
+                "toast-show"
+            );
+
+
+            clearTimeout(
+                toastTimer
+            );
+
+
+            toastTimer =
+                setTimeout(
+
+                    function() {
+
+                        toast.classList.remove(
+                            "toast-show"
+                        );
+
+                    },
+
+                    2600
+
+                );
+
+        }
+
+
+
+        /* =====================================================
+           THEME — THREE STATES
+           light -> sunset -> dark
+        ====================================================== */
+
+        const THEMES = [
+
+            {
+                name:
+                    "light",
+
+                icon:
+                    "☀️"
+            },
+
+            {
+                name:
+                    "sunset",
+
+                icon:
+                    "🌅"
+            },
+
+            {
+                name:
+                    "dark",
+
+                icon:
+                    "🌙"
+            }
+
+        ];
+
+
+        let currentThemeIndex =
+            0;
+
+
+
+        function applySavedTheme() {
+
+            const saved =
+                localStorage.getItem(
+                    "capsuleTheme"
+                ) || "light";
+
+
+            const foundIndex =
+                THEMES.findIndex(
+
+                    function(theme) {
+
+                        return (
+                            theme.name ===
+                            saved
+                        );
+
+                    }
+
+                );
+
+
+            currentThemeIndex =
+                foundIndex >= 0
+                    ? foundIndex
+                    : 0;
+
+
+            applyTheme();
+
+        }
+
+
+
+        function applyTheme() {
+
+            document.body
+                .classList
+                .remove(
+                    "dark-mode",
+                    "sunset-mode"
+                );
+
+
+            const theme =
+                THEMES[
+                    currentThemeIndex
+                ];
+
+
+            if (
+                theme.name ===
+                "dark"
+            ) {
+
+                document.body
+                    .classList
+                    .add(
+                        "dark-mode"
+                    );
+
+            }
+
+
+            if (
+                theme.name ===
+                "sunset"
+            ) {
+
+                document.body
+                    .classList
+                    .add(
+                        "sunset-mode"
+                    );
+
+            }
+
+
+            document
+                .getElementById(
+                    "themeButton"
+                )
+                .textContent =
+                theme.icon;
+
+
+            localStorage.setItem(
+
+                "capsuleTheme",
+
+                theme.name
+
+            );
+
+        }
+
+
+
+        function cycleTheme() {
+
+            currentThemeIndex =
+                (
+                    currentThemeIndex +
+                    1
+                ) %
+                THEMES.length;
+
+
+            applyTheme();
+
+        }
+
+
+        applySavedTheme();
+
+
+
+        /* =====================================================
+           PARTICLES
+        ====================================================== */
+
+        function createCapsuleParticles() {
+
+            const container =
+                document.getElementById(
+                    "capsuleParticles"
+                );
+
+
+            const icons = [
+
+                "✨",
+                "❤️",
+                "🔐",
+                "🌙",
+                "💌",
+                "⏳"
+
+            ];
+
+
+            for (
+                let i = 0;
+                i < 22;
+                i++
+            ) {
+
+                const particle =
+                    document.createElement(
+                        "span"
+                    );
+
+
+                particle.className =
+                    "capsule-particle";
+
+
+                particle.textContent =
+                    icons[
+                        Math.floor(
+                            Math.random() *
+                            icons.length
+                        )
+                    ];
+
+
+                particle.style.left =
+                    Math.random() *
+                    100 +
+                    "%";
+
+
+                particle.style.animationDuration =
+                    (
+                        10 +
+                        Math.random() *
+                        14
+                    ) + "s";
+
+
+                particle.style.animationDelay =
+                    Math.random() *
+                    10 +
+                    "s";
+
+
+                container.appendChild(
+                    particle
+                );
+
+            }
+
+        }
+
+
+        createCapsuleParticles();
+
+
+
+        /* =====================================================
+           NAVIGATION
+        ====================================================== */
+
+        function scrollToCapsules() {
+
+            document
+                .getElementById(
+                    "vaultSection"
+                )
+                .scrollIntoView({
+
+                    behavior:
+                        "smooth",
+
+                    block:
+                        "start"
+
+                });
+
+        }
+
+
+
+        /* =====================================================
+           KEYBOARD
+        ====================================================== */
+
+        document.addEventListener(
+
+            "keydown",
+
+            function(event) {
+
+                if (
+                    event.key ===
+                    "Escape"
+                ) {
+
+                    closeCapsuleModal();
+
+                }
+
+            }
+
+        );
+
+
+
+        /* =====================================================
+           CUSTOM DATE DEFAULT
+           Three years from now as a helpful starting point
+        ====================================================== */
+
+        function setDefaultCustomDate() {
+
+            const input =
+                document.getElementById(
+                    "customDate"
+                );
+
+
+            const date =
+                new Date();
+
+
+            date.setFullYear(
+                date.getFullYear() +
+                3
+            );
+
+
+            date.setMinutes(
+                date.getMinutes() -
+                date.getTimezoneOffset()
+            );
+
+
+            input.value =
+                date
+                    .toISOString()
+                    .slice(
+                        0,
+                        16
+                    );
+
+        }
+
+
+        setDefaultCustomDate();
+
+
+    </script>
+
+
+</body>
+
+</html>
