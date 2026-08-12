@@ -1048,6 +1048,34 @@ body {
     }
 
 }
+    /* =========================================================
+   COMIC LIGHTBOX ABOVE GLOBAL PLAYER
+   ========================================================= */
+
+body.comic-lightbox-active #siteShell {
+    z-index: 40000 !important;
+    bottom: 0 !important;
+}
+
+body.comic-lightbox-active #musicMiniPlayer {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+
+    transition:
+        opacity 0.28s ease,
+        transform 0.28s ease;
+}
+
+body.comic-lightbox-active #mobileBottomNav {
+    opacity: 0;
+    transform: translateY(25px);
+    pointer-events: none;
+
+    transition:
+        opacity 0.28s ease,
+        transform 0.28s ease;
+    }
 
 
 </style>
