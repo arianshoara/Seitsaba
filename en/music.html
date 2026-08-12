@@ -1,0 +1,2686 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>Our Music 🎵❤️</title>
+
+    <meta name="theme-color" content="#17152b">
+    <meta name="description" content="Arian & Saba's Music ❤️">
+
+    <!-- MAIN SITE STYLES -->
+    <link rel="stylesheet" href="style.css">
+
+    <!--
+        Styles specific to this page.
+        They are intentionally kept inside music.html so at this stage
+        you do not need to change style.css.
+    -->
+    <style id="musicLibraryStyles">
+
+        :root {
+            --music-page-bg: #0d0e19;
+            --music-page-bg-2: #18132b;
+
+            --music-surface:
+                rgba(255, 255, 255, 0.075);
+
+            --music-surface-strong:
+                rgba(255, 255, 255, 0.105);
+
+            --music-line:
+                rgba(255, 255, 255, 0.085);
+
+            --music-text:
+                #ffffff;
+
+            --music-soft:
+                rgba(255, 255, 255, 0.62);
+
+            --music-pink:
+                #ff8fc4;
+
+            --music-purple:
+                #a88af0;
+
+            --music-blue:
+                #8bb8ff;
+
+            --music-shadow:
+                0 20px 55px
+                rgba(4, 3, 13, 0.34);
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html {
+            min-height: 100%;
+            background: var(--music-page-bg);
+        }
+
+
+        body.music-library-page {
+            margin: 0;
+
+            min-height: 100vh;
+
+            padding:
+                0
+                0
+                40px;
+
+            overflow-x: hidden;
+
+            color:
+                var(--music-text);
+
+            font-family:
+                Tahoma,
+                Arial,
+                sans-serif;
+
+            background:
+                radial-gradient(
+                    circle at 10% 6%,
+                    rgba(151, 105, 255, 0.23),
+                    transparent 27%
+                ),
+                radial-gradient(
+                    circle at 92% 24%,
+                    rgba(255, 107, 173, 0.17),
+                    transparent 26%
+                ),
+                radial-gradient(
+                    circle at 50% 92%,
+                    rgba(78, 125, 255, 0.10),
+                    transparent 32%
+                ),
+                linear-gradient(
+                    160deg,
+                    #11101f 0%,
+                    #17132a 48%,
+                    #0c0d18 100%
+                );
+
+            background-attachment: fixed;
+        }
+
+
+        body.music-library-page::before {
+            content: "";
+
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 0;
+
+            pointer-events: none;
+
+            opacity: 0.34;
+
+            background-image:
+                radial-gradient(
+                    circle at 12% 18%,
+                    rgba(255, 255, 255, 0.78) 0 1px,
+                    transparent 1.5px
+                ),
+                radial-gradient(
+                    circle at 31% 9%,
+                    rgba(210, 190, 255, 0.74) 0 1px,
+                    transparent 1.6px
+                ),
+                radial-gradient(
+                    circle at 68% 16%,
+                    rgba(255, 255, 255, 0.65) 0 1px,
+                    transparent 1.5px
+                ),
+                radial-gradient(
+                    circle at 83% 37%,
+                    rgba(255, 164, 210, 0.70) 0 1px,
+                    transparent 1.6px
+                ),
+                radial-gradient(
+                    circle at 22% 64%,
+                    rgba(255, 255, 255, 0.62) 0 1px,
+                    transparent 1.5px
+                ),
+                radial-gradient(
+                    circle at 76% 78%,
+                    rgba(188, 164, 255, 0.68) 0 1px,
+                    transparent 1.5px
+                );
+        }
+
+
+        button,
+        input {
+            font-family: inherit;
+        }
+
+
+        button {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+
+        .music-page-shell {
+            position: relative;
+
+            z-index: 1;
+
+            width: min(100%, 920px);
+
+            margin: 0 auto;
+
+            padding:
+                18px
+                18px
+                32px;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .music-page-header {
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 12px;
+
+            margin-bottom: 18px;
+        }
+
+
+        .music-page-heading {
+            min-width: 0;
+        }
+
+
+        .music-page-kicker {
+            display: block;
+
+            margin-bottom: 4px;
+
+            color:
+                var(--music-soft);
+
+            font-size: 11px;
+            font-weight: 700;
+
+            letter-spacing: 0.08em;
+        }
+
+
+        .music-page-heading h1 {
+            margin: 0;
+
+            color:
+                white;
+
+            font-size:
+                clamp(24px, 5vw, 34px);
+
+            line-height: 1.45;
+        }
+
+
+        .music-page-heading p {
+            margin:
+                5px
+                0
+                0;
+
+            color:
+                var(--music-soft);
+
+            font-size: 12px;
+
+            line-height: 1.8;
+        }
+
+
+        .music-player-open-button {
+            width: 48px;
+            height: 48px;
+
+            flex: none;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.10);
+
+            border-radius: 17px;
+
+            background:
+                rgba(255, 255, 255, 0.075);
+
+            color: white;
+
+            font-size: 20px;
+
+            cursor: pointer;
+
+            backdrop-filter: blur(14px);
+
+            transition:
+                transform 0.18s ease,
+                background 0.18s ease;
+        }
+
+
+        .music-player-open-button:active {
+            transform:
+                scale(0.94);
+        }
+
+
+        /* =========================
+           ALBUM / HERO
+        ========================= */
+
+        .music-album-card {
+            position: relative;
+
+            display: grid;
+
+            grid-template-columns:
+                minmax(180px, 0.82fr)
+                minmax(0, 1.18fr);
+
+            align-items: center;
+
+            gap: 24px;
+
+            width: 100%;
+
+            padding: 18px;
+
+            overflow: hidden;
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.09);
+
+            border-radius: 29px;
+
+            background:
+                radial-gradient(
+                    circle at 82% 16%,
+                    rgba(255, 143, 196, 0.13),
+                    transparent 31%
+                ),
+                linear-gradient(
+                    145deg,
+                    rgba(255, 255, 255, 0.09),
+                    rgba(255, 255, 255, 0.045)
+                );
+
+            box-shadow:
+                var(--music-shadow);
+
+            backdrop-filter:
+                blur(20px)
+                saturate(120%);
+
+            -webkit-backdrop-filter:
+                blur(20px)
+                saturate(120%);
+        }
+
+
+        .music-album-card::before {
+            content: "";
+
+            position: absolute;
+
+            width: 240px;
+            height: 240px;
+
+            top: -145px;
+            left: -100px;
+
+            border-radius: 50%;
+
+            pointer-events: none;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(167, 124, 255, 0.19),
+                    transparent 68%
+                );
+        }
+
+
+        .album-cover-frame {
+            position: relative;
+
+            width: 100%;
+
+            aspect-ratio: 1 / 1;
+
+            overflow: hidden;
+
+            border-radius: 23px;
+
+            background:
+                #14111e;
+
+            box-shadow:
+                0 18px 46px
+                rgba(0, 0, 0, 0.32);
+        }
+
+
+        .album-cover-frame img {
+            display: block;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+
+        .album-cover-frame::after {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            pointer-events: none;
+
+            box-shadow:
+                inset 0 0 0 1px
+                rgba(255, 255, 255, 0.09);
+        }
+
+
+        .album-info {
+            min-width: 0;
+        }
+
+
+        .album-label {
+            color:
+                var(--music-soft);
+
+            font-size: 11px;
+
+            letter-spacing:
+                0.08em;
+        }
+
+
+        .album-info h2 {
+            margin:
+                5px
+                0
+                7px;
+
+            color:
+                white;
+
+            font-size:
+                clamp(28px, 5vw, 44px);
+
+            line-height: 1.35;
+        }
+
+
+        .album-description {
+            margin:
+                0
+                0
+                12px;
+
+            color:
+                rgba(255, 255, 255, 0.76);
+
+            font-size: 13px;
+
+            line-height: 1.9;
+        }
+
+
+        .album-meta {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap:
+                7px
+                12px;
+
+            margin-bottom: 17px;
+
+            color:
+                var(--music-soft);
+
+            font-size: 10px;
+        }
+
+
+        .album-actions {
+            display: flex;
+
+            align-items: center;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+        }
+
+
+        .album-play-button {
+            min-height: 50px;
+
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 8px;
+
+            padding:
+                0
+                19px;
+
+            border: none;
+
+            border-radius: 999px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--music-pink),
+                    var(--music-purple)
+                );
+
+            color:
+                white;
+
+            font-size: 13px;
+            font-weight: 900;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 12px 30px
+                rgba(166, 100, 202, 0.25);
+
+            transition:
+                transform 0.18s ease;
+        }
+
+
+        .album-play-button:active {
+            transform:
+                scale(0.96);
+        }
+
+
+        .album-round-button {
+            width: 50px;
+            height: 50px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.10);
+
+            border-radius: 50%;
+
+            background:
+                rgba(255, 255, 255, 0.075);
+
+            color:
+                white;
+
+            font-size: 19px;
+
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           CURRENT TRACK
+        ========================= */
+
+        .current-track-card {
+            display: none;
+
+            grid-template-columns:
+                54px
+                minmax(0, 1fr)
+                auto;
+
+            align-items: center;
+
+            gap: 11px;
+
+            margin-top: 14px;
+
+            padding:
+                9px
+                10px;
+
+            border:
+                1px solid
+                rgba(255, 143, 196, 0.18);
+
+            border-radius: 19px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255, 143, 196, 0.10),
+                    rgba(168, 138, 240, 0.11)
+                );
+
+            cursor: pointer;
+        }
+
+
+        .current-track-card.visible {
+            display: grid;
+        }
+
+
+        .current-track-card img {
+            width: 54px;
+            height: 54px;
+
+            border-radius: 14px;
+
+            object-fit: cover;
+        }
+
+
+        .current-track-info {
+            min-width: 0;
+        }
+
+
+        .current-track-info strong,
+        .current-track-info span {
+            display: block;
+
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+
+        .current-track-info strong {
+            font-size: 12px;
+        }
+
+
+        .current-track-info span {
+            margin-top: 3px;
+
+            color:
+                var(--music-soft);
+
+            font-size: 9px;
+        }
+
+
+        .current-track-state {
+            color:
+                var(--music-pink);
+
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           TOOLBAR / SEARCH
+        ========================= */
+
+        .music-library-tools {
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1fr)
+                auto;
+
+            gap: 10px;
+
+            margin:
+                23px
+                0
+                13px;
+        }
+
+
+        .music-search-wrap {
+            position: relative;
+        }
+
+
+        .music-search-wrap::before {
+            content: "⌕";
+
+            position: absolute;
+
+            top: 50%;
+            right: 14px;
+
+            transform:
+                translateY(-52%);
+
+            color:
+                rgba(255, 255, 255, 0.47);
+
+            font-size: 20px;
+
+            pointer-events: none;
+        }
+
+
+        #musicSearch {
+            width: 100%;
+            height: 48px;
+
+            padding:
+                0
+                44px
+                0
+                14px;
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.08);
+
+            border-radius: 17px;
+
+            outline: none;
+
+            background:
+                rgba(255, 255, 255, 0.065);
+
+            color:
+                white;
+
+            font-size: 12px;
+        }
+
+
+        #musicSearch::placeholder {
+            color:
+                rgba(255, 255, 255, 0.40);
+        }
+
+
+        #musicSearch:focus {
+            border-color:
+                rgba(255, 143, 196, 0.24);
+
+            background:
+                rgba(255, 255, 255, 0.085);
+        }
+
+
+        .filter-button {
+            height: 48px;
+
+            padding:
+                0
+                15px;
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.08);
+
+            border-radius: 17px;
+
+            background:
+                rgba(255, 255, 255, 0.065);
+
+            color:
+                rgba(255, 255, 255, 0.80);
+
+            font-size: 11px;
+            font-weight: 800;
+
+            cursor: pointer;
+        }
+
+
+        .filter-button.active {
+            color:
+                #ffacd3;
+
+            border-color:
+                rgba(255, 143, 196, 0.23);
+
+            background:
+                rgba(255, 143, 196, 0.09);
+        }
+
+
+        /* =========================
+           LIST
+        ========================= */
+
+        .music-list-section {
+            width: 100%;
+        }
+
+
+        .music-list-title-row {
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 12px;
+
+            margin-bottom: 7px;
+        }
+
+
+        .music-list-title-row h3 {
+            margin: 0;
+
+            color:
+                white;
+
+            font-size: 15px;
+        }
+
+
+        #musicTrackCount {
+            color:
+                var(--music-soft);
+
+            font-size: 9px;
+        }
+
+
+        .music-track-list {
+            border-top:
+                1px solid
+                var(--music-line);
+        }
+
+
+        .library-track-row {
+            position: relative;
+
+            width: 100%;
+
+            display: grid;
+
+            grid-template-columns:
+                36px
+                48px
+                minmax(0, 1fr)
+                auto
+                40px;
+
+            align-items: center;
+
+            gap: 9px;
+
+            min-height: 72px;
+
+            padding:
+                9px
+                5px;
+
+            border:
+                0;
+
+            border-bottom:
+                1px solid
+                var(--music-line);
+
+            background:
+                transparent;
+
+            color:
+                white;
+
+            text-align: right;
+
+            cursor: pointer;
+
+            transition:
+                background 0.18s ease;
+        }
+
+
+        .library-track-row:not(.disabled):active {
+            background:
+                rgba(255, 255, 255, 0.055);
+        }
+
+
+        .library-track-row.active {
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(255, 143, 196, 0.09),
+                    transparent 72%
+                );
+        }
+
+
+        .library-track-row.active::before {
+            content: "";
+
+            position: absolute;
+
+            top: 8px;
+            bottom: 8px;
+            right: 0;
+
+            width: 3px;
+
+            border-radius:
+                999px
+                0
+                0
+                999px;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    var(--music-pink),
+                    var(--music-purple)
+                );
+        }
+
+
+        .library-track-row.disabled {
+            opacity: 0.47;
+
+            cursor:
+                default;
+        }
+
+
+        .track-index {
+            color:
+                rgba(255, 255, 255, 0.45);
+
+            font-size: 10px;
+
+            text-align: center;
+
+            direction: ltr;
+        }
+
+
+        .track-cover {
+            width: 48px;
+            height: 48px;
+
+            border-radius: 12px;
+
+            object-fit: cover;
+
+            background:
+                rgba(255, 255, 255, 0.06);
+        }
+
+
+        .track-copy {
+            min-width: 0;
+        }
+
+
+        .track-title {
+            display: block;
+
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            color:
+                rgba(255, 255, 255, 0.92);
+
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+
+        .library-track-row.active .track-title {
+            color:
+                #ffacd3;
+        }
+
+
+        .track-artist {
+            display: block;
+
+            margin-top: 4px;
+
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            color:
+                var(--music-soft);
+
+            font-size: 9px;
+        }
+
+
+        .track-status {
+            min-width: 52px;
+
+            color:
+                rgba(255, 255, 255, 0.50);
+
+            font-size: 9px;
+
+            text-align: left;
+
+            direction: ltr;
+        }
+
+
+        .track-status.available {
+            color:
+                rgba(255, 255, 255, 0.66);
+        }
+
+
+        .track-status.soon {
+            direction: rtl;
+
+            color:
+                rgba(255, 255, 255, 0.34);
+        }
+
+
+        .track-action {
+            width: 36px;
+            height: 36px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.075);
+
+            border-radius: 50%;
+
+            background:
+                rgba(255, 255, 255, 0.045);
+
+            color:
+                rgba(255, 255, 255, 0.78);
+
+            font-size: 13px;
+
+            pointer-events: none;
+        }
+
+
+        .library-track-row.active .track-action {
+            color:
+                #ffacd3;
+
+            border-color:
+                rgba(255, 143, 196, 0.20);
+
+            background:
+                rgba(255, 143, 196, 0.08);
+        }
+
+
+        /* =========================
+           EMPTY / TOAST
+        ========================= */
+
+        .music-empty {
+            display: none;
+
+            padding:
+                38px
+                16px;
+
+            text-align: center;
+
+            color:
+                var(--music-soft);
+
+            font-size: 12px;
+
+            line-height: 2;
+        }
+
+
+        .music-empty.visible {
+            display: block;
+        }
+
+
+        #musicPageToast {
+            position: fixed;
+
+            left: 50%;
+            bottom: 18px;
+
+            z-index: 5000;
+
+            max-width:
+                calc(100vw - 30px);
+
+            padding:
+                10px
+                15px;
+
+            border-radius: 999px;
+
+            background:
+                rgba(18, 15, 31, 0.96);
+
+            color:
+                white;
+
+            box-shadow:
+                0 13px 35px
+                rgba(0, 0, 0, 0.30);
+
+            font-size: 10px;
+            font-weight: 800;
+
+            opacity: 0;
+            visibility: hidden;
+
+            transform:
+                translate(
+                    -50%,
+                    10px
+                );
+
+            transition:
+                opacity 0.20s ease,
+                transform 0.20s ease,
+                visibility 0.20s ease;
+        }
+
+
+        #musicPageToast.show {
+            opacity: 1;
+            visibility: visible;
+
+            transform:
+                translate(
+                    -50%,
+                    0
+                );
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 680px) {
+
+            .music-page-shell {
+                padding:
+                    14px
+                    13px
+                    28px;
+            }
+
+
+            .music-page-header {
+                margin-bottom:
+                    14px;
+            }
+
+
+            .music-page-heading h1 {
+                font-size: 25px;
+            }
+
+
+            .music-page-heading p {
+                font-size: 10px;
+            }
+
+
+            .music-player-open-button {
+                width: 44px;
+                height: 44px;
+
+                border-radius: 15px;
+            }
+
+
+            .music-album-card {
+                grid-template-columns:
+                    104px
+                    minmax(0, 1fr);
+
+                gap: 14px;
+
+                padding: 12px;
+
+                border-radius: 23px;
+            }
+
+
+            .album-cover-frame {
+                border-radius: 17px;
+            }
+
+
+            .album-info h2 {
+                margin-top: 4px;
+
+                font-size: 23px;
+            }
+
+
+            .album-description {
+                display: none;
+            }
+
+
+            .album-meta {
+                margin-bottom: 11px;
+
+                gap: 5px 9px;
+
+                font-size: 8px;
+            }
+
+
+            .album-play-button {
+                min-height: 42px;
+
+                padding:
+                    0
+                    15px;
+
+                font-size: 11px;
+            }
+
+
+            .album-round-button {
+                width: 42px;
+                height: 42px;
+
+                font-size: 16px;
+            }
+
+
+            .music-library-tools {
+                margin-top: 17px;
+            }
+
+
+            .library-track-row {
+                grid-template-columns:
+                    29px
+                    44px
+                    minmax(0, 1fr)
+                    auto
+                    34px;
+
+                gap: 7px;
+
+                min-height: 67px;
+            }
+
+
+            .track-cover {
+                width: 44px;
+                height: 44px;
+
+                border-radius: 11px;
+            }
+
+
+            .track-title {
+                font-size: 11px;
+            }
+
+
+            .track-artist {
+                font-size: 8px;
+            }
+
+
+            .track-status {
+                min-width: 42px;
+
+                font-size: 8px;
+            }
+
+
+            .track-action {
+                width: 31px;
+                height: 31px;
+
+                font-size: 11px;
+            }
+
+        }
+
+
+        @media (max-width: 390px) {
+
+            .music-album-card {
+                grid-template-columns:
+                    92px
+                    minmax(0, 1fr);
+
+                gap: 11px;
+            }
+
+
+            .album-info h2 {
+                font-size: 20px;
+            }
+
+
+            .album-label {
+                font-size: 8px;
+            }
+
+
+            .album-meta {
+                font-size: 7px;
+            }
+
+
+            .album-play-button {
+                min-height: 39px;
+
+                padding:
+                    0
+                    12px;
+            }
+
+
+            .album-round-button {
+                width: 39px;
+                height: 39px;
+            }
+
+
+            .library-track-row {
+                grid-template-columns:
+                    24px
+                    40px
+                    minmax(0, 1fr)
+                    33px;
+
+                gap: 6px;
+            }
+
+
+            .track-cover {
+                width: 40px;
+                height: 40px;
+            }
+
+
+            .track-status {
+                display: none;
+            }
+
+
+            .track-action {
+                width: 30px;
+                height: 30px;
+            }
+
+        }
+
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                transition-duration:
+                    0.01ms !important;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="music-library-page">
+
+    <main class="music-page-shell">
+
+
+        <!-- =========================
+             HEADER
+        ========================== -->
+
+        <header class="music-page-header">
+
+            <div class="music-page-heading">
+
+                <span class="music-page-kicker">
+                    A ❤️ S • MUSIC
+                </span>
+
+                <h1>
+                    Our Music 🎵
+                </h1>
+
+                <p>
+                    Songs that became connected to some part of our story.
+                </p>
+
+            </div>
+
+
+            <button
+                class="music-player-open-button"
+                type="button"
+                onclick="openMainPlayer()"
+                aria-label="Open player"
+                title="Open player"
+            >
+                🎧
+            </button>
+
+        </header>
+
+
+
+        <!-- =========================
+             ALBUM HERO
+        ========================== -->
+
+        <section class="music-album-card">
+
+            <div class="album-cover-frame">
+
+                <img
+                    src="images/photo9.jpg"
+                    alt="Arian & Saba playlist cover"
+                >
+
+            </div>
+
+
+            <div class="album-info">
+
+                <span class="album-label">
+                    PLAYLIST
+                </span>
+
+                <h2>
+                    Our Soundtrack
+                </h2>
+
+                <p class="album-description">
+                    A small archive of songs we've listened to,
+                    that reminded us of each other, or that we want to listen to together again someday.
+                </p>
+
+                <div class="album-meta">
+
+                    <span>
+                        ❤️ Arian & Saba
+                    </span>
+
+                    <span>
+                        •
+                    </span>
+
+                    <span>
+                        🎵 40 song slots
+                    </span>
+
+                    <span>
+                        •
+                    </span>
+
+                    <span id="availableMeta">
+                        3 active songs
+                    </span>
+
+                </div>
+
+
+                <div class="album-actions">
+
+                    <button
+                        class="album-play-button"
+                        type="button"
+                        onclick="playFirstAvailable()"
+                    >
+                        ▶ Play
+                    </button>
+
+                    <button
+                        class="album-round-button"
+                        type="button"
+                        onclick="playRandomAvailable()"
+                        aria-label="Shuffle play"
+                        title="Shuffle play"
+                    >
+                        🔀
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             CURRENT TRACK
+        ========================== -->
+
+        <section
+            id="currentTrackCard"
+            class="current-track-card"
+            onclick="openMainPlayer()"
+            aria-label="Now playing"
+        >
+
+            <img
+                id="currentTrackCover"
+                src="images/photo9.jpg"
+                alt=""
+            >
+
+            <div class="current-track-info">
+
+                <strong id="currentTrackTitle">
+                    Love You
+                </strong>
+
+                <span id="currentTrackArtist">
+                    Arian & Saba Playlist
+                </span>
+
+            </div>
+
+            <span
+                id="currentTrackState"
+                class="current-track-state"
+            >
+                ▶
+            </span>
+
+        </section>
+
+
+
+        <!-- =========================
+             SEARCH / FILTER
+        ========================== -->
+
+        <div class="music-library-tools">
+
+            <label class="music-search-wrap">
+
+                <input
+                    id="musicSearch"
+                    type="search"
+                    inputmode="search"
+                    autocomplete="off"
+                    placeholder="Search songs..."
+                    oninput="renderMusicLibrary()"
+                >
+
+            </label>
+
+            <button
+                id="favoritesFilter"
+                class="filter-button"
+                type="button"
+                onclick="toggleFavoritesFilter()"
+            >
+                ♡ Favorites
+            </button>
+
+        </div>
+
+
+
+        <!-- =========================
+             TRACK LIST
+        ========================== -->
+
+        <section class="music-list-section">
+
+            <div class="music-list-title-row">
+
+                <h3>
+                    Track List
+                </h3>
+
+                <span id="musicTrackCount">
+                    40 songs
+                </span>
+
+            </div>
+
+
+            <div
+                id="musicTrackList"
+                class="music-track-list"
+            ></div>
+
+
+            <div
+                id="musicEmpty"
+                class="music-empty"
+            >
+                Nothing matched this search 🎵
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <div id="musicPageToast"></div>
+
+
+
+    <script>
+
+        /* =====================================================
+           MUSIC LIBRARY DATA
+
+           Note:
+           The actual Player is located in index.html.
+           This page only controls that Player.
+
+           Files:
+           music/song01.mp3
+           music/song02.mp3
+           ...
+           music/song40.mp3
+
+           For now, tracks 01 through 03 are active.
+           ===================================================== */
+
+
+        const AVAILABLE_TRACKS = [
+            1,
+            2,
+            3,
+            4,
+            5
+        ];
+
+
+        const fallbackPhotos = [
+
+            "images/photo1.jpg",
+            "images/photo2.jpg",
+            "images/photo3.jpg",
+            "images/photo4.jpg",
+            "images/photo5.jpg",
+            "images/photo6.jpg",
+            "images/photo7.jpg",
+            "images/photo8.jpg",
+            "images/photo9.jpg",
+            "images/photo10.jpg",
+            "images/photo11.jpg"
+
+        ];
+
+
+        const musicLibrary =
+            Array.from(
+                {
+                    length:
+                        40
+                },
+                function (
+                    _,
+                    index
+                ) {
+
+                    const id =
+                        index + 1;
+
+                    const padded =
+                        String(
+                            id
+                        ).padStart(
+                            2,
+                            "0"
+                        );
+
+                    let title =
+                        "Song " +
+                        padded;
+
+                    let artist =
+                        "Will be added later";
+
+                    let cover =
+                        fallbackPhotos[
+                            index %
+                            fallbackPhotos.length
+                        ];
+
+                    if (
+                        id ===
+                        1
+                    ) {
+
+                        title =
+                            "Love You";
+
+                        artist =
+                            "Arian & Saba Playlist";
+
+                        cover =
+                            "images/photo9.jpg";
+
+                    }
+
+
+                    if (
+                        id ===
+                        2
+                    ) {
+
+                        title =
+                            "Black Sails";
+
+                        artist =
+                            "DARK • Soundtrack";
+
+                        cover =
+                            "images/photo4.jpg";
+
+                    }
+
+
+                    if (
+                        id ===
+                        3
+                    ) {
+
+                        title =
+                            "What If This Is Real Nightmare";
+
+                        artist =
+                            "Arian & Saba Playlist";
+
+                        cover =
+                            "images/photo2.jpg";
+
+                    }
+
+                    if (id === 4) {
+
+                        title =
+                              "Zolf";
+
+                        artist =
+                             "Mohsen Namjoo";
+  
+                        cover =
+                            "images/photo6.jpg";
+
+                    }
+                    if (id === 5) {
+
+    title =
+        "casino143";
+
+    artist =
+        "IVOXYGEN";
+
+    cover =
+        "images/photo2.jpg";
+
+                    }
+                    
+                    return {
+
+                        id:
+                            id,
+
+                        file:
+                            "music/song" +
+                            padded +
+                            ".mp3",
+
+                        title:
+                            title,
+
+                        artist:
+                            artist,
+
+                        cover:
+                            cover,
+
+                        available:
+                            AVAILABLE_TRACKS
+                                .includes(
+                                    id
+                                )
+
+                    };
+
+                }
+            );
+
+
+
+        /* =====================================================
+           PAGE STATE
+           ===================================================== */
+
+        let currentMusicState =
+            null;
+
+        let favoritesOnly =
+            false;
+
+        let toastTimer =
+            null;
+
+
+
+        /* =====================================================
+           HELPERS
+           ===================================================== */
+
+        function showMusicPageToast(
+            text
+        ) {
+
+            const toast =
+                document.getElementById(
+                    "musicPageToast"
+                );
+
+            toast.textContent =
+                text;
+
+            toast.classList.add(
+                "show"
+            );
+
+            clearTimeout(
+                toastTimer
+            );
+
+            toastTimer =
+                setTimeout(
+                    function () {
+
+                        toast.classList.remove(
+                            "show"
+                        );
+
+                    },
+                    2300
+                );
+
+        }
+
+
+        function getLovedTracks() {
+
+            try {
+
+                return JSON.parse(
+                    localStorage.getItem(
+                        "asLovedTracks"
+                    ) || "[]"
+                );
+
+            }
+
+            catch (
+                error
+            ) {
+
+                return [];
+
+            }
+
+        }
+
+
+        function formatTime(
+            seconds
+        ) {
+
+            if (
+                !Number.isFinite(
+                    seconds
+                ) ||
+                seconds <=
+                0
+            ) {
+
+                return "--:--";
+
+            }
+
+            const minutes =
+                Math.floor(
+                    seconds /
+                    60
+                );
+
+            const secs =
+                Math.floor(
+                    seconds %
+                    60
+                );
+
+            return (
+                minutes +
+                ":" +
+                String(
+                    secs
+                ).padStart(
+                    2,
+                    "0"
+                )
+            );
+
+        }
+
+
+        function getParentMusicAPI() {
+
+            try {
+
+                if (
+                    window.parent &&
+                    window.parent !==
+                    window &&
+                    window.parent.ASMusic
+                ) {
+
+                    return (
+                        window.parent.ASMusic
+                    );
+
+                }
+
+            }
+
+            catch (
+                error
+            ) {}
+
+            return null;
+
+        }
+
+
+
+        /* =====================================================
+           PLAYBACK
+           ===================================================== */
+
+        function playLibraryTrack(
+            trackId
+        ) {
+
+            const track =
+                musicLibrary.find(
+                    function (
+                        item
+                    ) {
+
+                        return (
+                            item.id ===
+                            Number(
+                                trackId
+                            )
+                        );
+
+                    }
+                );
+
+
+            if (
+                !track
+            ) {
+
+                return;
+
+            }
+
+
+            if (
+                !track.available
+            ) {
+
+                showMusicPageToast(
+                    "This song slot is still empty; later add song" +
+                    String(
+                        track.id
+                    ).padStart(
+                        2,
+                        "0"
+                    ) +
+                    ".mp3 🎵"
+                );
+
+                return;
+
+            }
+
+
+            const api =
+                getParentMusicAPI();
+
+
+            if (
+                api
+            ) {
+
+                api.playTrack(
+                    track.id,
+                    {
+                        autoplay:
+                            true,
+
+                        /*
+                           The music page stays open.
+                           The Full Player opens only when the user
+                           taps the player manually.
+                        */
+                        openPlayer:
+                            false
+                    }
+                );
+
+                requestMusicState();
+
+                return;
+
+            }
+
+
+            /*
+               If music.html is opened directly outside index,
+               instead of creating a second Audio instance, we send the user to the main shell.
+            */
+
+            showMusicPageToast(
+                "For continuous playback, music must be opened from the main page ❤️"
+            );
+
+        }
+
+
+        function playFirstAvailable() {
+
+            const first =
+                musicLibrary.find(
+                    function (
+                        track
+                    ) {
+
+                        return (
+                            track.available
+                        );
+
+                    }
+                );
+
+
+            if (
+                first
+            ) {
+
+                playLibraryTrack(
+                    first.id
+                );
+
+            }
+
+        }
+
+
+        function playRandomAvailable() {
+
+            const available =
+                musicLibrary.filter(
+                    function (
+                        track
+                    ) {
+
+                        return (
+                            track.available
+                        );
+
+                    }
+                );
+
+
+            if (
+                !available.length
+            ) {
+
+                return;
+
+            }
+
+
+            const random =
+                available[
+                    Math.floor(
+                        Math.random() *
+                        available.length
+                    )
+                ];
+
+
+            playLibraryTrack(
+                random.id
+            );
+
+        }
+
+
+        function openMainPlayer() {
+
+            const api =
+                getParentMusicAPI();
+
+
+            if (
+                api
+            ) {
+
+                api.openPlayer();
+
+                return;
+
+            }
+
+
+            showMusicPageToast(
+                "The main player is located inside index.html."
+            );
+
+        }
+
+
+
+        /* =====================================================
+           STATE SYNC
+           ===================================================== */
+
+        function requestMusicState() {
+
+            const api =
+                getParentMusicAPI();
+
+
+            if (
+                api
+            ) {
+
+                try {
+
+                    receiveMusicState(
+                        api.getState()
+                    );
+
+                    return;
+
+                }
+
+                catch (
+                    error
+                ) {}
+
+            }
+
+
+            if (
+                window.parent &&
+                window.parent !==
+                window
+            ) {
+
+                window.parent.postMessage(
+                    {
+                        type:
+                            "AS_MUSIC_GET_STATE"
+                    },
+                    "*"
+                );
+
+            }
+
+        }
+
+
+        function receiveMusicState(
+            state
+        ) {
+
+            if (
+                !state ||
+                typeof state !==
+                "object"
+            ) {
+
+                return;
+
+            }
+
+
+            currentMusicState =
+                state;
+
+
+            const card =
+                document.getElementById(
+                    "currentTrackCard"
+                );
+
+
+            if (
+                state.trackId
+            ) {
+
+                card.classList.add(
+                    "visible"
+                );
+
+
+                document.getElementById(
+                    "currentTrackTitle"
+                ).textContent =
+                    state.title ||
+                    "Music";
+
+
+                document.getElementById(
+                    "currentTrackArtist"
+                ).textContent =
+                    state.artist ||
+                    "";
+
+
+                document.getElementById(
+                    "currentTrackCover"
+                ).src =
+                    state.cover ||
+                    "images/photo9.jpg";
+
+
+                document.getElementById(
+                    "currentTrackState"
+                ).textContent =
+                    state.paused
+                        ? "▶"
+                        : "❚❚";
+
+            }
+
+
+            renderMusicLibrary();
+
+        }
+
+
+        window.addEventListener(
+            "message",
+            function (
+                event
+            ) {
+
+                const data =
+                    event.data;
+
+
+                if (
+                    !data ||
+                    typeof data !==
+                    "object"
+                ) {
+
+                    return;
+
+                }
+
+
+                if (
+                    data.type ===
+                    "AS_MUSIC_STATE"
+                ) {
+
+                    receiveMusicState(
+                        data
+                    );
+
+                }
+
+            }
+        );
+
+
+
+        /* =====================================================
+           FILTER
+           ===================================================== */
+
+        function toggleFavoritesFilter() {
+
+            favoritesOnly =
+                !favoritesOnly;
+
+
+            const button =
+                document.getElementById(
+                    "favoritesFilter"
+                );
+
+
+            button.classList.toggle(
+                "active",
+                favoritesOnly
+            );
+
+
+            button.textContent =
+                favoritesOnly
+                    ? "♥ Favorites"
+                    : "♡ Favorites";
+
+
+            renderMusicLibrary();
+
+        }
+
+
+
+        /* =====================================================
+           RENDER
+           ===================================================== */
+
+        function renderMusicLibrary() {
+
+            const list =
+                document.getElementById(
+                    "musicTrackList"
+                );
+
+
+            const empty =
+                document.getElementById(
+                    "musicEmpty"
+                );
+
+
+            const query =
+                document.getElementById(
+                    "musicSearch"
+                )
+                .value
+                .trim()
+                .toLowerCase();
+
+
+            const loved =
+                getLovedTracks();
+
+
+            const filtered =
+                musicLibrary.filter(
+                    function (
+                        track
+                    ) {
+
+                        const matchesSearch =
+                            !query ||
+                            track.title
+                                .toLowerCase()
+                                .includes(
+                                    query
+                                ) ||
+                            track.artist
+                                .toLowerCase()
+                                .includes(
+                                    query
+                                );
+
+
+                        const matchesFavorite =
+                            !favoritesOnly ||
+                            loved.includes(
+                                track.id
+                            );
+
+
+                        return (
+                            matchesSearch &&
+                            matchesFavorite
+                        );
+
+                    }
+                );
+
+
+            list.innerHTML =
+                "";
+
+
+            empty.classList.toggle(
+                "visible",
+                filtered.length ===
+                0
+            );
+
+
+            document.getElementById(
+                "musicTrackCount"
+            ).textContent =
+                filtered.length +
+                " songs";
+
+
+            filtered.forEach(
+                function (
+                    track
+                ) {
+
+                    const active =
+                        currentMusicState &&
+                        Number(
+                            currentMusicState.trackId
+                        ) ===
+                        track.id;
+
+
+                    const row =
+                        document.createElement(
+                            "button"
+                        );
+
+
+                    row.type =
+                        "button";
+
+
+                    row.className =
+                        "library-track-row" +
+                        (
+                            active
+                                ? " active"
+                                : ""
+                        ) +
+                        (
+                            !track.available
+                                ? " disabled"
+                                : ""
+                        );
+
+
+                    let status =
+                        "Ready";
+
+
+                    if (
+                        !track.available
+                    ) {
+
+                        status =
+                            "Coming soon";
+
+                    }
+
+
+                    if (
+                        active &&
+                        currentMusicState &&
+                        currentMusicState.duration >
+                        0
+                    ) {
+
+                        status =
+                            formatTime(
+                                currentMusicState.duration
+                            );
+
+                    }
+
+
+                    row.innerHTML = `
+
+                        <span class="track-index">
+                            ${String(
+                                track.id
+                            ).padStart(
+                                2,
+                                "0"
+                            )}
+                        </span>
+
+                        <img
+                            class="track-cover"
+                            src="${track.cover}"
+                            alt=""
+                            loading="lazy"
+                        >
+
+                        <span class="track-copy">
+
+                            <strong class="track-title">
+                                ${escapeHTML(
+                                    track.title
+                                )}
+                            </strong>
+
+                            <small class="track-artist">
+                                ${escapeHTML(
+                                    track.artist
+                                )}
+                            </small>
+
+                        </span>
+
+                        <span
+                            class="track-status ${track.available ? "available" : "soon"}"
+                        >
+                            ${status}
+                        </span>
+
+                        <span class="track-action">
+                            ${
+                                !track.available
+                                    ? "＋"
+                                    : active &&
+                                      currentMusicState &&
+                                      !currentMusicState.paused
+                                        ? "❚❚"
+                                        : "▶"
+                            }
+                        </span>
+                    `;
+
+
+                    row.addEventListener(
+                        "click",
+                        function () {
+
+                            if (
+                                active &&
+                                currentMusicState
+                            ) {
+
+                                const api =
+                                    getParentMusicAPI();
+
+
+                                if (
+                                    api
+                                ) {
+
+                                    api.toggle();
+
+                                }
+
+
+                                setTimeout(
+                                    requestMusicState,
+                                    100
+                                );
+
+                                return;
+
+                            }
+
+
+                            playLibraryTrack(
+                                track.id
+                            );
+
+                        }
+                    );
+
+
+                    list.appendChild(
+                        row
+                    );
+
+                }
+            );
+
+        }
+
+
+        function escapeHTML(
+            value
+        ) {
+
+            return String(
+                value
+            )
+                .replaceAll(
+                    "&",
+                    "&amp;"
+                )
+                .replaceAll(
+                    "<",
+                    "&lt;"
+                )
+                .replaceAll(
+                    ">",
+                    "&gt;"
+                )
+                .replaceAll(
+                    '"',
+                    "&quot;"
+                )
+                .replaceAll(
+                    "'",
+                    "&#039;"
+                );
+
+        }
+
+
+
+        /* =====================================================
+           INITIALIZATION
+           ===================================================== */
+
+        document.getElementById(
+            "availableMeta"
+        ).textContent =
+            AVAILABLE_TRACKS.length +
+            " active songs";
+
+
+        renderMusicLibrary();
+
+
+        requestMusicState();
+
+
+        /*
+           So Play/Pause and the current time stay updated even if
+           no specific message arrives.
+        */
+
+        setInterval(
+            requestMusicState,
+            1200
+        );
+
+
+        /*
+           Favorite changes inside the Full Player are read from localStorage;
+           the list is also refreshed when returning to the tab.
+        */
+
+        window.addEventListener(
+            "focus",
+            renderMusicLibrary
+        );
+
+
+        document.addEventListener(
+            "visibilitychange",
+            function () {
+
+                if (
+                    !document.hidden
+                ) {
+
+                    requestMusicState();
+
+                }
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>
