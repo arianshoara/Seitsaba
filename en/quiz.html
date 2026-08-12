@@ -1,0 +1,2348 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>How Well Does Saba Know Arian? ❤️</title>
+
+    <meta
+        name="theme-color"
+        content="#17152b"
+    >
+
+    <link
+        rel="stylesheet"
+        href="quiz.css"
+    >
+</head>
+
+
+<body>
+
+    <!-- BACKGROUND -->
+    <div id="particles"></div>
+
+
+    <!-- =========================
+         TOP BAR
+    ========================== -->
+
+    <header class="top-bar">
+
+        <a
+            href="index.html"
+            class="home-button"
+        >
+            ← Back
+        </a>
+
+
+        <div class="top-title">
+            A ❤️ S
+        </div>
+
+
+        <button
+            id="themeButton"
+            class="theme-button"
+            onclick="toggleTheme()"
+            aria-label="Toggle light and dark mode"
+        >
+            🌙
+        </button>
+
+    </header>
+
+
+
+    <main class="page">
+
+
+        <!-- =========================
+             INTRODUCTION
+        ========================== -->
+
+        <section class="hero-card">
+
+            <div class="hero-icon">
+                🧠❤️
+            </div>
+
+
+            <p class="mini-title">
+                THE ARIAN TEST
+            </p>
+
+
+            <h1>
+                How well does Saba
+                <span>
+                    Arian
+                </span>
+                know?
+            </h1>
+
+
+            <p class="hero-text">
+                Ten completely scientific questions,
+                precise and with absolutely no favoritism 😭
+            </p>
+
+
+            <button
+                id="startQuizButton"
+                class="main-button"
+                onclick="startQuiz()"
+            >
+                Start Quiz 🤭
+            </button>
+
+        </section>
+
+
+
+        <!-- =========================
+             QUIZ
+        ========================== -->
+
+        <section
+            id="quizSection"
+            class="quiz-card hidden"
+        >
+
+
+            <!-- QUIZ STATUS -->
+
+            <div class="quiz-status">
+
+                <span id="questionCounter">
+                    Question 1 of 10
+                </span>
+
+                <span id="scoreCounter">
+                    ❤️ 0
+                </span>
+
+            </div>
+
+
+            <!-- Progress -->
+
+            <div class="progress-track">
+
+                <div
+                    id="progressBar"
+                    class="progress-bar"
+                ></div>
+
+            </div>
+
+
+
+            <!-- Question -->
+
+            <div class="question-area">
+
+                <div
+                    id="questionEmoji"
+                    class="question-emoji"
+                >
+                    🤔
+                </div>
+
+
+                <h2 id="questionText">
+                    Question
+                </h2>
+
+
+                <div
+                    id="answersContainer"
+                    class="answers-container"
+                ></div>
+
+            </div>
+
+
+
+            <!-- FEEDBACK -->
+
+            <div
+                id="answerFeedback"
+                class="answer-feedback hidden"
+            >
+            </div>
+
+
+            <button
+                id="nextQuestionButton"
+                class="next-button hidden"
+                onclick="nextQuestion()"
+            >
+                Next Question ←
+            </button>
+
+        </section>
+
+
+
+        <!-- =========================
+             QUIZ RESULT
+        ========================== -->
+
+        <section
+            id="resultSection"
+            class="result-card hidden"
+        >
+
+            <div
+                id="resultEmoji"
+                class="result-emoji"
+            >
+                ❤️
+            </div>
+
+
+            <p class="result-small">
+                Final Result
+            </p>
+
+
+            <h2 id="finalScore">
+                0 / 10
+            </h2>
+
+
+            <div
+                id="resultStars"
+                class="result-stars"
+            >
+            </div>
+
+
+            <p
+                id="resultMessage"
+                class="result-message"
+            >
+            </p>
+
+
+            <div class="result-buttons">
+
+                <button
+                    class="main-button"
+                    onclick="restartQuiz()"
+                >
+                    Try Again 🔄
+                </button>
+
+
+                <button
+                    class="secondary-button"
+                    onclick="scrollToGame()"
+                >
+                    Let's Play 🚗❤️
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             GAME
+        ========================== -->
+
+        <section
+            id="gameSection"
+            class="game-card"
+        >
+
+            <div class="game-heading">
+
+                <span class="game-badge">
+                    MINI GAME
+                </span>
+
+
+                <h2>
+                    Love Car 🚗❤️
+                </h2>
+
+
+                <p>
+                    Collect the hearts,
+                    but watch out for the broken hearts 😭
+                </p>
+
+            </div>
+
+
+
+            <!-- GAME STATS -->
+
+            <div class="game-stats">
+
+                <div>
+                    <span>
+                        ❤️ Score
+                    </span>
+
+                    <strong id="gameScore">
+                        0
+                    </strong>
+                </div>
+
+
+                <div>
+                    <span>
+                        🏆 Best
+                    </span>
+
+                    <strong id="bestScore">
+                        0
+                    </strong>
+                </div>
+
+
+                <div>
+                    <span>
+                        💗 Lives
+                    </span>
+
+                    <strong id="gameLives">
+                        3
+                    </strong>
+                </div>
+
+            </div>
+
+
+
+            <!-- GAME AREA -->
+
+            <div class="game-shell">
+
+                <canvas
+                    id="gameCanvas"
+                    width="360"
+                    height="560"
+                >
+                </canvas>
+
+
+                <!-- GAME START SCREEN -->
+
+                <div
+                    id="gameOverlay"
+                    class="game-overlay"
+                >
+
+                    <div class="game-overlay-content">
+
+                        <span class="overlay-car">
+                            🚗
+                        </span>
+
+
+                        <h3>
+                            Ready?
+                        </h3>
+
+
+                        <p>
+                            Collect ❤️
+                            <br>
+                            Avoid 💔
+                        </p>
+
+
+                        <button
+                            class="main-button"
+                            onclick="startGame()"
+                        >
+                            START GAME
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MOBILE CONTROLS -->
+
+            <div class="mobile-controls">
+
+                <button
+                    class="control-button"
+                    id="rightButton"
+                >
+                    ➡️
+                </button>
+
+
+                <button
+                    class="control-button"
+                    id="leftButton"
+                >
+                    ⬅️
+                </button>
+
+            </div>
+
+
+            <p class="game-help">
+                On mobile, use the buttons;
+                on a computer, use ← and →.
+            </p>
+
+        </section>
+
+
+
+        <p class="footer-text">
+            made for Saba with an unreasonable amount of love ❤️
+        </p>
+
+
+    </main>
+
+
+
+    <script>
+
+        /* =========================================
+           QUIZ DATA
+        ========================================= */
+
+        const questions = [
+
+            {
+                emoji: "🍽️",
+
+                question:
+                    "What is Arian's favorite food?",
+
+                answers: [
+                    "Pizza",
+                    "Kaleh Pacheh",
+                    "Ghormeh Sabzi",
+                    "Kebab"
+                ],
+
+                correct: 1,
+
+                correctText:
+                    "Correct 😭 Kaleh Pacheh! So romantic and delicate.",
+
+                wrongText:
+                    "Nooo 😭 The correct answer was Kaleh Pacheh."
+            },
+
+
+            {
+                emoji: "😑",
+
+                question:
+                    "Which behavior does Arian dislike the most?",
+
+                answers: [
+                    "Replying late",
+                    "Too much joking",
+                    "Controlling behavior",
+                    "Being too quiet"
+                ],
+
+                correct: 2,
+
+                correctText:
+                    "Exactly. Controlling behavior ❌",
+
+                wrongText:
+                    "The correct answer was controlling behavior 👀"
+            },
+
+
+            {
+                emoji: "😴",
+
+                question:
+                    "When Arian is really feeling bad, what does he usually need most?",
+
+                answers: [
+                    "Going out and being around crowds",
+                    "Talking to everyone",
+                    "Sleep and quiet",
+                    "Playing games"
+                ],
+
+                correct: 2,
+
+                correctText:
+                    "Yeah ❤️ Some sleep and quiet are usually the best remedy.",
+
+                wrongText:
+                    "No 🤭 Arian's answer: sleep and quiet."
+            },
+
+
+            {
+                emoji: "🚶",
+
+                question:
+                    "Which combination does Arian enjoy most for spending time?",
+
+                answers: [
+                    "Walking, eating, and watching movies",
+                    "Shopping and parties",
+                    "Only playing computer games",
+                    "Intense exercise"
+                ],
+
+                correct: 0,
+
+                correctText:
+                    "Absolutely right ❤️ Walking + eating + movies.",
+
+                wrongText:
+                    "Nooo. The right combination: walking, eating, and watching movies 🤭"
+            },
+
+
+            {
+                emoji: "🛌",
+
+                question:
+                    "What is one of Arian's well-known habits?",
+
+                answers: [
+                    "He wakes up very early",
+                    "He eats very little",
+                    "He sleeps a lot",
+                    "He never watches movies"
+                ],
+
+                correct: 2,
+
+                correctText:
+                    "Unfortunately, yes 😭 I sleep a lot.",
+
+                wrongText:
+                    "Correct answer: sleeping a lot 😭"
+            },
+
+
+            {
+                emoji: "🌉",
+
+                question:
+                    "Before Arian's birthday, where had Arian and Saba gone together?",
+
+                answers: [
+                    "Ghadir Bridge",
+                    "Maliabad",
+                    "Blue Kaleh",
+                    "Alef"
+                ],
+
+                correct: 0,
+
+                correctText:
+                    "Yeah 🤭❤️ Ghadir Bridge.",
+
+                wrongText:
+                    "No! Before that, we had gone to Ghadir Bridge together ❤️"
+            },
+
+
+            {
+                emoji: "🌙",
+
+                question:
+                    "Where was that simple but unforgettable night from our memories?",
+
+                answers: [
+                    "Maaliabad",
+                    "Sadra",
+                    "Cinema",
+                    "Blue Kaleh"
+                ],
+
+                correct: 1,
+
+                correctText:
+                    "Exactly; in Sadra 🌙❤️",
+
+                wrongText:
+                    "The correct answer was Sadra; a simple but unforgettable night."
+            },
+
+
+            {
+                emoji: "☕",
+
+                question:
+                    "Where did we go to study and still have a great time?",
+
+                answers: [
+                    "Ghadir Bridge",
+                    "Sadra",
+                    "Maliabad",
+                    "Cinema"
+                ],
+
+                correct: 2,
+
+                correctText:
+                    "Yeah ☕📚 Maliabad.",
+
+                wrongText:
+                    "The answer was Maliabad; even studying together became a memory 🤭"
+            },
+
+
+            {
+                emoji: "🖤",
+
+                question:
+                    "Which memory was from the beginning of the relationship and Arian's “dark theme” era?",
+
+                answers: [
+                    "Blue Kaleh",
+                    "Ghadir Bridge",
+                    "Ervin's Goodbye Party",
+                    "Maliabad"
+                ],
+
+                correct: 0,
+
+                correctText:
+                    "Blue Kaleh 😭🖤 The dark-theme era is unforgettable.",
+
+                wrongText:
+                    "It was Blue Kaleh 🤭 Early relationship days and the famous dark theme."
+            },
+
+
+            {
+                emoji: "🥹",
+
+                question:
+                    "Which of these phrases does Arian say to Saba the most?",
+
+                answers: [
+                    "I'm in love with you",
+                    "You're my love",
+                    "I'd sacrifice myself for you",
+                    "I love you"
+                ],
+
+                correct: 2,
+
+                correctText:
+                    "I'd sacrifice myself for you 🥹❤️ You really should have known this one!",
+
+                wrongText:
+                    "The correct answer was “I'd sacrifice myself for you” 😭❤️"
+            }
+
+        ];
+
+
+
+        /* =========================================
+           QUIZ VARIABLES
+        ========================================= */
+
+        let currentQuestion = 0;
+
+        let score = 0;
+
+        let answered = false;
+
+
+
+        /* =========================================
+           START QUIZ
+        ========================================= */
+
+        function startQuiz() {
+
+            document
+                .getElementById("startQuizButton")
+                .classList
+                .add("hidden");
+
+
+            document
+                .getElementById("quizSection")
+                .classList
+                .remove("hidden");
+
+
+            currentQuestion = 0;
+
+            score = 0;
+
+            answered = false;
+
+
+            showQuestion();
+
+
+            document
+                .getElementById("quizSection")
+                .scrollIntoView({
+
+                    behavior: "smooth",
+                    block: "start"
+
+                });
+
+        }
+
+
+
+        /* =========================================
+           SHOW QUESTION
+        ========================================= */
+
+        function showQuestion() {
+
+            answered = false;
+
+
+            const data =
+                questions[currentQuestion];
+
+
+            document
+                .getElementById("questionEmoji")
+                .textContent =
+                data.emoji;
+
+
+            document
+                .getElementById("questionText")
+                .textContent =
+                data.question;
+
+
+            document
+                .getElementById("questionCounter")
+                .textContent =
+                `Question ${currentQuestion + 1} of ${questions.length}`;
+
+
+            document
+                .getElementById("scoreCounter")
+                .textContent =
+                `❤️ ${score}`;
+
+
+            const progress =
+                (
+                    currentQuestion /
+                    questions.length
+                ) * 100;
+
+
+            document
+                .getElementById("progressBar")
+                .style.width =
+                progress + "%";
+
+
+            const container =
+                document.getElementById(
+                    "answersContainer"
+                );
+
+
+            container.innerHTML = "";
+
+
+            data.answers.forEach(
+
+                function(answer, index) {
+
+                    const button =
+                        document.createElement(
+                            "button"
+                        );
+
+
+                    button.className =
+                        "answer-button";
+
+
+                    button.textContent =
+                        answer;
+
+
+                    button.onclick =
+                        function() {
+
+                            selectAnswer(
+                                index,
+                                button
+                            );
+
+                        };
+
+
+                    container.appendChild(
+                        button
+                    );
+
+                }
+
+            );
+
+
+            document
+                .getElementById("answerFeedback")
+                .classList
+                .add("hidden");
+
+
+            document
+                .getElementById("nextQuestionButton")
+                .classList
+                .add("hidden");
+
+        }
+
+
+
+        /* =========================================
+           SELECT ANSWER
+        ========================================= */
+
+        function selectAnswer(
+            selectedIndex,
+            selectedButton
+        ) {
+
+            if (answered) {
+                return;
+            }
+
+
+            answered = true;
+
+
+            const data =
+                questions[currentQuestion];
+
+
+            const buttons =
+                document.querySelectorAll(
+                    ".answer-button"
+                );
+
+
+            buttons.forEach(
+
+                function(button) {
+
+                    button.disabled = true;
+
+                }
+
+            );
+
+
+            const feedback =
+                document.getElementById(
+                    "answerFeedback"
+                );
+
+
+            if (
+                selectedIndex ===
+                data.correct
+            ) {
+
+                score++;
+
+
+                selectedButton
+                    .classList
+                    .add(
+                        "answer-correct"
+                    );
+
+
+                feedback.textContent =
+                    data.correctText;
+
+
+                feedback.className =
+                    "answer-feedback feedback-correct";
+
+
+                createCelebration();
+
+            }
+
+            else {
+
+                selectedButton
+                    .classList
+                    .add(
+                        "answer-wrong"
+                    );
+
+
+                buttons[
+                    data.correct
+                ].classList.add(
+                    "answer-correct"
+                );
+
+
+                feedback.textContent =
+                    data.wrongText;
+
+
+                feedback.className =
+                    "answer-feedback feedback-wrong";
+
+            }
+
+
+            document
+                .getElementById("scoreCounter")
+                .textContent =
+                `❤️ ${score}`;
+
+
+            document
+                .getElementById("nextQuestionButton")
+                .classList
+                .remove("hidden");
+
+
+            if (
+                currentQuestion ===
+                questions.length - 1
+            ) {
+
+                document
+                    .getElementById("nextQuestionButton")
+                    .textContent =
+                    "See the Result ❤️";
+
+            }
+
+            else {
+
+                document
+                    .getElementById("nextQuestionButton")
+                    .textContent =
+                    "Next Question ←";
+
+            }
+
+        }
+
+
+
+        /* =========================================
+           NEXT QUESTION
+        ========================================= */
+
+        function nextQuestion() {
+
+            if (
+                currentQuestion <
+                questions.length - 1
+            ) {
+
+                currentQuestion++;
+
+                showQuestion();
+
+            }
+
+            else {
+
+                showResult();
+
+            }
+
+        }
+
+
+
+        /* =========================================
+           RESULT
+        ========================================= */
+
+                function showResult() {
+
+            document
+                .getElementById("quizSection")
+                .classList
+                .add("hidden");
+
+
+            const resultSection =
+                document.getElementById(
+                    "resultSection"
+                );
+
+
+            resultSection
+                .classList
+                .remove("hidden");
+
+
+            document
+                .getElementById("finalScore")
+                .textContent =
+                `${score} / ${questions.length}`;
+
+
+            let emoji;
+
+            let message;
+
+            let stars;
+
+
+            if (score === 10) {
+
+                emoji = "🏆❤️";
+
+                stars =
+                    "❤️ ❤️ ❤️ ❤️ ❤️";
+
+                message =
+                    "10 out of 10?! Okay, that's suspicious... Either you really know me way too well, or you went and read the site's source code 😭❤️";
+
+            }
+
+            else if (score >= 8) {
+
+                emoji = "🥹❤️";
+
+                stars =
+                    "❤️ ❤️ ❤️ ❤️";
+
+                message =
+                    "Very good, Ms. Saba 🤭 Apparently a significant part of Arian is still stored in your memory.";
+
+            }
+
+            else if (score >= 6) {
+
+                emoji = "🤨💕";
+
+                stars =
+                    "❤️ ❤️ ❤️";
+
+                message =
+                    "Not bad... but a few things in your software need an update, ma'am 😭";
+
+            }
+
+            else if (score >= 4) {
+
+                emoji = "😭";
+
+                stars =
+                    "❤️ ❤️";
+
+                message =
+                    "This is getting a little concerning. An intensive course in “Arian Studies” is recommended.";
+
+            }
+
+            else {
+
+                emoji = "💀";
+
+                stars =
+                    "❤️";
+
+                message =
+                    "Saba... we need to talk 😭 This result is officially an insult to years of memories.";
+
+            }
+
+
+            document
+                .getElementById("resultEmoji")
+                .textContent =
+                emoji;
+
+
+            document
+                .getElementById("resultStars")
+                .textContent =
+                stars;
+
+
+            document
+                .getElementById("resultMessage")
+                .textContent =
+                message;
+
+
+            resultSection.scrollIntoView({
+
+                behavior: "smooth",
+                block: "center"
+
+            });
+
+
+            createCelebration();
+
+        }
+
+
+
+        /* =========================================
+           RESTART QUIZ
+        ========================================= */
+
+        function restartQuiz() {
+
+            document
+                .getElementById("resultSection")
+                .classList
+                .add("hidden");
+
+
+            document
+                .getElementById("quizSection")
+                .classList
+                .remove("hidden");
+
+
+            currentQuestion = 0;
+
+            score = 0;
+
+            answered = false;
+
+
+            showQuestion();
+
+
+            document
+                .getElementById("quizSection")
+                .scrollIntoView({
+
+                    behavior: "smooth",
+                    block: "start"
+
+                });
+
+        }
+
+
+
+        /* =========================================
+           CELEBRATION HEARTS
+        ========================================= */
+
+        function createCelebration() {
+
+            const symbols = [
+
+                "❤️",
+                "💕",
+                "💖",
+                "✨",
+                "🌹"
+
+            ];
+
+
+            for (
+                let i = 0;
+                i < 12;
+                i++
+            ) {
+
+                const item =
+                    document.createElement(
+                        "span"
+                    );
+
+
+                item.className =
+                    "celebration-heart";
+
+
+                item.textContent =
+                    symbols[
+                        Math.floor(
+                            Math.random() *
+                            symbols.length
+                        )
+                    ];
+
+
+                item.style.left =
+                    (
+                        10 +
+                        Math.random() * 80
+                    ) + "%";
+
+
+                item.style.animationDelay =
+                    (
+                        Math.random() *
+                        0.3
+                    ) + "s";
+
+
+                document.body.appendChild(
+                    item
+                );
+
+
+                setTimeout(
+
+                    function() {
+
+                        item.remove();
+
+                    },
+
+                    1800
+
+                );
+
+            }
+
+        }
+
+
+
+        /* =========================================
+           DARK MODE
+        ========================================= */
+
+        const savedTheme =
+            localStorage.getItem(
+                "quizTheme"
+            );
+
+
+        if (
+            savedTheme === "dark"
+        ) {
+
+            document.body
+                .classList
+                .add("dark-mode");
+
+        }
+
+
+        updateThemeButton();
+
+
+
+        function toggleTheme() {
+
+            document.body
+                .classList
+                .toggle("dark-mode");
+
+
+            const dark =
+                document.body
+                    .classList
+                    .contains(
+                        "dark-mode"
+                    );
+
+
+            localStorage.setItem(
+
+                "quizTheme",
+
+                dark
+                    ? "dark"
+                    : "light"
+
+            );
+
+
+            updateThemeButton();
+
+        }
+
+
+
+        function updateThemeButton() {
+
+            const button =
+                document.getElementById(
+                    "themeButton"
+                );
+
+
+            button.textContent =
+                document.body
+                    .classList
+                    .contains(
+                        "dark-mode"
+                    )
+                    ? "☀️"
+                    : "🌙";
+
+        }
+
+
+
+        /* =========================================
+           PARTICLES
+        ========================================= */
+
+        function createParticles() {
+
+            const container =
+                document.getElementById(
+                    "particles"
+                );
+
+
+            const icons = [
+
+                "✨",
+                "❤️",
+                "💫",
+                "🌹"
+
+            ];
+
+
+            for (
+                let i = 0;
+                i < 20;
+                i++
+            ) {
+
+                const particle =
+                    document.createElement(
+                        "span"
+                    );
+
+
+                particle.className =
+                    "background-particle";
+
+
+                particle.textContent =
+                    icons[
+                        Math.floor(
+                            Math.random() *
+                            icons.length
+                        )
+                    ];
+
+
+                particle.style.left =
+                    Math.random() * 100 +
+                    "%";
+
+
+                particle.style.animationDuration =
+                    (
+                        8 +
+                        Math.random() * 12
+                    ) + "s";
+
+
+                particle.style.animationDelay =
+                    Math.random() * 10 +
+                    "s";
+
+
+                container.appendChild(
+                    particle
+                );
+
+            }
+
+        }
+
+
+        createParticles();
+
+
+
+        /* =========================================
+           GAME
+        ========================================= */
+
+        const canvas =
+            document.getElementById(
+                "gameCanvas"
+            );
+
+
+        const ctx =
+            canvas.getContext(
+                "2d"
+            );
+
+
+        let gameRunning = false;
+
+        let gameScore = 0;
+
+        let gameLives = 3;
+
+        let animationId = null;
+
+        let spawnTimer = 0;
+
+
+        let bestScore =
+            Number(
+                localStorage.getItem(
+                    "loveCarBest"
+                )
+            ) || 0;
+
+
+        document
+            .getElementById("bestScore")
+            .textContent =
+            bestScore;
+
+
+
+        const car = {
+
+            x: 150,
+
+            y: 480,
+
+            width: 60,
+
+            height: 60,
+
+            speed: 7
+
+        };
+
+
+        let objects = [];
+
+
+        const keys = {
+
+            left: false,
+
+            right: false
+
+        };
+
+
+
+        /* =========================================
+           START GAME
+        ========================================= */
+
+        function startGame() {
+
+            gameScore = 0;
+
+            gameLives = 3;
+
+            objects = [];
+
+            spawnTimer = 0;
+
+
+            car.x =
+                canvas.width / 2 -
+                car.width / 2;
+
+
+            gameRunning =
+                true;
+
+
+            updateGameStats();
+
+
+            document
+                .getElementById("gameOverlay")
+                .classList
+                .add("hidden");
+
+
+            if (animationId) {
+
+                cancelAnimationFrame(
+                    animationId
+                );
+
+            }
+
+
+            gameLoop();
+
+        }
+
+
+
+        /* =========================================
+           GAME LOOP
+        ========================================= */
+
+        function gameLoop() {
+
+            if (!gameRunning) {
+
+                return;
+
+            }
+
+
+            updateGame();
+
+            drawGame();
+
+
+            animationId =
+                requestAnimationFrame(
+                    gameLoop
+                );
+
+        }
+
+
+
+        /* =========================================
+           UPDATE GAME
+        ========================================= */
+
+        function updateGame() {
+
+            if (keys.left) {
+
+                car.x -=
+                    car.speed;
+
+            }
+
+
+            if (keys.right) {
+
+                car.x +=
+                    car.speed;
+
+            }
+
+
+            if (car.x < 5) {
+
+                car.x = 5;
+
+            }
+
+
+            if (
+                car.x +
+                car.width >
+                canvas.width - 5
+            ) {
+
+                car.x =
+                    canvas.width -
+                    car.width -
+                    5;
+
+            }
+
+
+            spawnTimer++;
+
+
+            if (
+                spawnTimer > 42
+            ) {
+
+                spawnObject();
+
+                spawnTimer = 0;
+
+            }
+
+
+            objects.forEach(
+
+                function(object) {
+
+                    object.y +=
+                        object.speed;
+
+                }
+
+            );
+
+
+            for (
+                let i =
+                    objects.length - 1;
+                i >= 0;
+                i--
+            ) {
+
+                const object =
+                    objects[i];
+
+
+                if (
+                    checkCollision(
+                        car,
+                        object
+                    )
+                ) {
+
+                    if (
+                        object.type ===
+                        "heart"
+                    ) {
+
+                        gameScore++;
+
+
+                        createGamePop(
+                            "❤️",
+                            object.x,
+                            object.y
+                        );
+
+                    }
+
+                    else {
+
+                        gameLives--;
+
+
+                        createGamePop(
+                            "💔",
+                            object.x,
+                            object.y
+                        );
+
+                    }
+
+
+                    objects.splice(
+                        i,
+                        1
+                    );
+
+
+                    updateGameStats();
+
+
+                    if (
+                        gameLives <= 0
+                    ) {
+
+                        endGame();
+
+                        return;
+
+                    }
+
+                }
+
+                else if (
+                    object.y >
+                    canvas.height + 50
+                ) {
+
+                    objects.splice(
+                        i,
+                        1
+                    );
+
+                }
+
+            }
+
+        }
+
+
+
+        /* =========================================
+           SPAWN HEARTS
+        ========================================= */
+
+        function spawnObject() {
+
+            const bad =
+                Math.random() <
+                0.22;
+
+
+            objects.push({
+
+                x:
+                    20 +
+                    Math.random() *
+                    (
+                        canvas.width -
+                        70
+                    ),
+
+                y:
+                    -50,
+
+                width:
+                    42,
+
+                height:
+                    42,
+
+                speed:
+                    2.5 +
+                    Math.random() *
+                    2,
+
+                type:
+                    bad
+                        ? "broken"
+                        : "heart"
+
+            });
+
+        }
+
+
+
+        /* =========================================
+           DRAW GAME
+        ========================================= */
+
+        function drawGame() {
+
+            ctx.clearRect(
+                0,
+                0,
+                canvas.width,
+                canvas.height
+            );
+
+
+            const gradient =
+                ctx.createLinearGradient(
+                    0,
+                    0,
+                    0,
+                    canvas.height
+                );
+
+
+            gradient.addColorStop(
+                0,
+                "#211b3a"
+            );
+
+
+            gradient.addColorStop(
+                1,
+                "#100d20"
+            );
+
+
+            ctx.fillStyle =
+                gradient;
+
+
+            ctx.fillRect(
+                0,
+                0,
+                canvas.width,
+                canvas.height
+            );
+
+
+            /* ROAD CENTER LINE */
+
+            ctx.strokeStyle =
+                "rgba(255,255,255,0.16)";
+
+
+            ctx.lineWidth =
+                4;
+
+
+            ctx.setLineDash([
+                20,
+                25
+            ]);
+
+
+            ctx.beginPath();
+
+
+            ctx.moveTo(
+                canvas.width / 2,
+                0
+            );
+
+
+            ctx.lineTo(
+                canvas.width / 2,
+                canvas.height
+            );
+
+
+            ctx.stroke();
+
+
+            ctx.setLineDash([]);
+
+
+
+            /* CAR */
+
+            ctx.font =
+                "52px sans-serif";
+
+
+            ctx.textAlign =
+                "center";
+
+
+            ctx.textBaseline =
+                "middle";
+
+
+            ctx.fillText(
+                "🚗",
+                car.x +
+                car.width / 2,
+                car.y +
+                car.height / 2
+            );
+
+
+
+            /* HEARTS */
+
+            objects.forEach(
+
+                function(object) {
+
+                    ctx.font =
+                        "38px sans-serif";
+
+
+                    ctx.fillText(
+
+                        object.type ===
+                        "heart"
+                            ? "❤️"
+                            : "💔",
+
+                        object.x +
+                        object.width / 2,
+
+                        object.y +
+                        object.height / 2
+
+                    );
+
+                }
+
+            );
+
+        }
+
+
+
+        /* =========================================
+           COLLISION
+        ========================================= */
+
+        function checkCollision(
+            a,
+            b
+        ) {
+
+            return (
+
+                a.x <
+                b.x + b.width
+
+                &&
+
+                a.x + a.width >
+                b.x
+
+                &&
+
+                a.y <
+                b.y + b.height
+
+                &&
+
+                a.y + a.height >
+                b.y
+
+            );
+
+        }
+
+
+
+        /* =========================================
+           END GAME
+        ========================================= */
+
+        function endGame() {
+
+            gameRunning =
+                false;
+
+
+            if (
+                gameScore >
+                bestScore
+            ) {
+
+                bestScore =
+                    gameScore;
+
+
+                localStorage.setItem(
+
+                    "loveCarBest",
+
+                    bestScore
+
+                );
+
+
+                document
+                    .getElementById(
+                        "bestScore"
+                    )
+                    .textContent =
+                    bestScore;
+
+            }
+
+
+            const overlay =
+                document.getElementById(
+                    "gameOverlay"
+                );
+
+
+            overlay.classList
+                .remove("hidden");
+
+
+            overlay.innerHTML = `
+
+                <div class="game-overlay-content">
+
+                    <span class="overlay-car">
+                        ${gameScore >= 10 ? "🏆" : "😭"}
+                    </span>
+
+                    <h3>
+                        Game Over!
+                    </h3>
+
+                    <p>
+                        ${gameScore}
+                        hearts collected ❤️
+                    </p>
+
+                    <p class="game-result-message">
+
+                        ${
+                            gameScore >= 15
+
+                            ? "That was officially the Love Car 😭❤️"
+
+                            : gameScore >= 8
+
+                            ? "Not bad, Ms. Driver 🤭"
+
+                            : "Where did you go, leaving all the hearts behind? 😭"
+                        }
+
+                    </p>
+
+                    <button
+                        class="main-button"
+                        onclick="startGame()"
+                    >
+                        Play Again
+                    </button>
+
+                </div>
+
+            `;
+
+        }
+
+
+
+        /* =========================================
+           UPDATE GAME STATS
+        ========================================= */
+
+        function updateGameStats() {
+
+            document
+                .getElementById(
+                    "gameScore"
+                )
+                .textContent =
+                gameScore;
+
+
+            document
+                .getElementById(
+                    "gameLives"
+                )
+                .textContent =
+                gameLives;
+
+        }
+
+
+
+        /* =========================================
+           KEYBOARD CONTROLS
+        ========================================= */
+
+        document.addEventListener(
+
+            "keydown",
+
+            function(event) {
+
+                if (
+                    event.key ===
+                    "ArrowLeft"
+                ) {
+
+                    keys.left =
+                        true;
+
+                }
+
+
+                if (
+                    event.key ===
+                    "ArrowRight"
+                ) {
+
+                    keys.right =
+                        true;
+
+                }
+
+            }
+
+        );
+
+
+        document.addEventListener(
+
+            "keyup",
+
+            function(event) {
+
+                if (
+                    event.key ===
+                    "ArrowLeft"
+                ) {
+
+                    keys.left =
+                        false;
+
+                }
+
+
+                if (
+                    event.key ===
+                    "ArrowRight"
+                ) {
+
+                    keys.right =
+                        false;
+
+                }
+
+            }
+
+        );
+
+
+
+        /* =========================================
+           MOBILE CONTROLS
+        ========================================= */
+
+        function bindControl(
+            element,
+            direction
+        ) {
+
+            element.addEventListener(
+
+                "touchstart",
+
+                function(event) {
+
+                    event.preventDefault();
+
+
+                    keys[direction] =
+                        true;
+
+                },
+
+                {
+                    passive: false
+                }
+
+            );
+
+
+            element.addEventListener(
+
+                "touchend",
+
+                function(event) {
+
+                    event.preventDefault();
+
+
+                    keys[direction] =
+                        false;
+
+                },
+
+                {
+                    passive: false
+                }
+
+            );
+
+
+            element.addEventListener(
+
+                "touchcancel",
+
+                function() {
+
+                    keys[direction] =
+                        false;
+
+                }
+
+            );
+
+
+            element.addEventListener(
+
+                "mousedown",
+
+                function() {
+
+                    keys[direction] =
+                        true;
+
+                }
+
+            );
+
+
+            element.addEventListener(
+
+                "mouseup",
+
+                function() {
+
+                    keys[direction] =
+                        false;
+
+                }
+
+            );
+
+
+            element.addEventListener(
+
+                "mouseleave",
+
+                function() {
+
+                    keys[direction] =
+                        false;
+
+                }
+
+            );
+
+        }
+
+
+
+        bindControl(
+
+            document.getElementById(
+                "leftButton"
+            ),
+
+            "left"
+
+        );
+
+
+        bindControl(
+
+            document.getElementById(
+                "rightButton"
+            ),
+
+            "right"
+
+        );
+
+
+
+        /* =========================================
+           HEART COLLECTION EFFECT
+        ========================================= */
+
+        function createGamePop(
+            symbol,
+            x,
+            y
+        ) {
+
+            const rect =
+                canvas.getBoundingClientRect();
+
+
+            const pop =
+                document.createElement(
+                    "span"
+                );
+
+
+            pop.className =
+                "game-pop";
+
+
+            pop.textContent =
+                symbol;
+
+
+            pop.style.left =
+                (
+                    rect.left +
+                    (
+                        x /
+                        canvas.width
+                    ) *
+                    rect.width
+                ) + "px";
+
+
+            pop.style.top =
+                (
+                    rect.top +
+                    (
+                        y /
+                        canvas.height
+                    ) *
+                    rect.height
+                ) + "px";
+
+
+            document.body
+                .appendChild(
+                    pop
+                );
+
+
+            setTimeout(
+
+                function() {
+
+                    pop.remove();
+
+                },
+
+                700
+
+            );
+
+        }
+
+
+
+        /* =========================================
+           SCROLL TO GAME SECTION
+        ========================================= */
+
+        function scrollToGame() {
+
+            document
+                .getElementById(
+                    "gameSection"
+                )
+                .scrollIntoView({
+
+                    behavior:
+                        "smooth",
+
+                    block:
+                        "start"
+
+                });
+
+        }
+
+
+
+        /* =========================================
+           FIRST GAME FRAME
+        ========================================= */
+
+        drawGame();
+
+
+    </script>
+
+
+</body>
+
+</html>
