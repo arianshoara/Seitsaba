@@ -1,0 +1,3857 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        We Still Have So Much To Do ❤️
+    </title>
+
+    <meta
+        name="theme-color"
+        content="#17152b"
+    >
+
+    <meta
+        name="description"
+        content="Arian and Saba’s dreams and future ❤️"
+    >
+
+    <link
+        rel="stylesheet"
+        href="future.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         BACKGROUND
+    ========================== -->
+
+    <div id="futureParticles"></div>
+
+
+
+    <!-- =========================
+         TOP BAR
+    ========================== -->
+
+    <header class="top-bar">
+
+
+        <a
+            href="index.html"
+            class="home-button"
+        >
+            ← Back
+        </a>
+
+
+        <div class="top-title">
+            A ❤️ S
+        </div>
+
+
+        <button
+            id="themeButton"
+            class="theme-button"
+            onclick="toggleTheme()"
+            aria-label="Toggle light and dark mode"
+        >
+            🌙
+        </button>
+
+
+    </header>
+
+
+
+    <main class="page">
+
+
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section class="future-card hero-section">
+
+
+            <div class="hero-symbol">
+                🚐🌍❤️
+            </div>
+
+
+            <p class="small-label">
+                OUR FUTURE
+            </p>
+
+
+            <h1>
+                We still have
+                <span>so much left to do</span>
+                ...
+            </h1>
+
+
+            <p class="hero-text">
+                Some dreams are big,
+                some are really simple,
+                and some might take years;
+                but well...
+                we’re making the list from now. 🤭❤️
+            </p>
+
+
+
+            <div class="future-counter">
+
+
+                <div>
+                    <strong id="dreamCount">
+                        17
+                    </strong>
+
+                    <span>
+                        dreams ✨
+                    </span>
+                </div>
+
+
+                <div>
+                    <strong>
+                        0
+                    </strong>
+
+                    <span>
+                        rush 😌
+                    </span>
+                </div>
+
+
+                <div>
+                    <strong>
+                        1
+                    </strong>
+
+                    <span>
+                        life ❤️
+                    </span>
+                </div>
+
+
+            </div>
+
+
+            <button
+                class="main-button"
+                onclick="scrollToSection('dreamList')"
+            >
+                Let’s see what’s waiting for us ↓
+            </button>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             DREAM CHECKLIST
+        ====================================================== -->
+
+        <section
+            class="future-card"
+            id="dreamList"
+        >
+
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    ✨
+                </span>
+
+
+                <h2>
+                    The “We Have to Do This Together” List
+                </h2>
+
+
+                <p>
+                    Whenever we do something,
+                    tap it so it stays checked forever on this phone.
+                </p>
+
+            </div>
+
+
+
+            <div class="dream-progress-box">
+
+
+                <div class="dream-progress-text">
+
+                    <span>
+                        Our progress
+                    </span>
+
+
+                    <strong id="dreamProgressText">
+                        0 of 17
+                    </strong>
+
+                </div>
+
+
+                <div class="dream-progress-track">
+
+                    <div
+                        id="dreamProgressBar"
+                        class="dream-progress-bar"
+                    ></div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- TRAVEL -->
+
+            <div class="dream-category">
+
+
+                <h3>
+                    🌍 Travel & Road Trips
+                </h3>
+
+
+                <div class="dream-grid">
+
+
+                    <button
+                        class="dream-item"
+                        data-dream="wohnmobil"
+                        onclick="toggleDream(this)"
+                    >
+                        <span class="dream-check">⬜</span>
+                        <span class="dream-emoji">🚐</span>
+                        <span class="dream-name">
+                            A long trip with a Wohnmobil
+                        </span>
+                    </button>
+
+
+                    <button
+                        class="dream-item"
+                        data-dream="italy"
+                        onclick="toggleDream(this)"
+                    >
+                        <span class="dream-check">⬜</span>
+                        <span class="dream-emoji">🇮🇹</span>
+                        <span class="dream-name">
+                            A trip to Italy together
+                        </span>
+                    </button>
+
+
+                    <button
+                        class="dream-item"
+                        data-dream="europe"
+                        onclick="toggleDream(this)"
+                    >
+                        <span class="dream-check">⬜</span>
+                        <span class="dream-emoji">🗺️</span>
+                        <span class="dream-name">
+                            Road Trip through Europe
+                        </span>
+                    </button>
+
+
+                    <button
+                        class="dream-item"
+                        data-dream="aurora"
+                        onclick="toggleDream(this)"
+                    >
+                        <span class="dream-check">⬜</span>
+                        <span class="dream-emoji">🌌</span>
+                        <span class="dream-name">
+                            See the Northern Lights together
+                        </span>
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- HOME -->
+
+            <div class="dream-category">
+
+
+                <h3>
+                    🏠 Home & Life
+                </h3>
+
+
+                <div class="dream-grid">
+
+
+                    <button
+                        class="dream-item"
+                        data-dream="germany-home"
+                        onclick="toggleDream(this)"
+                    >
+                        <span class="dream-check">⬜</span>
+                        <span class="dream-emoji">🇩🇪</span>
+                        <span class="dream-name">
+                            Live together in Germany
+                        </span>
+                    </button>
+
+
+                    <button
+                        class="dream-item"
+                        data-dream="home"
+                        onclick="toggleDream(this)"
+                    >
+                        <span class="dream-check">⬜</span>
+                        <span class="dream-emoji">🔑</span>
+                        <span class="dream-name">
+                            Our own home
+                        </span>
+                    </button>
+
+
+                    <button
+                        class="dream-item"
+                        data-dream="cooking"
+                        onclick="toggleDream(this)"
+                    >
+                        <span class="dream-check">⬜</span>
+                        <span class="dream-emoji">🍳</span>
+                        <span class="dream-name">
+                            Cook together
+                        </span>
+                    </button>
+
+
+                    <button
+                        class="dream-item"
+                        data-dream="pet"
+                        onclick="toggleDream(this)"
+                    >
+                        <span class="dream-check">⬜</span>
+                        <span class="dream-emoji">🐾</span>
+                        <span class="dream-name">
+                            Maybe get a pet
+                        </span>
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- EXPERIENCES -->
+
+            <div class="dream-category">
+
+
+                <h3>
+                    🎉 Experiences Still Ahead
+                </h3>
+
+
+                <div class="dream-grid">
+
+
+                    <button
+                        class="dream-item"
+                        data-dream="cinema"
+                        onclick="toggleDream(this)"
+                    >
+                        <span class="dream-check">⬜</span>
+                        <span class="dream-emoji">🎬</span>
+                        <span class="dream-name">
+                            Lots more cinema dates
+                        </span>
+                    </button>
+
+
+                    <button
+                        class="dream-item"
+                        data-dream="party"
+                        onclick="toggleDream(this)"
+                    >
+                        <span class="dream-check">⬜</span>
+                        <span class="dream-emoji">🎉</span>
+                        <span class="dream-name">
+                            Party and go clubbing together
+                        </span>
+                    </button>
+
+
+                    <button
+                        class="dream-item"
+                        data-dream="concert"
+                        onclick="toggleDream(this)"
+                    >
+                        <span class="dream-check">⬜</span>
+                        <span class="dream-emoji">🎵</span>
+                        <span class="dream-name">
+                            Go to a concert together
+                        </span>
+                    </button>
+
+
+                    <button
+                        class="dream-item"
+                        data-dream="random-day"
+                        onclick="toggleDream(this)"
+                    >
+                        <span class="dream-check">⬜</span>
+                        <span class="dream-emoji">🌤️</span>
+                        <span class="dream-name">
+                            A whole day with absolutely no plans
+                        </span>
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- QUIET DAYS -->
+
+            <div class="dream-category">
+
+
+                <h3>
+                    🎬📚 Quiet Days
+                </h3>
+
+
+                <div class="dream-grid">
+
+
+                    <button
+                        class="dream-item"
+                        data-dream="movies"
+                        onclick="toggleDream(this)"
+                    >
+                        <span class="dream-check">⬜</span>
+                        <span class="dream-emoji">🍿</span>
+                        <span class="dream-name">
+                            Watch lots of movies and series together
+                        </span>
+                    </button>
+
+
+                    <button
+                        class="dream-item"
+                        data-dream="books"
+                        onclick="toggleDream(this)"
+                    >
+                        <span class="dream-check">⬜</span>
+                        <span class="dream-emoji">📚</span>
+                        <span class="dream-name">
+                            Read books together
+                        </span>
+                    </button>
+
+
+                    <button
+                        class="dream-item"
+                        data-dream="rain"
+                        onclick="toggleDream(this)"
+                    >
+                        <span class="dream-check">⬜</span>
+                        <span class="dream-emoji">🌧️</span>
+                        <span class="dream-name">
+                            A rainy day under a blanket
+                        </span>
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DISTANT FUTURE -->
+
+            <div class="dream-category">
+
+
+                <h3>
+                    ❤️ Much Later Chapters
+                </h3>
+
+
+                <div class="dream-grid">
+
+
+                    <button
+                        class="dream-item"
+                        data-dream="baby"
+                        onclick="toggleDream(this)"
+                    >
+                        <span class="dream-check">⬜</span>
+                        <span class="dream-emoji">👶</span>
+                        <span class="dream-name">
+                            Maybe one day having a child together
+                        </span>
+                    </button>
+
+
+                    <button
+                        class="dream-item"
+                        data-dream="old"
+                        onclick="toggleDream(this)"
+                    >
+                        <span class="dream-check">⬜</span>
+                        <span class="dream-emoji">👴👵</span>
+                        <span class="dream-name">
+                            Grow old and still annoy each other 😭❤️
+                        </span>
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================================
+             WORLD MAP
+        ====================================================== -->
+
+        <section class="future-card">
+
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    🌍
+                </span>
+
+
+                <h2>
+                    The “We Have to Go Here” Map
+                </h2>
+
+
+                <p>
+                    Tap the destinations.
+                    Every point is a tiny version of a possible trip.
+                </p>
+
+            </div>
+
+
+
+            <div class="map-statuses">
+
+
+                <span>
+                    ❤️ Definitely
+                </span>
+
+
+                <span>
+                    ✨ Someday
+                </span>
+
+
+                <span>
+                    ✅ Been There
+                </span>
+
+
+            </div>
+
+
+
+            <div class="dream-map">
+
+
+                <div class="map-glow"></div>
+
+
+                <span class="continent continent-europe">
+                    EUROPE
+                </span>
+
+
+                <span class="continent continent-asia">
+                    ASIA
+                </span>
+
+
+                <span class="continent continent-africa">
+                    AFRICA
+                </span>
+
+
+                <span class="continent continent-america">
+                    AMERICA
+                </span>
+
+
+
+                <button
+                    class="map-pin must-go pin-italy"
+                    onclick="showDestination(
+                        '🇮🇹 Italy',
+                        '❤️ We absolutely have to go',
+                        'Wohnmobil, pasta, beaches, Rome, little towns, and probably getting lost together in some weird alley 😭❤️'
+                    )"
+                >
+                    🇮🇹
+                </button>
+
+
+
+                <button
+                    class="map-pin must-go pin-france"
+                    onclick="showDestination(
+                        '🇫🇷 France',
+                        '❤️ We absolutely have to go',
+                        'A calm trip, cafés, wandering the streets, and at least one very cliché photo we can make fun of later.'
+                    )"
+                >
+                    🇫🇷
+                </button>
+
+
+
+                <button
+                    class="map-pin someday pin-spain"
+                    onclick="showDestination(
+                        '🇪🇸 Spain',
+                        '✨ Maybe someday',
+                        'Sunshine, beaches, nights out, and a trip with absolutely no detailed plan.'
+                    )"
+                >
+                    🇪🇸
+                </button>
+
+
+
+                <button
+                    class="map-pin must-go pin-norway"
+                    onclick="showDestination(
+                        '🇳🇴 Norway',
+                        '❤️ We absolutely have to go',
+                        'For the Northern Lights. That reason alone is enough. 🌌'
+                    )"
+                >
+                    🇳🇴
+                </button>
+
+
+
+                <button
+                    class="map-pin someday pin-japan"
+                    onclick="showDestination(
+                        '🇯🇵 Japan',
+                        '✨ Maybe one very distant day',
+                        'Food, cities, culture, tons of weird photos, and probably walking for ten hours without even noticing.'
+                    )"
+                >
+                    🇯🇵
+                </button>
+
+
+
+                <button
+                    class="map-pin must-go pin-germany"
+                    onclick="showDestination(
+                        '🇩🇪 Germany',
+                        '🏠 Not every destination is just a trip',
+                        'A place where maybe part of our future, our home, and our everyday life will be built.'
+                    )"
+                >
+                    🏠
+                </button>
+
+
+
+                <button
+                    class="map-pin someday pin-usa"
+                    onclick="showDestination(
+                        '🇺🇸 USA',
+                        '✨ Maybe someday',
+                        'A long Road Trip through cities we’ve only ever heard about in movies.'
+                    )"
+                >
+                    🇺🇸
+                </button>
+
+
+
+            </div>
+
+
+
+            <div
+                id="destinationCard"
+                class="destination-card"
+            >
+
+
+                <span id="destinationFlag">
+                    🌍
+                </span>
+
+
+                <div>
+
+                    <h3 id="destinationTitle">
+                        Choose one of the destinations
+                    </h3>
+
+
+                    <strong id="destinationStatus">
+                        A ❤️ S
+                    </strong>
+
+
+                    <p id="destinationText">
+                        There are still so many places in the world where no memory of us has been made yet.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+        <!-- =====================================================
+             FUTURE HOME
+        ====================================================== -->
+
+        <section class="future-card">
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    🏠
+                </span>
+
+                <h2>
+                    Someday, Our Home
+                </h2>
+
+                <p>
+                    Tap any part of the house;
+                    see what kind of future is hiding there.
+                </p>
+
+            </div>
+
+
+            <div class="future-house">
+
+
+                <button
+                    class="room room-living"
+                    onclick="showRoom(
+                        '🛋️ Living Room',
+                        'A place for watching series under a blanket, eating in front of the TV, and arguing over what to watch tonight 😭'
+                    )"
+                >
+
+                    <span>
+                        🛋️
+                    </span>
+
+                    <strong>
+                        Living Room
+                    </strong>
+
+                </button>
+
+
+                <button
+                    class="room room-kitchen"
+                    onclick="showRoom(
+                        '🍳 Kitchen',
+                        'Meals that turn out amazing one time and a disaster the next. What matters is that we made them together.'
+                    )"
+                >
+
+                    <span>
+                        🍳
+                    </span>
+
+                    <strong>
+                        Kitchen
+                    </strong>
+
+                </button>
+
+
+                <button
+                    class="room room-library"
+                    onclick="showRoom(
+                        '📚 Reading Corner',
+                        'Two chairs, books, silence, and interrupting each other every few minutes to read an interesting sentence out loud.'
+                    )"
+                >
+
+                    <span>
+                        📚
+                    </span>
+
+                    <strong>
+                        Library
+                    </strong>
+
+                </button>
+
+
+                <button
+                    class="room room-balcony"
+                    onclick="showRoom(
+                        '🌿 Balcony',
+                        'Coffee, cool air, random nonsense, and those conversations that suddenly last three hours.'
+                    )"
+                >
+
+                    <span>
+                        🌿
+                    </span>
+
+                    <strong>
+                        Balcony
+                    </strong>
+
+                </button>
+
+
+                <button
+                    class="room room-bedroom"
+                    onclick="showRoom(
+                        '🛏️ Bedroom',
+                        'A place where Arian will probably still sleep way more than the standard amount 😭'
+                    )"
+                >
+
+                    <span>
+                        🛏️
+                    </span>
+
+                    <strong>
+                        Room
+                    </strong>
+
+                </button>
+
+
+                <button
+                    class="room room-future"
+                    onclick="showRoom(
+                        '🧸 Later Chapters',
+                        'This one is still far away. We don’t need to know exactly what it looks like yet; it’s just nice to leave some space for it. ❤️'
+                    )"
+                >
+
+                    <span>
+                        🧸
+                    </span>
+
+                    <strong>
+                        Future
+                    </strong>
+
+                </button>
+
+            </div>
+
+
+            <div
+                id="roomMessage"
+                class="room-message"
+            >
+
+                <span id="roomEmoji">
+                    🏠
+                </span>
+
+                <div>
+
+                    <h3 id="roomTitle">
+                        Home, someday.
+                    </h3>
+
+                    <p id="roomText">
+                        A home isn’t just walls and a roof;
+                        it’s lots of ordinary days spent with the right person.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SHARED SHELF
+        ====================================================== -->
+
+        <section class="future-card">
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    🎬📚
+                </span>
+
+                <h2>
+                    Our Shared Shelf
+                </h2>
+
+                <p>
+                    Movies, series, and books we have to finish together someday.
+                </p>
+
+            </div>
+
+
+            <div class="shelf-tabs">
+
+                <button
+                    class="shelf-tab active"
+                    onclick="showShelf('movies', this)"
+                >
+                    🎬 Movies
+                </button>
+
+                <button
+                    class="shelf-tab"
+                    onclick="showShelf('series', this)"
+                >
+                    📺 Series
+                </button>
+
+                <button
+                    class="shelf-tab"
+                    onclick="showShelf('books', this)"
+                >
+                    📚 Books
+                </button>
+
+            </div>
+
+
+            <!-- Movies -->
+
+            <div
+                id="moviesShelf"
+                class="shelf-content active-shelf"
+            >
+
+                <button
+                    class="shelf-item"
+                    data-shelf="movie-1"
+                    onclick="toggleShelfItem(this)"
+                >
+                    <span>🎥</span>
+
+                    <strong>
+                        A horror movie together
+                    </strong>
+
+                    <small>
+                        ⬜ Still to do
+                    </small>
+                </button>
+
+
+                <button
+                    class="shelf-item"
+                    data-shelf="movie-2"
+                    onclick="toggleShelfItem(this)"
+                >
+                    <span>🍿</span>
+
+                    <strong>
+                        Movie Marathon until morning
+                    </strong>
+
+                    <small>
+                        ⬜ Still to do
+                    </small>
+                </button>
+
+
+                <button
+                    class="shelf-item"
+                    data-shelf="movie-3"
+                    onclick="toggleShelfItem(this)"
+                >
+                    <span>🎞️</span>
+
+                    <strong>
+                        A really good old movie
+                    </strong>
+
+                    <small>
+                        ⬜ Still to do
+                    </small>
+                </button>
+
+
+                <button
+                    class="shelf-item"
+                    data-shelf="movie-4"
+                    onclick="toggleShelfItem(this)"
+                >
+                    <span>🎟️</span>
+
+                    <strong>
+                        A new cinema date
+                    </strong>
+
+                    <small>
+                        ⬜ Still to do
+                    </small>
+                </button>
+
+            </div>
+
+
+            <!-- Series -->
+
+            <div
+                id="seriesShelf"
+                class="shelf-content"
+            >
+
+                <button
+                    class="shelf-item"
+                    data-shelf="series-1"
+                    onclick="toggleShelfItem(this)"
+                >
+                    <span>📺</span>
+
+                    <strong>
+                        A long series to start together
+                    </strong>
+
+                    <small>
+                        ⬜ Still to do
+                    </small>
+                </button>
+
+
+                <button
+                    class="shelf-item"
+                    data-shelf="series-2"
+                    onclick="toggleShelfItem(this)"
+                >
+                    <span>😭</span>
+
+                    <strong>
+                        A series whose ending destroys us
+                    </strong>
+
+                    <small>
+                        ⬜ Still to do
+                    </small>
+                </button>
+
+
+                <button
+                    class="shelf-item"
+                    data-shelf="series-3"
+                    onclick="toggleShelfItem(this)"
+                >
+                    <span>😂</span>
+
+                    <strong>
+                        A Sitcom for tired nights
+                    </strong>
+
+                    <small>
+                        ⬜ Still to do
+                    </small>
+                </button>
+
+            </div>
+
+
+            <!-- Books -->
+
+            <div
+                id="booksShelf"
+                class="shelf-content"
+            >
+
+                <button
+                    class="shelf-item"
+                    data-shelf="book-1"
+                    onclick="toggleShelfItem(this)"
+                >
+                    <span>📖</span>
+
+                    <strong>
+                        Read the same novel at the same time
+                    </strong>
+
+                    <small>
+                        ⬜ Still to do
+                    </small>
+                </button>
+
+
+                <button
+                    class="shelf-item"
+                    data-shelf="book-2"
+                    onclick="toggleShelfItem(this)"
+                >
+                    <span>🧠</span>
+
+                    <strong>
+                        A psychology book and lots of arguments about it
+                    </strong>
+
+                    <small>
+                        ⬜ Still to do
+                    </small>
+                </button>
+
+
+                <button
+                    class="shelf-item"
+                    data-shelf="book-3"
+                    onclick="toggleShelfItem(this)"
+                >
+                    <span>☕</span>
+
+                    <strong>
+                        A whole afternoon of café + books
+                    </strong>
+
+                    <small>
+                        ⬜ Still to do
+                    </small>
+                </button>
+
+            </div>
+
+
+            <button
+                class="random-picker-button"
+                onclick="pickTonight()"
+            >
+                🎲 What should we pick tonight?
+            </button>
+
+
+            <div
+                id="randomPickResult"
+                class="random-pick-result"
+            >
+                We haven’t picked anything yet 🤭
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             FUTURE TIMELINE
+        ====================================================== -->
+
+        <section class="future-card">
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    🛤️
+                </span>
+
+                <h2>
+                    There’s Still So Much Life Ahead
+                </h2>
+
+                <p>
+                    Some stops are close,
+                    some are very far away.
+                    For now, we’re just saving their places along the road.
+                </p>
+
+            </div>
+
+
+            <div class="future-timeline">
+
+
+                <button
+                    class="future-stop"
+                    data-stop="stop-wohnmobil"
+                    onclick="toggleFutureStop(this)"
+                >
+
+                    <span class="stop-icon">
+                        🚐
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Our first real trip with a Wohnmobil
+                        </h3>
+
+                        <p>
+                            We haven’t reached this stop yet...
+                        </p>
+
+                    </div>
+
+                    <span class="stop-lock">
+                        🔒
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="future-stop"
+                    data-stop="stop-party"
+                    onclick="toggleFutureStop(this)"
+                >
+
+                    <span class="stop-icon">
+                        🎉
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Party and clubbing together
+                        </h3>
+
+                        <p>
+                            A night that’ll probably make us ask the next day why we did that 😭
+                        </p>
+
+                    </div>
+
+                    <span class="stop-lock">
+                        🔒
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="future-stop"
+                    data-stop="stop-home"
+                    onclick="toggleFutureStop(this)"
+                >
+
+                    <span class="stop-icon">
+                        🏠
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Living under one roof in Germany
+                        </h3>
+
+                        <p>
+                            Turning trips and dates into ordinary everyday life together.
+                        </p>
+
+                    </div>
+
+                    <span class="stop-lock">
+                        🔒
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="future-stop"
+                    data-stop="stop-travel"
+                    onclick="toggleFutureStop(this)"
+                >
+
+                    <span class="stop-icon">
+                        🌍
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Lots of new countries and cities
+                        </h3>
+
+                        <p>
+                            Every destination, a new memory.
+                        </p>
+
+                    </div>
+
+                    <span class="stop-lock">
+                        🔒
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="future-stop"
+                    data-stop="stop-books"
+                    onclick="toggleFutureStop(this)"
+                >
+
+                    <span class="stop-icon">
+                        📚
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            A shared bookshelf
+                        </h3>
+
+                        <p>
+                            Books that some of us both love
+                            and some we’ll argue about.
+                        </p>
+
+                    </div>
+
+                    <span class="stop-lock">
+                        🔒
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="future-stop"
+                    data-stop="stop-pet"
+                    onclick="toggleFutureStop(this)"
+                >
+
+                    <span class="stop-icon">
+                        🐾
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Maybe get a pet
+                        </h3>
+
+                        <p>
+                            This one is still firmly in the “maybe” category.
+                        </p>
+
+                    </div>
+
+                    <span class="stop-lock">
+                        🔒
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="future-stop"
+                    data-stop="stop-child"
+                    onclick="toggleFutureStop(this)"
+                >
+
+                    <span class="stop-icon">
+                        👶
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Maybe one day, a bigger family
+                        </h3>
+
+                        <p>
+                            It’s very far away.
+                            For now, it’s just a stop on the map of our future. ❤️
+                        </p>
+
+                    </div>
+
+                    <span class="stop-lock">
+                        🔒
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="future-stop"
+                    data-stop="stop-old"
+                    onclick="toggleFutureStop(this)"
+                >
+
+                    <span class="stop-icon">
+                        👴👵
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Growing old and still getting on each other’s nerves
+                        </h3>
+
+                        <p>
+                            The Final Boss of life 😭❤️
+                        </p>
+
+                    </div>
+
+                    <span class="stop-lock">
+                        🔒
+                    </span>
+
+                </button>
+
+
+            </div>
+
+
+            <p class="timeline-hint">
+                Whenever one of these things actually happens,
+                tap the stop to Unlock it. 🔓
+            </p>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             ROAD TRIP GAME
+        ====================================================== -->
+
+        <section
+            class="future-card game-section"
+            id="roadGame"
+        >
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    🚐
+                </span>
+
+                <h2>
+                    Road Trip: Arian & Saba
+                </h2>
+
+                <p>
+                    hearts ❤️,
+                    fuel ⛽
+                    and memories 📸.
+                    And dodge the potholes 🕳️.
+                </p>
+
+            </div>
+
+
+            <div class="road-stats">
+
+
+                <div>
+
+                    <span>
+                        ❤️ Hearts
+                    </span>
+
+                    <strong id="roadHearts">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        ⛽ Fuel
+                    </span>
+
+                    <strong id="roadFuel">
+                        5
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        📸 Memories
+                    </span>
+
+                    <strong id="roadMemories">
+                        0
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="road-game-shell">
+
+
+                <canvas
+                    id="roadCanvas"
+                    width="360"
+                    height="560"
+                >
+                </canvas>
+
+
+                <div
+                    id="roadOverlay"
+                    class="road-overlay"
+                >
+
+                    <div class="road-overlay-box">
+
+                        <span class="road-big-icon">
+                            🚐
+                        </span>
+
+                        <h3>
+                            Ready for Europe?
+                        </h3>
+
+                        <p>
+                            Final destination:
+                            <br>
+                            🏠 Home, Germany ❤️
+                        </p>
+
+                        <button
+                            class="main-button"
+                            onclick="startRoadGame()"
+                        >
+                            Let’s go
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="road-controls">
+
+                <button
+                    id="roadLeft"
+                    class="road-control"
+                >
+
+
+                 <script>
+
+
+        /* =====================================================
+           PARTICLES
+        ====================================================== */
+
+        function createFutureParticles() {
+
+            const container =
+                document.getElementById(
+                    "futureParticles"
+                );
+
+
+            const icons = [
+
+                "✨",
+                "❤️",
+                "🌍",
+                "🚐",
+                "🌟"
+
+            ];
+
+
+            for (
+                let i = 0;
+                i < 22;
+                i++
+            ) {
+
+                const particle =
+                    document.createElement(
+                        "span"
+                    );
+
+
+                particle.className =
+                    "future-particle";
+
+
+                particle.textContent =
+                    icons[
+                        Math.floor(
+                            Math.random() *
+                            icons.length
+                        )
+                    ];
+
+
+                particle.style.left =
+                    Math.random() * 100 +
+                    "%";
+
+
+                particle.style.animationDuration =
+                    (
+                        10 +
+                        Math.random() * 13
+                    ) + "s";
+
+
+                particle.style.animationDelay =
+                    Math.random() * 10 +
+                    "s";
+
+
+                container.appendChild(
+                    particle
+                );
+
+            }
+
+        }
+
+
+        createFutureParticles();
+
+
+
+        /* =====================================================
+           DARK MODE
+        ====================================================== */
+
+        const savedFutureTheme =
+            localStorage.getItem(
+                "futureTheme"
+            );
+
+
+        if (
+            savedFutureTheme ===
+            "dark"
+        ) {
+
+            document.body
+                .classList
+                .add("dark-mode");
+
+        }
+
+
+        updateThemeButton();
+
+
+
+        function toggleTheme() {
+
+            document.body
+                .classList
+                .toggle("dark-mode");
+
+
+            const isDark =
+                document.body
+                    .classList
+                    .contains(
+                        "dark-mode"
+                    );
+
+
+            localStorage.setItem(
+
+                "futureTheme",
+
+                isDark
+                    ? "dark"
+                    : "light"
+
+            );
+
+
+            updateThemeButton();
+
+        }
+
+
+
+        function updateThemeButton() {
+
+            const button =
+                document.getElementById(
+                    "themeButton"
+                );
+
+
+            button.textContent =
+                document.body
+                    .classList
+                    .contains(
+                        "dark-mode"
+                    )
+                    ? "☀️"
+                    : "🌙";
+
+        }
+
+
+
+        /* =====================================================
+           SCROLL
+        ====================================================== */
+
+        function scrollToSection(id) {
+
+            const section =
+                document.getElementById(
+                    id
+                );
+
+
+            if (section) {
+
+                section.scrollIntoView({
+
+                    behavior:
+                        "smooth",
+
+                    block:
+                        "start"
+
+                });
+
+            }
+
+        }
+
+
+
+        /* =====================================================
+           DREAM CHECKLIST
+        ====================================================== */
+
+        const dreamItems =
+            document.querySelectorAll(
+                ".dream-item"
+            );
+
+
+
+        function loadDreams() {
+
+            dreamItems.forEach(
+
+                function(item) {
+
+                    const key =
+                        item.dataset.dream;
+
+
+                    const saved =
+                        localStorage.getItem(
+                            "dream-" + key
+                        );
+
+
+                    if (
+                        saved === "done"
+                    ) {
+
+                        markDreamDone(
+                            item,
+                            true
+                        );
+
+                    }
+
+                }
+
+            );
+
+
+            updateDreamProgress();
+
+        }
+
+
+
+        function toggleDream(item) {
+
+            const key =
+                item.dataset.dream;
+
+
+            const done =
+                item.classList
+                    .contains(
+                        "dream-done"
+                    );
+
+
+            if (done) {
+
+                localStorage.removeItem(
+                    "dream-" + key
+                );
+
+
+                markDreamDone(
+                    item,
+                    false
+                );
+
+            }
+
+            else {
+
+                localStorage.setItem(
+                    "dream-" + key,
+                    "done"
+                );
+
+
+                markDreamDone(
+                    item,
+                    true
+                );
+
+
+                createMiniCelebration();
+
+            }
+
+
+            updateDreamProgress();
+
+        }
+
+
+
+        function markDreamDone(
+            item,
+            done
+        ) {
+
+            const check =
+                item.querySelector(
+                    ".dream-check"
+                );
+
+
+            if (done) {
+
+                item.classList.add(
+                    "dream-done"
+                );
+
+
+                check.textContent =
+                    "✅";
+
+            }
+
+            else {
+
+                item.classList.remove(
+                    "dream-done"
+                );
+
+
+                check.textContent =
+                    "⬜";
+
+            }
+
+        }
+
+
+
+        function updateDreamProgress() {
+
+            const done =
+                document.querySelectorAll(
+                    ".dream-item.dream-done"
+                ).length;
+
+
+            const total =
+                dreamItems.length;
+
+
+            document
+                .getElementById(
+                    "dreamProgressText"
+                )
+                .textContent =
+                done +
+                " of " +
+                total;
+
+
+            document
+                .getElementById(
+                    "dreamProgressBar"
+                )
+                .style.width =
+                (
+                    done /
+                    total *
+                    100
+                ) + "%";
+
+
+            document
+                .getElementById(
+                    "dreamCount"
+                )
+                .textContent =
+                total;
+
+        }
+
+
+        loadDreams();
+
+
+
+        /* =====================================================
+           DESTINATION MAP
+        ====================================================== */
+
+        function showDestination(
+            title,
+            status,
+            text
+        ) {
+
+            document
+                .getElementById(
+                    "destinationTitle"
+                )
+                .textContent =
+                title;
+
+
+            document
+                .getElementById(
+                    "destinationStatus"
+                )
+                .textContent =
+                status;
+
+
+            document
+                .getElementById(
+                    "destinationText"
+                )
+                .textContent =
+                text;
+
+
+            document
+                .getElementById(
+                    "destinationFlag"
+                )
+                .textContent =
+                title.split(" ")[0];
+
+
+            const card =
+                document.getElementById(
+                    "destinationCard"
+                );
+
+
+            card.classList.remove(
+                "card-pop"
+            );
+
+
+            void card.offsetWidth;
+
+
+            card.classList.add(
+                "card-pop"
+            );
+
+        }
+
+
+
+        /* =====================================================
+           FUTURE HOUSE
+        ====================================================== */
+
+        function showRoom(
+            title,
+            text
+        ) {
+
+            document
+                .getElementById(
+                    "roomTitle"
+                )
+                .textContent =
+                title;
+
+
+            document
+                .getElementById(
+                    "roomText"
+                )
+                .textContent =
+                text;
+
+
+            document
+                .getElementById(
+                    "roomEmoji"
+                )
+                .textContent =
+                title.split(" ")[0];
+
+
+            const message =
+                document.getElementById(
+                    "roomMessage"
+                );
+
+
+            message.classList.remove(
+                "card-pop"
+            );
+
+
+            void message.offsetWidth;
+
+
+            message.classList.add(
+                "card-pop"
+            );
+
+        }
+
+
+
+        /* =====================================================
+           SHARED SHELF
+        ====================================================== */
+
+        function showShelf(
+            shelf,
+            button
+        ) {
+
+            document
+                .querySelectorAll(
+                    ".shelf-content"
+                )
+                .forEach(
+
+                    function(content) {
+
+                        content.classList.remove(
+                            "active-shelf"
+                        );
+
+                    }
+
+                );
+
+
+            document
+                .querySelectorAll(
+                    ".shelf-tab"
+                )
+                .forEach(
+
+                    function(tab) {
+
+                        tab.classList.remove(
+                            "active"
+                        );
+
+                    }
+
+                );
+
+
+            document
+                .getElementById(
+                    shelf + "Shelf"
+                )
+                .classList.add(
+                    "active-shelf"
+                );
+
+
+            button.classList.add(
+                "active"
+            );
+
+        }
+
+
+
+        const shelfItems =
+            document.querySelectorAll(
+                ".shelf-item"
+            );
+
+
+
+        function loadShelf() {
+
+            shelfItems.forEach(
+
+                function(item) {
+
+                    const key =
+                        item.dataset.shelf;
+
+
+                    if (
+                        localStorage.getItem(
+                            "shelf-" + key
+                        ) === "done"
+                    ) {
+
+                        setShelfDone(
+                            item,
+                            true
+                        );
+
+                    }
+
+                }
+
+            );
+
+        }
+
+
+
+        function toggleShelfItem(item) {
+
+            const key =
+                item.dataset.shelf;
+
+
+            const done =
+                item.classList
+                    .contains(
+                        "shelf-done"
+                    );
+
+
+            if (done) {
+
+                localStorage.removeItem(
+                    "shelf-" + key
+                );
+
+
+                setShelfDone(
+                    item,
+                    false
+                );
+
+            }
+
+            else {
+
+                localStorage.setItem(
+                    "shelf-" + key,
+                    "done"
+                );
+
+
+                setShelfDone(
+                    item,
+                    true
+                );
+
+            }
+
+        }
+
+
+
+        function setShelfDone(
+            item,
+            done
+        ) {
+
+            const status =
+                item.querySelector(
+                    "small"
+                );
+
+
+            if (done) {
+
+                item.classList.add(
+                    "shelf-done"
+                );
+
+
+                status.textContent =
+                    "✅ Done";
+
+            }
+
+            else {
+
+                item.classList.remove(
+                    "shelf-done"
+                );
+
+
+                status.textContent =
+                    "⬜ Still to do";
+
+            }
+
+        }
+
+
+        loadShelf();
+
+
+
+        /* =====================================================
+           RANDOM PICKER
+        ====================================================== */
+
+        const randomChoices = [
+
+            "🎬 Let’s watch a movie tonight.",
+
+            "📺 One episode of a series tonight.",
+
+            "📚 Let’s read together for twenty minutes.",
+
+            "🍿 Let’s pick a movie neither of us has seen before.",
+
+            "☕ Book + drink + no phones.",
+
+            "😭 Tonight Saba gets full choice.",
+
+            "🤭 Tonight Arian chooses and Saba gets no objections.",
+
+            "🎟️ Instead of staying home, let’s plan a cinema night."
+
+        ];
+
+
+
+        function pickTonight() {
+
+            const result =
+                document.getElementById(
+                    "randomPickResult"
+                );
+
+
+            result.textContent =
+                "Making a very scientific decision... 🎲";
+
+
+            setTimeout(
+
+                function() {
+
+                    result.textContent =
+                        randomChoices[
+                            Math.floor(
+                                Math.random() *
+                                randomChoices.length
+                            )
+                        ];
+
+
+                    result.classList.remove(
+                        "card-pop"
+                    );
+
+
+                    void result.offsetWidth;
+
+
+                    result.classList.add(
+                        "card-pop"
+                    );
+
+                },
+
+                500
+
+            );
+
+        }
+
+
+
+        /* =====================================================
+           FUTURE TIMELINE
+        ====================================================== */
+
+        const futureStops =
+            document.querySelectorAll(
+                ".future-stop"
+            );
+
+
+
+        function loadFutureStops() {
+
+            futureStops.forEach(
+
+                function(stop) {
+
+                    const key =
+                        stop.dataset.stop;
+
+
+                    if (
+                        localStorage.getItem(
+                            "future-" + key
+                        ) === "unlocked"
+                    ) {
+
+                        setStopUnlocked(
+                            stop,
+                            true
+                        );
+
+                    }
+
+                }
+
+            );
+
+        }
+
+
+
+        function toggleFutureStop(stop) {
+
+            const key =
+                stop.dataset.stop;
+
+
+            const unlocked =
+                stop.classList
+                    .contains(
+                        "stop-unlocked"
+                    );
+
+
+            if (unlocked) {
+
+                localStorage.removeItem(
+                    "future-" + key
+                );
+
+
+                setStopUnlocked(
+                    stop,
+                    false
+                );
+
+            }
+
+            else {
+
+                localStorage.setItem(
+                    "future-" + key,
+                    "unlocked"
+                );
+
+
+                setStopUnlocked(
+                    stop,
+                    true
+                );
+
+
+                createMiniCelebration();
+
+            }
+
+        }
+
+
+
+        function setStopUnlocked(
+            stop,
+            unlocked
+        ) {
+
+            const lock =
+                stop.querySelector(
+                    ".stop-lock"
+                );
+
+
+            if (unlocked) {
+
+                stop.classList.add(
+                    "stop-unlocked"
+                );
+
+
+                lock.textContent =
+                    "✅";
+
+            }
+
+            else {
+
+                stop.classList.remove(
+                    "stop-unlocked"
+                );
+
+
+                lock.textContent =
+                    "🔒";
+
+            }
+
+        }
+
+
+        loadFutureStops();
+
+
+
+        /* =====================================================
+           MINI CELEBRATION
+        ====================================================== */
+
+        function createMiniCelebration() {
+
+            const icons = [
+
+                "❤️",
+                "✨",
+                "🌟",
+                "💖"
+
+            ];
+
+
+            for (
+                let i = 0;
+                i < 10;
+                i++
+            ) {
+
+                const item =
+                    document.createElement(
+                        "span"
+                    );
+
+
+                item.className =
+                    "celebration-item";
+
+
+                item.textContent =
+                    icons[
+                        Math.floor(
+                            Math.random() *
+                            icons.length
+                        )
+                    ];
+
+
+                item.style.left =
+                    (
+                        10 +
+                        Math.random() * 80
+                    ) + "%";
+
+
+                document.body.appendChild(
+                    item
+                );
+
+
+                setTimeout(
+
+                    function() {
+
+                        item.remove();
+
+                    },
+
+                    1500
+
+                );
+
+            }
+
+        }
+
+
+
+        /* =====================================================
+           ROAD TRIP GAME
+        ====================================================== */
+
+        const roadCanvas =
+            document.getElementById(
+                "roadCanvas"
+            );
+
+
+        const roadCtx =
+            roadCanvas.getContext(
+                "2d"
+            );
+
+
+        let roadRunning =
+            false;
+
+
+        let roadAnimation =
+            null;
+
+
+        let roadHearts =
+            0;
+
+
+        let roadFuel =
+            5;
+
+
+        let roadMemories =
+            0;
+
+
+        let roadSpawnTimer =
+            0;
+
+
+        let roadDistance =
+            0;
+
+
+        let roadObjects =
+            [];
+
+
+        let stampsUnlocked =
+            0;
+
+
+
+        const camper = {
+
+            x: 150,
+
+            y: 470,
+
+            width: 62,
+
+            height: 62,
+
+            speed: 7
+
+        };
+
+
+
+        const roadKeys = {
+
+            left: false,
+
+            right: false
+
+        };
+
+
+
+        const stampFlags = [
+
+            "🇮🇹",
+
+            "🇫🇷",
+
+            "🇦🇹",
+
+            "🇨🇭",
+
+            "🇩🇪"
+
+        ];
+
+
+
+        /* =====================================================
+           START ROAD GAME
+        ====================================================== */
+
+        function startRoadGame() {
+
+            roadRunning =
+                true;
+
+
+            roadHearts =
+                0;
+
+
+            roadFuel =
+                5;
+
+
+            roadMemories =
+                0;
+
+
+            roadSpawnTimer =
+                0;
+
+
+            roadDistance =
+                0;
+
+
+            roadObjects =
+                [];
+
+
+            stampsUnlocked =
+                0;
+
+
+            camper.x =
+                roadCanvas.width /
+                2 -
+                camper.width /
+                2;
+
+
+            resetPassport();
+
+
+            updateRoadStats();
+
+
+            document
+                .getElementById(
+                    "roadOverlay"
+                )
+                .classList
+                .add("hidden");
+
+
+            if (roadAnimation) {
+
+                cancelAnimationFrame(
+                    roadAnimation
+                );
+
+            }
+
+
+            roadGameLoop();
+
+        }
+
+
+
+        /* =====================================================
+           ROAD LOOP
+        ==================     
+                           /* =====================================================
+           ROAD LOOP
+        ====================================================== */
+
+        function roadGameLoop() {
+
+            if (!roadRunning) {
+
+                return;
+
+            }
+
+
+            updateRoadGame();
+
+
+            drawRoadGame();
+
+
+            roadAnimation =
+                requestAnimationFrame(
+                    roadGameLoop
+                );
+
+        }
+
+
+
+        /* =====================================================
+           UPDATE ROAD GAME
+        ====================================================== */
+
+        function updateRoadGame() {
+
+            roadDistance++;
+
+
+            if (roadKeys.left) {
+
+                camper.x -=
+                    camper.speed;
+
+            }
+
+
+            if (roadKeys.right) {
+
+                camper.x +=
+                    camper.speed;
+
+            }
+
+
+            if (
+                camper.x < 8
+            ) {
+
+                camper.x =
+                    8;
+
+            }
+
+
+            if (
+                camper.x +
+                camper.width >
+                roadCanvas.width - 8
+            ) {
+
+                camper.x =
+                    roadCanvas.width -
+                    camper.width -
+                    8;
+
+            }
+
+
+            roadSpawnTimer++;
+
+
+            if (
+                roadSpawnTimer > 45
+            ) {
+
+                spawnRoadObject();
+
+
+                roadSpawnTimer =
+                    0;
+
+            }
+
+
+            roadObjects.forEach(
+
+                function(object) {
+
+                    object.y +=
+                        object.speed;
+
+                }
+
+            );
+
+
+            for (
+                let i =
+                    roadObjects.length - 1;
+                i >= 0;
+                i--
+            ) {
+
+                const object =
+                    roadObjects[i];
+
+
+                if (
+                    roadCollision(
+                        camper,
+                        object
+                    )
+                ) {
+
+                    collectRoadObject(
+                        object
+                    );
+
+
+                    roadObjects.splice(
+                        i,
+                        1
+                    );
+
+                }
+
+                else if (
+                    object.y >
+                    roadCanvas.height +
+                    60
+                ) {
+
+                    roadObjects.splice(
+                        i,
+                        1
+                    );
+
+                }
+
+            }
+
+
+            if (
+                roadDistance % 850 ===
+                0
+            ) {
+
+                unlockNextStamp();
+
+            }
+
+
+            if (
+                stampsUnlocked >= 5
+            ) {
+
+                finishRoadTrip();
+
+            }
+
+
+            if (
+                roadFuel <= 0
+            ) {
+
+                endRoadGame(
+                    false
+                );
+
+            }
+
+        }
+
+
+
+        /* =====================================================
+           SPAWN OBJECT
+        ====================================================== */
+
+        function spawnRoadObject() {
+
+            const chance =
+                Math.random();
+
+
+            let type;
+
+
+            if (
+                chance < 0.42
+            ) {
+
+                type =
+                    "heart";
+
+            }
+
+            else if (
+                chance < 0.64
+            ) {
+
+                type =
+                    "fuel";
+
+            }
+
+            else if (
+                chance < 0.84
+            ) {
+
+                type =
+                    "memory";
+
+            }
+
+            else {
+
+                type =
+                    "hole";
+
+            }
+
+
+            roadObjects.push({
+
+                x:
+                    24 +
+                    Math.random() *
+                    (
+                        roadCanvas.width -
+                        80
+                    ),
+
+                y:
+                    -55,
+
+                width:
+                    44,
+
+                height:
+                    44,
+
+                speed:
+                    2.8 +
+                    Math.random() *
+                    1.8,
+
+                type:
+                    type
+
+            });
+
+        }
+
+
+
+        /* =====================================================
+           COLLECT
+        ====================================================== */
+
+        function collectRoadObject(
+            object
+        ) {
+
+            if (
+                object.type ===
+                "heart"
+            ) {
+
+                roadHearts++;
+
+
+                roadPop(
+                    "❤️",
+                    object
+                );
+
+            }
+
+
+            else if (
+                object.type ===
+                "fuel"
+            ) {
+
+                roadFuel =
+                    Math.min(
+                        9,
+                        roadFuel + 1
+                    );
+
+
+                roadPop(
+                    "⛽",
+                    object
+                );
+
+            }
+
+
+            else if (
+                object.type ===
+                "memory"
+            ) {
+
+                roadMemories++;
+
+
+                roadPop(
+                    "📸",
+                    object
+                );
+
+            }
+
+
+            else {
+
+                roadFuel--;
+
+
+                roadPop(
+                    "💥",
+                    object
+                );
+
+            }
+
+
+            updateRoadStats();
+
+        }
+
+
+
+        /* =====================================================
+           DRAW ROAD
+        ====================================================== */
+
+        function drawRoadGame() {
+
+            roadCtx.clearRect(
+
+                0,
+                0,
+                roadCanvas.width,
+                roadCanvas.height
+
+            );
+
+
+            const gradient =
+                roadCtx.createLinearGradient(
+
+                    0,
+                    0,
+                    0,
+                    roadCanvas.height
+
+                );
+
+
+            gradient.addColorStop(
+
+                0,
+                "#303254"
+
+            );
+
+
+            gradient.addColorStop(
+
+                1,
+                "#111426"
+
+            );
+
+
+            roadCtx.fillStyle =
+                gradient;
+
+
+            roadCtx.fillRect(
+
+                0,
+                0,
+                roadCanvas.width,
+                roadCanvas.height
+
+            );
+
+
+
+            /* ROAD SIDES */
+
+            roadCtx.fillStyle =
+                "rgba(57,122,76,0.45)";
+
+
+            roadCtx.fillRect(
+
+                0,
+                0,
+                35,
+                roadCanvas.height
+
+            );
+
+
+            roadCtx.fillRect(
+
+                roadCanvas.width - 35,
+                0,
+                35,
+                roadCanvas.height
+
+            );
+
+
+
+            /* ROAD LINE */
+
+            roadCtx.strokeStyle =
+                "rgba(255,255,255,0.22)";
+
+
+            roadCtx.lineWidth =
+                4;
+
+
+            roadCtx.setLineDash([
+
+                22,
+                24
+
+            ]);
+
+
+            roadCtx.beginPath();
+
+
+            roadCtx.moveTo(
+
+                roadCanvas.width / 2,
+                0
+
+            );
+
+
+            roadCtx.lineTo(
+
+                roadCanvas.width / 2,
+                roadCanvas.height
+
+            );
+
+
+            roadCtx.stroke();
+
+
+            roadCtx.setLineDash([]);
+
+
+
+            /* Wohnmobil */
+
+            roadCtx.font =
+                "52px sans-serif";
+
+
+            roadCtx.textAlign =
+                "center";
+
+
+            roadCtx.textBaseline =
+                "middle";
+
+
+            roadCtx.fillText(
+
+                "🚐",
+
+                camper.x +
+                camper.width / 2,
+
+                camper.y +
+                camper.height / 2
+
+            );
+
+
+
+            /* ROAD ITEMS */
+
+            roadObjects.forEach(
+
+                function(object) {
+
+                    let icon;
+
+
+                    if (
+                        object.type ===
+                        "heart"
+                    ) {
+
+                        icon =
+                            "❤️";
+
+                    }
+
+                    else if (
+                        object.type ===
+                        "fuel"
+                    ) {
+
+                        icon =
+                            "⛽";
+
+                    }
+
+                    else if (
+                        object.type ===
+                        "memory"
+                    ) {
+
+                        icon =
+                            "📸";
+
+                    }
+
+                    else {
+
+                        icon =
+                            "🕳️";
+
+                    }
+
+
+                    roadCtx.font =
+                        "37px sans-serif";
+
+
+                    roadCtx.fillText(
+
+                        icon,
+
+                        object.x +
+                        object.width / 2,
+
+                        object.y +
+                        object.height / 2
+
+                    );
+
+                }
+
+            );
+
+        }
+
+
+
+        /* =====================================================
+           COLLISION
+        ====================================================== */
+
+        function roadCollision(
+            a,
+            b
+        ) {
+
+            return (
+
+                a.x <
+                b.x + b.width
+
+                &&
+
+                a.x + a.width >
+                b.x
+
+                &&
+
+                a.y <
+                b.y + b.height
+
+                &&
+
+                a.y + a.height >
+                b.y
+
+            );
+
+        }
+
+
+
+        /* =====================================================
+           ROAD STATS
+        ====================================================== */
+
+        function updateRoadStats() {
+
+            document
+                .getElementById(
+                    "roadHearts"
+                )
+                .textContent =
+                roadHearts;
+
+
+            document
+                .getElementById(
+                    "roadFuel"
+                )
+                .textContent =
+                roadFuel;
+
+
+            document
+                .getElementById(
+                    "roadMemories"
+                )
+                .textContent =
+                roadMemories;
+
+        }
+
+
+
+        /* =====================================================
+           PASSPORT
+        ====================================================== */
+
+        function resetPassport() {
+
+            const container =
+                document.getElementById(
+                    "passportStamps"
+                );
+
+
+            container.innerHTML =
+                stampFlags.map(
+
+                    function(flag) {
+
+                        return `
+                            <span class="locked-stamp">
+                                ${flag} ?
+                            </span>
+                        `;
+
+                    }
+
+                ).join("");
+
+        }
+
+
+
+        function unlockNextStamp() {
+
+            if (
+                stampsUnlocked >=
+                stampFlags.length
+            ) {
+
+                return;
+
+            }
+
+
+            const stamps =
+                document.querySelectorAll(
+                    "#passportStamps span"
+                );
+
+
+            stamps[
+                stampsUnlocked
+            ].classList.remove(
+                "locked-stamp"
+            );
+
+
+            stamps[
+                stampsUnlocked
+            ].classList.add(
+                "unlocked-stamp"
+            );
+
+
+            stamps[
+                stampsUnlocked
+            ].textContent =
+                stampFlags[
+                    stampsUnlocked
+                ] +
+                " ✅";
+
+
+            stampsUnlocked++;
+
+
+            createMiniCelebration();
+
+        }
+
+
+
+        /* =====================================================
+           ROAD ENDINGS
+        ====================================================== */
+
+        function finishRoadTrip() {
+
+            roadRunning =
+                false;
+
+
+            const overlay =
+                document.getElementById(
+                    "roadOverlay"
+                );
+
+
+            overlay.classList.remove(
+                "hidden"
+            );
+
+
+            overlay.innerHTML = `
+
+                <div class="road-overlay-box">
+
+                    <span class="road-big-icon">
+                        🏠❤️
+                    </span>
+
+                    <h3>
+                        Destination reached
+                    </h3>
+
+                    <p>
+                        Home, Germany 🇩🇪
+                        <br><br>
+                        ❤️ ${roadHearts}
+                        &nbsp;
+                        📸 ${roadMemories}
+                    </p>
+
+                    <p>
+                        At the end of some journeys,
+                        the destination isn’t a city...
+                        it’s a home.
+                    </p>
+
+                    <button
+                        class="main-button"
+                        onclick="startRoadGame()"
+                    >
+                        Let’s go again 🚐
+                    </button>
+
+                </div>
+
+            `;
+
+
+            createMiniCelebration();
+
+        }
+
+
+
+        function endRoadGame() {
+
+            roadRunning =
+                false;
+
+
+            const overlay =
+                document.getElementById(
+                    "roadOverlay"
+                );
+
+
+            overlay.classList.remove(
+                "hidden"
+            );
+
+
+            overlay.innerHTML = `
+
+                <div class="road-overlay-box">
+
+                    <span class="road-big-icon">
+                        😭⛽
+                    </span>
+
+                    <h3>
+                        Out of fuel!
+                    </h3>
+
+                    <p>
+                        Apparently love alone
+                        can’t keep the Wohnmobil running 😭
+                    </p>
+
+                    <button
+                        class="main-button"
+                        onclick="startRoadGame()"
+                    >
+                        Try again
+                    </button>
+
+                </div>
+
+            `;
+
+        }
+
+
+
+        /* =====================================================
+           ROAD CONTROLS
+        ====================================================== */
+
+        function bindRoadControl(
+            element,
+            direction
+        ) {
+
+            element.addEventListener(
+
+                "touchstart",
+
+                function(event) {
+
+                    event.preventDefault();
+
+
+                    roadKeys[
+                        direction
+                    ] =
+                        true;
+
+                },
+
+                {
+                    passive:
+                        false
+                }
+
+            );
+
+
+            element.addEventListener(
+
+                "touchend",
+
+                function(event) {
+
+                    event.preventDefault();
+
+
+                    roadKeys[
+                        direction
+                    ] =
+                        false;
+
+                },
+
+                {
+                    passive:
+                        false
+                }
+
+            );
+
+
+            element.addEventListener(
+
+                "touchcancel",
+
+                function() {
+
+                    roadKeys[
+                        direction
+                    ] =
+                        false;
+
+                }
+
+            );
+
+
+            element.addEventListener(
+
+                "mousedown",
+
+                function() {
+
+                    roadKeys[
+                        direction
+                    ] =
+                        true;
+
+                }
+
+            );
+
+
+            element.addEventListener(
+
+                "mouseup",
+
+                function() {
+
+                    roadKeys[
+                        direction
+                    ] =
+                        false;
+
+                }
+
+            );
+
+
+            element.addEventListener(
+
+                "mouseleave",
+
+                function() {
+
+                    roadKeys[
+                        direction
+                    ] =
+                        false;
+
+                }
+
+            );
+
+        }
+
+
+
+        bindRoadControl(
+
+            document.getElementById(
+                "roadLeft"
+            ),
+
+            "left"
+
+        );
+
+
+        bindRoadControl(
+
+            document.getElementById(
+                "roadRight"
+            ),
+
+            "right"
+
+        );
+
+
+
+        document.addEventListener(
+
+            "keydown",
+
+            function(event) {
+
+                if (
+                    event.key ===
+                    "ArrowLeft"
+                ) {
+
+                    roadKeys.left =
+                        true;
+
+                }
+
+
+                if (
+                    event.key ===
+                    "ArrowRight"
+                ) {
+
+                    roadKeys.right =
+                        true;
+
+                }
+
+            }
+
+        );
+
+
+        document.addEventListener(
+
+            "keyup",
+
+            function(event) {
+
+                if (
+                    event.key ===
+                    "ArrowLeft"
+                ) {
+
+                    roadKeys.left =
+                        false;
+
+                }
+
+
+                if (
+                    event.key ===
+                    "ArrowRight"
+                ) {
+
+                    roadKeys.right =
+                        false;
+
+                }
+
+            }
+
+        );
+
+
+
+        /* =====================================================
+           ROAD POP
+        ====================================================== */
+
+        function roadPop(
+            symbol,
+            object
+        ) {
+
+            const rect =
+                roadCanvas
+                    .getBoundingClientRect();
+
+
+            const pop =
+                document.createElement(
+                    "span"
+                );
+
+
+            pop.className =
+                "road-pop";
+
+
+            pop.textContent =
+                symbol;
+
+
+            pop.style.left =
+                (
+                    rect.left +
+                    object.x /
+                    roadCanvas.width *
+                    rect.width
+                ) + "px";
+
+
+            pop.style.top =
+                (
+                    rect.top +
+                    object.y /
+                    roadCanvas.height *
+                    rect.height
+                ) + "px";
+
+
+            document.body.appendChild(
+                pop
+            );
+
+
+            setTimeout(
+
+                function() {
+
+                    pop.remove();
+
+                },
+
+                750
+
+            );
+
+        }
+
+
+
+        /* =====================================================
+           INITIAL GAME FRAME
+        ====================================================== */
+
+        resetPassport();
+
+        updateRoadStats();
+
+        drawRoadGame();
+
+
+    </script>
+
+
+</body>
+
+</html>
